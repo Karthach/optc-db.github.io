@@ -27,8 +27,8 @@
     </button>
 
     <button id="theme-toggle" ng-click="toggleTheme()" title="toggle theme">
-        <i class="fa" ng-class="{'fa-sun-o': theme === 'dark', 'fa-moon-o': theme === 'light'}"></i>
-        <span>Theme</span>
+        <span ng-bind="theme === 'dark' ? '🌙' : '☀️'"></span>
+        <span ng-bind="theme === 'dark' ? 'Neko' : 'Inu'"></span>
     </button>
 </div>
 
