@@ -25,6 +25,11 @@
         <i class="fa fa-info-circle"></i>
         <span>Operators</span>
     </button>
+
+    <button id="theme-toggle" ng-click="toggleTheme()" title="toggle theme">
+        <i class="fa" ng-class="{'fa-sun-o': theme === 'dark', 'fa-moon-o': theme === 'light'}"></i>
+        <span>Theme</span>
+    </button>
 </div>
 
 <div id="tableContainer">
