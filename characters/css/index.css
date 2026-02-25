@@ -1,6 +1,267 @@
 @import url('../../common/css/orb-colors.css');
 @import url('../../common/css/bonuses.css');
 
+/* Light Mode - overrides only */
+.light-mode body,
+.light-mode html {
+    background: #f5f5f5 !important;
+    color: #333333;
+}
+
+/* Type badge colors - more saturated for light mode */
+.light-mode .STR, .light-mode .type.STR { background: #e55545 !important; color: white !important; }
+.light-mode .QCK, .light-mode .type.QCK { background: #4a9fe8 !important; color: white !important; }
+.light-mode .DEX, .light-mode .type.DEX { background: #4ab85a !important; color: white !important; }
+.light-mode .PSY, .light-mode .type.PSY { background: #e8c22a !important; color: #333333 !important; }
+.light-mode .INT, .light-mode .type.INT { background: #c45ab8 !important; color: white !important; }
+
+/* Type hover - show type's own color */
+.light-mode .filter.type.STR:hover { background: #ff6655 !important; }
+.light-mode .filter.type.QCK:hover { background: #66b0ff !important; }
+.light-mode .filter.type.DEX:hover { background: #66cc77 !important; }
+.light-mode .filter.type.PSY:hover { background: #ffcc44 !important; }
+.light-mode .filter.type.INT:hover { background: #dd77dd !important; }
+
+/* Type active - show type's own saturated color */
+.light-mode .filter.type.STR.active { background: #ff6655 !important; }
+.light-mode .filter.type.QCK.active { background: #66b0ff !important; }
+.light-mode .filter.type.DEX.active { background: #66cc77 !important; }
+.light-mode .filter.type.PSY.active { background: #ffcc44 !important; }
+.light-mode .filter.type.INT.active { background: #dd77dd !important; }
+
+
+/* Override dark mode !important rules */
+.light-mode html, 
+.light-mode body,
+.light-mode .pagination a {
+    background: #f5f5f5 !important;
+}
+
+/* Table wrapper backgrounds */
+.light-mode #mainTable_wrapper,
+.light-mode #mainTable_wrapper > div,
+.light-mode .dataTables_scrollHead,
+.light-mode .dataTables_scrollBody,
+.light-mode #queryContainer,
+.light-mode #tableContainer {
+    background: #f5f5f5 !important;
+}
+
+.light-mode .filter:not(.type):not(.orb):not(.custom),
+.light-mode .filter.custom > div:first-child,
+.light-mode .filter .submatchers .submatcher .submatcher-option {
+    background: #ffffff !important;
+    color: #333333 !important;
+}
+
+.light-mode #leftContainer,
+.light-mode #rightContainer {
+    background: #f5f5f5;
+}
+
+/* Mobile sidebar */
+.light-mode #leftContainer {
+    background: #f5f5f5 !important;
+}
+
+.light-mode #leftContainer,
+.light-mode #rightContainer,
+.light-mode #mainTable,
+.light-mode #mainTable tr,
+.light-mode #mainTable td,
+.light-mode #queryContainer > button,
+.light-mode #burgerMenu,
+.light-mode .dataTables_length > label,
+.light-mode .dataTables_info,
+.light-mode .fuzzy-toggle,
+.light-mode .pagination a,
+.light-mode .paginate_button a {
+    color: #333333;
+}
+
+.light-mode #leftContainer,
+.light-mode #rightContainer {
+    background: #f5f5f5;
+}
+
+.light-mode .filter-header {
+    background: #f5f5f5;
+    color: #333333;
+    border-color: #dddddd;
+}
+
+.light-mode .filter-group-header {
+    background: #e0e0e0 !important;
+    color: #333333 !important;
+}
+
+.light-mode .filter,
+.light-mode .filter.custom > div:first-child,
+.light-mode .filter .submatchers .submatcher .submatcher-option,
+.light-mode .filter:not(.type):not(.orb):not(.custom) {
+    background: #ffffff !important;
+    color: #333333 !important;
+    border-color: #cccccc;
+}
+
+/* Hover - subtle blue for all filters */
+.light-mode .filter:hover,
+.light-mode .filter.custom > div:first-child:hover,
+.light-mode .filter .submatchers .submatcher .submatcher-option:hover {
+    background: #88c0d0 !important;
+}
+
+.light-mode .filter-header-log {
+    background: hsla(157, 90%, 90%, 0.5) !important;
+}
+
+.light-mode .filter-header-pve {
+    background: hsla(220, 85%, 90%, 0.5) !important;
+}
+
+.light-mode .filter-header-pvp {
+    background: hsl(0, 85%, 90%, 0.5) !important;
+}
+
+.light-mode #clear-button,
+.light-mode #toggle-button {
+    background: #f5f5f5;
+    color: #333333;
+}
+
+.light-mode #picker {
+    background: #ffffff;
+    color: #333333;
+}
+
+.light-mode .separator {
+    background: #e0e0e0 !important;
+    color: #333333;
+}
+
+.light-mode .orb-controllers > span.separator {
+    background: #f0f0f0;
+}
+
+.light-mode .custom.filter .submatchers {
+    background-color: #dd6060;
+    color: #ffffff;
+}
+
+.light-mode .custom.filter .submatchers input {
+    color: #333333;
+}
+
+.light-mode #leftContainer .submatcher label input {
+    color: #333333;
+    background: #ffffff;
+}
+
+.light-mode #leftContainer .submatcher .submatcher-option {
+    background-color: #ffffff;
+    color: #333333;
+}
+
+.light-mode #leftContainer .submatcher .submatcher-option:hover {
+    background-color: #e0e0e0;
+}
+
+.light-mode .tt-menu {
+    background: #ffffff;
+    color: #333333;
+    border-color: #cccccc;
+}
+
+.light-mode .tt-cursor {
+    background-color: #e0e0e0;
+}
+
+.light-mode .tt-suggestion:hover {
+    background-color: #e0e0e0;
+}
+
+.light-mode #mainTable.table-striped-column > * > tr > :nth-of-type(odd) {
+    background-color: #ffffff !important;
+}
+
+.light-mode #mainTable.table-striped-column > * > tr > :nth-of-type(even) {
+    background-color: #f5f5f5 !important;
+}
+
+.light-mode #mainTable,
+.light-mode #mainTable tr,
+.light-mode #mainTable td {
+    border-color: #dddddd;
+    color: #333333;
+}
+
+.light-mode .modal-header,
+.light-mode .modal-footer {
+    background-color: #ffffff;
+    color: rgb(40, 40, 40);
+}
+
+.light-mode .modal-body {
+    background-color: #f5f5f5;
+}
+
+.light-mode .details-card {
+    background: #ffffff;
+    border-color: #dddddd;
+}
+
+.light-mode .details-card-header {
+    background: #f2f1f1;
+    border-color: #f2f1f1;
+}
+
+.light-mode .details-card-header:hover {
+    background: #e0e0e0;
+}
+
+.light-mode .details-card-title {
+    color: #333333;
+}
+
+.light-mode .paginate_button.active > a {
+    border-color: #333333 !important;
+    background-color: #e0e0e0 !important;
+}
+
+.light-mode .pagination > li > a {
+    color: #333333;
+}
+
+.light-mode .pagination a:hover {
+    background: #e0e0e0 !important;
+}
+
+.light-mode .pagination > li:hover > a {
+    color: #333333;
+}
+
+.light-mode .cost-value-display,
+.light-mode .rumble-cost-value-display {
+    color: #333333;
+}
+
+.light-mode .quick-nav {
+    background: #f5f5f5;
+    border-color: #dddddd;
+}
+
+.light-mode .quick-nav .btn:hover {
+    background: #e0e0e0;
+}
+
+.light-mode .filter-container:last-child > .filter:last-child {
+    border-color: #cccccc;
+}
+
+.light-mode .filter.orb {
+    outline: 1px solid #333333;
+}
+
 body, html {
     height: 100%;
     font-family: 'PT Sans', sans-serif;
@@ -1033,7 +1294,6 @@ tr.preview td:nth-child(2) > a:after {
 
 .modal-header,
 .modal-footer {
-    background-color: #428bca;
     color: white;
 }
 
@@ -1316,6 +1576,34 @@ unit > a {
     scrollbar-color: #5a5a5a #969696;
 }
 
+/* Light mode scrollbars */
+.light-mode ::-webkit-scrollbar-track {
+    background: #e0e0e0;
+}
+
+.light-mode ::-webkit-scrollbar-thumb {
+    background: #aaaaaa;
+    border-radius: 4px;
+}
+
+.light-mode ::-webkit-scrollbar-thumb:hover {
+    background: #888888;
+}
+
+.light-mode * {
+    scrollbar-color: #c5c5c5 #e0e0e0;
+}
+
+/* Light mode link colors */
+.light-mode a { color: #2a7a7a; }
+.light-mode a:hover { color: #1a5a5a; }
+
+/* Light mode cell type colors - more saturated */
+.light-mode .cell-STR { color: #e03030 !important; }
+.light-mode .cell-QCK { color: #3080e0 !important; }
+.light-mode .cell-DEX { color: #30a030 !important; }
+.light-mode .cell-PSY { color: #d4a020 !important; }
+.light-mode .cell-INT { color: #a030a0 !important; }
 
 
 /* Cost Slider - minimal spacing only */
@@ -1511,6 +1799,13 @@ a { color: #8acccf; }
 @media (max-width: 1024px) {
     #rightContainer, #leftContainer {
       background:   #404040;
+    }
+}
+
+@media (max-width: 1024px) {
+    .light-mode #rightContainer,
+    .light-mode #leftContainer {
+      background:   #f5f5f5;
     }
 }
 

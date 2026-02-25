@@ -3598,6 +3598,16 @@ window.drops = {
             'Defeat Level Rewards': [ 4510 ],
         },
 
+        {
+            name: 'Shiryu',
+            dropID: 'pka34',
+            thumb: 4526,
+            global: true,
+            nakama: null,
+            gamewith: null,
+            'Defeat Level Rewards': [ 4526 ],
+        },
+
     ],
 
 
@@ -9789,6 +9799,13 @@ window.drops = {
         {
             name: 'VS Five Elders Blitz Battle!',
             thumb: 4491,
+            global: true,
+            nakama: null,
+        },
+
+        {
+            name: 'VS "Emperor" Blackbeard Pirates',
+            thumb: 4522,
             global: true,
             nakama: null,
         },
