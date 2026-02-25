@@ -56,6 +56,7 @@
       var result = [
         { title: "ID" },
         { title: "Name", render: addImage },
+        { title: "Evolutions", orderable: false },
         { title: "Type" },
         { title: "Class" },
         { title: "HP" },
@@ -1418,6 +1419,7 @@ var flags = window.flags[unit.id] || {};
         var result = [
           ("000" + parseInt(x.id, 10)).slice(-padding),
           x.name,
+          "",
           combinedType,
 
           combinedClass && Array.isArray(combinedClass) ? combinedClass.join(", ") : (combinedClass || ""),
@@ -1428,7 +1430,6 @@ var flags = window.flags[unit.id] || {};
           x.sockets || 0,
           x.stars || 0,
           "",
-          parseInt(x.id, 10),
         ];
         additionalColumns.forEach(function (c, n) {
           var temp = 0;
@@ -1499,7 +1500,7 @@ var flags = window.flags[unit.id] || {};
           )
             temp = "&#8734;";
           if (temp && temp.constructor != String && isNaN(temp)) temp = 0;
-          result.splice(result.length - 2, 0, temp);
+          result.splice(result.length - 1, 0, temp);
         });
         return result;
       });

@@ -1585,3 +1585,30 @@ a { color: #8acccf; }
 .quick-nav .btn:hover {
     background: #e9ecef;
 }
+
+/* Evolutions column styles */
+.evo-col {
+    min-width: 70px !important;
+    text-align: center;
+    vertical-align: middle !important;
+}
+
+.evo-thumb {
+    width: 25px;
+    height: 25px;
+    margin: 1px;
+    border: 1px solid #555;
+    border-radius: 3px;
+}
+
+.evo-pre, .evo-next {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+}
+
+.evo-divider {
+    opacity: 0.5;
+}

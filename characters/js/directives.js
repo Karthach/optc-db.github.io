@@ -14,6 +14,26 @@
 		$compile,
 		$storage
 	) {
+		function hasEvolution(unitId) {
+			return window.evolutions && window.evolutions[unitId];
+		}
+		function getEvolutionId(unitId) {
+			if (!window.evolutions || !window.evolutions[unitId]) return null;
+			var evo = window.evolutions[unitId].evolution;
+			return Array.isArray(evo) ? evo[0] : evo;
+		}
+		function getPreEvolutionId(unitId) {
+			if (!window.evolutions) return null;
+			for (var id in window.evolutions) {
+				var evo = window.evolutions[id].evolution;
+				if (Array.isArray(evo)) {
+					if (evo.indexOf(unitId) !== -1) return parseInt(id);
+				} else {
+					if (evo === unitId) return parseInt(id);
+				}
+			}
+			return null;
+		}
 		return {
 			restrict: "E",
 			replace: true,
@@ -44,10 +64,48 @@
 								id +
 								']"></input></label>'
 						);
-						$(row.cells[10 + scope.table.additional]).append(checkbox);
+						$(row.cells[row.cells.length - 1]).append(checkbox);
+
+						// Evolutions column
+						var evoHtml = '';
+						var evoData = window.evolutions && window.evolutions[id];
+						if (evoData) {
+							// Pre-evolutions (find all units that evolve to this one)
+							var preEvos = [];
+							for (var key in window.evolutions) {
+								var evo = window.evolutions[key].evolution;
+								if (Array.isArray(evo) && evo.includes(id)) preEvos.push(key);
+								else if (evo === id) preEvos.push(key);
+							}
+							if (preEvos.length) {
+								evoHtml += '<div class="evo-pre">';
+								preEvos.forEach(function(preId) {
+									var prePaths = Utils.getThumbnailUrl(preId, '..');
+									evoHtml += '<a ui-sref="main.search.view({ id: ' + preId + '})"><img class="evo-thumb" src="' + prePaths.glo + '" onerror="this.onerror=null;this.src=\'' + prePaths.jap + '\'" title="Pre-evolución #' + preId + '"></a>';
+								});
+								evoHtml += '</div>';
+							}
+							evoHtml += '<div class="evo-divider" style="width:100%;height:2px;background:#ccc;margin:2px 0;"></div>';
+							// Evolutions (all possible evolutions from this unit)
+							var evos = Array.isArray(evoData.evolution) ? evoData.evolution : (evoData.evolution ? [evoData.evolution] : []);
+							if (evos.length) {
+								evoHtml += '<div class="evo-next">';
+								evos.forEach(function(evoId) {
+									var evoPaths = Utils.getThumbnailUrl(evoId, '..');
+									evoHtml += '<a ui-sref="main.search.view({ id: ' + evoId + '})"><img class="evo-thumb" src="' + evoPaths.glo + '" onerror="this.onerror=null;this.src=\'' + evoPaths.jap + '\'" title="Evoluciona a #' + evoId + '"></a>';
+								});
+								evoHtml += '</div>';
+							}
+						}
+						if (row.cells.length > 1) {
+							var evoCell = row.cells[2];
+							evoCell.innerHTML = evoHtml;
+							evoCell.className = "evo-col";
+						}
+
 						// cosmetic fixes
-						var typeBox = row.cells[2];
-						var classBox = row.cells[3];
+						var typeBox = row.cells[3];
+						var classBox = row.cells[4];
 						var type = typeBox.textContent;
 						var classes = classBox.textContent;
 						if (type.indexOf(",") > -1 || type.indexOf("/") > -1) {
