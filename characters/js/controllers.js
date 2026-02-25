@@ -39,6 +39,15 @@
         }
       });
 
+      $scope.theme = $storage.get('optc-theme', 'dark');
+      document.body.classList.toggle('light-mode', $scope.theme === 'light');
+
+      $scope.toggleTheme = function() {
+        $scope.theme = $scope.theme === 'dark' ? 'light' : 'dark';
+        $storage.set('optc-theme', $scope.theme);
+        document.body.classList.toggle('light-mode', $scope.theme === 'light');
+      };
+
       $scope.getRandChar = function () {
         var range = parseInt($rootScope.table.data.length) + 1;
         return $rootScope.table.data[Math.floor(Math.random() * range)][0];
