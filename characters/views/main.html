@@ -8,7 +8,7 @@
     <label for="burgerMenuState" id="burgerMenu" class="fa fa-bars fa-lg"></label>
     
     <input type="text" id="picker" placeholder="type to filter"
-        ng-model="query" ng-model-options="{ updateOn: 'change blur' }" auto-focus>
+        ng-model="query" ng-model-options="{ updateOn: 'default blur', debounce: { 'default': 300, 'blur': 0 } }" auto-focus>
 
     <button ng-if="query" ng-click="clearQuery()" title="clear">
         <i class="fa fa-times"></i>

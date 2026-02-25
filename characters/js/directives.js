@@ -12,7 +12,8 @@
 		$rootScope,
 		$timeout,
 		$compile,
-		$storage
+		$storage,
+		$state
 	) {
 		function hasEvolution(unitId) {
 			return window.evolutions && window.evolutions[unitId];
@@ -29,7 +30,7 @@
 				if (Array.isArray(evo)) {
 					if (evo.indexOf(unitId) !== -1) return parseInt(id);
 				} else {
-					if (evo === unitId) return parseInt(id);
+					if (evo === id) return parseInt(id);
 				}
 			}
 			return null;
@@ -55,53 +56,6 @@
 							x.setAttribute("src", x.getAttribute("data-original"));
 							x.removeAttribute("data-original");
 						});
-						// character log checkbox
-						var id = parseInt(data[0], 10);
-						var checkbox = $(
-							'<label><input type="checkbox" ng-change="checkLog(' +
-								id +
-								')" ng-model="characterLog[' +
-								id +
-								']"></input></label>'
-						);
-						$(row.cells[row.cells.length - 1]).append(checkbox);
-
-						// Evolutions column
-						var evoHtml = '';
-						var evoData = window.evolutions && window.evolutions[id];
-						if (evoData) {
-							// Pre-evolutions (find all units that evolve to this one)
-							var preEvos = [];
-							for (var key in window.evolutions) {
-								var evo = window.evolutions[key].evolution;
-								if (Array.isArray(evo) && evo.includes(id)) preEvos.push(key);
-								else if (evo === id) preEvos.push(key);
-							}
-							if (preEvos.length) {
-								evoHtml += '<div class="evo-pre">';
-								preEvos.forEach(function(preId) {
-									var prePaths = Utils.getThumbnailUrl(preId, '..');
-									evoHtml += '<a ui-sref="main.search.view({ id: ' + preId + '})"><img class="evo-thumb" src="' + prePaths.glo + '" onerror="this.onerror=null;this.src=\'' + prePaths.jap + '\'" title="Pre-evolución #' + preId + '"></a>';
-								});
-								evoHtml += '</div>';
-							}
-							evoHtml += '<div class="evo-divider" style="width:100%;height:2px;background:#ccc;margin:2px 0;"></div>';
-							// Evolutions (all possible evolutions from this unit)
-							var evos = Array.isArray(evoData.evolution) ? evoData.evolution : (evoData.evolution ? [evoData.evolution] : []);
-							if (evos.length) {
-								evoHtml += '<div class="evo-next">';
-								evos.forEach(function(evoId) {
-									var evoPaths = Utils.getThumbnailUrl(evoId, '..');
-									evoHtml += '<a ui-sref="main.search.view({ id: ' + evoId + '})"><img class="evo-thumb" src="' + evoPaths.glo + '" onerror="this.onerror=null;this.src=\'' + evoPaths.jap + '\'" title="Evoluciona a #' + evoId + '"></a>';
-								});
-								evoHtml += '</div>';
-							}
-						}
-						if (row.cells.length > 1) {
-							var evoCell = row.cells[2];
-							evoCell.innerHTML = evoHtml;
-							evoCell.className = "evo-col";
-						}
 
 						// cosmetic fixes
 						var typeBox = row.cells[3];
@@ -144,8 +98,7 @@
 						var n = row.cells.length - 2 - scope.table.additional;
 						$(row.cells[n]).addClass("stars stars-" + row.cells[n].textContent);
 						row.cells[n].textContent = "";
-						// compile
-						$compile($(row).contents())($rootScope);
+						
 						row.setAttribute("loaded", "true");
 					},
 					headerCallback: function (header) {
@@ -157,6 +110,25 @@
 						header.setAttribute("loaded", true);
 					},
 				});
+
+				// Delegated event for checkboxes (High Performance)
+				element.on('change', '.log-checkbox', function() {
+					var id = $(this).data('id');
+					var checked = $(this).is(':checked');
+					scope.$apply(function() {
+						$rootScope.characterLog[id] = checked;
+						$rootScope.checkLog();
+					});
+				});
+
+				// Delegated event for character links (Restore click functionality)
+				element.on('click', '.char-link', function() {
+					var id = $(this).data('id');
+					scope.$apply(function() {
+						$state.go('main.search.view', { id: id, previous: [] });
+					});
+				});
+
 				scope.table.refresh = function () {
 					$rootScope.$emit("table.refresh");
 					$timeout(function () {

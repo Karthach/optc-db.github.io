@@ -6,6 +6,20 @@
 
     var additionalColumns = $storage.get("charColumns", []);
 
+    // PRE-CALCULATE EVOLUTION MAPS FOR PERFORMANCE
+    var preEvoMap = {};
+    if (window.evolutions) {
+      for (var sourceId in window.evolutions) {
+        var evoData = window.evolutions[sourceId].evolution;
+        var targets = Array.isArray(evoData) ? evoData : [evoData];
+        targets.forEach(function(targetId) {
+          if (!targetId) return;
+          if (!preEvoMap[targetId]) preEvoMap[targetId] = [];
+          if (!preEvoMap[targetId].includes(sourceId)) preEvoMap[targetId].push(sourceId);
+        });
+      }
+    }
+
     var padding =
       Math.floor(Math.log(Object.keys(window.units).length + 2) / Math.log(10)) + 1;
     var table = null;
@@ -22,14 +36,53 @@
           "onerror=\"this.onerror=null; this.src='" +
           paths.jap +
           "'; this.onerror=function(){this.src='" + noimage + "'};\">" +
-          '<a ui-sref="main.search.view({ id: ' +
+          '<a class="char-link" data-id="' +
           id +
-          '})">' +
+          '" style="cursor:pointer;">' +
           data +
           "</a>"
         );
       }
       return data; // only the Name string for filtering, sorting, etc.
+    };
+
+    var renderEvolutions = function (data, type, row, meta) {
+      if (type !== 'display') return "";
+      var id = parseInt(row[11], 10);
+      var evoHtml = '';
+      var preEvos = preEvoMap[id] || [];
+      if (preEvos.length) {
+        evoHtml += '<div class="evo-pre">';
+        preEvos.forEach(function(preId) {
+          var prePaths = Utils.getThumbnailUrl(preId, '..');
+          evoHtml += '<a class="char-link" data-id="' + preId + '" style="cursor:pointer;"><img class="evo-thumb" src="' + prePaths.glo + '" onerror="this.onerror=null;this.src=\'' + prePaths.jap + '\'" title="Pre-evolución #' + preId + '"></a>';
+        });
+        evoHtml += '</div>';
+      }
+      
+      var evoData = window.evolutions && window.evolutions[id];
+      var evos = evoData ? (Array.isArray(evoData.evolution) ? evoData.evolution : (evoData.evolution ? [evoData.evolution] : [])) : [];
+      
+      if (preEvos.length && evos.length) {
+        evoHtml += '<div class="evo-divider" style="width:100%;height:2px;background:#ccc;margin:2px 0;"></div>';
+      }
+
+      if (evos.length) {
+        evoHtml += '<div class="evo-next">';
+        evos.forEach(function(evoId) {
+          var evoPaths = Utils.getThumbnailUrl(evoId, '..');
+          evoHtml += '<a class="char-link" data-id="' + evoId + '" style="cursor:pointer;"><img class="evo-thumb" src="' + evoPaths.glo + '" onerror="this.onerror=null;this.src=\'' + evoPaths.jap + '\'" title="Evoluciona a #' + evoId + '"></a>';
+        });
+        evoHtml += '</div>';
+      }
+      return evoHtml;
+    };
+
+    var renderLog = function (data, type, row, meta) {
+      if (type !== 'display') return "";
+      var id = parseInt(row[11], 10);
+      var checked = characterLog[id] ? 'checked' : '';
+      return '<label><input type="checkbox" class="log-checkbox" data-id="' + id + '" ' + checked + '></input></label>';
     };
 
     var fuse = new Fuse(Object.values(window.units), {
@@ -56,7 +109,7 @@
       var result = [
         { title: "ID" },
         { title: "Name", render: addImage },
-        { title: "Evolutions", orderable: false },
+        { title: "Evolutions", orderable: false, render: renderEvolutions, className: "evo-col" },
         { title: "Type" },
         { title: "Class" },
         { title: "HP" },
@@ -65,7 +118,7 @@
         { title: "Cost" },
         { title: "Sockets" },
         { title: "Stars" },
-        { title: "CL", orderable: false },
+        { title: "CL", orderable: false, render: renderLog },
       ];
       additionalColumns.forEach(function (x) {
         var title = x
@@ -1429,7 +1482,7 @@ var flags = window.flags[unit.id] || {};
           x.cost || 0,
           x.sockets || 0,
           x.stars || 0,
-          "",
+          parseInt(x.id, 10),
         ];
         additionalColumns.forEach(function (c, n) {
           var temp = 0;
