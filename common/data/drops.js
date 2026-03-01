@@ -1251,7 +1251,7 @@ window.drops = {
             'Branded in Shackles': [ -3018, -1883, -2236, -219, -1081, -1322, -1577, -1741, -2481, -789 ],
             'Commotion at Makino\'s Tavern?!': [ -1816, -562, -2475, -257, -750, -1127, -1177, -528, -1658, -2154, -2240 ],
             'Coliseum Executioner': [ -2195, -1001, -2534, -308, -838, -1182, -1408, -1614, -1877, -2203, -2349 ],
-            'Holy Mother\'s Lover: Mother Caramel': [ -4987, -1910, -359, -878, -1175, -1551, -896, -1798, -2306, -2269, -2544 ],
+            'Holy Mother\'s Lover: Mother Caramel': [ -5014, -1910, -359, -878, -1175, -1551, -896, -1798, -2306, -2269, -2544 ],
             'Escapees, Join the Fight!': [ -2601, -2700, -2835, -2563, -2674, -2678, -2702, -2810, -2839 ],
         },
 
@@ -6229,13 +6229,13 @@ window.drops = {
 
         {
             name: 'Coliseum Extra Vs. Coby',
-            thumb: 4995,
+            thumb: 5055,
             showManual: true,
             global: true,
             nakama: 5337301,
             gamewith: null,
             slefty: 'coliseums',
-            'All Difficulties': [ 4994, 4996 ],
+            'All Difficulties': [ 5054, 5056 ],
         },
 
     ],

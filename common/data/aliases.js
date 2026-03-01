@@ -11415,7 +11415,7 @@
 		4250: ["", "", "Koby"],
 		4294: ["", "", "Waifus Oiran Thot Trio"],
 		4365: ["", "", "Trio"],
-		4986: [
+		5013: [
 			"",
 			"",
 			"Kung Fu Luffy",
@@ -11425,7 +11425,7 @@
 			"Another Legend Luffy",
 			"Best Cup of Coffee",
 		],
-		4987: [
+		5014: [
 			"",
 			"",
 			"Kung Fu Luffy",
@@ -11435,15 +11435,15 @@
 			"Another Legend Luffy",
 			"Best Cup of Coffee",
 		],
-		4988: ["", "", "Log Vivi"],
-		4989: ["", "", "Log Vivi"],
-		4990: ["", "", "Log Ace"],
-		4991: ["", "", "Log Ace"],
-		4992: ["", "", "White Swimsuit Pudding", "White Summer Pudding"],
-		4993: ["", "", "White Swimsuit Pudding", "White Summer Pudding"],
-		4994: ["", "", "Neo Coby", "Extra Coby", "EX Coby"],
-		4995: ["", "", "Neo Coby", "Extra Coby", "EX Coby"],
-		4996: ["", "", "Neo Helmeppo", "Extra Helmeppo", "EX Helmeppo"],
+		5029: ["", "", "Log Vivi"],
+		5030: ["", "", "Log Vivi"],
+		5031: ["", "", "Log Ace"],
+		5032: ["", "", "Log Ace"],
+		5046: ["", "", "White Swimsuit Pudding", "White Summer Pudding"],
+		5047: ["", "", "White Swimsuit Pudding", "White Summer Pudding"],
+		5054: ["", "", "Neo Coby", "Extra Coby", "EX Coby"],
+		5055: ["", "", "Neo Coby", "Extra Coby", "EX Coby"],
+		5056: ["", "", "Neo Helmeppo", "Extra Helmeppo", "EX Helmeppo"],
 	};
 
 	const calcGhostStartIDStart = 5000;

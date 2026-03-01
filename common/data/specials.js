@@ -22873,18 +22873,18 @@
             });
         },
     },
-4986: {
+5013: {
         atk: function(p) { return 1.75; },
         type: "type",
     },
-4987: {
+5014: {
         atk: function(p) { return 1.75; },
         type: "type",
     },
-4988: {
+5029: {
         orb: function(p) { return 1.75; },
     },
-4989: {
+5030: {
         orb: function(p) { return 1.75; },
     },
 };
