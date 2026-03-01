@@ -4869,24 +4869,24 @@ window.sailors = {
         hpStatic: function(p) { return p.unit.type == "INT" ? 50 : 0; },
         rcvStatic: function(p) { return p.unit.type == "INT" ? 50 : 0; },
     },
-4986: {
+5013: {
         staticMult: function(p) { return 3; }
     },
-4987: {
+5014: {
         staticMult: function(p) { return 3; }
     },
-4988: {
+5029: {
         atkStatic: function(p) { return p.slot <= 1 ? 60 : 0; },
     },
-4989: {
+5030: {
         atkStatic: function(p) { return p.slot <= 1 ? 60 : 0; },
     },
-4994: {
+5054: {
         atkStatic: function(p) { return 50; },
         hpStatic: function(p) { return 50; },
         rcvStatic: function(p) { return 50; },
     },
-4995: {
+5055: {
         atkStatic: function(p) { return 50; },
         hpStatic: function(p) { return 50; },
         rcvStatic: function(p) { return 50; },
