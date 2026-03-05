@@ -434,6 +434,130 @@
 
 	// Structure will be changed to window.matchers[target][matcherGroup]
 	let matchers = {
+		"Auto+": [
+
+			{
+				name: "Activates: Special",
+				targets: ["support"],
+				regex:
+					/When you reach the (\d+)\w{2} stage, activates supported character's Special/i,
+				submatchers: [
+					{
+						type: "option",
+						description: "1st",
+						regex: /1/i,
+						groups: [1],
+						radioGroup: "sub",
+						cssClasses: ["min-width-3"],
+					},
+					{
+						type: "option",
+						description: "2nd",
+						regex: /2/i,
+						groups: [1],
+						radioGroup: "sub",
+						cssClasses: ["min-width-3"],
+					},
+					{
+						type: "option",
+						description: "3rd",
+						regex: /3/i,
+						groups: [1],
+						radioGroup: "sub",
+						cssClasses: ["min-width-3"],
+					},
+					{
+						type: "option",
+						description: "4th",
+						regex: /4/i,
+						groups: [1],
+						radioGroup: "sub",
+						cssClasses: ["min-width-3"],
+					},
+				],
+			},
+			{
+				name: "Activates: Super Effect",
+				targets: ["support"],
+				regex:
+					/When you reach the (\d+)\w{2} stage, activates supported character's Super Effect/i,
+				submatchers: [
+					{
+						type: "option",
+						description: "1st",
+						regex: /1/i,
+						groups: [1],
+						radioGroup: "sub",
+						cssClasses: ["min-width-3"],
+					},
+					{
+						type: "option",
+						description: "2nd",
+						regex: /2/i,
+						groups: [1],
+						radioGroup: "sub",
+						cssClasses: ["min-width-3"],
+					},
+					{
+						type: "option",
+						description: "3rd",
+						regex: /3/i,
+						groups: [1],
+						radioGroup: "sub",
+						cssClasses: ["min-width-3"],
+					},
+					{
+						type: "option",
+						description: "4th",
+						regex: /4/i,
+						groups: [1],
+						radioGroup: "sub",
+						cssClasses: ["min-width-3"],
+					},
+				],
+			},
+			{
+				name: "Activates: Switch Effect",
+				targets: ["support"],
+				regex:
+					/When you reach the (\d+)\w{2} stage, activates supported character's Switch Effect/i,
+				submatchers: [
+					{
+						type: "option",
+						description: "1st",
+						regex: /1/i,
+						groups: [1],
+						radioGroup: "sub",
+						cssClasses: ["min-width-3"],
+					},
+					{
+						type: "option",
+						description: "2nd",
+						regex: /2/i,
+						groups: [1],
+						radioGroup: "sub",
+						cssClasses: ["min-width-3"],
+					},
+					{
+						type: "option",
+						description: "3rd",
+						regex: /3/i,
+						groups: [1],
+						radioGroup: "sub",
+						cssClasses: ["min-width-3"],
+					},
+					{
+						type: "option",
+						description: "4th",
+						regex: /4/i,
+						groups: [1],
+						radioGroup: "sub",
+						cssClasses: ["min-width-3"],
+					},
+				],
+			},
+		],
+
 		Damage: [
 			{
 				name: "Old Damage dealer",
@@ -4120,6 +4244,8 @@
 				regex: /converts Color Affinity into a Stackable Color Affinity/i,
 			},
 		],
+
+		
 		"Ability Requirements": [
 			{
 				name: "Turn Limited Effects",
@@ -8244,10 +8370,10 @@
 			},
 
 			{
-				name: "End of Turn Damage/Percent Cut",
+				name: "End of Turn Damage",
 				targets: ["special", "superSpecial", "swap", "support"],
 				regex:
-					/(?:reduces|removes) enemies[^."]+?End of Turn Damage\/Percent Cut[^."]+?duration (?:by ([?\d]+)(?:-([?\d]+))? turns?|(completely))(?:, by ([?\d]+)(?:-([?\d]+))? turns?)?/i,
+					/(?:reduces|removes) enemies[^."]+?End of Turn Damage(?:\/Percent Cut)?[^."]+?duration (?:by ([?\d]+)(?:-([?\d]+))? turns?|(completely))(?:, by ([?\d]+)(?:-([?\d]+))? turns?)?/i,
 				submatchers: [
 					{
 						type: "number",
@@ -11454,12 +11580,12 @@
 				name: "Sub Switch",
 				targets: ["rumbleSpecial"],
 				regex:
-					/Switches (self) with (1st|2nd|3rd) sub character./i,
+					/Switches (self) with (\d+)\w{2} sub character./i,
 				submatchers: [
 					{
 						type: "option",
 						description: "1st",
-						regex: /1st/i,
+						regex: /1/i,
 						radioGroup: "sub",
 						groups: [2],
 						cssClasses: ["min-width-3"],
@@ -11467,7 +11593,7 @@
 					{
 						type: "option",
 						description: "2nd",
-						regex: /2nd/i,
+						regex: /2/i,
 						radioGroup: "sub",
 						groups: [2],
 						cssClasses: ["min-width-3"],
@@ -11475,7 +11601,7 @@
 					{
 						type: "option",
 						description: "3rd",
-						regex: /3rd/i,
+						regex: /3/i,
 						radioGroup: "sub",
 						groups: [2],
 						cssClasses: ["min-width-3"],
@@ -13074,6 +13200,86 @@
 				targets: ["gpSpecial"],
 				regex:
 					/([.\d]+)% chance to evade[^.]+Paralysis[^.]+to (?=((?:[^c]+|c(?!rew))*))\2crew members?(?: with [^.]+ (ATK|DEF|HP|RCV|SPD|Special CT))?(?: for (\d+) seconds)?/i,
+				submatchers: [
+					{
+						type: "number",
+						description: "Chance:",
+						groups: [1],
+					},
+					{
+						type: "number",
+						description: "Duration:",
+						groups: [4],
+					},
+					{
+						type: "separator",
+						description: "Targeting:",
+					},
+					{
+						type: "option",
+						description: "Universal",
+						regex: /all/i,
+						groups: [2],
+						cssClasses: ["min-width-6"],
+					},
+					{
+						type: "separator",
+						description: "Types:",
+					},
+					...createTypesSubmatchers([2]),
+					{
+						type: "separator",
+						description: "Classes:",
+					},
+					...createClassesSubmatchers([2]),
+				],
+			},
+
+			{
+				name: "RCV Bind",
+				targets: ["rumbleSpecial"],
+				regex:
+					/([.\d]+)% chance to evade[^.]+RCV Bind[^.]+to (self|(?=((?:[^c]+|c(?!rew))*))\3crew members?)(?:, excluding self,)?(?: with [^.]+ (ATK|DEF|HP|RCV|SPD|Special CT))?(?: for (\d+) seconds)?/i,
+				submatchers: [
+					{
+						type: "number",
+						description: "Chance:",
+						groups: [1],
+					},
+					{
+						type: "number",
+						description: "Duration:",
+						groups: [5],
+					},
+					{
+						type: "separator",
+						description: "Targeting:",
+					},
+					{
+						type: "option",
+						description: "Universal",
+						regex: /all/i,
+						groups: [2],
+						cssClasses: ["min-width-6"],
+					},
+					{
+						type: "separator",
+						description: "Types:",
+					},
+					...createTypesSubmatchers([2]),
+					{
+						type: "separator",
+						description: "Classes:",
+					},
+					...createClassesSubmatchers([2]),
+				],
+			},
+
+			{
+				name: "RCV Bind",
+				targets: ["gpSpecial"],
+				regex:
+					/([.\d]+)% chance to evade[^.]+RCV Bind[^.]+to (?=((?:[^c]+|c(?!rew))*))\2crew members?(?: with [^.]+ (ATK|DEF|HP|RCV|SPD|Special CT))?(?: for (\d+) seconds)?/i,
 				submatchers: [
 					{
 						type: "number",
