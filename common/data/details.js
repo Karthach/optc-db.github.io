@@ -181933,6 +181933,310 @@ window.details = {
             }
         ]
     },
+    4532: {//Doc Q & Strongheart
+        captain: "Reduces Special Cooldown of all characters by 1 turn at the start of the fight, boosts ATK of [QCK] and [INT] characters by 4x, by 6x instead following a chain of [INT] > [QCK] > [INT] attacks no lower than GOOD, boosts HP of [QCK] and [INT] characters by 1.35x, and makes [QCK], [INT] and [BOMB] orbs beneficial for [QCK] and [INT] characters. Up to 4 times per adventure, when Marshall D. Teach (Blackbeard), Jesus Burgess (Mr. Store), Shiryu, Avalo Pizarro, Lafitte, Catarina Devon, San Juan Wolf, Vasco Shot, Van Ogre or Kuzan (Aokiji) uses a special as crewmate, boosts Final Tap ATK of all characters by 25%. If your crew has 3+ [Blackbeard Pirates] characters, reduces Despair duration by 10 turns, and [BOMB] and [SUPERBOMB] orbs will deal 100% less damage to the crew.",
+        special: "Reduces enemies' Resilience duration by 6 turns, reduces ATK Down duration by 6 turns, boosts Base ATK of [QCK] and [INT] characters by 1,750 for 1 turn, and changes all orbs, including [BLOCK] orbs, into [BOMB] orbs. If HP is below 30% when the special is activated and your crew has 3+ [Blackbeard Pirates] characters, ignores Debuff Protection and inflicts all enemies with Weaken by 1.5x, by 1.95x if enemies are inflicted with Increase Damage Taken, for 1 turn. If an [INT] character is supporting this character, reduces enemies' damage received by 50% for 3 turns, and reduces damage received by 80% for 1 turn. If a [QCK] character is supporting this character, adds 1.4x to chain multiplier for 1 turn.",
+        specialName: "Red Fruit Bombardment",
+        sailor: {
+            base: "Boosts base ATK of all characters by 75, and makes [RCV] and [BOMB] orbs beneficial for all characters.",
+            level1: "Reduces Special Bind duration by 6 turns on this character. If HP is below 30%, boosts base ATK of this character by 600."
+        },
+        superSpecialCriteria: "Can be launched as crewmate. Your crew must consist of any 3 of the following, excluding supports and counting only 1 per unit: [Blackbeard Pirates] characters",
+        superSpecial: "Reduces Special Cooldown of [QCK] and [INT] characters by 2 turns, reduces damage received by 80% for 1 turn, increases Orb Effects of beneficial [QCK] and [BOMB] orbs to 3x for 1 turn, allows crew to perform Super Tandem with [RCV] and [BOMB] orbs for 2 turns, and transforms Free Spirit characters into Super Free Spirit characters.",
+        support: [
+            {
+                Characters: "[Blackbeard Pirates] characters",
+                description: [
+                    "Once per adventure, when an enemy inflicts you with ATK Down, reduces ATK Down duration by 1 turn.",
+                    "Once per adventure, when an enemy inflicts you with ATK Down, reduces ATK Down duration by 1 turn.",
+                    "Once per adventure, when an enemy inflicts you with ATK Down, reduces ATK Down duration by 2 turns.",
+                    "Once per adventure, when an enemy inflicts you with ATK Down, reduces ATK Down duration by 2 turns.",
+                    "Once per adventure, when an enemy inflicts you with ATK Down, reduces ATK Down duration by 3 turns."
+                ]
+            }
+        ],
+        limit: [
+            "Boosts base ATK by 20",
+            "Boosts base RCV by 20",
+            "Boosts base HP by 20",
+            "Acquire Potential 1: No Healing",
+            "Boosts base HP by 20",
+            "Boosts base ATK by 20",
+            "Boosts base RCV by 20",
+            "Boosts base HP by 20",
+            "Boosts base HP by 20",
+            "Boosts base ATK by 20",
+            "Boosts base RCV by 20",
+            "Boosts base ATK by 30",
+            "Boosts base HP by 20",
+            "Boosts base ATK by 40",
+            "Acquire Potential 2: Enrage/Increase Damage Taken",
+            "Reduce base Special Cooldown by 1 turn",
+            "Boosts base HP by 20",
+            "Boosts base RCV by 20",
+            "Boosts base ATK by 50",
+            "Boosts base RCV by 20",
+            "Boosts base HP by 30",
+            "Boosts base HP by 40",
+            "Boosts base HP by 50",
+            "Boosts base HP by 60",
+            "Acquire Sailor Ability 2: Reduces character's Special Bind duration by 6 turns, and when remaining HP is 30% or below, boosts character's base ATK by 600",
+            "Boosts base RCV by 50",
+            "Boosts base ATK by 60",
+            "Boosts base RCV by 50",
+            "Boosts base ATK by 60",
+            "Acquire Potential 3: Last Tap",
+            "LOCKED WITH KEY",
+            "Boosts base HP by 100",
+            "Boosts base ATK by 50",
+            "Boosts base RCV by 50",
+            "Boosts base HP by 100",
+            "Boosts base ATK by 50",
+            "Boosts base HP by 150",
+            "Boosts base HP by 150",
+            "Boosts base ATK by 100",
+            "Reduce base Special Cooldown by 1 turn"
+        ],
+        potential: [
+            {
+                Name: "No Healing",
+                description: [
+                    "Reduces No Healing duration by 1 turn",
+                    "Reduces No Healing duration by 2 turns",
+                    "Reduces No Healing duration by 3 turns",
+                    "Reduces No Healing duration by 4 turns",
+                    "Reduces No Healing duration by 5 turns"
+                ]
+            },
+            {
+                Name: "Enrage/Increase Damage Taken",
+                description: [
+                    "Boosts base ATK by 75 the turn after taking damage and reduces Increase Damage Taken duration by 1 turn",
+                    "Boosts base ATK by 100 the turn after taking damage and reduces Increase Damage Taken duration by 1 turn",
+                    "Boosts base ATK by 150 the turn after taking damage and reduces Increase Damage Taken duration by 2 turns",
+                    "Boosts base ATK by 200 the turn after taking damage and reduces Increase Damage Taken duration by 2 turns",
+                    "Boosts base ATK by 300 the turn after taking damage and reduces Increase Damage Taken duration by 3 turns"
+                ]
+            },
+            {
+                Name: "Last Tap",
+                description: [
+                    "Obtain Last Tap Lv.1",
+                    "Obtain Last Tap Lv.2",
+                    "Obtain Last Tap Lv.3",
+                    "Obtain Last Tap Lv.4",
+                    "Obtain Last Tap Lv.5"
+                ]
+            }
+        ],
+        lastTap: {
+            condition: "On the last stage. When HP is below 30% and your crew must consist of any 2 of the following, excluding Supports and counting only 1 per unit: Marshall D. Teach (Blackbeard), Jesus Burgess (Mr. Store), Shiryu, Avalo Pizarro, Lafitte, Catarina Devon, San Juan Wolf, Vasco Shot, Van Ogre, Kuzan (Aokiji)",
+            description: [
+                "Adds 0.2x of damage dealt by normal attacks of other characters this turn on top of the final damage.",
+                "Adds 0.4x of damage dealt by normal attacks of other characters this turn on top of the final damage.",
+                "Adds 0.6x of damage dealt by normal attacks of other characters this turn on top of the final damage.",
+                "Adds 0.8x of damage dealt by normal attacks of other characters this turn on top of the final damage.",
+                "Adds 1.0x of damage dealt by normal attacks of other characters this turn on top of the final damage."
+            ]
+        }
+    },
+    4533: {//Jesus Burgess
+        captain: "Reduces Special Cooldown of all characters by 1 turn at the start of the fight, boosts ATK of Driven and Fighter characters by 3.5x, boosts HP of Driven and Fighter characters by 1.4x, makes [INT] orbs beneficial for Driven and Fighter characters, and reduces damage received by 15%. If you use \"Throw of Monstrous Might\", boosts ATK of this character by 4.2x in this turn instead.",
+        special: "Reduces crew's current HP by 90%, deals 50x the amount of HP subtracted in Typeless damage to all enemies, reduces Chain Coefficient Reduction, Burn and Bleed duration by 6 turns, and inflicts all enemies with Increase Damage Taken by 2.25x for 1 turn. If enemies have Full Immunity or Increase Damage Taken when the special is activated, boosts ATK of Driven and Fighter characters by 2.5x for 3 turns. If your crew has 3+ [Blackbeard Pirates] characters, activates HP Guard of 75% effect for 1 turn, and sets Chain Boundaries to 2.25x and 15.0x for 1 turn.",
+        specialName: "Throw of Monstrous Might",
+        sailor: {
+            base: "Removes Stun duration completely on this character.",
+            level1: "Boosts base ATK of Driven and Fighter characters by 100, and makes [INT] orbs beneficial for Driven and Fighter characters."
+        },
+        superSpecialCriteria: "Can be launched as crewmate. Your crew must consist of any 3 of the following, excluding supports and counting only 1 per unit: [Blackbeard Pirates] characters",
+        superSpecial: "Recovers 50% of crew's MAX HP, and transforms [INT] characters into Super [INT] characters.",
+        support: [
+            {
+                Characters: "[Blackbeard Pirates] characters",
+                description: [
+                    "Adds 3% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV.",
+                    "Adds 4% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV.",
+                    "Adds 5% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV.",
+                    "Adds 7% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV.",
+                    "Adds 10% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV."
+                ]
+            }
+        ],
+        limit: [
+            "Boosts base ATK by 20",
+            "Boosts base HP by 60",
+            "Boosts base RCV by 10",
+            "Acquire Potential 1: Enrage/Increase Damage Taken",
+            "Boosts base RCV by 20",
+            "Boosts base ATK by 20",
+            "Boosts base RCV by 20",
+            "Acquire 1 additional Socket slot",
+            "Boosts base ATK by 30",
+            "Boosts base HP by 70",
+            "Boosts base HP by 70",
+            "Acquire Sailor Ability 2: Boosts Driven and Fighter characters' base ATK by 100, and makes their [INT] slots have matching slot effects",
+            "Boosts base ATK by 30",
+            "Reduce base Special Cooldown by 1 turn",
+            "Acquire Potential 2: Cooldown Reduction"
+        ],
+        potential: [
+            {
+                Name: "Enrage/Increase Damage Taken",
+                description: [
+                    "Boosts base ATK by 75 the turn after taking damage and reduces Increase Damage Taken duration by 1 turn",
+                    "Boosts base ATK by 100 the turn after taking damage and reduces Increase Damage Taken duration by 1 turn",
+                    "Boosts base ATK by 125 the turn after taking damage and reduces Increase Damage Taken duration by 1 turn",
+                    "Boosts base ATK by 150 the turn after taking damage and reduces Increase Damage Taken duration by 1 turn",
+                    "Boosts base ATK by 200 the turn after taking damage and reduces Increase Damage Taken duration by 2 turns"
+                ]
+            },
+            {
+                Name: "Cooldown Reduction",
+                description: [
+                    "Reduces Special Cooldown of this character by 1 turn at the start of the fight",
+                    "Reduces Special Cooldown of this character by 2 turns at the start of the fight",
+                    "Reduces Special Cooldown of this character by 4 turns at the start of the fight",
+                    "Reduces Special Cooldown of this character by 6 turns at the start of the fight",
+                    "Reduces Special Cooldown of this character by 8 turns at the start of the fight"
+                ]
+            }
+        ]
+    },
+    4534: {//Van Ogre
+        captain: "Boosts ATK of Shooter and Driven characters by 3.75x, and boosts RCV of Shooter and Driven characters by 1.2x.",
+        special: "Reduces enemies' Increased Defense duration by 4 turns, and reduces Special Bind duration by 4 turns. If HP is below 30% when the special is activated and your crew has 3+ [Blackbeard Pirates] characters, boosts Crew Damage Reduction to ATK of Shooter and Driven characters by 1x-1.5x, proportional to the strength of crew's Percent Damage Reduction buff, for 1 turn.",
+        specialName: "Stepping Foot on Hostile Ground",
+        sailor: "Reduces Blindness duration by 3 turns.",
+        support: [
+            {
+                Characters: "[Blackbeard Pirates] characters",
+                description: [
+                    "Once per adventure, when the supported character uses an ATK Up or Chain Addition special, reduces ATK Down duration by 1 turn, reduces enemies' Increased Defense duration by 1 turn, and reduces enemies' damage received by 40% for 6 turns.",
+                    "Once per adventure, when the supported character uses an ATK Up or Chain Addition special, reduces ATK Down duration by 1 turn, reduces enemies' Increased Defense duration by 1 turn, and reduces enemies' damage received by 40% for 6 turns.",
+                    "Once per adventure, when the supported character uses an ATK Up or Chain Addition special, reduces ATK Down duration by 2 turns, reduces enemies' Increased Defense duration by 2 turns, and reduces enemies' damage received by 40% for 6 turns.",
+                    "Once per adventure, when the supported character uses an ATK Up or Chain Addition special, reduces ATK Down duration by 2 turns, reduces enemies' Increased Defense duration by 2 turns, reduces enemies' [QCK] and [INT] resistance by -10% for 1 turn, and reduces enemies' damage received by 40% for 6 turns.",
+                    "Once per adventure, when the supported character uses an ATK Up or Chain Addition special, reduces ATK Down duration by 3 turns, reduces enemies' Increased Defense duration by 3 turns, reduces enemies' [QCK] and [INT] resistance by -10% for 1 turn, and reduces enemies' damage received by 40% for 6 turns. <b>[AUTO+]</b> When you reach the 2nd stage, activates supported character's Super Effect."
+                ]
+            }
+        ]
+    },
+    4535: {//Smoker
+        captain: "Reduces Special Cooldown of [QCK] characters by 1 turn and reduces VS Gauge and Switch Effect of [QCK] characters by 1 at the start of the fight, boosts ATK of [QCK] characters by 4.5x-5.5x, by an additive 0.2x after each PERFECT in a row, and boosts HP of [QCK] characters by 1.3x. If your crew has 3+ [Navy] characters, increases duration of any ATK Up and Orb Amplification buffs applied by specials by 2 turns.",
+        special: "Deals 150x character's ATK in Typeless Fixed True damage to one enemy, reduces Burn and ATK Down duration by 6 turns, and applies Burn and ATK Down Immunity for 5 turns. If your crew has ATK Up when the special is activated, boosts Orb Effects of [QCK] characters by 2.75x for 1 turn; boosts ATK of [QCK] characters by 3x for 1 turn otherwise.",
+        specialName: "Rushing to the Objective",
+        sailor: {
+            level1: "This character cannot be Blown Away.",
+            level2: "Makes [QCK] orbs beneficial for all characters."
+        },
+        superSpecialCriteria: "Can be launched as crewmate. If your crew has an ATK UP or Orb Amplification buff",
+        superSpecial: "Increases duration of any ATK Up and Orb Amplification buffs by 1 turn, increases boost effects of ATK Up and Orb Amplification buffs by +0.25x, and transforms [QCK] characters into Super [QCK] characters.",
+        support: [
+            {
+                Characters: "[QCK] characters",
+                description: [
+                    "Once per adventure, when the supported character uses a Damage Dealing or Health Cutting special, boosts ATK of [QCK] characters by 1.5x for 1 turn.",
+                    "Once per adventure, when the supported character uses a Damage Dealing or Health Cutting special, boosts ATK of [QCK] characters by 1.55x for 1 turn.",
+                    "Once per adventure, when the supported character uses a Damage Dealing or Health Cutting special, boosts ATK of [QCK] characters by 1.6x for 1 turn.",
+                    "Once per adventure, when the supported character uses a Damage Dealing or Health Cutting special, boosts ATK of [QCK] characters by 1.65x for 1 turn.",
+                    "Once per adventure, when the supported character uses a Damage Dealing or Health Cutting special, boosts ATK of [QCK] characters by 1.75x for 1 turn."
+                ]
+            }
+        ],
+        limit: [
+            "Boosts base HP by 20",
+            "Boosts base HP by 20",
+            "Boosts base HP by 20",
+            "Acquire Potential 1: Critical Hit",
+            "Boosts base ATK by 10",
+            "Boosts base ATK by 10",
+            "Boosts base RCV by 10",
+            "Boosts base RCV by 10",
+            "Boosts base RCV by 20",
+            "Acquire Sailor Ability 1: Character cannot be blown away by attack",
+            "Boosts base ATK by 15",
+            "Boosts base ATK by 15",
+            "Boosts base ATK by 20",
+            "Boosts base ATK by 20",
+            "Acquire Potential 2: Enrage/Increase Damage Taken",
+            "Reduce base Special Cooldown by 1 turn",
+            "Boosts base HP by 30",
+            "Boosts base HP by 30",
+            "Boosts base RCV by 30",
+            "Boosts base RCV by 30",
+            "Boosts base HP by 50",
+            "Boosts base HP by 70",
+            "Boosts base HP by 70",
+            "Boosts base HP by 90",
+            "Acquire Sailor Ability 2: Makes crew's [QCK] slots have matching slot effects",
+            "Boosts base ATK by 30",
+            "Boosts base ATK by 30",
+            "Boosts base HP by 100",
+            "Boosts base ATK by 50",
+            "Acquire Potential 3: Slot Bind",
+            "LOCKED WITH KEY",
+            "Boosts base HP by 50",
+            "Boosts base HP by 100",
+            "Boosts base ATK by 25",
+            "Boosts base ATK by 25",
+            "Boosts base ATK by 50",
+            "Boosts base RCV by 50",
+            "Boosts base HP by 150",
+            "Boosts base HP by 200",
+            "Boosts base ATK by 100"
+        ],
+        lLimit: [
+            null,
+            {
+                rAbility: true
+            },
+            {
+                captain: {
+                    base: "Reduces Special Cooldown of [DEX] and [QCK] characters by 2 turns and reduces VS Gauge and Switch Effect of [DEX] and [QCK] characters by 2 at the start of the fight, boosts ATK of [DEX] and [QCK] characters by 4.5x-5.75x, by an additive 0.25x after each PERFECT in a row, and boosts HP of [DEX] and [QCK] characters by 1.3x. If your crew has 3+ [Navy] characters, increases duration of any ATK Up and Orb Amplification buffs applied by specials by 2 turns, and increases boost effects of ATK Up and Orb Amplification buffs applied by specials by 1.2x (up to 8x)."
+                }
+            },
+            {
+                rSpecial: true
+            },
+            {
+                special: {
+                    base: "Deals 200x character's ATK in Typeless Fixed True damage to one enemy, reduces Burn and ATK Down duration by 6 turns, applies Burn and ATK Down Immunity for 5 turns, and boosts ATK of [DEX] and [QCK] characters by 3.25x for 1 turn. If your crew has ATK Up when the special is activated, boosts Orb Effects of [DEX] and [QCK] characters by 2.75x for 1 turn. If your crew has 3+ [Navy] characters, increases duration of any ATK Up and Orb Amplification buffs by 1 turn, including effects activated in the same ability."
+                },
+                rResilience: true
+            }
+        ],
+        potential: [
+            {
+                Name: "Critical Hit",
+                description: [
+                    "If you hit a PERFECT with this character, there is a 30% chance to deal 5% of this character's attack in extra damage",
+                    "If you hit a PERFECT with this character, there is a 40% chance to deal 6% of this character's attack in extra damage",
+                    "If you hit a PERFECT with this character, there is a 50% chance to deal 7% of this character's attack in extra damage",
+                    "If you hit a PERFECT with this character, there is a 60% chance to deal 8% of this character's attack in extra damage",
+                    "If you hit a PERFECT with this character, there is a 70% chance to deal 10% of this character's attack in extra damage"
+                ]
+            },
+            {
+                Name: "Enrage/Increase Damage Taken",
+                description: [
+                    "Boosts base ATK by 75 the turn after taking damage and reduces Increase Damage Taken duration by 1 turn",
+                    "Boosts base ATK by 100 the turn after taking damage and reduces Increase Damage Taken duration by 1 turn",
+                    "Boosts base ATK by 150 the turn after taking damage and reduces Increase Damage Taken duration by 2 turns",
+                    "Boosts base ATK by 200 the turn after taking damage and reduces Increase Damage Taken duration by 2 turns",
+                    "Boosts base ATK by 300 the turn after taking damage and reduces Increase Damage Taken duration by 3 turns"
+                ]
+            },
+            {
+                Name: "Slot Bind",
+                description: [
+                    "Reduces Slot Bind duration by 3 turns on this character",
+                    "Reduces Slot Bind duration by 5 turns on this character",
+                    "Reduces Slot Bind duration by 7 turns on this character",
+                    "Reduces Slot Bind duration by 10 turns on this character",
+                    "Reduces Slot Bind duration completely on this character"
+                ]
+            }
+        ]
+    },
     5013: {//Kung Fu Luffy
         captain: "Boosts ATK of all characters by 3.5x after the 2nd PERFECTs in a row, by 4x after the 5th PERFECTs in a row and boosts HP of all characters by 1.5x",
         special: "Deals 120x character's ATK in Typeless damage to all enemies, changes orbs of adjacent characters into Matching Orbs, boosts ATK of all characters by 1.75x for 2 turns, reduces any damage received above 5,656 HP by 97% for 2 turns and makes PERFECTs easier to hit for 2 turns",
