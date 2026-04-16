@@ -66,6 +66,7 @@
       $scope.availableTags = window.availableTags;
       $scope.farmableOptions = window.farmableOptions;
       $scope.nonFarmableOptions = window.nonFarmableOptions;
+      $scope.shops = window.shops;
 
       $timeout(function () {
         $scope.$watch(
@@ -301,7 +302,7 @@
       $scope.cooldown = window.cooldowns[String(id)] || null;
       $scope.evolution = window.evolutions[id];
       $scope.families = window.families[id];
-      $scope.farmableVersions = CharUtils.getFarmableVersions(id);
+      $scope.farmableVersions = CharUtils.getFarmableVersions(Utils.searchEvolutionTree(id));
       $scope.displayFamily = $scope.families ? $scope.families.join(" & ") : "";
 
       if (window.rumble[id]) {
