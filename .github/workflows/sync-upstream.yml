@@ -33,6 +33,13 @@ jobs:
           # y te enviará un correo para que lo resuelvas manualmente.
           git merge upstream/master --no-edit
 
+      - name: Fix Typos and Data
+        run: |
+          node common/tests/scripts/fix_typos.cjs
+          # Commitear los arreglos si se ha modificado algo
+          git add common/data/details.js
+          git diff-index --quiet HEAD || git commit -m "chore: auto-fix typos in synced data"
+
       - name: Push Changes
         run: |
           git push origin master
