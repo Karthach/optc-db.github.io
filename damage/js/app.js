@@ -6,7 +6,7 @@ var app = angular.module('optc', [ 'ui.router', 'ui.bootstrap', 'ngSanitize' ]);
  * SharedRootCtrl *
  ******************/
 
-var SharedRootCtrl = function($scope, $rootScope, $timeout) {
+var SharedRootCtrl = function($scope, $rootScope, $timeout, LanguageService) {
 
     $rootScope.data = {
         //setting default values

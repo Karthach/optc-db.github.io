@@ -5,7 +5,7 @@
         <li ui-sref=".effects">
             <div id="profileContainer" ng-class="{ profiled: data.effect }">
                 <i class="fa fa-book"></i>
-                <a>{{data.effect || 'No active map effect'}}</a>
+                <a>{{data.effect || ('NO_MAP_EFFECT' | translate)}}</a>
             </div>
         </li>
 
@@ -13,34 +13,34 @@
             <div id="ship" status="{{data.ship[1]}}" ship-manager>
                 <i class="fa fa-level-up comodity" ui-sref="main.ship"></i>
                 <i class="fa fa-ship"></i>
-                <span>{{ships[data.ship[0]].name}} (lv. {{data.ship[1]}})</span>
+                <span>{{ships[data.ship[0]].name}} ({{ 'LEVEL' | translate }}. {{data.ship[1]}})</span>
                 <div id="ship-background"></div>
             </div>
         </li>
         
         <li>
             <div id="buffs">
-                <i class="fa fa-fist-raised"></i> Custom Universal (for now) Buffs:<br>
-                 ATK: <input type="number" size="4" min="1" max="10" step="0.1" id="customATK" to-int ng-model="data.customATK"></input><br>
-                 Orb: <input type="number" size="4" min="1" max="10" step="0.1" id="customOrb" to-int ng-model="data.customOrb"></input><br>
-                 Affinity: <input type="number" size="4" min="1" max="10" step="0.1" id="customAffinity" to-int ng-model="data.customAffinity"></input><br>
-                 ATK Base: <input type="number" size="5" min="0" max="10000" step="10" id="customATKBase" to-int ng-model="data.customATKBase"></input><br>
-                 Chain Addition: <input type="number" size="4" min="0" max="5" step="0.1" id="customChainAddition" to-int ng-model="data.customChainAddition"></input><br>
-                 Bird Buff: <input type="checkbox" id="birdBuff" ng-model="data.birdBuff"></input>
+                <i class="fa fa-fist-raised"></i> {{ 'CUSTOM_BUFFS' | translate }}<br>
+                 {{ 'ATK' | translate }}: <input type="number" size="4" min="1" max="10" step="0.1" id="customATK" to-int ng-model="data.customATK"></input><br>
+                 {{ 'ORB' | translate }}: <input type="number" size="4" min="1" max="10" step="0.1" id="customOrb" to-int ng-model="data.customOrb"></input><br>
+                 {{ 'AFFINITY' | translate }}: <input type="number" size="4" min="1" max="10" step="0.1" id="customAffinity" to-int ng-model="data.customAffinity"></input><br>
+                 {{ 'ATK_BASE' | translate }} <input type="number" size="5" min="0" max="10000" step="10" id="customATKBase" to-int ng-model="data.customATKBase"></input><br>
+                 {{ 'CHAIN_ADDITION' | translate }} <input type="number" size="4" min="0" max="5" step="0.1" id="customChainAddition" to-int ng-model="data.customChainAddition"></input><br>
+                 {{ 'BIRD_BUFF' | translate }} <input type="checkbox" id="birdBuff" ng-model="data.birdBuff"></input>
             </div>
         </li>
 
         <li>
             <div id="customRainbow">
-                <i class="fa fa-fist-raised"></i> Custom Rainbow Damage:<br>
-                <span ng-repeat="n in ::[].constructor(6) track by $index"><label>Crew {{$index+1}}: <input type="checkbox" class="wheelable" name="rainbowDamage{{$index}}" ng-model="data.rainbowDamage[$index]"></label><br ng-if="$index % 2 == 1"> </span>
+                <i class="fa fa-fist-raised"></i> {{ 'RAINBOW_DMG' | translate }}<br>
+                <span ng-repeat="n in ::[].constructor(6) track by $index"><label>{{ 'CREW' | translate }} {{$index+1}}: <input type="checkbox" class="wheelable" name="rainbowDamage{{$index}}" ng-model="data.rainbowDamage[$index]"></label><br ng-if="$index % 2 == 1"> </span>
             </div>
         </li>
         
         <li>
             <div id="heal">
                 <i class="fa fa-heart"></i>
-                Heal Socket Level: <input type="number" size="2" min="0" max="5" id="healLevel" to-int ng-model="data.healLevel"></input>
+                {{ 'HEAL_SOCKET' | translate }} <input type="number" size="2" min="0" max="5" id="healLevel" to-int ng-model="data.healLevel"></input>
             </div>
         </li>
 
@@ -48,45 +48,45 @@
             <div id="defenseContainer" title="Middle-click or CTRL-click for details" defense-on-click>
                 <i class="fa fa-level-up comodity" ui-sref="main.defense"></i>
                 <i class="fa fa-shield"></i>
-                Enemy Defense: <input type="number" id="defense" min = 0 to-int ng-model="data.defense"></input>
+                {{ 'ENEMY_DEFENSE' | translate }} <input type="number" id="defense" min = 0 to-int ng-model="data.defense"></input>
             </div>
         </li>
 
         <li>
             <div id="enemySuperTypeContainer">
-                <input type="checkbox" name="enemySuperType" ng-model="data.enemySuperType"><span>Enemy Super Type</span>
+                <input type="checkbox" name="enemySuperType" ng-model="data.enemySuperType"><span>{{ 'ENEMY_SUPER_TYPE' | translate }}</span>
             </div>
         </li>
 
         <li>
             <div id="enemyImmunities">
-                <i class="fa fa-shield"></i>Enemy Immunities:<br>
-                <label><input type="checkbox" class="wheelable" name="enemyImmunities.all" ng-model="data.enemyImmunities.all" ng-change="toggleEnemyImmunity(true)"> All</label><br>
-                <label><input type="checkbox" class="wheelable" name="enemyImmunities.burn" ng-model="data.enemyImmunities.burn" ng-change="toggleEnemyImmunity(false)"> Burn</label><br>
-                <label><input type="checkbox" class="wheelable" name="enemyImmunities.def" ng-model="data.enemyImmunities.def" ng-change="toggleEnemyImmunity(false)"> Defense Reduction</label><br>
-                <label><input type="checkbox" class="wheelable" name="enemyImmunities.delay" ng-model="data.enemyImmunities.delay" ng-change="toggleEnemyImmunity(false)"> Delay</label><br>
-                <label><input type="checkbox" class="wheelable" name="enemyImmunities.increaseDamageTaken" ng-model="data.enemyImmunities.increaseDamageTaken" ng-change="toggleEnemyImmunity(false)"> Increase Damage Taken</label><br>
-                <label><input type="checkbox" class="wheelable" name="enemyImmunities.negative" ng-model="data.enemyImmunities.negative" ng-change="toggleEnemyImmunity(false)"> Negative</label><br>
-                <label><input type="checkbox" class="wheelable" name="enemyImmunities.poison" ng-model="data.enemyImmunities.poison" ng-change="toggleEnemyImmunity(false)"> Poison</label><br>
+                <i class="fa fa-shield"></i>{{ 'ENEMY_IMMUNITIES' | translate }}<br>
+                <label><input type="checkbox" class="wheelable" name="enemyImmunities.all" ng-model="data.enemyImmunities.all" ng-change="toggleEnemyImmunity(true)"> {{ 'IMM_ALL' | translate }}</label><br>
+                <label><input type="checkbox" class="wheelable" name="enemyImmunities.burn" ng-model="data.enemyImmunities.burn" ng-change="toggleEnemyImmunity(false)"> {{ 'IMM_BURN' | translate }}</label><br>
+                <label><input type="checkbox" class="wheelable" name="enemyImmunities.def" ng-model="data.enemyImmunities.def" ng-change="toggleEnemyImmunity(false)"> {{ 'IMM_DEF' | translate }}</label><br>
+                <label><input type="checkbox" class="wheelable" name="enemyImmunities.delay" ng-model="data.enemyImmunities.delay" ng-change="toggleEnemyImmunity(false)"> {{ 'IMM_DELAY' | translate }}</label><br>
+                <label><input type="checkbox" class="wheelable" name="enemyImmunities.increaseDamageTaken" ng-model="data.enemyImmunities.increaseDamageTaken" ng-change="toggleEnemyImmunity(false)"> {{ 'IMM_IDT' | translate }}</label><br>
+                <label><input type="checkbox" class="wheelable" name="enemyImmunities.negative" ng-model="data.enemyImmunities.negative" ng-change="toggleEnemyImmunity(false)"> {{ 'IMM_NEGATIVE' | translate }}</label><br>
+                <label><input type="checkbox" class="wheelable" name="enemyImmunities.poison" ng-model="data.enemyImmunities.poison" ng-change="toggleEnemyImmunity(false)"> {{ 'IMM_POISON' | translate }}</label><br>
             </div>
         </li>
 
         <li>
             <div id="enemyBuffs">
-                <i class="fa fa-fist-raised"></i>Other Enemy Buffs<br>
-                <label><input type="checkbox" class="wheelable" name="enemyBuffs.barrier" ng-model="data.enemyBuffs.barrier"> Barrier</label><br>
+                <i class="fa fa-fist-raised"></i>{{ 'OTHER_ENEMY_BUFFS' | translate }}<br>
+                <label><input type="checkbox" class="wheelable" name="enemyBuffs.barrier" ng-model="data.enemyBuffs.barrier"> {{ 'BARRIER' | translate }}</label><br>
             </div>
         </li>
 
         <li>
             <div id="shieldContainer">
                 <i class="fa fa-shield"></i>
-                Barrier: <input min="0" style="color: black; width:40px" type="number" id="comboShield" to-int ng-model="data.comboShield">
+                {{ 'BARRIER' | translate }}: <input min="0" style="color: black; width:40px" type="number" id="comboShield" to-int ng-model="data.comboShield">
                                                                       <select style="color: black" id="comboType" ng-model="data.comboType">
-                                                                        <option value="" selected>Hits</option>
-                                                                        <option value="Good">Good</option>
-                                                                        <option value="Great">Great</option>
-                                                                        <option value="Perfect">Perfect</option>
+                                                                        <option value="" selected>{{ 'HITS' | translate }}</option>
+                                                                        <option value="Good">{{ 'GOOD' | translate }}</option>
+                                                                        <option value="Great">{{ 'GREAT' | translate }}</option>
+                                                                        <option value="Perfect">{{ 'PERFECT' | translate }}</option>
                                                                       </select> 
             </div>
         </li>
@@ -94,33 +94,21 @@
         <li ui-sref=".candy">
             <div id="candyContainer">
                 <i class="fa fa-sliders"></i>
-                <a>Cotton Candies</a>
+                <a>{{ 'CANDIES' | translate }}</a>
             </div>
         </li>
         
         <li>
             <div id="action">
                 <i class="fa fa-check-square"></i>
-                Boosted Abilities: <br><input type="checkbox" name="friend" value="left" ng-model="data.actionleft">Friend/Guest Captain<br><input type="checkbox" name="captain" value="right" ng-model="data.actionright">Captain
-                <!--br>Gear Levels: <br>Friend/Guest Captain: <select style="color: black" id="gearLevelLeft" ng-model="data.gearLevelLeft">
-                                                                        <option value=0 selected>Gear 2</option>
-                                                                        <option value=1>Gear 3</option>
-                                                                        <option value=2>Gear 4: Boundman</option>
-                                                                        <option value=3>Gear 4: Tankman</option>
-                                                                      </select>
-                                <br> Captain: <select style="color: black" id="gearLevelRight" ng-model="data.gearLevelRight">
-                                                                        <option value=0 selected>Gear 2</option>
-                                                                        <option value=1>Gear 3</option>
-                                                                        <option value=2>Gear 4: Boundman</option>
-                                                                        <option value=3>Gear 4: Tankman</option>
-                                                                      </select--> 
+                {{ 'BOOSTED_ABILITIES' | translate }} <br><input type="checkbox" name="friend" value="left" ng-model="data.actionleft">{{ 'FRIEND_CAPTAIN' | translate }}<br><input type="checkbox" name="captain" value="right" ng-model="data.actionright">{{ 'CAPTAIN' | translate }}
             </div>
         </li>
         
         <li>
             <div id="limit">
                 <i class="fa fa-angle-double-up"></i>
-                Limit Break Level:  <button type="button" ng-click="toggleLimitBreakLevels()">Toggle MAX</button> <br>
+                {{ 'LIMIT_BREAK_LEVEL' | translate }}  <button type="button" ng-click="toggleLimitBreakLevels()">{{ 'TOGGLE_MAX' | translate }}</button> <br>
                 <span ng-repeat="n in ::[].constructor(6) track by $index"><input type="number" size="4" id="limitLevel" class="wheelable" name="limit{{$index}}" min=0 max="{{data.team[$index].unit.limitStats.atk.length ? data.team[$index].unit.limitStats.atk.length : 0}}" ng-model="data.team[$index].limit"><br ng-if="$index % 2 == 1"></span>
             </div>
         </li>
@@ -128,7 +116,7 @@
         <li>
             <div id="llimit">
                 <i class="fa fa-angle-double-up"></i>
-                Level Limit Break Level:  <button type="button" ng-click="toggleLLimitBreakLevels()">Toggle MAX</button> <br>
+                {{ 'LEVEL_LIMIT_BREAK_LEVEL' | translate }}  <button type="button" ng-click="toggleLLimitBreakLevels()">{{ 'TOGGLE_MAX' | translate }}</button> <br>
                 <span ng-repeat="n in ::[].constructor(6) track by $index"><input type="number" size="4" id="llimitLevel" class="wheelable" name="llimit{{$index}}" min=0 max="{{data.team[$index].unit.maxLevel == 99 ? 5 : 0}}" ng-model="data.team[$index].llimit"><br ng-if="$index % 2 == 1"></span>
             </div>
         </li>
@@ -136,7 +124,7 @@
         <li>
             <div>
                 <i class="fa fa-atom"></i> 
-                Super Typing: 
+                {{ 'SUPER_TYPING' | translate }} 
             </div>
             <div id="supertypeContainer">
                 <input id="supertypeSTR" type="checkbox" name="STR" ng-model="data.superTypeSTR"><label for="supertypeSTR" 
@@ -156,29 +144,29 @@
         <li>
             <div>
                 <i class="fa fa-toolbox"></i> 
-                Super Class: 
+                {{ 'SUPER_CLASS' | translate }} 
             </div>
             <div id="superclassContainer">
                 <input id="superclassFighter" type="checkbox" name="Fighter" ng-model="data.superClassFighter"><label for="superclassFighter" 
-                    class="width-6 superclass Fighter">Fighter
+                    class="width-6 superclass Fighter">{{ 'CLASS_FIGHTER' | translate }}
                 </label><input id="superclassShooter" type="checkbox" name="Shooter" ng-model="data.superClassShooter"><label for="superclassShooter" 
-                    class="width-6 superclass Shooter">Shooter
+                    class="width-6 superclass Shooter">{{ 'CLASS_SHOOTER' | translate }}
                 </label><input id="superclassSlasher" type="checkbox" name="Slasher" ng-model="data.superClassSlasher"><label for="superclassSlasher" 
-                    class="width-6 superclass Slasher">Slasher
+                    class="width-6 superclass Slasher">{{ 'CLASS_SLASHER' | translate }}
                 </label><input id="superclassStriker" type="checkbox" name="Striker" ng-model="data.superClassStriker"><label for="superclassStriker" 
-                    class="width-6 superclass Striker">Striker
+                    class="width-6 superclass Striker">{{ 'CLASS_STRIKER' | translate }}
                 </label><input id="superclassFreeSpirit" type="checkbox" name="FreeSpirit" ng-model="data.superClassFreeSpirit"><label for="superclassFreeSpirit" 
-                    class="width-6 superclass FreeSpirit">Free Spirit
+                    class="width-6 superclass FreeSpirit">{{ 'CLASS_FREE_SPIRIT' | translate }}
                 </label><input id="superclassCerebral" type="checkbox" name="Cerebral" ng-model="data.superClassCerebral"><label for="superclassCerebral" 
-                    class="width-6 superclass Cerebral">Cerebral
+                    class="width-6 superclass Cerebral">{{ 'CLASS_CEREBRAL' | translate }}
                 </label><input id="superclassPowerhouse" type="checkbox" name="Powerhouse" ng-model="data.superClassPowerhouse"><label for="superclassPowerhouse" 
-                    class="width-6 superclass Powerhouse">Powerhouse
+                    class="width-6 superclass Powerhouse">{{ 'CLASS_POWERHOUSE' | translate }}
                 </label><input id="superclassDriven" type="checkbox" name="Driven" ng-model="data.superClassDriven"><label for="superclassDriven" 
-                    class="width-6 superclass Driven">Driven
+                    class="width-6 superclass Driven">{{ 'CLASS_DRIVEN' | translate }}
                 </label><input id="superclassEvolver" type="checkbox" name="Evolver" ng-model="data.superClassEvolver"><label for="superclassEvolver" 
-                    class="width-6 superclass Evolver">Evolver
+                    class="width-6 superclass Evolver">{{ 'CLASS_EVOLVER' | translate }}
                 </label><input id="superclassBooster" type="checkbox" name="Booster" ng-model="data.superClassBooster"><label for="superclassBooster" 
-                    class="width-6 superclass Booster">Booster
+                    class="width-6 superclass Booster">{{ 'CLASS_BOOSTER' | translate }}
                 </label>
             </div>
         </li>
@@ -186,88 +174,88 @@
         <li ng-show="options.sugarToysEnabled">
             <div id="sugarToy">
                 <i class="fa fa-paw"></i>
-                Hobby-Hobby Transformation:<br>
-                <span ng-repeat="n in ::[].constructor(6) track by $index"><label>Crew {{$index+1}}: <input type="checkbox" class="wheelable" name="sugarToy{{$index}}" ng-model="data.team[$index].sugarToy"></label><br ng-if="$index % 2 == 1"> </span>
-                <button type="button" ng-click="toggleSugarToys()">Toggle All</button>
+                {{ 'SUGAR_TOYS' | translate }}<br>
+                <span ng-repeat="n in ::[].constructor(6) track by $index"><label>{{ 'CREW' | translate }} {{$index+1}}: <input type="checkbox" class="wheelable" name="sugarToy{{$index}}" ng-model="data.team[$index].sugarToy"></label><br ng-if="$index % 2 == 1"> </span>
+                <button type="button" ng-click="toggleSugarToys()">{{ 'TOGGLE_ALL' | translate }}</button>
             </div>
         </li>
 
         <li ng-show="options.vegapunkOptionsEnabled">
             <div id="vegapunkOptions">
                 <i class="fa fa-wrench"></i>
-                Vegapunk Options:<br>
-                <span ng-repeat="n in ::[].constructor(6) track by $index"><label>Effect {{$index+1}}: <input type="checkbox" class="wheelable" name="vegapunkOptions{{$index}}" ng-model="data.vegapunkOptions[$index]"></label></span>
+                {{ 'VEGAPUNK_OPTIONS' | translate }}<br>
+                <span ng-repeat="n in ::[].constructor(6) track by $index"><label>{{ 'SPECIAL' | translate }} {{$index+1}}: <input type="checkbox" class="wheelable" name="vegapunkOptions{{$index}}" ng-model="data.vegapunkOptions[$index]"></label></span>
             </div>
         </li>
 
         <li ng-show="options.tokiStateEnabled">
             <div id="toki">
                 <i class="fa fa-hourglass"></i>
-                Toki-Toki & Selected Character Effects:<br>
-                <span ng-repeat="n in ::[].constructor(6) track by $index"><label>Crew {{$index+1}}: <input type="checkbox" class="wheelable" name="tokiState{$index}}" ng-model="data.team[$index].tokiState"></label><br ng-if="$index % 2 == 1"> </span>
-                <button type="button" ng-click="resetTokiStates()">Reset</button>
+                {{ 'TOKI_EFFECTS' | translate }}<br>
+                <span ng-repeat="n in ::[].constructor(6) track by $index"><label>{{ 'CREW' | translate }} {{$index+1}}: <input type="checkbox" class="wheelable" name="tokiState{$index}}" ng-model="data.team[$index].tokiState"></label><br ng-if="$index % 2 == 1"> </span>
+                <button type="button" ng-click="resetTokiStates()">{{ 'RESET' | translate }}</button>
             </div>
         </li>
 
         <li ng-show="options.cloneEnabled">
             <div id="clone">
                 <i class="fa fa-people-arrows"></i>
-                Clone-Clone Effect:<br>
-                <input type="checkbox" name="cloneCheck1" value="left" ng-model="data.cloneCheck1">Friend/Guest Captain<br>
-                Type: <select style="color: black" name="cars" id="cloneType" ng-model="data.cloneFCType">
+                {{ 'CLONE_EFFECT' | translate }}<br>
+                <input type="checkbox" name="cloneCheck1" value="left" ng-model="data.cloneCheck1">{{ 'FRIEND_CAPTAIN' | translate }}<br>
+                {{ 'TYPE' | translate }}: <select style="color: black" name="cars" id="cloneType" ng-model="data.cloneFCType">
                         <option value="STR" selected>STR</option>
                         <option value="DEX">DEX</option>
                         <option value="QCK">QCK</option>
                         <option value="PSY">PSY</option>
                         <option value="INT">INT</option>
                     </select><br>
-                Class 1: <select style="color: black" name="cars" id="cloneClass" ng-model="data.cloneFCClass1">
-                        <option value="Fighter" selected>Fighter</option>
-                        <option value="Shooter">Shooter</option>
-                        <option value="Slasher">Slasher</option>
-                        <option value="Striker">Striker</option>
-                        <option value="Free Spirit">Free Spirit</option>
-                        <option value="Cerebral">Cerebral</option>
-                        <option value="Powerhouse">Powerhouse</option>
-                        <option value="Driven">Driven</option>
+                {{ 'CLASS' | translate }} 1: <select style="color: black" name="cars" id="cloneClass" ng-model="data.cloneFCClass1">
+                        <option value="Fighter" selected>{{ 'CLASS_FIGHTER' | translate }}</option>
+                        <option value="Shooter">{{ 'CLASS_SHOOTER' | translate }}</option>
+                        <option value="Slasher">{{ 'CLASS_SLASHER' | translate }}</option>
+                        <option value="Striker">{{ 'CLASS_STRIKER' | translate }}</option>
+                        <option value="Free Spirit">{{ 'CLASS_FREE_SPIRIT' | translate }}</option>
+                        <option value="Cerebral">{{ 'CLASS_CEREBRAL' | translate }}</option>
+                        <option value="Powerhouse">{{ 'CLASS_POWERHOUSE' | translate }}</option>
+                        <option value="Driven">{{ 'CLASS_DRIVEN' | translate }}</option>
                     </select>
-                Class 2: <select style="color: black" name="cars" id="cloneClass" ng-model="data.cloneFCClass2">
-                        <option value="Fighter" selected>Fighter</option>
-                        <option value="Shooter">Shooter</option>
-                        <option value="Slasher">Slasher</option>
-                        <option value="Striker">Striker</option>
-                        <option value="Free Spirit">Free Spirit</option>
-                        <option value="Cerebral">Cerebral</option>
-                        <option value="Powerhouse">Powerhouse</option>
-                        <option value="Driven">Driven</option>
+                {{ 'CLASS' | translate }} 2: <select style="color: black" name="cars" id="cloneClass" ng-model="data.cloneFCClass2">
+                        <option value="Fighter" selected>{{ 'CLASS_FIGHTER' | translate }}</option>
+                        <option value="Shooter">{{ 'CLASS_SHOOTER' | translate }}</option>
+                        <option value="Slasher">{{ 'CLASS_SLASHER' | translate }}</option>
+                        <option value="Striker">{{ 'CLASS_STRIKER' | translate }}</option>
+                        <option value="Free Spirit">{{ 'CLASS_FREE_SPIRIT' | translate }}</option>
+                        <option value="Cerebral">{{ 'CLASS_CEREBRAL' | translate }}</option>
+                        <option value="Powerhouse">{{ 'CLASS_POWERHOUSE' | translate }}</option>
+                        <option value="Driven">{{ 'CLASS_DRIVEN' | translate }}</option>
                     </select><br>
-                <input type="checkbox" name="cloneCheck2" value="right" ng-model="data.cloneCheck2">Crew<br>
-                Type: <select style="color: black" name="cars" id="cloneType" ng-model="data.cloneCrewType">
+                <input type="checkbox" name="cloneCheck2" value="right" ng-model="data.cloneCheck2">{{ 'CREW' | translate }}<br>
+                {{ 'TYPE' | translate }}: <select style="color: black" name="cars" id="cloneType" ng-model="data.cloneCrewType">
                         <option value="STR" selected>STR</option>
                         <option value="DEX">DEX</option>
                         <option value="QCK">QCK</option>
                         <option value="PSY">PSY</option>
                         <option value="INT">INT</option>
                     </select><br>
-                Class 1: <select style="color: black" name="cars" id="cloneClass" ng-model="data.cloneCrewClass1">
-                        <option value="Fighter" selected>Fighter</option>
-                        <option value="Shooter">Shooter</option>
-                        <option value="Slasher">Slasher</option>
-                        <option value="Striker">Striker</option>
-                        <option value="Free Spirit">Free Spirit</option>
-                        <option value="Cerebral">Cerebral</option>
-                        <option value="Powerhouse">Powerhouse</option>
-                        <option value="Driven">Driven</option>
+                {{ 'CLASS' | translate }} 1: <select style="color: black" name="cars" id="cloneClass" ng-model="data.cloneCrewClass1">
+                        <option value="Fighter" selected>{{ 'CLASS_FIGHTER' | translate }}</option>
+                        <option value="Shooter">{{ 'CLASS_SHOOTER' | translate }}</option>
+                        <option value="Slasher">{{ 'CLASS_SLASHER' | translate }}</option>
+                        <option value="Striker">{{ 'CLASS_STRIKER' | translate }}</option>
+                        <option value="Free Spirit">{{ 'CLASS_FREE_SPIRIT' | translate }}</option>
+                        <option value="Cerebral">{{ 'CLASS_CEREBRAL' | translate }}</option>
+                        <option value="Powerhouse">{{ 'CLASS_POWERHOUSE' | translate }}</option>
+                        <option value="Driven">{{ 'CLASS_DRIVEN' | translate }}</option>
                     </select>
-                Class 2: <select style="color: black" name="cars" id="cloneClass" ng-model="data.cloneCrewClass2">
-                        <option value="Fighter" selected>Fighter</option>
-                        <option value="Shooter">Shooter</option>
-                        <option value="Slasher">Slasher</option>
-                        <option value="Striker">Striker</option>
-                        <option value="Free Spirit">Free Spirit</option>
-                        <option value="Cerebral">Cerebral</option>
-                        <option value="Powerhouse">Powerhouse</option>
-                        <option value="Driven">Driven</option>
+                {{ 'CLASS' | translate }} 2: <select style="color: black" name="cars" id="cloneClass" ng-model="data.cloneCrewClass2">
+                        <option value="Fighter" selected>{{ 'CLASS_FIGHTER' | translate }}</option>
+                        <option value="Shooter">{{ 'CLASS_SHOOTER' | translate }}</option>
+                        <option value="Slasher">{{ 'CLASS_SLASHER' | translate }}</option>
+                        <option value="Striker">{{ 'CLASS_STRIKER' | translate }}</option>
+                        <option value="Free Spirit">{{ 'CLASS_FREE_SPIRIT' | translate }}</option>
+                        <option value="Cerebral">{{ 'CLASS_CEREBRAL' | translate }}</option>
+                        <option value="Powerhouse">{{ 'CLASS_POWERHOUSE' | translate }}</option>
+                        <option value="Driven">{{ 'CLASS_DRIVEN' | translate }}</option>
                     </select>
             </div>
         </li>
@@ -275,36 +263,29 @@
         <li ng-show="options.classOverrideEnabled">
             <div id="clone">
                 <i class="fa fa-people-arrows"></i>
-                Universal Class Override:<br>
+                {{ 'UNIVERSAL_CLASS_OVERRIDE' | translate }}<br>
                 <input type="checkbox" name="classOverrideEnabled" value="left" ng-model="data.classOverrideEnabled"><br>
-                <!-- Type: <select style="color: black" name="cars" id="cloneType" ng-model="data.typeOverride">
-                        <option value="STR" selected>STR</option>
-                        <option value="DEX">DEX</option>
-                        <option value="QCK">QCK</option>
-                        <option value="PSY">PSY</option>
-                        <option value="INT">INT</option>
-                    </select><br> -->
-                Class 1: <select style="color: black" name="cars" id="overrideClass" ng-model="data.classOverride1">
-                        <option value=0 selected>None</option>
-                        <option value="Fighter" >Fighter</option>
-                        <option value="Shooter">Shooter</option>
-                        <option value="Slasher">Slasher</option>
-                        <option value="Striker">Striker</option>
-                        <option value="Free Spirit">Free Spirit</option>
-                        <option value="Cerebral">Cerebral</option>
-                        <option value="Powerhouse">Powerhouse</option>
-                        <option value="Driven">Driven</option>
+                {{ 'CLASS' | translate }} 1: <select style="color: black" name="cars" id="overrideClass" ng-model="data.classOverride1">
+                        <option value=0 selected>{{ 'NONE' | translate }}</option>
+                        <option value="Fighter" >{{ 'CLASS_FIGHTER' | translate }}</option>
+                        <option value="Shooter">{{ 'CLASS_SHOOTER' | translate }}</option>
+                        <option value="Slasher">{{ 'CLASS_SLASHER' | translate }}</option>
+                        <option value="Striker">{{ 'CLASS_STRIKER' | translate }}</option>
+                        <option value="Free Spirit">{{ 'CLASS_FREE_SPIRIT' | translate }}</option>
+                        <option value="Cerebral">{{ 'CLASS_CEREBRAL' | translate }}</option>
+                        <option value="Powerhouse">{{ 'CLASS_POWERHOUSE' | translate }}</option>
+                        <option value="Driven">{{ 'CLASS_DRIVEN' | translate }}</option>
                     </select>
-                Class 2: <select style="color: black" name="cars" id="overrideClass" ng-model="data.classOverride2">
-                        <option value=0 selected>None</option>
-                        <option value="Fighter" >Fighter</option>
-                        <option value="Shooter">Shooter</option>
-                        <option value="Slasher">Slasher</option>
-                        <option value="Striker">Striker</option>
-                        <option value="Free Spirit">Free Spirit</option>
-                        <option value="Cerebral">Cerebral</option>
-                        <option value="Powerhouse">Powerhouse</option>
-                        <option value="Driven">Driven</option>
+                {{ 'CLASS' | translate }} 2: <select style="color: black" name="cars" id="overrideClass" ng-model="data.classOverride2">
+                        <option value=0 selected>{{ 'NONE' | translate }}</option>
+                        <option value="Fighter" >{{ 'CLASS_FIGHTER' | translate }}</option>
+                        <option value="Shooter">{{ 'CLASS_SHOOTER' | translate }}</option>
+                        <option value="Slasher">{{ 'CLASS_SLASHER' | translate }}</option>
+                        <option value="Striker">{{ 'CLASS_STRIKER' | translate }}</option>
+                        <option value="Free Spirit">{{ 'CLASS_FREE_SPIRIT' | translate }}</option>
+                        <option value="Cerebral">{{ 'CLASS_CEREBRAL' | translate }}</option>
+                        <option value="Powerhouse">{{ 'CLASS_POWERHOUSE' | translate }}</option>
+                        <option value="Driven">{{ 'CLASS_DRIVEN' | translate }}</option>
                     </select>
             </div>
         </li>
@@ -319,12 +300,12 @@
         <li ng-show="showGatherButton">
             <div id="gather" ui-sref=".gather">
                 <i class="fa fa-heartbeat"></i>
-                Data Gathering
+                {{ 'DATA_GATHERING' | translate }}
             </div>
         </li>
 
         <li>
-            <div id="specialDivider">Specials:</div>
+            <div id="specialDivider">{{ 'SPECIALS_DIVIDER' | translate }}</div>
         </li>
 
         <special slot="0"></special>

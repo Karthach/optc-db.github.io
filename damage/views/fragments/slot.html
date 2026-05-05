@@ -4,11 +4,11 @@
     uib-popover-template="'views/fragments/popover.html'" popover-append-to-body="'true'">
 
     <span class="unitPlaceholder" ng-hide="data.team[slot].unit"
-        ng-if="slot == 0">Click to add (friend)</span>
+        ng-if="slot == 0">{{ 'CLICK_TO_ADD_FRIEND' | translate }}</span>
     <span class="unitPlaceholder" ng-hide="data.team[slot].unit"
-        ng-if="slot == 1">Click to add (captain)</span>
+        ng-if="slot == 1">{{ 'CLICK_TO_ADD_CAPTAIN' | translate }}</span>
     <span class="unitPlaceholder" ng-hide="data.team[slot].unit"
-        ng-if="slot > 1">Click to add</span>
+        ng-if="slot > 1">{{ 'CLICK_TO_ADD' | translate }}</span>
 
     <level-label ng-if="data.team[slot].unit">Lv. {{ data.team[slot].level }}</level-label>
 
@@ -26,8 +26,8 @@
     
 
     <div class="ribbon-container" ng-if="slot < 2">
-        <div class="corner-ribbon orange" ng-if="slot < 1">Friend</div>
-        <div class="corner-ribbon red" ng-if="slot == 1">Captain</div>
+        <div class="corner-ribbon orange" ng-if="slot < 1">{{ 'FRIEND' | translate }}</div>
+        <div class="corner-ribbon red" ng-if="slot == 1">{{ 'CAPTAIN_SHORT' | translate }}</div>
     </div>
 
 </div>

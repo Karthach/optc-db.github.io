@@ -6,12 +6,12 @@
                 <td colspan="5">ID: {{data.team[slot].unit.id}}</td>
             </tr>
             <tr class="header">
-                <td ng-if="data.team[slot].unit.class.length > 2">Class</td>
-                <td ng-if="data.team[slot].unit.class.length < 3">Class 1</td>
-                <td ng-if="data.team[slot].unit.class.length < 3">Class 2</td>
-                <td>Type</td>
-                <td>Rarity</td>
-                <td colspan="{{data.team[slot].unit.class.length < 3 ? 1 : 2}}">Cost</td>
+                <td ng-if="data.team[slot].unit.class.length > 2">{{ 'CLASS' | translate }}</td>
+                <td ng-if="data.team[slot].unit.class.length < 3">{{ 'CLASS' | translate }} 1</td>
+                <td ng-if="data.team[slot].unit.class.length < 3">{{ 'CLASS' | translate }} 2</td>
+                <td>{{ 'TYPE' | translate }}</td>
+                <td>{{ 'RARITY' | translate }}</td>
+                <td colspan="{{data.team[slot].unit.class.length < 3 ? 1 : 2}}">{{ 'COST' | translate }}</td>
             </tr>
             <tr class="information">
                 <td ng-if="data.team[slot].unit.class.length > 2">{{data.team[slot].unit.class}}</td>
@@ -24,11 +24,11 @@
                 <td colspan="{{data.team[slot].unit.class.length < 3 ? 1 : 2}}">{{data.team[slot].unit.cost}}</td>
             </tr>
             <tr class="header">
-                <td>HP</td>
-                <td>ATK</td>
-                <td>RCV</td>
-                <td>CMB</td>
-                <td>Slots</td>
+                <td>{{ 'HP' | translate }}</td>
+                <td>{{ 'ATK' | translate }}</td>
+                <td>{{ 'RCV' | translate }}</td>
+                <td>{{ 'CMB' | translate }}</td>
+                <td>{{ 'SOCKETS' | translate }}</td>
             </tr>
             <tr class="information">
                 <td>
@@ -47,9 +47,9 @@
                 <td>{{data.team[slot].unit.slots}}</td>
             </tr>
             <tr class="header" ng-if="false && (data.team[slot].unit.limitHP - data.team[slot].unit.maxHP != 0 || data.team[slot].unit.limitATK - data.team[slot].unit.maxATK != 0 || data.team[slot].unit.limitRCV - data.team[slot].unit.maxRCV != 0)">
-                <td>LB HP</td>
-                <td>LB ATK</td>
-                <td>LB RCV</td>
+                <td>{{ 'LB_HP' | translate }}</td>
+                <td>{{ 'LB_ATK' | translate }}</td>
+                <td>{{ 'LB_RCV' | translate }}</td>
                 <td></td>
                 <td></td>
             </tr>
@@ -67,9 +67,9 @@
                 <td></td>
             </tr>
             <tr class="header" ng-if="false && (data.team[slot].unit.limitexHP - data.team[slot].unit.limitHP != 0 || data.team[slot].unit.limitexATK - data.team[slot].unit.limitATK != 0 || data.team[slot].unit.limitexRCV - data.team[slot].unit.limitRCV != 0)">
-                <td>LB Ex. HP</td>
-                <td>LB Ex. ATK</td>
-                <td>LB Ex. RCV</td>
+                <td>{{ 'LB_EX_HP' | translate }}</td>
+                <td>{{ 'LB_EX_ATK' | translate }}</td>
+                <td>{{ 'LB_EX_RCV' | translate }}</td>
                 <td></td>
                 <td></td>
             </tr>
@@ -87,7 +87,7 @@
                 <td></td>
             </tr>
             <tr class="header" ng-if="slot < 2">
-                <td colspan="5">Captain Ability</td>
+                <td colspan="5">{{ 'CAPTAIN_ABILITY' | translate }}</td>
             </tr>
             <tr class="information" ng-if="slot < 2">
                 <td colspan="5">
@@ -114,14 +114,14 @@
                             <div ng-bind-html="details.captain.character2 | decorate"></div>
                         </div>
                         <div ng-show="details.captain.combined">
-                            <strong>Combined:</strong>
+                            <strong>{{ 'COMBINED' | translate }}</strong>
                             <div ng-bind-html="details.captain.combined | decorate"></div>
                         </div>
                     </div>
                 </td>
             </tr>
             <tr class="header" ng-if="slot > 1">
-                <td colspan="5">Sailor Ability</td>
+                <td colspan="5">{{ 'SAILOR_ABILITY' | translate }}</td>
             </tr>
             <tr class="information" ng-if="slot > 1">
                 <td colspan="5">
@@ -143,13 +143,13 @@
                             <!-- Dual unit sailors -->
                             <li ng-show="details.sailor.character1"><strong>{{::char1.name}}:</strong> <span ng-bind-html="details.sailor.character1 | decorate"></span></li>
                             <li ng-show="details.sailor.character2"><strong>{{::char2.name}}:</strong> <span ng-bind-html="details.sailor.character2 | decorate"></span></li>
-                            <li ng-show="details.sailor.combined"><strong>Combined:</strong> <span ng-bind-html="details.sailor.combined | decorate"></span></li>
+                            <li ng-show="details.sailor.combined"><strong>{{ 'COMBINED' | translate }}</strong> <span ng-bind-html="details.sailor.combined | decorate"></span></li>
                         </ng-container>
                     </ul>
                 </td>
             </tr>
             <tr class="header">
-                <td colspan="5">Special: <strong class="specialName" ng-if="details.specialName">{{details.specialName}}</strong></td>
+                <td colspan="5">{{ 'SPECIAL' | translate }}: <strong class="specialName" ng-if="details.specialName">{{details.specialName}}</strong></td>
             </tr>
             <tr class="information">
                 <td colspan="5">
@@ -177,14 +177,14 @@
                         </div>
                     </div>
                     <div class="cooldown" ng-if="details.special && cooldown">
-                        {{cooldown.length ? cooldown[0] : cooldown}} turns
-                        {{(cooldown.length ? ' (Max: ' + cooldown[1] + ' turns' : '')+(data.team[slot].unit.limitCD != 0 ? ', LB: ' + (cooldown[1]-data.team[slot].unit.limitCD) + ' turns' : '')+(data.team[slot].unit.limitexCD != 0 && data.team[slot].unit.limitexCD != data.team[slot].unit.limitCD ? ', LB+: ' + (cooldown[1]-data.team[slot].unit.limitexCD) + ' turns)' : ')')}}
+                        {{cooldown.length ? cooldown[0] : cooldown}} {{ 'TURNS' | translate }}
+                        {{(cooldown.length ? ' (Max: ' + cooldown[1] + ' ' + ('TURNS' | translate) : '')+(data.team[slot].unit.limitCD != 0 ? ', LB: ' + (cooldown[1]-data.team[slot].unit.limitCD) + ' ' + ('TURNS' | translate) : '')+(data.team[slot].unit.limitexCD != 0 && data.team[slot].unit.limitexCD != data.team[slot].unit.limitCD ? ', LB+: ' + (cooldown[1]-data.team[slot].unit.limitexCD) + ' ' + ('TURNS' | translate) + ')' : ')')}}
                     </div>
                 </td>
             </tr>
             <tr class="header" ng-if="slot < 2 && details.superSpecial">
-                <td colspan="2">Super Special</td>
-                <td colspan="3">Super Special Criteria</td>
+                <td colspan="2">{{ 'SUPER_SPECIAL' | translate }}</td>
+                <td colspan="3">{{ 'VS_SUPER_CRITERIA' | translate }}</td>
             </tr>
             <tr class="information" ng-if="slot < 2 && details.superSpecial">
                 <td colspan="2">
@@ -217,8 +217,8 @@
                 </td>
             </tr>
             <tr class="header" ng-if="details.swap.base">
-                <td colspan="2">Swap</td>
-                <td colspan="3">Super Swap: {{details.swap.superTurns}} Swaps</td>
+                <td colspan="2">{{ 'SWAP' | translate }}</td>
+                <td colspan="3">{{ 'SUPER_SWAP' | translate }} {{details.swap.superTurns}} {{ 'SWAPS' | translate }}</td>
             </tr>
             <tr class="information" ng-if="details.swap.base">
                 <td colspan="2">
@@ -250,7 +250,7 @@
                 </td>
             </tr>
             <tr class="header" ng-if="!details.swap.base && details.swap">
-                <td colspan="5">Swap</td>
+                <td colspan="5">{{ 'SWAP' | translate }}</td>
             </tr>
             <tr class="information" ng-if="!details.swap.base && details.swap">
                 <td colspan="5">
