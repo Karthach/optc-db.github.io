@@ -503,139 +503,122 @@ body, html {
     padding: 12px 10px;
     color: #abb2bf;
     text-align: left;
-    font-size: 10.5pt;
+    font-size: 10pt;
     transition: all 0.2s;
-    cursor: pointer;
 }
 
-#menu li > div:hover {
+/* Common Toggle Button Style for Sidebar Labels */
+#menu label {
+    display: flex;
+    align-items: center;
+    padding: 6px 10px;
     background: #2c313a;
-    color: white;
-}
-
-#menu li button {
-    background: #3e4451;
-    border: none;
-    color: white;
+    border: 1px solid #3e4451;
     border-radius: 4px;
-    padding: 2px 8px;
-    font-size: 0.8em;
-    margin-top: 5px;
+    margin: 4px 0;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: all 0.2s;
+    width: 100%;
+    color: #abb2bf;
 }
 
-#menu li button:hover {
-    background: #4b5263;
+#menu label:hover {
+    background: #3e4451;
+    color: white;
 }
 
-#specialDivider {
-    padding: 8px !important;
-    text-align: center;
-    background: #282c34 !important;
-    color: #61afef !important;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    border-top: 2px solid #61afef;
-    cursor: default !important;
+#menu label input[type="checkbox"] {
+    margin-right: 10px;
+    accent-color: #61afef;
+    width: 16px;
+    height: 16px;
 }
 
+/* Refined Grid Containers for original layout structure */
 #supertypeContainer, #superclassContainer {
     background: transparent !important;
-    padding: 5px !important;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2px;
+    padding: 8px 10px !important;
+    display: grid !important;
+    gap: 6px !important;
+}
+
+#supertypeContainer {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+#superclassContainer {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+/* Hide native checkboxes but keep functionality */
+#supertypeContainer > input, #superclassContainer > input {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+    pointer-events: none;
 }
 
 .supertype, .superclass {
-    flex: 1 1 30%;
-    border-radius: 4px;
-    font-size: 0.8em;
-    font-weight: 600;
-    padding: 4px 2px !important;
-    border: 1px solid rgba(0,0,0,0.1);
-}
-
-/******************
- * MAIN UNIT PANE *
- ******************/
-
-.unit {
-    width: 112px;
-    height: 112px;
+    border-radius: 6px;
+    font-size: 0.75em;
+    font-weight: 700;
+    padding: 10px 4px !important;
+    border: 1px solid #3e4451;
+    background: #2c313a;
+    color: #abb2bf;
     cursor: pointer;
-    border: 2px solid #3e4451;
-    border-radius: 8px;
-    margin: 4px 4px 0 0 !important;
+    opacity: 0.4;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
     text-align: center;
-    position: relative;
-    display: inline-block;
-    float: left;
-    background: #282c34;
-    overflow: hidden;
-    transition: transform 0.2s, border-color 0.2s;
-}
-
-.unit:hover {
-    transform: scale(1.02);
-    border-color: #61afef;
-}
-
-.unitPlaceholder {
-    font-size: 0.8em;
-    color: #5c6370;
-    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 40px;
+    margin: 0 !important;
     text-transform: uppercase;
+    width: 100% !important;
 }
 
-#captain { border-color: #e06c75 !important; }
-#friend { border-color: #d19a66 !important; }
-
-.unitLevel {
-    background: rgba(40, 44, 52, 0.8);
-    color: #61afef;
-    padding: 2px 5px;
-    border-radius: 4px 0 0 0;
-    border: none;
-    outline: none;
+input:checked + .supertype, input:checked + .superclass {    
+    opacity: 1 !important;
+    color: #1e2127 !important;
+    border-color: rgba(255,255,255,0.7) !important;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+    transform: translateY(-1px);
 }
 
-.supertype.STR       { background: salmon; }
-.supertype.QCK       { background: lightskyblue; }
-.supertype.DEX       { background: lightgreen; }
-.supertype.PSY       { background: gold; }
-.supertype.INT       { background: orchid; }
-.superclass.Fighter       { background: #FF0C2A; }
-.superclass.Slasher       { background: #31E7FF; }
-.superclass.Striker       { background: #2356F6; }
-.superclass.Shooter       { background: #C318FF; }
-.superclass.FreeSpirit       { background: #FFB841; }
-.superclass.Driven       { background: #FF11CA; }
-.superclass.Cerebral       { background: #5AFF38; }
-.superclass.Powerhouse       { background: #FA5B12; }
-.superclass.Evolver       { background: Peru; }
-.superclass.Booster       { background: Peru; }
+/* Super Type Colors */
+.supertype.STR:hover, input:checked + .supertype.STR { background: #ff6b6b !important; }
+.supertype.DEX:hover, input:checked + .supertype.DEX { background: #51cf66 !important; }
+.supertype.QCK:hover, input:checked + .supertype.QCK { background: #339af0 !important; }
+.supertype.PSY:hover, input:checked + .supertype.PSY { background: #fcc419 !important; }
+.supertype.INT:hover, input:checked + .supertype.INT { background: #ae3ec9 !important; }
 
-@media (hover) {
-    .supertype:hover {
-        opacity: 1;
-    }
+/* Super Class Colors */
+.superclass.Fighter:hover, input:checked + .superclass.Fighter { background: #FF0C2A !important; }
+.superclass.Slasher:hover, input:checked + .superclass.Slasher { background: #31E7FF !important; }
+.superclass.Striker:hover, input:checked + .superclass.Striker { background: #2356F6 !important; color: white !important; }
+.superclass.Shooter:hover, input:checked + .superclass.Shooter { background: #C318FF !important; color: white !important; }
+.superclass.FreeSpirit:hover, input:checked + .superclass.FreeSpirit { background: #FFB841 !important; }
+.superclass.Driven:hover, input:checked + .superclass.Driven { background: #FF11CA !important; }
+.superclass.Cerebral:hover, input:checked + .superclass.Cerebral { background: #5AFF38 !important; }
+.superclass.Powerhouse:hover, input:checked + .superclass.Powerhouse { background: #FA5B12 !important; }
+.superclass.Evolver:hover, input:checked + .superclass.Evolver { background: #8B4513 !important; color: white !important; }
+.superclass.Booster:hover, input:checked + .superclass.Booster { background: #8B4513 !important; color: white !important; }
 
-    .superclass:hover {
-        opacity: 1;
-    }
-}
-
-input:checked + .supertype {    
-    font-weight: bold;
-    text-decoration: underline;
-    opacity: 1;
-}
-
-input:checked + .superclass {    
-    font-weight: bold;
-    text-decoration: underline;
-    opacity: 1;
+#specialDivider {
+    padding: 10px !important;
+    text-align: center;
+    background: #282c34 !important;
+    color: #61afef !important;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    border-top: 2px solid #61afef;
+    margin-top: 10px;
+    cursor: default !important;
 }
 
 #enemySuperTypeContainer > input + span {
