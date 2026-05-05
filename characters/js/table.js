@@ -1,5 +1,5 @@
 (function () {
-  angular.module("optc").run(function ($rootScope, $timeout, $storage) {
+  angular.module("optc").run(function ($rootScope, $timeout, $storage, LanguageService) {
     /**************
      * Table data *
      **************/
@@ -108,17 +108,17 @@
     var getTableColumns = function () {
       var result = [
         { title: "ID" },
-        { title: "Name", render: addImage },
-        { title: "Evolutions", orderable: false, render: renderEvolutions, className: "evo-col" },
-        { title: "Type" },
-        { title: "Class" },
-        { title: "HP" },
-        { title: "ATK" },
-        { title: "RCV" },
-        { title: "Cost" },
-        { title: "Sockets" },
-        { title: "Stars" },
-        { title: "CL", orderable: false, render: renderLog },
+        { title: LanguageService.translate("NAME"), render: addImage },
+        { title: LanguageService.translate("EVOLUTIONS"), orderable: false, render: renderEvolutions, className: "evo-col" },
+        { title: LanguageService.translate("TYPE") },
+        { title: LanguageService.translate("CLASS") },
+        { title: LanguageService.translate("HP") },
+        { title: LanguageService.translate("ATK") },
+        { title: LanguageService.translate("RCV") },
+        { title: LanguageService.translate("COST") },
+        { title: LanguageService.translate("SOCKETS") },
+        { title: LanguageService.translate("STARS") },
+        { title: LanguageService.translate("CL"), orderable: false, render: renderLog },
       ];
       additionalColumns.forEach(function (x) {
         var title = x

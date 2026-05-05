@@ -530,14 +530,16 @@ input#burgerMenuState {
 
 .filter-header {
     display: block;
-    padding: 5px;
+    padding: 8px 5px;
     text-align: center;
     background: #202020;
     color: white;
     font-weight: bold;
-    cursor: default;
-    border-top: 1px solid #333;
-    border-bottom: 1px solid #333;
+    cursor: pointer;
+    border: 1px solid #333;
+    border-radius: 6px;
+    margin: 4px 2px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
 }
 
 .filter-header-log {
@@ -559,11 +561,13 @@ input#burgerMenuState {
 
 .filter {
     display: inline-block;
-    padding: 3px 8px;
+    padding: 4px 10px;
     text-align: center;
     cursor: pointer;
-    border-top: 1px solid #aaa;
-    border-left: 1px solid #aaa;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    margin: 1px;
+    transition: all 0.2s ease;
 }
 
 .filter.custom {

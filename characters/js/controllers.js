@@ -14,7 +14,8 @@
       $stateParams,
       $timeout,
       $storage,
-      $controller
+      $controller,
+      LanguageService
     ) {
 
       $scope.query = $state.params.query;
@@ -61,7 +62,7 @@
 
   app.controller(
     "SidebarCtrl",
-    function ($scope, $rootScope, $stateParams, $timeout) {
+    function ($scope, $rootScope, $stateParams, $timeout, LanguageService) {
       $scope.availableClasses = window.availableClasses;
       $scope.availableTags = window.availableTags;
       $scope.farmableOptions = window.farmableOptions;

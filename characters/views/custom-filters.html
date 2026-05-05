@@ -34,7 +34,7 @@
     </div>
     <!-- Categorized -->
     <div class="filter-group width-12" ng-repeat="(group, matchers) in ::filterData[target]" ng-if="::group != 'Uncategorized'">
-        <animate-collapse class="filter-group-header filter-header">{{::group}}</animate-collapse>
+        <animate-collapse class="filter-group-header filter-header">{{ group === 'Uncategorized' ? ('UNCATEGORIZED' | translate) : group }}</animate-collapse>
         <div class="collapse">
             <div class="filter width-12 custom" ng-repeat="(name, filter) in ::matchers track by $index" ng-if="::filter.target == target" ng-class="{ active: filters.custom[target][group].matchers[name].enabled }">
                 <div ng-click="toggleMatcher($event, filter)">{{::filter.name}}</div>

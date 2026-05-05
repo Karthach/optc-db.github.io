@@ -5,16 +5,16 @@
 
 <!-- Event Boosters -->
 <div class="filter-container" id="tmkc-filter">
-    <animate-collapse class="filter-header">Event Boosters</animate-collapse>
+    <animate-collapse class="filter-header">{{ 'EVENT_BOOSTERS' | translate }}</animate-collapse>
     <div class="collapse">
         <span class="filter width-12 exc" ng-model="filters.globalTM" ng-class="{ active: filters.globalTM }"
-            ng-click="filters.globalTM = !filters.globalTM">Treasure Map Boosters [Lucci]</span>
+            ng-click="filters.globalTM = !filters.globalTM">{{ 'TM_BOOSTERS' | translate }}</span>
         <span class="filter width-12 exc" ng-model="filters.globalKC" ng-class="{ active: filters.globalKC }"
-            ng-click="filters.globalKC = !filters.globalKC">Kizuna Clash Boosters [Kid]</span>
+            ng-click="filters.globalKC = !filters.globalKC">{{ 'KC_BOOSTERS' | translate }}</span>
         <span class="filter width-12 exc" ng-model="filters.globalPKA" ng-class="{ active: filters.globalPKA }"
-            ng-click="filters.globalPKA = !filters.globalPKA">Pirate King Adventure Boosters [Dr. Vegapunk]</span>
+            ng-click="filters.globalPKA = !filters.globalPKA">{{ 'PKA_BOOSTERS' | translate }}</span>
         <span class="filter width-12 exc" ng-model="filters.comodorevsempress" ng-class="{ active: filters.comodorevsempress }"
-            ng-click="filters.comodorevsempress = !filters.comodorevsempress">Blitz Battle Boosters [VS Blackbeard Pirates]</span>
+            ng-click="filters.comodorevsempress = !filters.comodorevsempress">{{ 'BLITZ_BOOSTERS' | translate }}</span>
     </div>
 </div>
 
@@ -58,7 +58,7 @@
     <animate-collapse class="filter-header">{{ 'CLASS' | translate }}</animate-collapse>
     <div class="collapse in">
         <span ng-repeat="class in availableClasses" class="filter width-6 class" ng-click="onClassClick($event,class)"
-            ng-class="{ active: filters.classes.indexOf(class) > -1 }">{{::class}}</span>
+            ng-class="{ active: filters.classes.indexOf(class) > -1 }">{{ 'CLASS_' + class.toUpperCase().replace(' ', '_') | translate }}</span>
             <div style="display: flex; width: 100%;">
                 <span class="filter exc" style="flex: 1; text-align: center;" 
                 ng-model="filters.dualUnits" 
@@ -116,17 +116,17 @@
     <animate-collapse class="filter-header">{{ 'DROP_FILTER' | translate }}</animate-collapse>
     <div class="collapse">
         <span ng-repeat="type in [ 'Farmable', 'Non-farmable' ]" class="filter width-6 drop" ng-model="filters.drop"
-            ng-class="{ active: filters.drop == type }" ng-click="onFilterClick($event,type)">{{::type}}</span>
+            ng-class="{ active: filters.drop == type }" ng-click="onFilterClick($event,type)">{{ type == 'Farmable' ? ('FARMABLE' | translate) : ('NON_FARMABLE' | translate) }}</span>
         <span ng-repeat="type in [ 'Global units', 'Japan exclusives' ]" class="filter width-6 drop"
             ng-model="filters.server" ng-class="{ active: filters.server == type }"
-            ng-click="onFilterClick($event,type)">{{::type}}</span>
+            ng-click="onFilterClick($event,type)">{{ type == 'Global units' ? ('GLOBAL_UNITS' | translate) : ('JAPAN_UNITS' | translate) }}</span>
         <span ng-repeat="type in [ 'In RR pool', 'Not in RR pool' ]" class="filter width-6 drop" ng-model="filters.rr"
-            ng-class="{ active: filters.rr == type }" ng-click="onFilterClick($event,type)">{{::type}}</span>
+            ng-class="{ active: filters.rr == type }" ng-click="onFilterClick($event,type)">{{ type == 'In RR pool' ? ('RR_POOL' | translate) : ('NOT_RR_POOL' | translate) }}</span>
         <span ng-repeat="type in [ 'Farmable Sockets', 'No Farmable Sockets' ]" class="filter width-6 drop"
             ng-model="filters.socket" ng-class="{ active: filters.socket == type }"
-            ng-click="onFilterClick($event,type)">{{::type}}</span>
+            ng-click="onFilterClick($event,type)">{{ type == 'Farmable Sockets' ? ('FARMABLE_SOCKETS' | translate) : ('NO_FARMABLE_SOCKETS' | translate) }}</span>
         <span ng-repeat="type in [ 'Inkable', 'Not Inkable' ]" class="filter width-6 drop" ng-model="filters.inkable"
-            ng-class="{ active: filters.inkable == type }" ng-click="onFilterClick($event,type)">{{::type}}</span>
+            ng-class="{ active: filters.inkable == type }" ng-click="onFilterClick($event,type)">{{ type == 'Inkable' ? ('INKABLE' | translate) : ('NOT_INKABLE' | translate) }}</span>
 
         <!-- Current Shops nested inside Drop -->
         <div id="shops-filter">
@@ -342,8 +342,8 @@
     <animate-collapse class="filter-header filter-header-log">{{ 'CHAR_LOG' | translate }}</animate-collapse>
     <div class="collapse">
         <span class="filter width-12" ng-model="filters.noLog" ng-class="{ active: filters.noLog }"
-            ng-click="filters.noLog = !filters.noLog">Hide units in Character Log</span>
+            ng-click="filters.noLog = !filters.noLog">{{ 'HIDE_LOG' | translate }}</span>
         <span class="filter width-12" ng-model="filters.noMissing" ng-class="{ active: filters.noMissing }"
-            ng-click="filters.noMissing = !filters.noMissing">Hide units not in Character Log</span>
+            ng-click="filters.noMissing = !filters.noMissing">{{ 'HIDE_MISSING' | translate }}</span>
     </div>
 </div>
