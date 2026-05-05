@@ -27,9 +27,10 @@ services.LanguageService = ['$storage', function($storage) {
     return {
         getLang: function() { return currentLang; },
         setLang: function(lang) {
+            if (currentLang === lang) return;
             currentLang = lang;
             $storage.set('lang', lang);
-            window.location.reload(); // Reload to apply changes across all components
+            window.location.reload(); 
         },
         translate: function(key) {
             return (window.translations[currentLang] && window.translations[currentLang][key]) || key;

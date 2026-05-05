@@ -64,6 +64,7 @@ directives.linkButton = function() {
         templateUrl: '../common/views/links.html',
         scope: { exclude: '@' },
         controller: ['$scope', 'LanguageService', function($scope, LanguageService) {
+            $scope.currentLang = LanguageService.getLang();
             $scope.setLang = function(lang) {
                 LanguageService.setLang(lang);
             };
