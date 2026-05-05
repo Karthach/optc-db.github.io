@@ -1,0 +1,38 @@
+name: Sync Upstream
+
+on:
+  schedule:
+    - cron: '0 2 * * *' # Se ejecuta cada día a las 2:00 AM UTC
+  workflow_dispatch: # Permite ejecutarlo manualmente desde la pestaña "Actions"
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # Necesario para poder hacer push
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # Obtiene todo el historial para poder fusionar
+
+      - name: Configure Git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      - name: Fetch Upstream
+        run: |
+          git remote add upstream https://github.com/2Shankz/optc-db.github.io.git
+          git fetch upstream
+
+      - name: Merge Upstream
+        run: |
+          # Intenta fusionar los cambios. Si hay conflictos, la acción fallará 
+          # y te enviará un correo para que lo resuelvas manualmente.
+          git merge upstream/master --no-edit
+
+      - name: Push Changes
+        run: |
+          git push origin master
