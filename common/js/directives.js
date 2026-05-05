@@ -63,6 +63,11 @@ directives.linkButton = function() {
         replace: true,
         templateUrl: '../common/views/links.html',
         scope: { exclude: '@' },
+        controller: ['$scope', 'LanguageService', function($scope, LanguageService) {
+            $scope.setLang = function(lang) {
+                LanguageService.setLang(lang);
+            };
+        }],
         link: function(scope, element, attrs) {
             element.find(".trigger").click(function() {
                 element.toggleClass("active"); 

@@ -22,6 +22,27 @@ services.$storage = function() {
     };
 };
 
+services.LanguageService = ['$storage', function($storage) {
+    var currentLang = $storage.get('lang', 'es');
+    return {
+        getLang: function() { return currentLang; },
+        setLang: function(lang) {
+            currentLang = lang;
+            $storage.set('lang', lang);
+            window.location.reload(); // Reload to apply changes across all components
+        },
+        translate: function(key) {
+            return (window.translations[currentLang] && window.translations[currentLang][key]) || key;
+        }
+    };
+}];
+
+app.filter('translate', ['LanguageService', function(LanguageService) {
+    return function(key) {
+        return LanguageService.translate(key);
+    };
+}]);
+
 for (var service in services)
     app.factory(service, services[service]);
 

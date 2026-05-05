@@ -1,15 +1,29 @@
-<html>
+<html ng-app="optcIndex" ng-controller="IndexController">
 
 <head>
-    <title>OPTC Database - ES</title>
+    <title>{{ 'TITLE' | translate }} - Karthach</title>
     <link rel="stylesheet" type="text/css" href="common/libs/css/animate.css" />
     <link rel="stylesheet" type="text/css" href="common/libs/css/fontawesome/all.css" />
     <link rel="stylesheet" type="text/css" href="index.css" />
+    <link rel="stylesheet" type="text/css" href="common/css/links.css" />
     <link href='//fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="Karthach">
     <meta name="keywords" content="OPTC, One Piece Treasure Cruise, Base de Datos, Calculadora">
-    <meta name="description" content="Base de datos en español para One Piece Treasure Cruise. Incluye base de datos de personajes y descripciones de habilidades, además de una calculadora de daño.">
+    <meta name="description" content="Base de datos para One Piece Treasure Cruise. Incluye base de datos de personajes y calculadora de daño.">
+    
+    <script src="common/libs/js/jquery.min.js"></script>
+    <script src="common/libs/js/angular.min.js"></script>
+    <script src="common/data/translations.js"></script>
+    <script src="common/js/services.js"></script>
+    <script src="common/js/directives.js"></script>
+    <script>
+        var app = angular.module('optcIndex', ['optc']);
+        app.controller('IndexController', ['$scope', function($scope) {
+            // Index logic if any
+        }]);
+    </script>
+
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-59Y3NZR5TN"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -21,14 +35,16 @@
 
 <body>
     <div id="container">
-        <a class="animated zoomInLeft button red" href="damage">Calculadora de Daño</a>
-        <a class="animated zoomInRight button green" href="characters">Tabla de Personajes</a>
-        <a class="animated zoomInLeft button pink" href="drops">Tabla de Drops</a>
-        <a class="animated zoomInRight button limegreen" href="https://lukforce.bitbucket.io/">Calendario y Planificador TM</a>
-        <a class="animated zoomInRight button blue" href="https://optc-ships.vercel.app">Base de Datos de Barcos</a>
-        <a class="animated zoomInLeft button yellow" href="https://thepiebandit.github.io/optc-supports/">Base de Datos de Supports</a>
-        <a class="animated zoomInRight button purple" href="https://thepiebandit.github.io/optc-pirate-rumble-db/">Base de Datos Pirate Rumble</a>
+        <a class="animated zoomInLeft button red" href="damage">{{ 'CALC' | translate }}</a>
+        <a class="animated zoomInRight button green" href="characters">{{ 'CHAR' | translate }}</a>
+        <a class="animated zoomInLeft button pink" href="drops">{{ 'DROP' | translate }}</a>
+        <a class="animated zoomInRight button limegreen" href="https://lukforce.bitbucket.io/">{{ 'CALENDAR' | translate }}</a>
+        <a class="animated zoomInRight button blue" href="https://optc-ships.vercel.app">{{ 'SHIPS' | translate }}</a>
+        <a class="animated zoomInLeft button yellow" href="https://thepiebandit.github.io/optc-supports/">{{ 'SUPPORTS' | translate }}</a>
+        <a class="animated zoomInRight button purple" href="https://thepiebandit.github.io/optc-pirate-rumble-db/">{{ 'RUMBLE' | translate }}</a>
     </div>
+
+    <link-button></link-button>
 </body>
 
 </html>

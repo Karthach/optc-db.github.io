@@ -7,26 +7,26 @@
 <div id="queryContainer">
     <label for="burgerMenuState" id="burgerMenu" class="fa fa-bars fa-lg"></label>
     
-    <input type="text" id="picker" placeholder="type to filter"
+    <input type="text" id="picker" placeholder="{{ 'TYPE_TO_FILTER' | translate }}"
         ng-model="query" ng-model-options="{ updateOn: 'default blur', debounce: { 'default': 300, 'blur': 0 } }" auto-focus>
 
-    <button ng-if="query" ng-click="clearQuery()" title="clear">
+    <button ng-if="query" ng-click="clearQuery()" title="{{ 'CLEAR' | translate }}">
         <i class="fa fa-times"></i>
-        <span>Clear</span>
+        <span>{{ 'CLEAR' | translate }}</span>
     </button>
 
-    <button ng-click="query = getRandChar();" title="random">
+    <button ng-click="query = getRandChar();" title="{{ 'RANDOM' | translate }}">
         <i class="fa fa-random"></i>
-        <span>Random</span>
+        <span>{{ 'RANDOM' | translate }}</span>
     </button>
 
     <button popover-trigger="mouseenter" popover-placement="bottom"
-        uib-popover-template="'operators.html'" popover-append-to-body="'true'" title="operators">
+        uib-popover-template="'operators.html'" popover-append-to-body="'true'" title="{{ 'OPERATORS' | translate }}">
         <i class="fa fa-info-circle"></i>
-        <span>Operators</span>
+        <span>{{ 'OPERATORS' | translate }}</span>
     </button>
 
-    <button id="theme-toggle" ng-click="toggleTheme()" title="toggle theme">
+    <button id="theme-toggle" ng-click="toggleTheme()" title="{{ 'THEME' | translate }}">
         <span ng-bind="theme === 'dark' ? '🌙' : '☀️'"></span>
         <span ng-bind="theme === 'dark' ? 'Neko' : 'Inu'"></span>
     </button>
