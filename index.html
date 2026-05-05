@@ -1,7 +1,7 @@
-<html ng-app="optcIndex" ng-controller="IndexController">
+<html ng-app="optc">
 
 <head>
-    <title>{{ 'TITLE' | translate }} - Karthach</title>
+    <title>OPTC Database - Karthach</title>
     <link rel="stylesheet" type="text/css" href="common/libs/css/animate.css" />
     <link rel="stylesheet" type="text/css" href="common/libs/css/fontawesome/all.css" />
     <link rel="stylesheet" type="text/css" href="index.css" />
@@ -9,20 +9,12 @@
     <link href='//fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="Karthach">
-    <meta name="keywords" content="OPTC, One Piece Treasure Cruise, Base de Datos, Calculadora">
-    <meta name="description" content="Base de datos para One Piece Treasure Cruise. Incluye base de datos de personajes y calculadora de daño.">
     
     <script src="common/libs/js/jquery.min.js"></script>
     <script src="common/libs/js/angular.min.js"></script>
     <script src="common/data/translations.js"></script>
     <script src="common/js/services.js"></script>
     <script src="common/js/directives.js"></script>
-    <script>
-        var app = angular.module('optcIndex', ['optc']);
-        app.controller('IndexController', ['$scope', function($scope) {
-            // Index logic if any
-        }]);
-    </script>
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-59Y3NZR5TN"></script>
     <script>
@@ -33,7 +25,7 @@
     </script>
 </head>
 
-<body>
+<body ng-controller="LanguageService as lang">
     <div id="container">
         <a class="animated zoomInLeft button red" href="damage">{{ 'CALC' | translate }}</a>
         <a class="animated zoomInRight button green" href="characters">{{ 'CHAR' | translate }}</a>
