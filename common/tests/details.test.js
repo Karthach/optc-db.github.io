@@ -17,16 +17,11 @@ function splitCriteria(criteria){
     return families;
 }
 
-/**
- * This throws errors instead of using jest's expect matchers, because the
- * matchers would show the whole allFamilies array for every failed family name.
- * Throwing an error would let us use a custom fail message.
- */
 describe('Used family names should be valid', () => {
     let allFamilies = Object.keys(DButils.getReverseFamilyMap());
     allFamilies.push("Toy Bears"); // No such family name yet, but it is valid (Sugar)
 
-    describe("Supported characters' families", () => {
+    it("Supported characters' families", () => {
         for (let id in DBdetail) {
             const data = DBdetail[id];
             if (!data.support)
@@ -42,17 +37,15 @@ describe('Used family names should be valid', () => {
 
                 let familyNames = splitCriteria(criteria);
                 for (const familyName of familyNames) {
-                    it(`checks if ${familyName} is in window.families`, () => {
-                        if (!allFamilies.includes(familyName)){
-                            throw new Error(`${id} support: "${familyName}" should be in window.families (families.js)`);
-                        }
-                    });
+                    if (!allFamilies.includes(familyName)){
+                        throw new Error(`${id} support: "${familyName}" should be in window.families (families.js)`);
+                    }
                 }
             }
         }
     })
 
-    describe('Super special criteria families', () => {
+    it('Super special criteria families', () => {
         for (let id in DBdetail) {
             let data = DBdetail[id];
 
@@ -65,55 +58,84 @@ describe('Used family names should be valid', () => {
 
             let familyNames = splitCriteria(criteria);
             for (const familyName of familyNames) {
-                it(`checks if ${familyName} is in window.families`, () => {
-                    if (!allFamilies.includes(familyName)){
-                        throw new Error(`${id} superSpecial: "${familyName}" should be in window.families (families.js)`);
-                    }
-                });
+                if (!allFamilies.includes(familyName)){
+                    throw new Error(`${id} superSpecial: "${familyName}" should be in window.families (families.js)`);
+                }
             }
         }
     });
 });
 
 describe('Typos', () => {
-    for (let id in DBdetail) {
-        let data = DBdetail[id];
-        if (Number(id) >= 5000) // ignore ghost units because they use same descriptions, so no need to check them
-            break;
-        for (let property in data){
-            // some typos are important, as they could cause regexes to not match properly
-            describe(`${id}: ${property}`, () => { // not only does this show the unit ID, but this also allows tests to continue even when it fails on one unit
-                let target = data[property];
-                if (typeof target !== 'string')
-                    target = JSON.stringify(target);
-                it('checks for consecutive spaces', () => { // important
-                    let corrected = target.replace(/ {2,}/g, ' ');
-                    expect(target).toBe(corrected);
-                });
-                it('checks for invalid variable multipliers', () => { // important
-                    let corrected = target.replace(/([?.\d]+)(?:-([?.\d]+)(%|x))/g, '$1$3-$2$3');
-                    expect(target).toBe(corrected);
-                    // expect(target).toEqual(expect.not.stringMatching(/([?.\d]+)(?:-([?.\d]+)(%|x))/));
-                });
-                it('checks for "1 turns"', () => {
-                    let corrected = target.replace(/\b1 turns/g, '1 turn');
-                    expect(target).toBe(corrected);
-                });
-                it('checks for "n turn"', () => {
-                    let corrected = target.replace(/\b(\d{2,}|[02-9]) turn(?!s)/g, '$1 turns');
-                    expect(target).toBe(corrected);
-                });
-                it('checks for "ie" typos', () => { // important
-                    // let corrected = target.replace(/thier/g, 'their').replace(/recieve/g, 'receive');
-                    // expect(target).toBe(corrected);
-                    expect(target).toEqual(expect.not.stringMatching(/thier|recieve/));
-                });
-                it('checks for "a" that should be "an"', () => {
-                    // "an 8%" or "an 80%"
-                    // "an [INT] orb" or "an [INT] character"
-                    expect(target).toEqual(expect.not.stringMatching(/\ba (8|\[INT\])/)); 
-                });
-            });
+    const typoChecks = [
+        {
+            name: 'consecutive spaces',
+            check: (target) => {
+                let corrected = target.replace(/ {2,}/g, ' ');
+                return target === corrected;
+            },
+            message: (id, property, target) => `${id}: ${property} has consecutive spaces`
+        },
+        {
+            name: 'invalid variable multipliers',
+            check: (target) => {
+                let corrected = target.replace(/([?.\d]+)(?:-([?.\d]+)(%|x))/g, '$1$3-$2$3');
+                return target === corrected;
+            },
+            message: (id, property, target) => `${id}: ${property} has invalid variable multipliers`
+        },
+        {
+            name: '"1 turns"',
+            check: (target) => {
+                let corrected = target.replace(/\b1 turns/g, '1 turn');
+                return target === corrected;
+            },
+            message: (id, property, target) => `${id}: ${property} has "1 turns"`
+        },
+        {
+            name: '"n turn"',
+            check: (target) => {
+                let corrected = target.replace(/\b(\d{2,}|[02-9]) turn(?!s)/g, '$1 turns');
+                return target === corrected;
+            },
+            message: (id, property, target) => `${id}: ${property} has "n turn"`
+        },
+        {
+            name: '"ie" typos',
+            check: (target) => {
+                return !/thier|recieve/.test(target);
+            },
+            message: (id, property, target) => `${id}: ${property} has "thier" or "recieve"`
+        },
+        {
+            name: '"a" that should be "an"',
+            check: (target) => {
+                return !/\ba (8|\[INT\])/.test(target);
+            },
+            message: (id, property, target) => `${id}: ${property} has "a" instead of "an" before 8/INT`
         }
-    }
+    ];
+
+    typoChecks.forEach(typoCheck => {
+        it(`checks for ${typoCheck.name}`, () => {
+            const failures = [];
+            for (let id in DBdetail) {
+                let data = DBdetail[id];
+                if (Number(id) >= 5000)
+                    break;
+                for (let property in data){
+                    let target = data[property];
+                    if (typeof target !== 'string')
+                        target = JSON.stringify(target);
+                    
+                    if (!typoCheck.check(target)) {
+                        failures.push(typoCheck.message(id, property, target));
+                    }
+                }
+            }
+            if (failures.length > 0) {
+                throw new Error(`Found ${failures.length} issues:\n${failures.slice(0, 20).join('\n')}${failures.length > 20 ? '\n...' : ''}`);
+            }
+        });
+    });
 });

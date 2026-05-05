@@ -2213,7 +2213,7 @@ window.details = {
 					"If you hit a PERFECT with this character, there is a 50% chance to deal 5% of this character's attack in extra damage",
 					"If you hit a PERFECT with this character, there is a 60% chance to deal 6% of this character's attack in extra damage",
 					"If you hit a PERFECT with this character, there is a 70% chance to deal 7% of this character's attack in extra damage",
-					"If you hit a PERFECT with this character, there is a 80% chance to deal 8% of this character's attack in extra damage"
+					"If you hit a PERFECT with this character, there is an 80% chance to deal 8% of this character's attack in extra damage"
 				]
 			}
         ],
@@ -5047,7 +5047,7 @@ window.details = {
 					"If you hit a PERFECT with this character, there is a 50% chance to deal 5% of this character's attack in extra damage",
 					"If you hit a PERFECT with this character, there is a 60% chance to deal 6% of this character's attack in extra damage",
 					"If you hit a PERFECT with this character, there is a 70% chance to deal 7% of this character's attack in extra damage",
-					"If you hit a PERFECT with this character, there is a 80% chance to deal 8% of this character's attack in extra damage"
+					"If you hit a PERFECT with this character, there is an 80% chance to deal 8% of this character's attack in extra damage"
 				]
 			}
         ],
@@ -5254,7 +5254,7 @@ window.details = {
 					"If you hit a PERFECT with this character, there is a 50% chance to deal 5% of this character's attack in extra damage",
 					"If you hit a PERFECT with this character, there is a 60% chance to deal 6% of this character's attack in extra damage",
 					"If you hit a PERFECT with this character, there is a 70% chance to deal 7% of this character's attack in extra damage",
-					"If you hit a PERFECT with this character, there is a 80% chance to deal 8% of this character's attack in extra damage"
+					"If you hit a PERFECT with this character, there is an 80% chance to deal 8% of this character's attack in extra damage"
 				]
 			}
         ],
@@ -7032,7 +7032,7 @@ window.details = {
 			"Acquire Sailor Ability 2: Boosts crew's base HP by 200 and makes their [INT] slots have matching slot effects",
 			"Boosts base ATK by 100",
 			"Boosts base HP by 100",
-			"Reduce base Special Cooldown by 2 turn",
+			"Reduce base Special Cooldown by 2 turns",
 			"Acquire Potential 3: Super Tandem"
         ],
         lLimit: [
@@ -18958,11 +18958,11 @@ window.details = {
                 special: {
                     base: [
                         {
-                            description: "Deals 4x character's ATK in [INT] damage to all enemies, changes the orb of this character into a [INT] orb, reduces Paralysis duration by 3 turns, and reduces Special Cooldown of top row characters by 1 turn.",
+                            description: "Deals 4x character's ATK in [INT] damage to all enemies, changes the orb of this character into an [INT] orb, reduces Paralysis duration by 3 turns, and reduces Special Cooldown of top row characters by 1 turn.",
                             cooldown: [ 8, 3 ]
                         },
                         {
-                            description: "Deals 60x character's ATK in [INT] damage to all enemies, changes the orb of this character into a [INT] orb, reduces Paralysis duration by 6 turns, reduces Special Cooldown of top row characters by 2 turns, reduces Special Cooldown of all other characters by 1 turn, and reduces enemies' Percent Damage Reduction effect by 50%.",
+                            description: "Deals 60x character's ATK in [INT] damage to all enemies, changes the orb of this character into an [INT] orb, reduces Paralysis duration by 6 turns, reduces Special Cooldown of top row characters by 2 turns, reduces Special Cooldown of all other characters by 1 turn, and reduces enemies' Percent Damage Reduction effect by 50%.",
                             cooldown: [ 17, 12 ]
                         }
                     ]
@@ -19209,7 +19209,7 @@ window.details = {
 					"If you hit a PERFECT with this character, there is a 50% chance to deal 5% of this character's attack in extra damage",
 					"If you hit a PERFECT with this character, there is a 60% chance to deal 6% of this character's attack in extra damage",
 					"If you hit a PERFECT with this character, there is a 70% chance to deal 7% of this character's attack in extra damage",
-					"If you hit a PERFECT with this character, there is a 80% chance to deal 8% of this character's attack in extra damage"
+					"If you hit a PERFECT with this character, there is an 80% chance to deal 8% of this character's attack in extra damage"
 				]
 			}
         ],
@@ -44835,7 +44835,7 @@ window.details = {
             level1: "Boosts ATK of Fighter, Striker, Shooter, Cerebral and Powerhouse characters by 1.9x, reduces damage received by 20% and makes [QCK], [PSY], [RCV] and [TND] orbs beneficial for Fighter, Striker, Shooter, Cerebral and Powerhouse characters. has a chance to ignore Debuff Protection and delays all enemies by 1 turn based on damage dealt in previous turn."
         },
         captainNotes: "The bonus is cumulative. Characters with 2 of the boosted classes get a 1.825x or 1.9x squared ATK boost<br>Delay chance is based on damage dealt with normal attacks and does not stack with any other delay specials or effects<br><b>Base Chances</b><br><b>100,000 damage or more:</b> 20% chance to delay<br><b>500,000 damage or more:</b> 50% chance to delay<br><b>1,000,000 damage or more:</b> 100% chance to delay<br><b>2,000,000 damage or more:</b> 100% chance to delay ignoring Delay Debuff Protection<br><b>Limit Break Chances</b><br><b>100,000 damage or more:</b> 20% chance to delay<br><b>500,000 damage or more:</b> 50% chance to delay<br><b>750,000 damage or more:</b> 100% chance to delay<br><b>1,500,000 damage or more:</b> 100% chance to delay ignoring Delay Debuff Protection",
-        special:  "Boosts ATK against delayed enemies by 1.75x for 2 turns, changes [STR], [QCK], [DEX], [PSY], [INT] and [BLOCK] orbs of Fighter, Striker, Shooter, Cerebral and Powerhouse characters into Matching orbs and reduces Special Cooldown of Fighter, Striker, Shooter, Cerebral and Powerhouse characters by 1 turn.",
+        special: "Boosts ATK against delayed enemies by 1.75x for 2 turns, changes [STR], [QCK], [DEX], [PSY], [INT] and [BLOCK] orbs of Fighter, Striker, Shooter, Cerebral and Powerhouse characters into Matching orbs and reduces Special Cooldown of Fighter, Striker, Shooter, Cerebral and Powerhouse characters by 1 turn.",
         specialName: "Peerless Donuts: Mochi Singing Result",
         sailor: {
             level1: "Boosts base ATK of Fighter, Striker, Shooter, Cerebral and Powerhouse characters by 50",
@@ -53052,7 +53052,7 @@ window.details = {
             {
                 captain: {
                     base: "Reduces Special Cooldown of all characters by 1 turn at the start of the fight. Boosts ATK of Striker and Cerebral characters by 2x, by 3x instead if HP is above 50%",
-                    level6: "Reduces Special Cooldown of all characters by 2 turn at the start of the fight. Boosts ATK of Striker and Cerebral characters by 4.75x, by 5.25x instead if HP is above 50% and boosts RCV of Striker and Cerebral characters by 1.5x."
+                    level6: "Reduces Special Cooldown of all characters by 2 turns at the start of the fight. Boosts ATK of Striker and Cerebral characters by 4.75x, by 5.25x instead if HP is above 50% and boosts RCV of Striker and Cerebral characters by 1.5x."
                 }
             },
             {
@@ -102021,7 +102021,7 @@ window.details = {
             "Boosts base ATK by 50",
             "Boosts base ATK by 100",
             "Boosts base HP by 100",
-            "Reduce base Special Cooldown by 2 turn",
+            "Reduce base Special Cooldown by 2 turns",
             "Acquire Potential 3: Enrage/Reduce Increase Damage Taken duration",
         ],
         potential: [
@@ -106335,7 +106335,7 @@ window.details = {
                     "If you hit a PERFECT with this character, there is a 50% chance to deal 5% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 60% chance to deal 6% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 70% chance to deal 7% of this character's attack in extra damage",
-                    "If you hit a PERFECT with this character, there is a 80% chance to deal 8% of this character's attack in extra damage"
+                    "If you hit a PERFECT with this character, there is an 80% chance to deal 8% of this character's attack in extra damage"
                 ]
             },
             {
@@ -106419,7 +106419,7 @@ window.details = {
                     "If you hit a PERFECT with this character, there is a 50% chance to deal 5% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 60% chance to deal 6% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 70% chance to deal 7% of this character's attack in extra damage",
-                    "If you hit a PERFECT with this character, there is a 80% chance to deal 8% of this character's attack in extra damage"
+                    "If you hit a PERFECT with this character, there is an 80% chance to deal 8% of this character's attack in extra damage"
                 ]
             },
             {
@@ -107194,7 +107194,7 @@ window.details = {
                     "If you hit a PERFECT with this character, there is a 50% chance to deal 5% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 60% chance to deal 6% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 70% chance to deal 7% of this character's attack in extra damage",
-                    "If you hit a PERFECT with this character, there is a 80% chance to deal 8% of this character's attack in extra damage"
+                    "If you hit a PERFECT with this character, there is an 80% chance to deal 8% of this character's attack in extra damage"
                 ]
             }
         ],
@@ -107532,7 +107532,7 @@ window.details = {
                     "If you hit a PERFECT with this character, there is a 50% chance to deal 4% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 60% chance to deal 5% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 70% chance to deal 6% of this character's attack in extra damage",
-                    "If you hit a PERFECT with this character, there is a 80% chance to deal 7% of this character's attack in extra damage"
+                    "If you hit a PERFECT with this character, there is an 80% chance to deal 7% of this character's attack in extra damage"
                 ]
             },
             {
@@ -109944,7 +109944,7 @@ window.details = {
                     "If you hit a PERFECT with this character, there is a 50% chance to deal 5% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 60% chance to deal 6% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 70% chance to deal 7% of this character's attack in extra damage",
-                    "If you hit a PERFECT with this character, there is a 80% chance to deal 8% of this character's attack in extra damage"
+                    "If you hit a PERFECT with this character, there is an 80% chance to deal 8% of this character's attack in extra damage"
                 ]
             }
         ],
@@ -111360,7 +111360,7 @@ window.details = {
                     "If you hit a PERFECT with this character, there is a 50% chance to deal 5% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 60% chance to deal 6% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 70% chance to deal 7% of this character's attack in extra damage",
-                    "If you hit a PERFECT with this character, there is a 80% chance to deal 8% of this character's attack in extra damage"
+                    "If you hit a PERFECT with this character, there is an 80% chance to deal 8% of this character's attack in extra damage"
                 ]
             }
         ],
@@ -111667,7 +111667,7 @@ window.details = {
                     "If you hit a PERFECT with this character, there is a 50% chance to deal 5% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 60% chance to deal 6% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 70% chance to deal 7% of this character's attack in extra damage",
-                    "If you hit a PERFECT with this character, there is a 80% chance to deal 8% of this character's attack in extra damage"
+                    "If you hit a PERFECT with this character, there is an 80% chance to deal 8% of this character's attack in extra damage"
                 ]
             }
         ],
@@ -111748,7 +111748,7 @@ window.details = {
                     "If you hit a PERFECT with this character, there is a 50% chance to deal 4% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 60% chance to deal 5% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 70% chance to deal 6% of this character's attack in extra damage",
-                    "If you hit a PERFECT with this character, there is a 80% chance to deal 7% of this character's attack in extra damage"
+                    "If you hit a PERFECT with this character, there is an 80% chance to deal 7% of this character's attack in extra damage"
                 ]
             },
             {
@@ -111955,7 +111955,7 @@ window.details = {
                     "If you hit a PERFECT with this character, there is a 50% chance to deal 4% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 60% chance to deal 5% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 70% chance to deal 6% of this character's attack in extra damage",
-                    "If you hit a PERFECT with this character, there is a 80% chance to deal 7% of this character's attack in extra damage"
+                    "If you hit a PERFECT with this character, there is an 80% chance to deal 7% of this character's attack in extra damage"
                 ]
             },
             {
@@ -112025,7 +112025,7 @@ window.details = {
                     "If you hit a PERFECT with this character, there is a 50% chance to deal 4% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 60% chance to deal 5% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 70% chance to deal 6% of this character's attack in extra damage",
-                    "If you hit a PERFECT with this character, there is a 80% chance to deal 7% of this character's attack in extra damage"
+                    "If you hit a PERFECT with this character, there is an 80% chance to deal 7% of this character's attack in extra damage"
                 ]
             },
             {
@@ -112727,7 +112727,7 @@ window.details = {
                     "If you hit a PERFECT with this character, there is a 50% chance to deal 5% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 60% chance to deal 6% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 70% chance to deal 7% of this character's attack in extra damage",
-                    "If you hit a PERFECT with this character, there is a 80% chance to deal 8% of this character's attack in extra damage"
+                    "If you hit a PERFECT with this character, there is an 80% chance to deal 8% of this character's attack in extra damage"
                 ]
             }
         ],
@@ -113826,7 +113826,7 @@ window.details = {
                     "If you hit a PERFECT with this character, there is a 50% chance to deal 5% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 60% chance to deal 6% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 70% chance to deal 7% of this character's attack in extra damage",
-                    "If you hit a PERFECT with this character, there is a 80% chance to deal 8% of this character's attack in extra damage"
+                    "If you hit a PERFECT with this character, there is an 80% chance to deal 8% of this character's attack in extra damage"
                 ]
             }
         ],
@@ -115336,7 +115336,7 @@ window.details = {
                     "If you hit a PERFECT with this character, there is a 50% chance to deal 5% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 60% chance to deal 6% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 70% chance to deal 7% of this character's attack in extra damage",
-                    "If you hit a PERFECT with this character, there is a 80% chance to deal 8% of this character's attack in extra damage"
+                    "If you hit a PERFECT with this character, there is an 80% chance to deal 8% of this character's attack in extra damage"
                 ]
             },
             {
@@ -115418,7 +115418,7 @@ window.details = {
                     "If you hit a PERFECT with this character, there is a 50% chance to deal 5% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 60% chance to deal 6% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 70% chance to deal 7% of this character's attack in extra damage",
-                    "If you hit a PERFECT with this character, there is a 80% chance to deal 8% of this character's attack in extra damage"
+                    "If you hit a PERFECT with this character, there is an 80% chance to deal 8% of this character's attack in extra damage"
                 ]
             },
             {
@@ -115742,7 +115742,7 @@ window.details = {
             "Boosts base HP by 100",
             "Boosts base HP by 100",
             "Boosts base ATK by 100",
-            "Reduce base Special Cooldown by 2 turn",
+            "Reduce base Special Cooldown by 2 turns",
             "Acquire Potential 3: Reduce Special Use Limit duration",
         ],
         potential: [
@@ -121024,7 +121024,7 @@ window.details = {
                     "If you hit a PERFECT with this character, there is a 50% chance to deal 5% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 60% chance to deal 6% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 70% chance to deal 7% of this character's attack in extra damage",
-                    "If you hit a PERFECT with this character, there is a 80% chance to deal 8% of this character's attack in extra damage"
+                    "If you hit a PERFECT with this character, there is an 80% chance to deal 8% of this character's attack in extra damage"
                 ]
             }
         ],
@@ -122363,7 +122363,7 @@ window.details = {
                     "If you hit a PERFECT with this character, there is a 50% chance to deal 5% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 60% chance to deal 6% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 70% chance to deal 7% of this character's attack in extra damage",
-                    "If you hit a PERFECT with this character, there is a 80% chance to deal 8% of this character's attack in extra damage"
+                    "If you hit a PERFECT with this character, there is an 80% chance to deal 8% of this character's attack in extra damage"
                 ]
             }
         ],
@@ -130113,7 +130113,7 @@ window.details = {
                     "If you hit a PERFECT with this character, there is a 50% chance to deal 5% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 60% chance to deal 6% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 70% chance to deal 7% of this character's attack in extra damage",
-                    "If you hit a PERFECT with this character, there is a 80% chance to deal 8% of this character's attack in extra damage"
+                    "If you hit a PERFECT with this character, there is an 80% chance to deal 8% of this character's attack in extra damage"
                 ]
             }
         ],
@@ -137527,7 +137527,7 @@ window.details = {
                     "If you hit a PERFECT with this character, there is a 50% chance to deal 5% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 60% chance to deal 6% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 70% chance to deal 7% of this character's attack in extra damage",
-                    "If you hit a PERFECT with this character, there is a 80% chance to deal 8% of this character's attack in extra damage"
+                    "If you hit a PERFECT with this character, there is an 80% chance to deal 8% of this character's attack in extra damage"
                 ]
             },
             {
@@ -137647,7 +137647,7 @@ window.details = {
                     "If you hit a PERFECT with this character, there is a 50% chance to deal 5% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 60% chance to deal 6% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 70% chance to deal 7% of this character's attack in extra damage",
-                    "If you hit a PERFECT with this character, there is a 80% chance to deal 8% of this character's attack in extra damage"
+                    "If you hit a PERFECT with this character, there is an 80% chance to deal 8% of this character's attack in extra damage"
                 ]
             },
             {
@@ -137772,7 +137772,7 @@ window.details = {
                     "If you hit a PERFECT with this character, there is a 50% chance to deal 5% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 60% chance to deal 6% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 70% chance to deal 7% of this character's attack in extra damage",
-                    "If you hit a PERFECT with this character, there is a 80% chance to deal 8% of this character's attack in extra damage"
+                    "If you hit a PERFECT with this character, there is an 80% chance to deal 8% of this character's attack in extra damage"
                 ]
             },
             {
@@ -138154,15 +138154,15 @@ window.details = {
             "Boosts base ATK by 20",
             "Boosts base HP by 30",
             "Acquire new Captain Ability: Boosts HP of Fighter and Free Spirit characters by 1.2x and boosts ATK of Fighter and Free Spirit characters by 3.25x.",
-            "Reduce base Special Cooldown by 2 turn",
+            "Reduce base Special Cooldown by 2 turns",
             "Boosts base RCV by 20",
             "Boosts base ATK by 30",
             "Boosts base HP by 50",
-            "Reduce base Special Cooldown by 3 turn",
+            "Reduce base Special Cooldown by 3 turns",
             "Acquire 1 additional Socket orb",
             "Boosts base ATK by 30",
             "Boosts base HP by 60",
-            "Reduce base Special Cooldown by 4 turn",
+            "Reduce base Special Cooldown by 4 turns",
             "Acquire new Captain Ability: Boosts HP of Fighter and Free Spirit characters by 1.3x and boosts ATK of Fighter and Free Spirit characters by 3.5x.",
             "Boosts base HP by 60",
             "Boosts base ATK by 40",
@@ -138170,7 +138170,7 @@ window.details = {
             "Acquire Sailor Ability 2: Boosts base ATK of Fighter, Free Spirit, and Slasher characters by 100",
             "Boosts base HP by 70",
             "Boosts base HP by 90",
-            "Reduce base Special Cooldown by 5 turn",
+            "Reduce base Special Cooldown by 5 turns",
             "Acquire 1 additional Socket orb",
             "Acquire new Captain Ability: Boosts HP of Fighter and Free Spirit characters by 1.3x and boosts ATK of Fighter and Free Spirit characters by 3.75x.",
             "Boosts base ATK by 50",
@@ -138455,7 +138455,7 @@ window.details = {
             {
                 rResilience: true,
                 special: {
-                    base: "Deals 300,000 Fixed damage to one enemy, reduces Paralysis and Chain Coefficient Reduction duration by 7 turns, boosts Orb Effects of Powerhouse and Fighter characters by 2.5x for 3 turns, and becomes Sanji & Judge for 3 turns. If your crew has ATK UP status when the special is activated, increases duration of any ATK boosting buffs by 1 turn.  If there is a [STR], [DEX], [QCK], [PSY] and [INT] character in your crew, increases boost effects of ATK UP and Orb Amplification buffs by +0.25x, including effects activated in the same Ability."
+                    base: "Deals 300,000 Fixed damage to one enemy, reduces Paralysis and Chain Coefficient Reduction duration by 7 turns, boosts Orb Effects of Powerhouse and Fighter characters by 2.5x for 3 turns, and becomes Sanji & Judge for 3 turns. If your crew has ATK UP status when the special is activated, increases duration of any ATK boosting buffs by 1 turn. If there is a [STR], [DEX], [QCK], [PSY] and [INT] character in your crew, increases boost effects of ATK UP and Orb Amplification buffs by +0.25x, including effects activated in the same Ability."
                 }
             }
         ],
@@ -138519,7 +138519,7 @@ window.details = {
                     "If you hit a PERFECT with this character, there is a 50% chance to deal 5% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 60% chance to deal 6% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 70% chance to deal 7% of this character's attack in extra damage",
-                    "If you hit a PERFECT with this character, there is a 80% chance to deal 8% of this character's attack in extra damage"
+                    "If you hit a PERFECT with this character, there is an 80% chance to deal 8% of this character's attack in extra damage"
                 ]
             },
             {
@@ -138625,7 +138625,7 @@ window.details = {
                     "If you hit a PERFECT with this character, there is a 40% chance to deal 4% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 50% chance to deal 5% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 70% chance to deal 7% of this character's attack in extra damage",
-                    "If you hit a PERFECT with this character, there is a 80% chance to deal 8% of this character's attack in extra damage"
+                    "If you hit a PERFECT with this character, there is an 80% chance to deal 8% of this character's attack in extra damage"
                 ]
             },
             {
@@ -139066,7 +139066,7 @@ window.details = {
                     "If you hit a PERFECT with this character, there is a 40% chance to deal 5% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 50% chance to deal 6% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 60% chance to deal 7% of this character's attack in extra damage",
-                    "If you hit a PERFECT with this character, there is a 80% chance to deal 8% of this character's attack in extra damage"
+                    "If you hit a PERFECT with this character, there is an 80% chance to deal 8% of this character's attack in extra damage"
                 ]
             }
         ],
@@ -139237,15 +139237,15 @@ window.details = {
             "Boosts base ATK by 20",
             "Boosts base ATK by 30",
             "Acquire new Captain Ability: Boosts ATK of [STR], Driven, and Powerhouse characters by 3.5x and boosts HP of [STR], Driven, and Powerhouse characters by 1.15x.",
-            "Reduce base Special Cooldown by 2 turn",
+            "Reduce base Special Cooldown by 2 turns",
             "Boosts base RCV by 20",
             "Boosts base HP by 30",
             "Boosts base HP by 50",
-            "Reduce base Special Cooldown by 3 turn",
+            "Reduce base Special Cooldown by 3 turns",
             "Acquire 1 additional Socket slot",
             "Boosts base HP by 60",
             "Boosts base ATK by 30",
-            "Reduce base Special Cooldown by 4 turn",
+            "Reduce base Special Cooldown by 4 turns",
             "Acquire new Captain Ability: Boosts ATK of [STR], Driven, and Powerhouse characters by 3.75x and boosts HP of [STR], Driven, and Powerhouse characters by 1.15x.",
             "Boosts base ATK by 40",
             "Boosts base HP by 60",
@@ -139253,7 +139253,7 @@ window.details = {
             "Acquire Sailor Ability 2: Changes all orbs into [DEX] orbs at the start of the fight",
             "Boosts base HP by 70",
             "Boosts base RCV by 30",
-            "Reduce base Special Cooldown by 5 turn",
+            "Reduce base Special Cooldown by 5 turns",
             "Acquire 1 additional Socket slot",
             "Acquire new Captain Ability: Boosts ATK of [STR], Driven, and Powerhouse characters by 4x and boosts HP of [STR], Driven, and Powerhouse characters by 1.2x.",
             "Boosts base ATK by 60",
@@ -140105,10 +140105,10 @@ window.details = {
                 Characters: "Monkey D. Luffy, Shanks, Ben Beckman, Lucky Roux, Yasopp, Gordon, Bonk Punch, Hongo, Howling Gabu, Building Snake, Monster",
                 description: [
                     "Once per adventure, when an enemy inflicts you with Special Bind, reduces Special Bind duration by 1 turn on the supported character.",
-                    "Once per adventure, when an enemy inflicts you with Special Bind, reduces Special Bind duration by 2 turn on the supported character.",
-                    "Once per adventure, when an enemy inflicts you with Special Bind, reduces Special Bind duration by 3 turn on the supported character.",
-                    "Once per adventure, when an enemy inflicts you with Special Bind, reduces Special Bind duration by 4 turn on the supported character.",
-                    "Once per adventure, when an enemy inflicts you with Special Bind, reduces Special Bind duration by 5 turn on the supported character."
+                    "Once per adventure, when an enemy inflicts you with Special Bind, reduces Special Bind duration by 2 turns on the supported character.",
+                    "Once per adventure, when an enemy inflicts you with Special Bind, reduces Special Bind duration by 3 turns on the supported character.",
+                    "Once per adventure, when an enemy inflicts you with Special Bind, reduces Special Bind duration by 4 turns on the supported character.",
+                    "Once per adventure, when an enemy inflicts you with Special Bind, reduces Special Bind duration by 5 turns on the supported character."
                 ]
             }
         ]
@@ -140116,7 +140116,7 @@ window.details = {
     3994: {
         captain: {
             character1: "Reduces Special Cooldown of all characters by 1 turn at the start of the fight, boosts ATK of [PSY], Slasher, and Shooter characters by 4.75x, by 5x instead if they have a [PSY] or [TND] orb, boosts HP of [PSY], Slasher, and Shooter characters by 1.3x, boosts chances of getting [TND] orbs, makes [PSY], [INT] and [TND] orbs beneficial for [PSY], Slasher, and Shooter characters and makes crew immune to Blow Away. If your crew has 3 or more Slasher characters, deals 10% of enemies' current HP in damage to all enemies at the end of each turn.",
-            character2: "Reduces Special Cooldown of all characters by 1 turn at the start of the fight, boosts ATK of [INT], Shooter, and Slasher characters by 4.75x, by 5x instead if they have a [INT] or [TND] orb, boosts HP of [INT], Shooter, and Slasher characters by 1.3x, boosts chances of getting [TND] orbs and makes [PSY], [INT] and [TND] orbs beneficial for [INT], Shooter, and Slasher characters. If your crew has 3 or more Shooter characters, adds 0.2x to Chain multiplier.",
+            character2: "Reduces Special Cooldown of all characters by 1 turn at the start of the fight, boosts ATK of [INT], Shooter, and Slasher characters by 4.75x, by 5x instead if they have an [INT] or [TND] orb, boosts HP of [INT], Shooter, and Slasher characters by 1.3x, boosts chances of getting [TND] orbs and makes [PSY], [INT] and [TND] orbs beneficial for [INT], Shooter, and Slasher characters. If your crew has 3 or more Shooter characters, adds 0.2x to Chain multiplier.",
             combined: "Reduces Special Cooldown of all characters by 1 turn at the start of the fight, boosts ATK of [PSY], [INT], Slasher, and Shooter characters by 5.25x, by 5.5x instead if they have a [PSY], [INT] or [TND] orb, boosts HP of [PSY], [INT], Slasher, and Shooter characters by 1.3x, boosts chances of getting [TND] orbs, makes [PSY], [INT] and [TND] orbs beneficial for [PSY], [INT], Slasher, and Shooter characters and makes crew immune to Blow Away. If your crew has 3 or more Slasher characters, deals 10% of enemies' current HP in damage to all enemies at the end of each turn. If your crew has 3 or more Shooter characters, adds 0.2x to Chain multiplier."
         },
         sailor: {
@@ -140136,7 +140136,7 @@ window.details = {
     3995: {
         captain: {
             character1: "Reduces Special Cooldown of all characters by 1 turn at the start of the fight, boosts ATK of [PSY], Slasher, and Shooter characters by 4.75x, by 5x instead if they have a [PSY] or [TND] orb, boosts HP of [PSY], Slasher, and Shooter characters by 1.3x, boosts chances of getting [TND] orbs, makes [PSY], [INT] and [TND] orbs beneficial for [PSY], Slasher, and Shooter characters and makes crew immune to Blow Away. If your crew has 3 or more Slasher characters, deals 10% of enemies' current HP in damage to all enemies at the end of each turn.",
-            character2: "Reduces Special Cooldown of all characters by 1 turn at the start of the fight, boosts ATK of [INT], Shooter, and Slasher characters by 4.75x, by 5x instead if they have a [INT] or [TND] orb, boosts HP of [INT], Shooter, and Slasher characters by 1.3x, boosts chances of getting [TND] orbs and makes [PSY], [INT] and [TND] orbs beneficial for [INT], Shooter, and Slasher characters. If your crew has 3 or more Shooter characters, adds 0.2x to Chain multiplier.",
+            character2: "Reduces Special Cooldown of all characters by 1 turn at the start of the fight, boosts ATK of [INT], Shooter, and Slasher characters by 4.75x, by 5x instead if they have an [INT] or [TND] orb, boosts HP of [INT], Shooter, and Slasher characters by 1.3x, boosts chances of getting [TND] orbs and makes [PSY], [INT] and [TND] orbs beneficial for [INT], Shooter, and Slasher characters. If your crew has 3 or more Shooter characters, adds 0.2x to Chain multiplier.",
             combined: "Reduces Special Cooldown of all characters by 1 turn at the start of the fight, boosts ATK of [PSY], [INT], Slasher, and Shooter characters by 5.25x, by 5.5x instead if they have a [PSY], [INT] or [TND] orb, boosts HP of [PSY], [INT], Slasher, and Shooter characters by 1.3x, boosts chances of getting [TND] orbs, makes [PSY], [INT] and [TND] orbs beneficial for [PSY], [INT], Slasher, and Shooter characters and makes crew immune to Blow Away. If your crew has 3 or more Slasher characters, deals 10% of enemies' current HP in damage to all enemies at the end of each turn. If your crew has 3 or more Shooter characters, adds 0.2x to Chain multiplier."
         },
         lastTap: {
@@ -140198,7 +140198,7 @@ window.details = {
                     "If you hit a PERFECT with this character, there is a 40% chance to deal 4% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 50% chance to deal 5% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 70% chance to deal 7% of this character's attack in extra damage",
-                    "If you hit a PERFECT with this character, there is a 80% chance to deal 8% of this character's attack in extra damage",
+                    "If you hit a PERFECT with this character, there is an 80% chance to deal 8% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 100% chance to deal 10% of this character's attack in extra damage"
                 ]
             },
@@ -140285,7 +140285,7 @@ window.details = {
                     "If you hit a PERFECT with this character, there is a 50% chance to deal 5% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 60% chance to deal 6% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 70% chance to deal 7% of this character's attack in extra damage",
-                    "If you hit a PERFECT with this character, there is a 80% chance to deal 8% of this character's attack in extra damage"
+                    "If you hit a PERFECT with this character, there is an 80% chance to deal 8% of this character's attack in extra damage"
                 ]
             },
 			{
@@ -140608,7 +140608,7 @@ window.details = {
                     "If you hit a PERFECT with this character, there is a 50% chance to deal 5% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 60% chance to deal 6% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 70% chance to deal 7% of this character's attack in extra damage",
-                    "If you hit a PERFECT with this character, there is a 80% chance to deal 8% of this character's attack in extra damage"
+                    "If you hit a PERFECT with this character, there is an 80% chance to deal 8% of this character's attack in extra damage"
                 ]
             }
         ],
@@ -140829,7 +140829,7 @@ window.details = {
                     "If you hit a PERFECT with this character, there is a 50% chance to deal 5% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 60% chance to deal 6% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 70% chance to deal 7% of this character's attack in extra damage",
-                    "If you hit a PERFECT with this character, there is a 80% chance to deal 8% of this character's attack in extra damage"
+                    "If you hit a PERFECT with this character, there is an 80% chance to deal 8% of this character's attack in extra damage"
                 ]
             }
         ],
@@ -140941,15 +140941,15 @@ window.details = {
             "Boosts base RCV by 20",
             "Boosts base ATK by 20",
             "Acquire new Captain Ability: Boosts ATK of all characters by 3.75x, by 4.5x after scoring 4 GREAT strikes in a row and scoring a PERFECT reduces ATK boost for the next attack by 30%.",
-            "Reduce base Special Cooldown by 2 turn",
+            "Reduce base Special Cooldown by 2 turns",
             "Boosts base ATK by 30",
             "Boosts base HP by 50",
             "Boosts base RCV by 20",
-            "Reduce base Special Cooldown by 3 turn",
+            "Reduce base Special Cooldown by 3 turns",
             "Acquire 1 additional Socket slot",
             "Boosts base RCV by 30",
             "Boosts base HP by 60",
-            "Reduce base Special Cooldown by 4 turn",
+            "Reduce base Special Cooldown by 4 turns",
             "Acquire new Captain Ability: Boosts ATK of all characters by 4x, by 4.75x after scoring 4 GREAT strikes in a row and scoring a PERFECT reduces ATK boost for the next attack by 30%.",
             "Boosts base ATK by 30",
             "Boosts base HP by 60",
@@ -140957,7 +140957,7 @@ window.details = {
             "Acquire Sailor Ability 2: Boosts this character's damage against [DEX] characters by 2x",
             "Boosts base HP by 70",
             "Boosts base RCV by 30",
-            "Reduce base Special Cooldown by 5 turn",
+            "Reduce base Special Cooldown by 5 turns",
             "Acquire 1 additional Socket slot",
             "Acquire new Captain Ability: Boosts ATK of all characters by 4.25x, by 5x after scoring 4 GREAT strikes in a row, scoring a PERFECT reduces ATK boost for the next attack by 30%, and recovers 777 HP at end of each turn.",
             "Boosts base ATK by 60",
@@ -141136,11 +141136,11 @@ window.details = {
             {
                 Characters: "[QCK] Shooter characters",
                 description: [
-                    "Once per adventure, when you reach the final stage, reduces damage recieved by 10% for 1 turn.",
-                    "Once per adventure, when you reach the final stage, reduces damage recieved by 15% for 1 turn.",
-                    "Once per adventure, when you reach the final stage, reduces damage recieved by 20% for 1 turn.",
-                    "Once per adventure, when you reach the final stage, reduces damage recieved by 25% for 1 turn.",
-                    "Once per adventure, when you reach the final stage, reduces damage recieved by 30% for 2 turns."
+                    "Once per adventure, when you reach the final stage, reduces damage received by 10% for 1 turn.",
+                    "Once per adventure, when you reach the final stage, reduces damage received by 15% for 1 turn.",
+                    "Once per adventure, when you reach the final stage, reduces damage received by 20% for 1 turn.",
+                    "Once per adventure, when you reach the final stage, reduces damage received by 25% for 1 turn.",
+                    "Once per adventure, when you reach the final stage, reduces damage received by 30% for 2 turns."
                 ]
             }
         ]
@@ -141273,7 +141273,7 @@ window.details = {
             "Boosts base ATK by 100",
             "Boosts base HP by 150",
             "Acquire new Captain Ability: Reduces Special Cooldown of all characters by 1 turn at the start of the fight, boosts ATK of Shooter characters by 4.5x, by 5.25x instead if they have a beneficial orb, boosts HP of Shooter characters by 1.2x, reduces damage received by 10%, makes [BOMB] and [SUPERBOMB] orbs beneficial for all characters, and [BOMB] and [SUPERBOMB] orbs will deal 100% less damage to the crew.",
-            "Reduce base Special Cooldown by 3 turn",
+            "Reduce base Special Cooldown by 3 turns",
             "Boosts base ATK by 100",
         ],
         potential: [
@@ -141699,7 +141699,7 @@ window.details = {
             base: "Reduces Special Bind duration by 6 turns on this character",
             level1: "Recovers 500 HP at end of each turn"
         },
-        special: "Reduces damage recieved by 60% for 2 turns, reduces Special Bind duration by 6 turns, changes [BLOCK], [STR], [DEX], [QCK], [PSY] and [INT] orbs into [RCV] orbs, and recovers 30x character's RCV in HP, allowing HP Overfill up to 2x MAX HP.",
+        special: "Reduces damage received by 60% for 2 turns, reduces Special Bind duration by 6 turns, changes [BLOCK], [STR], [DEX], [QCK], [PSY] and [INT] orbs into [RCV] orbs, and recovers 30x character's RCV in HP, allowing HP Overfill up to 2x MAX HP.",
         specialName: "Peaceful Night",
         support: [
             {
@@ -141973,7 +141973,7 @@ window.details = {
             level1: "Reduces Paralysis duration by 1 turn, and reduces Special Cooldown of this character by 3 turns at the start of the fight"
         },
         special: "Boosts ATK against enemies with reduced defense by 2x for 1 turn. Increases duration of any Status ATK boosting buffs by 0-1 turn, including effects activated in the same Ability, reduces ATK Down and Ship Bind duration by 1-2 turns and reduces damage received by 0%-60% for 1 turn depending on how many times this character used \"Dashing Little Ones\" this adventure.",
-        specialNotes: "1 time: 1 turn debuff reduction, 0 turns buff extension & 0% damage reduction<br>2+ times: 2 turns debuff reduction, 1 turns buff extension & 60% damage reduction",
+        specialNotes: "1 time: 1 turn debuff reduction, 0 turns buff extension & 0% damage reduction<br>2+ times: 2 turns debuff reduction, 1 turn buff extension & 60% damage reduction",
         specialName: "Dashing Little Ones",
         support: [
             {
@@ -142447,7 +142447,7 @@ window.details = {
             level1: "Reduces Paralysis duration by 1 turn, and reduces Special Cooldown of this character by 3 turns at the start of the fight"
         },
         special: "Boosts ATK against enemies with reduced defense by 2x for 1 turn. Increases duration of any Status ATK boosting buffs by 0-1 turn, including effects activated in the same Ability, increases boost effects of Status ATK Boost buffs by +0x-+0.25x, including effects activated in the same Ability, reduces ATK Down and Ship Bind duration by 1-3 turns and reduces damage received by 0%-60% for 1 turn depending on how many times this character used \"Dashing Little Ones\" this adventure.",
-        specialNotes: "1 time: 1 turn debuff reduction, 0 turns buff extension, +0 buff enhancement & 0% damage reduction<br>2 times: 2 turns debuff reduction, 1 turns buff extension, +0 buff enhancement & 60% damage reduction<br>3+ times: 3 turns debuff reduction, 1 turns buff extension, +0.3 buff enhancement & 60% damage reduction",
+        specialNotes: "1 time: 1 turn debuff reduction, 0 turns buff extension, +0 buff enhancement & 0% damage reduction<br>2 times: 2 turns debuff reduction, 1 turn buff extension, +0 buff enhancement & 60% damage reduction<br>3+ times: 3 turns debuff reduction, 1 turn buff extension, +0.3 buff enhancement & 60% damage reduction",
         specialName: "Dashing Little Ones",
         support: [
             {
@@ -142786,7 +142786,7 @@ window.details = {
             base: "Makes [BOMB] and [SUPERBOMB] orbs beneficial for all characters",
             level1: "Boosts base ATK of Driven and Striker characters by 80"
         },
-        special: "Deals 70x character's ATK in [DEX] damage to all enemies, reduces Paralysis duration by 5 turns, changes all orbs into [BOMB] orbs, boosts Color Affinity of [DEX], Driven and Striker characters by 2x for 0-99 turns (until your crew takes 5,000 damage), and reduces any damage received above 3,000 HP by ?% for 1 turns.",
+        special: "Deals 70x character's ATK in [DEX] damage to all enemies, reduces Paralysis duration by 5 turns, changes all orbs into [BOMB] orbs, boosts Color Affinity of [DEX], Driven and Striker characters by 2x for 0-99 turns (until your crew takes 5,000 damage), and reduces any damage received above 3,000 HP by ?% for 1 turn.",
         specialName: "Annihilating Steel Arm",
         superSpecial: "Deals 100x character's ATK in Fixed True Typeless damage to all enemies, increases Orb Effects of beneficial [BOMB] orbs to 2.5x for 1 turn, increases Orb Effects of neutral [BOMB] orbs to 1.5x for 1 turn, and transforms [DEX] characters into Super [DEX] characters.",
         superSpecialCriteria: "This character must be captain and this character must have a [BOMB] or [SUPERBOMB] orb",
@@ -142962,7 +142962,7 @@ window.details = {
                     "If you hit a PERFECT with this character, there is a 50% chance to deal 5% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 60% chance to deal 6% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 70% chance to deal 7% of this character's attack in extra damage",
-                    "If you hit a PERFECT with this character, there is a 80% chance to deal 8% of this character's attack in extra damage"
+                    "If you hit a PERFECT with this character, there is an 80% chance to deal 8% of this character's attack in extra damage"
                 ]
             },
             {
@@ -143054,7 +143054,7 @@ window.details = {
                     "If you hit a PERFECT with this character, there is a 50% chance to deal 5% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 60% chance to deal 6% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 70% chance to deal 7% of this character's attack in extra damage",
-                    "If you hit a PERFECT with this character, there is a 80% chance to deal 8% of this character's attack in extra damage"
+                    "If you hit a PERFECT with this character, there is an 80% chance to deal 8% of this character's attack in extra damage"
                 ]
             },
             {
@@ -143280,7 +143280,7 @@ window.details = {
             base: "Boosts base RCV of Slasher and Free Spirit characters by 75",
             level1: "If your Captain is a Slasher character, reduces Paralysis duration by 1 turn"
         },
-        special: "Delays all enemies by 1 turn,  Changes [BLOCK], [STR], [DEX], [QCK], [PSY] and [INT] orbs of Slasher characters into Matching orbs, reduces enemies' Barrier duration by 1 turn and reduces enemies' Resilience duration by 3 turns. If your crew has 4 or more Slasher characters when the special is activated, boosts ATK against delayed enemies by 2x for 1 turn, by 1.75x for 1 turn otherwise.",
+        special: "Delays all enemies by 1 turn, Changes [BLOCK], [STR], [DEX], [QCK], [PSY] and [INT] orbs of Slasher characters into Matching orbs, reduces enemies' Barrier duration by 1 turn and reduces enemies' Resilience duration by 3 turns. If your crew has 4 or more Slasher characters when the special is activated, boosts ATK against delayed enemies by 2x for 1 turn, by 1.75x for 1 turn otherwise.",
         specialName: "Fireworks Above",
         support: [
             {
@@ -143438,7 +143438,7 @@ window.details = {
                     "If you hit a PERFECT with this character, there is a 50% chance to deal 5% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 60% chance to deal 6% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 70% chance to deal 7% of this character's attack in extra damage",
-                    "If you hit a PERFECT with this character, there is a 80% chance to deal 8% of this character's attack in extra damage"
+                    "If you hit a PERFECT with this character, there is an 80% chance to deal 8% of this character's attack in extra damage"
                 ]
             },
             {
@@ -143572,7 +143572,7 @@ window.details = {
                     "If you hit a PERFECT with this character, there is a 40% chance to deal 4% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 50% chance to deal 5% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 70% chance to deal 7% of this character's attack in extra damage",
-                    "If you hit a PERFECT with this character, there is a 80% chance to deal 8% of this character's attack in extra damage",
+                    "If you hit a PERFECT with this character, there is an 80% chance to deal 8% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 100% chance to deal 10% of this character's attack in extra damage"
                 ]
             },
@@ -143645,7 +143645,7 @@ window.details = {
                     "If you hit a PERFECT with this character, there is a 50% chance to deal 5% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 60% chance to deal 6% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 70% chance to deal 7% of this character's attack in extra damage",
-                    "If you hit a PERFECT with this character, there is a 80% chance to deal 8% of this character's attack in extra damage"
+                    "If you hit a PERFECT with this character, there is an 80% chance to deal 8% of this character's attack in extra damage"
                 ]
             }
         ],
@@ -143705,7 +143705,7 @@ window.details = {
                     "If you hit a PERFECT with this character, there is a 50% chance to deal 5% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 60% chance to deal 6% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 70% chance to deal 7% of this character's attack in extra damage",
-                    "If you hit a PERFECT with this character, there is a 80% chance to deal 8% of this character's attack in extra damage"
+                    "If you hit a PERFECT with this character, there is an 80% chance to deal 8% of this character's attack in extra damage"
                 ]
             }
         ],
@@ -144056,7 +144056,7 @@ window.details = {
             "Boosts base ATK by 100",
             "Boosts base HP by 150",
             "Acquire new Captain Ability: Reduces Special Cooldown of all characters by 1 turn at the start of the fight, boosts ATK by 4.75x, HP by 1.3x, and makes [INT] and [PSY] orbs beneficial for characters. If 4 or more characters of the same type are on the crew, boosts that type's ATK by approximately 5x. If crew uses a Special to apply ATK boost/additive chain multiplier boost (except multiplicative boosts), extends the duration of the effect by 1 turn",
-            "Reduce base Special Cooldown by 2 turn",
+            "Reduce base Special Cooldown by 2 turns",
             "Boosts base ATK by 100",
         ],
         potential: [
@@ -144177,7 +144177,7 @@ window.details = {
                     "If you hit a PERFECT with this character, there is a 50% chance to deal 5% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 60% chance to deal 6% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 70% chance to deal 7% of this character's attack in extra damage",
-                    "If you hit a PERFECT with this character, there is a 80% chance to deal 8% of this character's attack in extra damage"
+                    "If you hit a PERFECT with this character, there is an 80% chance to deal 8% of this character's attack in extra damage"
                 ]
             },
             {
@@ -144456,7 +144456,7 @@ window.details = {
                     "If you hit a PERFECT with this character, there is a 50% chance to deal 5% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 60% chance to deal 6% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 70% chance to deal 7% of this character's attack in extra damage",
-                    "If you hit a PERFECT with this character, there is a 80% chance to deal 8% of this character's attack in extra damage"
+                    "If you hit a PERFECT with this character, there is an 80% chance to deal 8% of this character's attack in extra damage"
                 ]
             },
             {
@@ -144651,7 +144651,7 @@ window.details = {
                     "If you hit a PERFECT with this character, there is a 40% chance to deal 4% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 50% chance to deal 5% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 60% chance to deal 6% of this character's attack in extra damage",
-                    "If you hit a PERFECT with this character, there is a 80% chance to deal 8% of this character's attack in extra damage"
+                    "If you hit a PERFECT with this character, there is an 80% chance to deal 8% of this character's attack in extra damage"
                 ]
             }
         ],
@@ -144770,7 +144770,7 @@ window.details = {
                     "If you hit a PERFECT with this character, there is a 50% chance to deal 4% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 60% chance to deal 5% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 70% chance to deal 6% of this character's attack in extra damage",
-                    "If you hit a PERFECT with this character, there is a 80% chance to deal 7% of this character's attack in extra damage",
+                    "If you hit a PERFECT with this character, there is an 80% chance to deal 7% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 90% chance to deal 8% of this character's attack in extra damage"
                 ]
             },
@@ -144848,18 +144848,18 @@ window.details = {
             "Boosts base ATK by 30",
             "Boosts base HP by 100",
             "Boosts base RCV by 40",
-            "Reduce base Special Cooldown by 2 turn",
+            "Reduce base Special Cooldown by 2 turns",
             "Boosts base HP by 100",
             "Boosts base ATK by 40",
             "Boosts base HP by 100",
             "Boosts base HP by 100",
             "Acquire Sailor Ability 1: Boosts Shooter and Striker characters' base ATK by 70",
-            "Reduce base Special Cooldown by 2 turn",
+            "Reduce base Special Cooldown by 2 turns",
             "Boosts base ATK by 40",
             "Boosts base HP by 100",
             "Boosts base RCV by 40",
             "Acquire Potential 1: Enrage/Reduce Increase Damage Taken duration",
-            "Reduce base Special Cooldown by 2 turn",
+            "Reduce base Special Cooldown by 2 turns",
             "Boosts base ATK by 50",
             "Boosts base ATK by 50",
             "Boosts base HP by 100",
@@ -144869,7 +144869,7 @@ window.details = {
             "Boosts base ATK by 50",
             "Boosts base ATK by 50",
             "Acquire Sailor Ability 2: Makes [TND] orbs beneficial for Shooter and Striker characters",
-            "Reduce base Special Cooldown by 2 turn",
+            "Reduce base Special Cooldown by 2 turns",
             "Boosts base HP by 150",
             "Boosts base RCV by 60",
             "Boosts base ATK by 60",
@@ -144982,18 +144982,18 @@ window.details = {
             "Boosts base ATK by 30",
             "Boosts base HP by 100",
             "Boosts base RCV by 40",
-            "Reduce base Special Cooldown by 2 turn",
+            "Reduce base Special Cooldown by 2 turns",
             "Boosts base HP by 100",
             "Boosts base ATK by 40",
             "Boosts base HP by 100",
             "Boosts base HP by 100",
             "Acquire Sailor Ability 1: Boosts Shooter and Striker characters' base ATK by 70",
-            "Reduce base Special Cooldown by 2 turn",
+            "Reduce base Special Cooldown by 2 turns",
             "Boosts base ATK by 40",
             "Boosts base HP by 100",
             "Boosts base RCV by 40",
             "Acquire Potential 1: Enrage/Reduce Increase Damage Taken duration",
-            "Reduce base Special Cooldown by 2 turn",
+            "Reduce base Special Cooldown by 2 turns",
             "Boosts base ATK by 50",
             "Boosts base ATK by 50",
             "Boosts base HP by 100",
@@ -145003,7 +145003,7 @@ window.details = {
             "Boosts base ATK by 50",
             "Boosts base ATK by 50",
             "Acquire Sailor Ability 2: Makes [TND] orbs beneficial for Shooter and Striker characters",
-            "Reduce base Special Cooldown by 2 turn",
+            "Reduce base Special Cooldown by 2 turns",
             "Boosts base HP by 150",
             "Boosts base RCV by 60",
             "Boosts base ATK by 60",
@@ -145376,7 +145376,7 @@ window.details = {
                     "If you hit a PERFECT with this character, there is a 50% chance to deal 4% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 60% chance to deal 5% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 70% chance to deal 6% of this character's attack in extra damage",
-                    "If you hit a PERFECT with this character, there is a 80% chance to deal 7% of this character's attack in extra damage",
+                    "If you hit a PERFECT with this character, there is an 80% chance to deal 7% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 90% chance to deal 8% of this character's attack in extra damage"
                 ]
             },
@@ -145848,7 +145848,7 @@ window.details = {
                     "If you hit a PERFECT with this character, there is a 50% chance to deal 5% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 60% chance to deal 6% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 70% chance to deal 7% of this character's attack in extra damage",
-                    "If you hit a PERFECT with this character, there is a 80% chance to deal 8% of this character's attack in extra damage"
+                    "If you hit a PERFECT with this character, there is an 80% chance to deal 8% of this character's attack in extra damage"
                 ]
             },
             {
@@ -146339,7 +146339,7 @@ window.details = {
                     "If you hit a PERFECT with this character, there is a 50% chance to deal 4% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 60% chance to deal 5% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 70% chance to deal 6% of this character's attack in extra damage",
-                    "If you hit a PERFECT with this character, there is a 80% chance to deal 7% of this character's attack in extra damage",
+                    "If you hit a PERFECT with this character, there is an 80% chance to deal 7% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 90% chance to deal 8% of this character's attack in extra damage"
                 ]
             },
@@ -146435,7 +146435,7 @@ window.details = {
                     "If you hit a PERFECT with this character, there is a 50% chance to deal 4% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 60% chance to deal 5% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 70% chance to deal 6% of this character's attack in extra damage",
-                    "If you hit a PERFECT with this character, there is a 80% chance to deal 7% of this character's attack in extra damage",
+                    "If you hit a PERFECT with this character, there is an 80% chance to deal 7% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 90% chance to deal 8% of this character's attack in extra damage"
                 ]
             },
@@ -147332,7 +147332,7 @@ window.details = {
                     "If you hit a PERFECT with this character, there is a 40% chance to deal 4% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 50% chance to deal 5% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 60% chance to deal 6% of this character's attack in extra damage",
-                    "If you hit a PERFECT with this character, there is a 80% chance to deal 8% of this character's attack in extra damage"
+                    "If you hit a PERFECT with this character, there is an 80% chance to deal 8% of this character's attack in extra damage"
                 ]
             }
         ],
@@ -147755,7 +147755,7 @@ window.details = {
                     "If you hit a PERFECT with this character, there is a 40% chance to deal 4% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 50% chance to deal 5% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 70% chance to deal 7% of this character's attack in extra damage",
-                    "If you hit a PERFECT with this character, there is a 80% chance to deal 8% of this character's attack in extra damage",
+                    "If you hit a PERFECT with this character, there is an 80% chance to deal 8% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 100% chance to deal 10% of this character's attack in extra damage"
                 ]
             },
@@ -147856,7 +147856,7 @@ window.details = {
                     "If you hit a PERFECT with this character, there is a 50% chance to deal 5% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 60% chance to deal 6% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 70% chance to deal 7% of this character's attack in extra damage",
-                    "If you hit a PERFECT with this character, there is a 80% chance to deal 8% of this character's attack in extra damage"
+                    "If you hit a PERFECT with this character, there is an 80% chance to deal 8% of this character's attack in extra damage"
                 ]
             },
             {
@@ -147969,7 +147969,7 @@ window.details = {
             base: "Restores Special Cooldown of this character by 2 turns when it is rewinded",
             level1: "Boosts base ATK and HP of Driven and Slasher characters by 60"
         },
-        special: "Reduces damage recieved by 80% for 1 turn, removes Poison duration completely, changes all [BLOCK] and Badly Matching orbs into Matching orbs, and reduces ATK Down duration by 6 turns. If your crew has 6 Driven characters when the special is activated, boosts Color Affinity of Driven characters by 2x for 3 turns, increases duration of any Orb Amplification buffs by 1 turn, and reduces Special Cooldown of top row characters by 2 turns. If your crew has 6 Striker characters when the special is activated, boosts Color Affinity of Striker characters by 2.25x for 1 turn, increases duration of any Orb Amplification buffs by 1 turn, and reduces Special Cooldown of middle row characters by 2 turns.",
+        special: "Reduces damage received by 80% for 1 turn, removes Poison duration completely, changes all [BLOCK] and Badly Matching orbs into Matching orbs, and reduces ATK Down duration by 6 turns. If your crew has 6 Driven characters when the special is activated, boosts Color Affinity of Driven characters by 2x for 3 turns, increases duration of any Orb Amplification buffs by 1 turn, and reduces Special Cooldown of top row characters by 2 turns. If your crew has 6 Striker characters when the special is activated, boosts Color Affinity of Striker characters by 2.25x for 1 turn, increases duration of any Orb Amplification buffs by 1 turn, and reduces Special Cooldown of middle row characters by 2 turns.",
         specialName: "Flattering Former Subordinate",
         support: [
             {
@@ -148328,7 +148328,7 @@ window.details = {
                     "If you hit a PERFECT with this character, there is a 50% chance to deal 5% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 60% chance to deal 6% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 70% chance to deal 7% of this character's attack in extra damage",
-                    "If you hit a PERFECT with this character, there is a 80% chance to deal 8% of this character's attack in extra damage"
+                    "If you hit a PERFECT with this character, there is an 80% chance to deal 8% of this character's attack in extra damage"
                 ]
             },
             {
@@ -148603,7 +148603,7 @@ window.details = {
                     "If you hit a PERFECT with this character, there is a 50% chance to deal 5% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 60% chance to deal 6% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 70% chance to deal 7% of this character's attack in extra damage",
-                    "If you hit a PERFECT with this character, there is a 80% chance to deal 8% of this character's attack in extra damage"
+                    "If you hit a PERFECT with this character, there is an 80% chance to deal 8% of this character's attack in extra damage"
                 ]
             },
             {
@@ -148984,7 +148984,7 @@ window.details = {
             "Acquire Potential 3: Reduce Sailor Despair duration",
             "Boosts base ATK by 100",
             "Boosts base RCV by 60",
-            "Acquire Sailor Ability 2: If this character has a [INT] or [TND] orb and you attack with this character, increases boost effects of Chain Lock buffs by +0.25x.",
+            "Acquire Sailor Ability 2: If this character has an [INT] or [TND] orb and you attack with this character, increases boost effects of Chain Lock buffs by +0.25x.",
         ],
         potential: [
             {
@@ -149020,7 +149020,7 @@ window.details = {
         ],
         sailor: {
             base: "Reduces Special Bind duration by 6 turns on this character",
-            level1: "If this character has a [INT] or [TND] orb and you attack with this character, increases boost effects of Chain Lock buffs by +0.25x."
+            level1: "If this character has an [INT] or [TND] orb and you attack with this character, increases boost effects of Chain Lock buffs by +0.25x."
         },
         special: "Recovers 10,000 HP, reduces Special Bind and Chain Coefficient Reduction duration by 6 turns, reduces enemies' Threshold Damage Reduction effect by 50%, and sets Chain Boundaries to 2.75x and 10.0x for 1 turn. If this character is a Crewmate when the special is activated, optionally swaps this unit with your captain for 1 turn.",
         specialName: "Eliminating Hard Strike",
@@ -149156,7 +149156,7 @@ window.details = {
                     "If you hit a PERFECT with this character, there is a 40% chance to deal 5% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 50% chance to deal 6% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 60% chance to deal 7% of this character's attack in extra damage",
-                    "If you hit a PERFECT with this character, there is a 80% chance to deal 8% of this character's attack in extra damage"
+                    "If you hit a PERFECT with this character, there is an 80% chance to deal 8% of this character's attack in extra damage"
                 ]
             }
         ],
@@ -149239,7 +149239,7 @@ window.details = {
                     "If you hit a PERFECT with this character, there is a 40% chance to deal 5% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 50% chance to deal 6% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 60% chance to deal 7% of this character's attack in extra damage",
-                    "If you hit a PERFECT with this character, there is a 80% chance to deal 8% of this character's attack in extra damage"
+                    "If you hit a PERFECT with this character, there is an 80% chance to deal 8% of this character's attack in extra damage"
                 ]
             }
         ],
@@ -149432,7 +149432,7 @@ window.details = {
                     "If you hit a PERFECT with this character, there is a 50% chance to deal 5% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 60% chance to deal 6% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 70% chance to deal 7% of this character's attack in extra damage",
-                    "If you hit a PERFECT with this character, there is a 80% chance to deal 8% of this character's attack in extra damage"
+                    "If you hit a PERFECT with this character, there is an 80% chance to deal 8% of this character's attack in extra damage"
                 ]
             },
             {
@@ -149950,7 +149950,7 @@ window.details = {
                     "If you hit a PERFECT with this character, there is a 50% chance to deal 5% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 60% chance to deal 6% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 70% chance to deal 7% of this character's attack in extra damage",
-                    "If you hit a PERFECT with this character, there is a 80% chance to deal 8% of this character's attack in extra damage"
+                    "If you hit a PERFECT with this character, there is an 80% chance to deal 8% of this character's attack in extra damage"
                 ]
             },
             {
@@ -150593,7 +150593,7 @@ window.details = {
                     "If you hit a PERFECT with this character, there is a 40% chance to deal 4% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 50% chance to deal 5% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 70% chance to deal 7% of this character's attack in extra damage",
-                    "If you hit a PERFECT with this character, there is a 80% chance to deal 8% of this character's attack in extra damage",
+                    "If you hit a PERFECT with this character, there is an 80% chance to deal 8% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 100% chance to deal 10% of this character's attack in extra damage"
                 ]
             },
@@ -150620,11 +150620,11 @@ window.details = {
         ],
         rush: {
             characterCondition: [
-                "On the last Stage, if character performs the 1st tap or 6th tap of an attack, and your crew must consist of any 3 of the following, excluding Supports and counting only 1 per unit: Roronoa Zoro, Nami, Usopp, Sanji, Tony Tony Chopper, Nico Robin, Franky, Brook, Jinbe, Yamato, Trafalgar Law,  Eustass Kid, Portgas D. Ace, Sabo, Shanks, Gol D. Roger",
-                "On the last Stage, if character performs the 1st tap or 6th tap of an attack, and your crew must consist of any 3 of the following, excluding Supports and counting only 1 per unit: Roronoa Zoro, Nami, Usopp, Sanji, Tony Tony Chopper, Nico Robin, Franky, Brook, Jinbe, Yamato, Trafalgar Law,  Eustass Kid, Portgas D. Ace, Sabo, Shanks, Gol D. Roger",
-                "On the last Stage, if character performs the 1st tap or 6th tap of an attack, and your crew must consist of any 3 of the following, excluding Supports and counting only 1 per unit: Roronoa Zoro, Nami, Usopp, Sanji, Tony Tony Chopper, Nico Robin, Franky, Brook, Jinbe, Yamato, Trafalgar Law,  Eustass Kid, Portgas D. Ace, Sabo, Shanks, Gol D. Roger",
-                "On the last Stage, if character performs the 1st tap or 6th tap of an attack, and your crew must consist of any 3 of the following, excluding Supports and counting only 1 per unit: Roronoa Zoro, Nami, Usopp, Sanji, Tony Tony Chopper, Nico Robin, Franky, Brook, Jinbe, Yamato, Trafalgar Law,  Eustass Kid, Portgas D. Ace, Sabo, Shanks, Gol D. Roger",
-                "On the last Stage, if character performs the 1st tap or 6th tap of an attack, and your crew must consist of any 3 of the following, excluding Supports and counting only 1 per unit: Roronoa Zoro, Nami, Usopp, Sanji, Tony Tony Chopper, Nico Robin, Franky, Brook, Jinbe, Yamato, Trafalgar Law,  Eustass Kid, Portgas D. Ace, Sabo, Shanks, Gol D. Roger"
+                "On the last Stage, if character performs the 1st tap or 6th tap of an attack, and your crew must consist of any 3 of the following, excluding Supports and counting only 1 per unit: Roronoa Zoro, Nami, Usopp, Sanji, Tony Tony Chopper, Nico Robin, Franky, Brook, Jinbe, Yamato, Trafalgar Law, Eustass Kid, Portgas D. Ace, Sabo, Shanks, Gol D. Roger",
+                "On the last Stage, if character performs the 1st tap or 6th tap of an attack, and your crew must consist of any 3 of the following, excluding Supports and counting only 1 per unit: Roronoa Zoro, Nami, Usopp, Sanji, Tony Tony Chopper, Nico Robin, Franky, Brook, Jinbe, Yamato, Trafalgar Law, Eustass Kid, Portgas D. Ace, Sabo, Shanks, Gol D. Roger",
+                "On the last Stage, if character performs the 1st tap or 6th tap of an attack, and your crew must consist of any 3 of the following, excluding Supports and counting only 1 per unit: Roronoa Zoro, Nami, Usopp, Sanji, Tony Tony Chopper, Nico Robin, Franky, Brook, Jinbe, Yamato, Trafalgar Law, Eustass Kid, Portgas D. Ace, Sabo, Shanks, Gol D. Roger",
+                "On the last Stage, if character performs the 1st tap or 6th tap of an attack, and your crew must consist of any 3 of the following, excluding Supports and counting only 1 per unit: Roronoa Zoro, Nami, Usopp, Sanji, Tony Tony Chopper, Nico Robin, Franky, Brook, Jinbe, Yamato, Trafalgar Law, Eustass Kid, Portgas D. Ace, Sabo, Shanks, Gol D. Roger",
+                "On the last Stage, if character performs the 1st tap or 6th tap of an attack, and your crew must consist of any 3 of the following, excluding Supports and counting only 1 per unit: Roronoa Zoro, Nami, Usopp, Sanji, Tony Tony Chopper, Nico Robin, Franky, Brook, Jinbe, Yamato, Trafalgar Law, Eustass Kid, Portgas D. Ace, Sabo, Shanks, Gol D. Roger"
             ],
             description: [
                 "<b>Activated on the 1st tap of an attack:</b><br>Performs a Rush up to 6 times. Adds 0.1x-0.4x to Chain multiplier for 1 turn and boosts Rush ATK of [INT], Fighter and Powerhouse characters by 1.1x-1.3x.<br><b>Activated on the 6th tap of an attack:</b><br>Performs a Rush up to 5 times. Adds 0.2x-0.6x to Chain multiplier for 1 turn and boosts Rush ATK of this character by 1.4x-1.7x.",
@@ -150649,7 +150649,7 @@ window.details = {
         specialNotes: "MISS: 3.5x, GOOD: 3.7x, GREAT: 3.8x, PERFECT: 3.9x, EXCELLENT 4x",
         specialName: "Young Strength to Pierce the Strongest",
         superSpecial: "Recovers 30% of crew's MAX HP, allowing HP Overfill up to 2x MAX HP, changes Class 1 of all non-Fighter Class 1 Cerebral and Class 1 Shooter characters to Fighter class for 1 turn, boosts Color Affinity of [INT], Fighter and Powerhouse characters by 2.5x for 2 turns, transforms [INT] characters into Super [INT] characters, and transforms Fighter characters into Super Fighter characters.",
-        superSpecialCriteria: "This character must be captain and your crew must consist of any 3 of the following, excluding Supports and counting only 1 per unit: Roronoa Zoro, Nami, Usopp, Sanji, Tony Tony Chopper, Nico Robin, Franky, Brook, Jinbe, Yamato, Trafalgar Law,  Eustass Kid, Portgas D. Ace, Sabo, Shanks, Gol D. Roger",
+        superSpecialCriteria: "This character must be captain and your crew must consist of any 3 of the following, excluding Supports and counting only 1 per unit: Roronoa Zoro, Nami, Usopp, Sanji, Tony Tony Chopper, Nico Robin, Franky, Brook, Jinbe, Yamato, Trafalgar Law, Eustass Kid, Portgas D. Ace, Sabo, Shanks, Gol D. Roger",
         support: [
             {
                 Characters: "[INT] of the following: Roronoa Zoro, Nami, Usopp, Sanji, Tony Tony Chopper, Nico Robin, Franky, Brook, Jinbe, Trafalgar Law, Eustass Kid",
@@ -150724,7 +150724,7 @@ window.details = {
                     "If you hit a PERFECT with this character, there is a 40% chance to deal 4% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 50% chance to deal 5% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 70% chance to deal 7% of this character's attack in extra damage",
-                    "If you hit a PERFECT with this character, there is a 80% chance to deal 8% of this character's attack in extra damage",
+                    "If you hit a PERFECT with this character, there is an 80% chance to deal 8% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 100% chance to deal 10% of this character's attack in extra damage"
                 ]
             },
@@ -150837,7 +150837,7 @@ window.details = {
                     "If you hit a PERFECT with this character, there is a 40% chance to deal 4% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 50% chance to deal 5% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 70% chance to deal 7% of this character's attack in extra damage",
-                    "If you hit a PERFECT with this character, there is a 80% chance to deal 8% of this character's attack in extra damage",
+                    "If you hit a PERFECT with this character, there is an 80% chance to deal 8% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 100% chance to deal 10% of this character's attack in extra damage"
                 ]
             },
@@ -150958,7 +150958,7 @@ window.details = {
                     "If you hit a PERFECT with this character, there is a 40% chance to deal 4% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 50% chance to deal 5% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 70% chance to deal 7% of this character's attack in extra damage",
-                    "If you hit a PERFECT with this character, there is a 80% chance to deal 8% of this character's attack in extra damage",
+                    "If you hit a PERFECT with this character, there is an 80% chance to deal 8% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 100% chance to deal 10% of this character's attack in extra damage"
                 ]
             },
@@ -151153,7 +151153,7 @@ window.details = {
             "Boosts base HP by 50",
             "Boosts base RCV by 30",
             "Boosts base HP by 60",
-            "Acquire Sailor Ability 1: Boosts base ATK of all characters by 50, and makes [DEX] orbs beneficial for  characters",
+            "Acquire Sailor Ability 1: Boosts base ATK of all characters by 50, and makes [DEX] orbs beneficial for characters",
             "Boosts base ATK by 40",
             "Reduce base Special Cooldown by 1 turn",
             "Acquire Potential 2: Critical Hit",
@@ -151176,7 +151176,7 @@ window.details = {
                     "If you hit a PERFECT with this character, there is a 40% chance to deal 4% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 50% chance to deal 5% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 60% chance to deal 6% of this character's attack in extra damage",
-                    "If you hit a PERFECT with this character, there is a 80% chance to deal 8% of this character's attack in extra damage"
+                    "If you hit a PERFECT with this character, there is an 80% chance to deal 8% of this character's attack in extra damage"
                 ]
             }
         ],
@@ -151293,7 +151293,7 @@ window.details = {
             "Boosts base ATK by 30",
             "Boosts base ATK by 30",
             "Boosts base RCV by 20",
-            "Acquire Sailor Ability 1: Boosts base ATK by 50, and makes their [INT] orbs beneficial for  characters",
+            "Acquire Sailor Ability 1: Boosts base ATK by 50, and makes their [INT] orbs beneficial for characters",
             "Boosts base HP by 80",
             "Reduce base Special Cooldown by 1 turn",
             "Acquire Potential 2: Reduce Sailor Despair duration",
@@ -151340,11 +151340,11 @@ window.details = {
             {
                 Characters: "[INT] of the following: Monkey D. Luffy, Roronoa Zoro, Usopp, Sanji, Tony Tony Chopper, Nico Robin, Franky, Brook, Jinbe",
                 description: [
-                    "Once per adventure, when you reach the final stage, changes orb of the supported character into a [INT] orb.",
-                    "Once per adventure, when you reach the final stage, changes orb of the supported character into a [INT] orb.",
-                    "Once per adventure, when you reach the final stage, changes orb of the supported character into a [INT] orb.",
-                    "Once per adventure, when you reach the final stage, changes orb of the supported character into a [INT] orb.",
-                    "Once per adventure, when you reach the final stage, reduces enemies' Percent Damage Reduction duration by 1 turn, and changes orb of the supported character into a [INT] orb."
+                    "Once per adventure, when you reach the final stage, changes orb of the supported character into an [INT] orb.",
+                    "Once per adventure, when you reach the final stage, changes orb of the supported character into an [INT] orb.",
+                    "Once per adventure, when you reach the final stage, changes orb of the supported character into an [INT] orb.",
+                    "Once per adventure, when you reach the final stage, changes orb of the supported character into an [INT] orb.",
+                    "Once per adventure, when you reach the final stage, reduces enemies' Percent Damage Reduction duration by 1 turn, and changes orb of the supported character into an [INT] orb."
                 ]
             }
         ]
@@ -152218,7 +152218,7 @@ window.details = {
                     "If you hit a PERFECT with this character, there is a 50% chance to deal 5% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 60% chance to deal 6% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 70% chance to deal 7% of this character's attack in extra damage",
-                    "If you hit a PERFECT with this character, there is a 80% chance to deal 8% of this character's attack in extra damage"
+                    "If you hit a PERFECT with this character, there is an 80% chance to deal 8% of this character's attack in extra damage"
                 ]
             },
             {
@@ -152315,7 +152315,7 @@ window.details = {
                     "If you hit a PERFECT with this character, there is a 50% chance to deal 5% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 60% chance to deal 6% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 70% chance to deal 7% of this character's attack in extra damage",
-                    "If you hit a PERFECT with this character, there is a 80% chance to deal 8% of this character's attack in extra damage"
+                    "If you hit a PERFECT with this character, there is an 80% chance to deal 8% of this character's attack in extra damage"
                 ]
             },
             {
@@ -152695,7 +152695,7 @@ window.details = {
 			level2: "Once per adventure, when any other [DEX], Shooter or Free Spirit Captain character uses a Special, reduces Special Cooldown of this character by 10 turns."
 		},
 		superSpecial: "Reduces Special Cooldown of this character by 10 turns, ignores Debuff Protection and delays all enemies by 1 turn, boosts Orb Effects of [DEX], Shooter and Free Spirit characters by 2.5x for 2 turns, and transforms Shooter characters into Super Shooter characters.",
-		superSpecialCriteria: "This character must be captain and your crew must consist of any 2 of the following, excluding Supports and counting only 1 per unit: Onion, Pepper, Carrot, Kaya, Heracles-un (Heracles), Yasopp,  Broggy, Monkey D. Luffy, Roronoa Zoro, Sanji, Nami, Tony Tony Chopper, Nico Robin, Franky, Brook, Jinbe",
+		superSpecialCriteria: "This character must be captain and your crew must consist of any 2 of the following, excluding Supports and counting only 1 per unit: Onion, Pepper, Carrot, Kaya, Heracles-un (Heracles), Yasopp, Broggy, Monkey D. Luffy, Roronoa Zoro, Sanji, Nami, Tony Tony Chopper, Nico Robin, Franky, Brook, Jinbe",
 		support: [
 			{
 				Characters: "Broggy, Kaya, Heracles-un (Heracles), Yasopp, Onion, Pepper, Carrot",
@@ -152716,7 +152716,7 @@ window.details = {
 					"If you hit a PERFECT with this character, there is a 50% chance to deal 5% of this character's attack in extra damage",
 					"If you hit a PERFECT with this character, there is a 60% chance to deal 6% of this character's attack in extra damage",
 					"If you hit a PERFECT with this character, there is a 70% chance to deal 7% of this character's attack in extra damage",
-					"If you hit a PERFECT with this character, there is a 80% chance to deal 8% of this character's attack in extra damage"
+					"If you hit a PERFECT with this character, there is an 80% chance to deal 8% of this character's attack in extra damage"
 				]
 			},
 			{
@@ -153143,7 +153143,7 @@ window.details = {
 	},
 	4185: {//Law
 		captain: "Boosts ATK of Free Spirit, Fighter, Striker and Slasher characters by 4.5x, by 5.25x instead if HP is above 99% at the start of the turn, makes [INT] orbs beneficial for Free Spirit, Fighter, Striker and Slasher characters, recovers 1,500 HP at the end of each turn, and reduces damage received by 25%. Recovers 30% of damage taken from enemies in the previous stage when entering a new stage. If there is more than 50,000 Excess Healing done, reduces Despair duration by 10 turns.",
-        special: "Deals 10% of enemies' current HP in True damage to one enemy, deals 200x character's ATK in [PSY] damage to all enemies at the end of each turn for 2 turns, changes [EMPTY], [BLOCK], [BOMB], [RCV], [G] and Badly Matching orbs into Matching orbs, and changes the orb of this character into a Matching orb. If your Captain is a Fighter, Slasher, Striker or Shooter character, boosts Orb Effects of all characters by 2.5x for 2 turns. If your Captain is a Free Spirit, Driven, Cerebral or Powerhouse character, sets Chain Boundaries to 2.5x and 35.0x for 2 turns. If this character's orb is a [INT], [EMPTY], [BLOCK], [BOMB], [RCV] or [G] orb, increases duration of any Chain Lock and Orb Amplification buffs by 1 turn, including effects activated in the same Ability.",
+        special: "Deals 10% of enemies' current HP in True damage to one enemy, deals 200x character's ATK in [PSY] damage to all enemies at the end of each turn for 2 turns, changes [EMPTY], [BLOCK], [BOMB], [RCV], [G] and Badly Matching orbs into Matching orbs, and changes the orb of this character into a Matching orb. If your Captain is a Fighter, Slasher, Striker or Shooter character, boosts Orb Effects of all characters by 2.5x for 2 turns. If your Captain is a Free Spirit, Driven, Cerebral or Powerhouse character, sets Chain Boundaries to 2.5x and 35.0x for 2 turns. If this character's orb is an [INT], [EMPTY], [BLOCK], [BOMB], [RCV] or [G] orb, increases duration of any Chain Lock and Orb Amplification buffs by 1 turn, including effects activated in the same Ability.",
 		specialName: "Ground-Carving Boulder",
 		sailor: {
 			level1: "When any other Free Spirit or Slasher character uses a Special, reduces Special Cooldown of this character by 1 turn.",
@@ -153250,7 +153250,7 @@ window.details = {
             },
             {
                 special: {
-                    base: "Deals 10% of enemies' current HP in True damage to one enemy, deals 200x character's ATK in [PSY] damage to all enemies at the end of each turn for 3 turns, and changes all orbs, including [BLOCK] orbs, into Matching orbs. If your Captain is a Fighter, Slasher, Striker or Shooter character, boosts Orb Effects of all characters by 2.75x for 2 turns. If your Captain is a Free Spirit, Driven, Cerebral or Powerhouse character, sets Chain Boundaries to 2.75x and 35.0x for 2 turns. If this character's orb is a [INT], [EMPTY], [BLOCK], [BOMB], [RCV], [G], [SUPERBOMB], [WANO] or [RAINBOW] orb, increases duration of any Chain Lock and Orb Amplification buffs by 1 turn, including effects activated in the same Ability."
+                    base: "Deals 10% of enemies' current HP in True damage to one enemy, deals 200x character's ATK in [PSY] damage to all enemies at the end of each turn for 3 turns, and changes all orbs, including [BLOCK] orbs, into Matching orbs. If your Captain is a Fighter, Slasher, Striker or Shooter character, boosts Orb Effects of all characters by 2.75x for 2 turns. If your Captain is a Free Spirit, Driven, Cerebral or Powerhouse character, sets Chain Boundaries to 2.75x and 35.0x for 2 turns. If this character's orb is an [INT], [EMPTY], [BLOCK], [BOMB], [RCV], [G], [SUPERBOMB], [WANO] or [RAINBOW] orb, increases duration of any Chain Lock and Orb Amplification buffs by 1 turn, including effects activated in the same Ability."
                 },
                 rResilience: true
             }
@@ -154086,7 +154086,7 @@ window.details = {
 					"If you hit a PERFECT with this character, there is a 50% chance to deal 5% of this character's attack in extra damage",
 					"If you hit a PERFECT with this character, there is a 60% chance to deal 6% of this character's attack in extra damage",
 					"If you hit a PERFECT with this character, there is a 70% chance to deal 7% of this character's attack in extra damage",
-					"If you hit a PERFECT with this character, there is a 80% chance to deal 10% of this character's attack in extra damage"
+					"If you hit a PERFECT with this character, there is an 80% chance to deal 10% of this character's attack in extra damage"
 				]
 			},
 			{
@@ -155189,7 +155189,7 @@ window.details = {
                     "If you hit a PERFECT with this character, there is a 50% chance to deal 5% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 60% chance to deal 6% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 70% chance to deal 7% of this character's attack in extra damage",
-                    "If you hit a PERFECT with this character, there is a 80% chance to deal 8% of this character's attack in extra damage"
+                    "If you hit a PERFECT with this character, there is an 80% chance to deal 8% of this character's attack in extra damage"
                 ]
             },
             {
@@ -155269,7 +155269,7 @@ window.details = {
 					"If you hit a PERFECT with this character, there is a 50% chance to deal 5% of this character's attack in extra damage",
 					"If you hit a PERFECT with this character, there is a 60% chance to deal 6% of this character's attack in extra damage",
 					"If you hit a PERFECT with this character, there is a 70% chance to deal 7% of this character's attack in extra damage",
-					"If you hit a PERFECT with this character, there is a 80% chance to deal 8% of this character's attack in extra damage"
+					"If you hit a PERFECT with this character, there is an 80% chance to deal 8% of this character's attack in extra damage"
 				]
 			},
 			{
@@ -155389,7 +155389,7 @@ window.details = {
 					"If you hit a PERFECT with this character, there is a 50% chance to deal 5% of this character's attack in extra damage",
 					"If you hit a PERFECT with this character, there is a 60% chance to deal 6% of this character's attack in extra damage",
 					"If you hit a PERFECT with this character, there is a 70% chance to deal 7% of this character's attack in extra damage",
-					"If you hit a PERFECT with this character, there is a 80% chance to deal 8% of this character's attack in extra damage"
+					"If you hit a PERFECT with this character, there is an 80% chance to deal 8% of this character's attack in extra damage"
 				]
 			},
 			{
@@ -155593,7 +155593,7 @@ window.details = {
 		]
 	},
 	4216: {//Whitebeard
-		captain: "Reduces Special Cooldown of all characters by 1 turn at the start of the fight, boosts ATK of Powerhouse and Striker characters by 5.5x-6x depending on the crew's current HP, boosts HP of Powerhouse and Striker characters by 1.3x, makes [TND] orbs beneficial for Powerhouse and Striker character, and increases duration of any  Chain Multiplier Growth Rate buffs applied by Specials by 2 turns. If HP is above 51% at the start of the turn, reduces damage received by 25%.",
+		captain: "Reduces Special Cooldown of all characters by 1 turn at the start of the fight, boosts ATK of Powerhouse and Striker characters by 5.5x-6x depending on the crew's current HP, boosts HP of Powerhouse and Striker characters by 1.3x, makes [TND] orbs beneficial for Powerhouse and Striker character, and increases duration of any Chain Multiplier Growth Rate buffs applied by Specials by 2 turns. If HP is above 51% at the start of the turn, reduces damage received by 25%.",
 		special: [
 			{
 				description: "Reduces Special Bind and Chain Coefficient Reduction duration by 6 turns. If your Captain is a Powerhouse or Striker character when the special is activated, boosts Chain Multiplier Growth Rate by 1.5x for 1 turn. If your crew has 3 turns or more of Chain Lock when the special is activated, decreases duration of any Chain Lock buffs by 2 turns and increases boost effects of Chain Lock buffs by +0.8x. If your Captain is a Powerhouse or Striker character and HP is below 51% when the special is activated, changes Class 1 of all non-Powerhouse characters to Powerhouse class for 1 turn and sets Chain Boundaries to 3.0x and 30.0x for 2 turns.",
@@ -155616,10 +155616,10 @@ window.details = {
 				Characters: "Portgas D. Ace, Marco, Jozu, Vista, Izo, Rakuyo, Fossa, Whitey Bay, Kingdew, Atmos",
 				description: [
 					"Once per adventure, when an enemy inflicts you with Special Bind, reduces Special Bind duration by 1 turn on the supported character.",
-					"Once per adventure, when an enemy inflicts you with Special Bind, reduces Special Bind duration by 2 turn on the supported character.",
-					"Once per adventure, when an enemy inflicts you with Special Bind, reduces Special Bind duration by 3 turn on the supported character.",
-					"Once per adventure, when an enemy inflicts you with Special Bind, reduces Special Bind duration by 4 turn on the supported character.",
-					"Once per adventure, when an enemy inflicts you with Special Bind, reduces Special Bind duration by 5 turn on the supported character."
+					"Once per adventure, when an enemy inflicts you with Special Bind, reduces Special Bind duration by 2 turns on the supported character.",
+					"Once per adventure, when an enemy inflicts you with Special Bind, reduces Special Bind duration by 3 turns on the supported character.",
+					"Once per adventure, when an enemy inflicts you with Special Bind, reduces Special Bind duration by 4 turns on the supported character.",
+					"Once per adventure, when an enemy inflicts you with Special Bind, reduces Special Bind duration by 5 turns on the supported character."
 				]
 			}
 		],
@@ -155923,7 +155923,7 @@ window.details = {
 					"If you hit a PERFECT with this character, there is a 50% chance to deal 5% of this character's attack in extra damage",
 					"If you hit a PERFECT with this character, there is a 60% chance to deal 6% of this character's attack in extra damage",
 					"If you hit a PERFECT with this character, there is a 70% chance to deal 7% of this character's attack in extra damage",
-					"If you hit a PERFECT with this character, there is a 80% chance to deal 8% of this character's attack in extra damage"
+					"If you hit a PERFECT with this character, there is an 80% chance to deal 8% of this character's attack in extra damage"
 				]
 			},
 			{
@@ -156300,7 +156300,7 @@ window.details = {
 		]
 	},
 	4225: {//Bepo
-		captain: "Reduces Special Cooldown of this character by 5 turns at the start of the fight, boosts ATK of Powerhouse and Striker characters by 4.25x, boosts HP of Powerhouse and Striker characters  by 1.3x, and makes [RCV] orbs beneficial for Powerhouse and Striker characters. If this character becomes your captain in the middle of an island, boosts ATK of Powerhouse and Striker characters by 5.7375x, and attacks will ignore damage reducing Barriers and Buffs.",
+		captain: "Reduces Special Cooldown of this character by 5 turns at the start of the fight, boosts ATK of Powerhouse and Striker characters by 4.25x, boosts HP of Powerhouse and Striker characters by 1.3x, and makes [RCV] orbs beneficial for Powerhouse and Striker characters. If this character becomes your captain in the middle of an island, boosts ATK of Powerhouse and Striker characters by 5.7375x, and attacks will ignore damage reducing Barriers and Buffs.",
 		captainNotes: "Attacks are still affected by DEF value. DEF boost buffs (Blue shield) still reduce your damage and you can not kill through Resilience, but Damage Negating (Yellow shield), % Damage Reduction (Rainbow shield), Barriers and Threshold Damage Reduction are ignored. Enemy attacks will go through YOUR defensive buffs.",
         special: "Reduces all enemies' Percent Damage Reduction duration by 2 turns, boosts Final Tap ATK of [PSY], Powerhouse, and Striker characters by 20%, boosts Color Affinity of [PSY], Powerhouse, and Striker characters by 1.75x, can be enhanced up to 2 times, for 2 turns. If this character used \"True Form of the Polar Bear\" 1 or more times this adventure and HP is below 70%, increases boost effects of Color Affinity buffs by +0.2x, including effects activated in the same Ability, and increases the duration of any Color Affinity buffs by 1 turn. If this character used \"True Form of the Polar Bear\" 1 or more times this adventure and HP is above 70%, reduces crew's current HP by 50%, reduces ATK Down duration by 2 turns, and increases boost effects of Color Affinity buffs by +0.4x, including effects activated in the same Ability. If this character used \"True Form of the Polar Bear\" 3 or more times this adventure, sets Chain Boundaries to 3.25x and 20.0x for 3 turns..",
 		specialName: "True Form of the Polar Bear",
@@ -156692,7 +156692,7 @@ window.details = {
 	},
 	4230: {//Shanks VS Kid
 		captain: {
-			character1: "Boosts ATK of all characters by 5x-6x depending on the number of Slasher characters on the crew, boosts HP of all characters by 1.3x, and makes [TND] orbs beneficial for all characters. If your crew has 4 or more Slasher characters, reduces Despair duration by 10 turns, and boosts Critical Hit Rate of Slasher characters by 30% for 10 turns at the start of the fight. If your crew has 6 Slasher characters and this character has a [INT] or [TND] orb and you attack with this character, reduces enemies' Slasher Resistance by -10% for 1 turn. If your crew has 6 Slasher characters and Territory: Slasher is on the field, boosts ATK of Slasher characters by 6.5x. If this character is your Captain and performs EXCELLENT with their Action Special, boosts Final Tap ATK of Slasher characters by 8% when a Slasher character performs a Critical Hit.",
+			character1: "Boosts ATK of all characters by 5x-6x depending on the number of Slasher characters on the crew, boosts HP of all characters by 1.3x, and makes [TND] orbs beneficial for all characters. If your crew has 4 or more Slasher characters, reduces Despair duration by 10 turns, and boosts Critical Hit Rate of Slasher characters by 30% for 10 turns at the start of the fight. If your crew has 6 Slasher characters and this character has an [INT] or [TND] orb and you attack with this character, reduces enemies' Slasher Resistance by -10% for 1 turn. If your crew has 6 Slasher characters and Territory: Slasher is on the field, boosts ATK of Slasher characters by 6.5x. If this character is your Captain and performs EXCELLENT with their Action Special, boosts Final Tap ATK of Slasher characters by 8% when a Slasher character performs a Critical Hit.",
 			character2: "Reduces Special Cooldown of Shooter characters by 2 turns at the start of the fight, boosts ATK of all characters by 5x-6x depending on the number of Shooter characters on the crew, boosts HP of all characters by 1.3x, and makes [TND], [BOMB], and [SUPERBOMB] orbs beneficial for all characters. If your crew has 4 or more Shooter characters, reduces Bind duration by 10 turns. If your crew has 6 Shooter characters and a Shooter character uses a special, reduces Special Cooldown of this character by 5 turns. If your crew has 6 Shooter characters and HP is below 25%, boosts ATK of Shooter characters by 6.5x. If this character uses \"Sweeping Damned Punk\", the following effect is added to this character's Captain Ability for 3 turns: If your crew has 6 Shooter characters and HP is below 25%, reduces enemies' Shooter Resistance by -6% for 1 turn when a Barrier Penetration Enabled character hits a PERFECT.",
 		},
 		special: {
@@ -156713,7 +156713,7 @@ window.details = {
 	},
 	4231: {//Shanks VS Kid
 		captain: {
-			character1: "Boosts ATK of all characters by 5x-6x depending on the number of Slasher characters on the crew, boosts HP of all characters by 1.3x, and makes [TND] orbs beneficial for all characters. If your crew has 4 or more Slasher characters, reduces Despair duration by 10 turns, and boosts Critical Hit Rate of Slasher characters by 30% for 10 turns at the start of the fight. If your crew has 6 Slasher characters and this character has a [INT] or [TND] orb and you attack with this character, reduces enemies' Slasher Resistance by -10% for 1 turn. If your crew has 6 Slasher characters and Territory: Slasher is on the field, boosts ATK of Slasher characters by 6.5x. If this character is your Captain and performs EXCELLENT with their Action Special, boosts Final Tap ATK of Slasher characters by 8% when a Slasher character performs a Critical Hit.",
+			character1: "Boosts ATK of all characters by 5x-6x depending on the number of Slasher characters on the crew, boosts HP of all characters by 1.3x, and makes [TND] orbs beneficial for all characters. If your crew has 4 or more Slasher characters, reduces Despair duration by 10 turns, and boosts Critical Hit Rate of Slasher characters by 30% for 10 turns at the start of the fight. If your crew has 6 Slasher characters and this character has an [INT] or [TND] orb and you attack with this character, reduces enemies' Slasher Resistance by -10% for 1 turn. If your crew has 6 Slasher characters and Territory: Slasher is on the field, boosts ATK of Slasher characters by 6.5x. If this character is your Captain and performs EXCELLENT with their Action Special, boosts Final Tap ATK of Slasher characters by 8% when a Slasher character performs a Critical Hit.",
 			character2: "Reduces Special Cooldown of Shooter characters by 2 turns at the start of the fight, boosts ATK of all characters by 5x-6x depending on the number of Shooter characters on the crew, boosts HP of all characters by 1.3x, and makes [TND], [BOMB], and [SUPERBOMB] orbs beneficial for all characters. If your crew has 4 or more Shooter characters, reduces Bind duration by 10 turns. If your crew has 6 Shooter characters and a Shooter character uses a special, reduces Special Cooldown of this character by 5 turns. If your crew has 6 Shooter characters and HP is below 25%, boosts ATK of Shooter characters by 6.5x. If this character uses \"Sweeping Damned Punk\", the following effect is added to this character's Captain Ability for 3 turns: If your crew has 6 Shooter characters and HP is below 25%, reduces enemies' Shooter Resistance by -6% for 1 turn when a Barrier Penetration Enabled character hits a PERFECT.",
 		},
 		special: {
@@ -156792,7 +156792,7 @@ window.details = {
 					"If you hit a PERFECT with this character, there is a 50% chance to deal 5% of this character's attack in extra damage",
 					"If you hit a PERFECT with this character, there is a 60% chance to deal 6% of this character's attack in extra damage",
 					"If you hit a PERFECT with this character, there is a 70% chance to deal 7% of this character's attack in extra damage",
-					"If you hit a PERFECT with this character, there is a 80% chance to deal 8% of this character's attack in extra damage"
+					"If you hit a PERFECT with this character, there is an 80% chance to deal 8% of this character's attack in extra damage"
 				]
 			},
 			{
@@ -156868,7 +156868,7 @@ window.details = {
 					"If you hit a PERFECT with this character, there is a 50% chance to deal 5% of this character's attack in extra damage",
 					"If you hit a PERFECT with this character, there is a 60% chance to deal 6% of this character's attack in extra damage",
 					"If you hit a PERFECT with this character, there is a 70% chance to deal 7% of this character's attack in extra damage",
-					"If you hit a PERFECT with this character, there is a 80% chance to deal 8% of this character's attack in extra damage"
+					"If you hit a PERFECT with this character, there is an 80% chance to deal 8% of this character's attack in extra damage"
 				]
 			},
 			{
@@ -157248,7 +157248,7 @@ window.details = {
 					"If you hit a PERFECT with this character, there is a 50% chance to deal 5% of this character's attack in extra damage",
 					"If you hit a PERFECT with this character, there is a 60% chance to deal 6% of this character's attack in extra damage",
 					"If you hit a PERFECT with this character, there is a 70% chance to deal 7% of this character's attack in extra damage",
-					"If you hit a PERFECT with this character, there is a 80% chance to deal 8% of this character's attack in extra damage"
+					"If you hit a PERFECT with this character, there is an 80% chance to deal 8% of this character's attack in extra damage"
 				]
 			},
 			{
@@ -157278,18 +157278,18 @@ window.details = {
 			"Boosts base ATK by 30",
 			"Boosts base HP by 100",
 			"Boosts base HP by 100",
-			"Reduce base Special Cooldown by 2 turn",
+			"Reduce base Special Cooldown by 2 turns",
 			"Boosts base RCV by 40",
 			"Boosts base ATK by 40",
 			"Boosts base ATK by 40",
 			"Boosts base HP by 100",
 			"Acquire Sailor Ability 1: Tapping on this character with a Rainbow or [G] slot will apply -10% All Type Resistance to all enemies for 1 turn",
-			"Reduce base Special Cooldown by 2 turn",
+			"Reduce base Special Cooldown by 2 turns",
 			"Boosts base ATK by 40",
 			"Boosts base HP by 100",
 			"Boosts base RCV by 50",
 			"Acquire Potential 1: Pinch Healing",
-			"Reduce base Special Cooldown by 2 turn",
+			"Reduce base Special Cooldown by 2 turns",
 			"Boosts base ATK by 40",
 			"Boosts base RCV by 50",
 			"Boosts base HP by 100",
@@ -157299,7 +157299,7 @@ window.details = {
 			"Boosts base ATK by 50",
 			"Boosts base ATK by 50",
 			"Acquire Sailor Ability 2: When a [DEX], Free Spirit, or Slasher Captain uses a Special, reduces character's Special charge time by 10 turns (only once per quest)",
-			"Reduce base Special Cooldown by 2 turn",
+			"Reduce base Special Cooldown by 2 turns",
 			"Boosts base RCV by 60",
 			"Boosts base HP by 150",
 			"Boosts base ATK by 60",
@@ -157664,7 +157664,7 @@ window.details = {
 					"If you hit a PERFECT with this character, there is a 40% chance to deal 4% of this character's attack in extra damage",
 					"If you hit a PERFECT with this character, there is a 50% chance to deal 5% of this character's attack in extra damage",
 					"If you hit a PERFECT with this character, there is a 60% chance to deal 6% of this character's attack in extra damage",
-					"If you hit a PERFECT with this character, there is a 80% chance to deal 8% of this character's attack in extra damage"
+					"If you hit a PERFECT with this character, there is an 80% chance to deal 8% of this character's attack in extra damage"
 				]
 			}
 		],
@@ -157694,7 +157694,7 @@ window.details = {
 				cooldown: [ 11, 5 ]
 			},
 			{
-				description: "Reduces Special Cooldown of all characters by 1 turn, deals 80x character's ATK in Typeless Fixed True damage to one enemy, reduces Bind duration by 5 turns, adds 80x character's ATK as Additional Typeless Damage for 3 turns, recovers 3x character's RCV in HP at the end of each turn for 9 turns, and locks the chain multiplier at 3.25x for 3 turn. If HP is above 80% when the special is activated, reduces crew's current HP by 20%, and reduces Special Cooldown of this character by 4 turns.",
+				description: "Reduces Special Cooldown of all characters by 1 turn, deals 80x character's ATK in Typeless Fixed True damage to one enemy, reduces Bind duration by 5 turns, adds 80x character's ATK as Additional Typeless Damage for 3 turns, recovers 3x character's RCV in HP at the end of each turn for 9 turns, and locks the chain multiplier at 3.25x for 3 turns. If HP is above 80% when the special is activated, reduces crew's current HP by 20%, and reduces Special Cooldown of this character by 4 turns.",
 				cooldown: [ 21, 15 ]
 			}
 		],
@@ -157783,7 +157783,7 @@ window.details = {
 				cooldown: [ 11, 5 ]
 			},
 			{
-				description: "Reduces Special Cooldown of all characters by 2 turns, deals 80x character's ATK in Typeless Fixed True damage to one enemy, reduces Bind duration by 5 turns, and adds 80x character's ATK as Additional Typeless Damage for 3 turns. If your crew has 5 turns or more of End of Turn Healing when the special is activated, increases duration of any End of Turn Healing buffs by 3 turns and sets Chain Boundaries to 3.25x and 20.0x for 3 turns. If your crew does not have End of Turn Healing or has 4 turns or less of End of Turn Healing when the special is activated, recovers 3x character's RCV in HP at the end of each turn for 9 turns, and locks the chain multiplier at 3.25x for 3 turn. If HP is above 80% when the special is activated, reduces crew's current HP by 20%, and reduces Special Cooldown of this character by 4 turns.",
+				description: "Reduces Special Cooldown of all characters by 2 turns, deals 80x character's ATK in Typeless Fixed True damage to one enemy, reduces Bind duration by 5 turns, and adds 80x character's ATK as Additional Typeless Damage for 3 turns. If your crew has 5 turns or more of End of Turn Healing when the special is activated, increases duration of any End of Turn Healing buffs by 3 turns and sets Chain Boundaries to 3.25x and 20.0x for 3 turns. If your crew does not have End of Turn Healing or has 4 turns or less of End of Turn Healing when the special is activated, recovers 3x character's RCV in HP at the end of each turn for 9 turns, and locks the chain multiplier at 3.25x for 3 turns. If HP is above 80% when the special is activated, reduces crew's current HP by 20%, and reduces Special Cooldown of this character by 4 turns.",
 				cooldown: [ 21, 15 ]
 			}
 		],
@@ -157902,7 +157902,7 @@ window.details = {
 					"If you hit a PERFECT with this character, there is a 50% chance to deal 5% of this character's attack in extra damage",
 					"If you hit a PERFECT with this character, there is a 60% chance to deal 6% of this character's attack in extra damage",
 					"If you hit a PERFECT with this character, there is a 70% chance to deal 7% of this character's attack in extra damage",
-					"If you hit a PERFECT with this character, there is a 80% chance to deal 8% of this character's attack in extra damage"
+					"If you hit a PERFECT with this character, there is an 80% chance to deal 8% of this character's attack in extra damage"
 				]
 			},
 			{
@@ -158271,7 +158271,7 @@ window.details = {
 					"If you hit a PERFECT with this character, there is a 50% chance to deal 5% of this character's attack in extra damage",
 					"If you hit a PERFECT with this character, there is a 60% chance to deal 6% of this character's attack in extra damage",
 					"If you hit a PERFECT with this character, there is a 70% chance to deal 7% of this character's attack in extra damage",
-					"If you hit a PERFECT with this character, there is a 80% chance to deal 8% of this character's attack in extra damage"
+					"If you hit a PERFECT with this character, there is an 80% chance to deal 8% of this character's attack in extra damage"
 				]
 			},
 			{
@@ -158575,7 +158575,7 @@ window.details = {
 					"If you hit a PERFECT with this character, there is a 50% chance to deal 5% of this character's attack in extra damage",
 					"If you hit a PERFECT with this character, there is a 60% chance to deal 6% of this character's attack in extra damage",
 					"If you hit a PERFECT with this character, there is a 70% chance to deal 7% of this character's attack in extra damage",
-					"If you hit a PERFECT with this character, there is a 80% chance to deal 8% of this character's attack in extra damage"
+					"If you hit a PERFECT with this character, there is an 80% chance to deal 8% of this character's attack in extra damage"
 				]
 			},
 			{
@@ -158689,7 +158689,7 @@ window.details = {
 					"If you hit a PERFECT with this character, there is a 40% chance to deal 4% of this character's attack in extra damage",
 					"If you hit a PERFECT with this character, there is a 50% chance to deal 5% of this character's attack in extra damage",
 					"If you hit a PERFECT with this character, there is a 60% chance to deal 6% of this character's attack in extra damage",
-					"If you hit a PERFECT with this character, there is a 80% chance to deal 8% of this character's attack in extra damage"
+					"If you hit a PERFECT with this character, there is an 80% chance to deal 8% of this character's attack in extra damage"
 				]
 			}
 		],
@@ -158749,7 +158749,7 @@ window.details = {
 					"If you hit a PERFECT with this character, there is a 40% chance to deal 4% of this character's attack in extra damage",
 					"If you hit a PERFECT with this character, there is a 50% chance to deal 5% of this character's attack in extra damage",
 					"If you hit a PERFECT with this character, there is a 60% chance to deal 6% of this character's attack in extra damage",
-					"If you hit a PERFECT with this character, there is a 80% chance to deal 8% of this character's attack in extra damage"
+					"If you hit a PERFECT with this character, there is an 80% chance to deal 8% of this character's attack in extra damage"
 				]
 			}
 		],
@@ -160013,7 +160013,7 @@ window.details = {
 					"If you hit a PERFECT with this character, there is a 50% chance to deal 5% of this character's attack in extra damage",
 					"If you hit a PERFECT with this character, there is a 60% chance to deal 6% of this character's attack in extra damage",
 					"If you hit a PERFECT with this character, there is a 70% chance to deal 7% of this character's attack in extra damage",
-					"If you hit a PERFECT with this character, there is a 80% chance to deal 8% of this character's attack in extra damage"
+					"If you hit a PERFECT with this character, there is an 80% chance to deal 8% of this character's attack in extra damage"
 				]
 			},
 			{
@@ -160139,7 +160139,7 @@ window.details = {
 					"If you hit a PERFECT with this character, there is a 50% chance to deal 5% of this character's attack in extra damage",
 					"If you hit a PERFECT with this character, there is a 60% chance to deal 6% of this character's attack in extra damage",
 					"If you hit a PERFECT with this character, there is a 70% chance to deal 7% of this character's attack in extra damage",
-					"If you hit a PERFECT with this character, there is a 80% chance to deal 8% of this character's attack in extra damage"
+					"If you hit a PERFECT with this character, there is an 80% chance to deal 8% of this character's attack in extra damage"
 				]
 			},
 			{
@@ -160155,11 +160155,11 @@ window.details = {
 		],
 		rush: {
 			characterCondition: [
-				"On the last stage, if character is in Combined Form and performs the 2nd tap  of an attack, and your crew must consist of any 3 of the following, excluding Supports and counting only 1 per unit: Kozuki Momonosuke, Kozuki Oden, Kin'emon, Denjiro (Kyoshiro), Raizo, Okiku, Ashura Doji (Shutenmaru), Kawamatsu, Izo, Monkey D. Luffy, Roronoa Zoro, Nami, Usopp, Sanji, Tony Tony Chopper, Nico Robin, Franky, Brook, Jinbe, Wanda, Yamato",
-				"On the last stage, if character is in Combined Form and performs the 2nd tap  of an attack, and your crew must consist of any 3 of the following, excluding Supports and counting only 1 per unit: Kozuki Momonosuke, Kozuki Oden, Kin'emon, Denjiro (Kyoshiro), Raizo, Okiku, Ashura Doji (Shutenmaru), Kawamatsu, Izo, Monkey D. Luffy, Roronoa Zoro, Nami, Usopp, Sanji, Tony Tony Chopper, Nico Robin, Franky, Brook, Jinbe, Wanda, Yamato",
-				"On the last stage, if character is in Combined Form and performs the 2nd tap  of an attack, and your crew must consist of any 3 of the following, excluding Supports and counting only 1 per unit: Kozuki Momonosuke, Kozuki Oden, Kin'emon, Denjiro (Kyoshiro), Raizo, Okiku, Ashura Doji (Shutenmaru), Kawamatsu, Izo, Monkey D. Luffy, Roronoa Zoro, Nami, Usopp, Sanji, Tony Tony Chopper, Nico Robin, Franky, Brook, Jinbe, Wanda, Yamato",
-				"On the last stage, if character is in Combined Form and performs the 2nd tap  of an attack, and your crew must consist of any 3 of the following, excluding Supports and counting only 1 per unit: Kozuki Momonosuke, Kozuki Oden, Kin'emon, Denjiro (Kyoshiro), Raizo, Okiku, Ashura Doji (Shutenmaru), Kawamatsu, Izo, Monkey D. Luffy, Roronoa Zoro, Nami, Usopp, Sanji, Tony Tony Chopper, Nico Robin, Franky, Brook, Jinbe, Wanda, Yamato",
-				"On the last stage, if character is in Combined Form and performs the 2nd tap  of an attack, and your crew must consist of any 3 of the following, excluding Supports and counting only 1 per unit: Kozuki Momonosuke, Kozuki Oden, Kin'emon, Denjiro (Kyoshiro), Raizo, Okiku, Ashura Doji (Shutenmaru), Kawamatsu, Izo, Monkey D. Luffy, Roronoa Zoro, Nami, Usopp, Sanji, Tony Tony Chopper, Nico Robin, Franky, Brook, Jinbe, Wanda, Yamato"
+				"On the last stage, if character is in Combined Form and performs the 2nd tap of an attack, and your crew must consist of any 3 of the following, excluding Supports and counting only 1 per unit: Kozuki Momonosuke, Kozuki Oden, Kin'emon, Denjiro (Kyoshiro), Raizo, Okiku, Ashura Doji (Shutenmaru), Kawamatsu, Izo, Monkey D. Luffy, Roronoa Zoro, Nami, Usopp, Sanji, Tony Tony Chopper, Nico Robin, Franky, Brook, Jinbe, Wanda, Yamato",
+				"On the last stage, if character is in Combined Form and performs the 2nd tap of an attack, and your crew must consist of any 3 of the following, excluding Supports and counting only 1 per unit: Kozuki Momonosuke, Kozuki Oden, Kin'emon, Denjiro (Kyoshiro), Raizo, Okiku, Ashura Doji (Shutenmaru), Kawamatsu, Izo, Monkey D. Luffy, Roronoa Zoro, Nami, Usopp, Sanji, Tony Tony Chopper, Nico Robin, Franky, Brook, Jinbe, Wanda, Yamato",
+				"On the last stage, if character is in Combined Form and performs the 2nd tap of an attack, and your crew must consist of any 3 of the following, excluding Supports and counting only 1 per unit: Kozuki Momonosuke, Kozuki Oden, Kin'emon, Denjiro (Kyoshiro), Raizo, Okiku, Ashura Doji (Shutenmaru), Kawamatsu, Izo, Monkey D. Luffy, Roronoa Zoro, Nami, Usopp, Sanji, Tony Tony Chopper, Nico Robin, Franky, Brook, Jinbe, Wanda, Yamato",
+				"On the last stage, if character is in Combined Form and performs the 2nd tap of an attack, and your crew must consist of any 3 of the following, excluding Supports and counting only 1 per unit: Kozuki Momonosuke, Kozuki Oden, Kin'emon, Denjiro (Kyoshiro), Raizo, Okiku, Ashura Doji (Shutenmaru), Kawamatsu, Izo, Monkey D. Luffy, Roronoa Zoro, Nami, Usopp, Sanji, Tony Tony Chopper, Nico Robin, Franky, Brook, Jinbe, Wanda, Yamato",
+				"On the last stage, if character is in Combined Form and performs the 2nd tap of an attack, and your crew must consist of any 3 of the following, excluding Supports and counting only 1 per unit: Kozuki Momonosuke, Kozuki Oden, Kin'emon, Denjiro (Kyoshiro), Raizo, Okiku, Ashura Doji (Shutenmaru), Kawamatsu, Izo, Monkey D. Luffy, Roronoa Zoro, Nami, Usopp, Sanji, Tony Tony Chopper, Nico Robin, Franky, Brook, Jinbe, Wanda, Yamato"
 			],
 			description: [
 				"Performs a Rush up to 7 times. Adds 0.1x-0.5x to Chain multiplier for 1 turn, and boosts Rush ATK of [STR], [DEX] and Slasher characters by 1.1x-1.5x.",
@@ -161781,7 +161781,7 @@ window.details = {
 					"If you hit a PERFECT with this character, there is a 50% chance to deal 5% of this character's attack in extra damage",
 					"If you hit a PERFECT with this character, there is a 60% chance to deal 6% of this character's attack in extra damage",
 					"If you hit a PERFECT with this character, there is a 70% chance to deal 7% of this character's attack in extra damage",
-					"If you hit a PERFECT with this character, there is a 80% chance to deal 8% of this character's attack in extra damage"
+					"If you hit a PERFECT with this character, there is an 80% chance to deal 8% of this character's attack in extra damage"
 				]
 			},
 			{
@@ -162380,7 +162380,7 @@ window.details = {
 					"If you hit a PERFECT with this character, there is a 50% chance to deal 5% of this character's attack in extra damage",
 					"If you hit a PERFECT with this character, there is a 60% chance to deal 6% of this character's attack in extra damage",
 					"If you hit a PERFECT with this character, there is a 70% chance to deal 7% of this character's attack in extra damage",
-					"If you hit a PERFECT with this character, there is a 80% chance to deal 8% of this character's attack in extra damage"
+					"If you hit a PERFECT with this character, there is an 80% chance to deal 8% of this character's attack in extra damage"
 				]
 			},
 			{
@@ -163010,7 +163010,7 @@ window.details = {
 					"If you hit a PERFECT with this character, there is a 50% chance to deal 5% of this character's attack in extra damage",
 					"If you hit a PERFECT with this character, there is a 60% chance to deal 6% of this character's attack in extra damage",
 					"If you hit a PERFECT with this character, there is a 70% chance to deal 7% of this character's attack in extra damage",
-					"If you hit a PERFECT with this character, there is a 80% chance to deal 8% of this character's attack in extra damage"
+					"If you hit a PERFECT with this character, there is an 80% chance to deal 8% of this character's attack in extra damage"
 				]
 			},
 			{
@@ -163115,7 +163115,7 @@ window.details = {
 					"If you hit a PERFECT with this character, there is a 50% chance to deal 5% of this character's attack in extra damage",
 					"If you hit a PERFECT with this character, there is a 60% chance to deal 6% of this character's attack in extra damage",
 					"If you hit a PERFECT with this character, there is a 70% chance to deal 7% of this character's attack in extra damage",
-					"If you hit a PERFECT with this character, there is a 80% chance to deal 8% of this character's attack in extra damage"
+					"If you hit a PERFECT with this character, there is an 80% chance to deal 8% of this character's attack in extra damage"
 				]
 			},
 			{
@@ -163328,7 +163328,7 @@ window.details = {
 					"If you hit a PERFECT with this character, there is a 40% chance to deal 5% of this character's attack in extra damage",
 					"If you hit a PERFECT with this character, there is a 50% chance to deal 6% of this character's attack in extra damage",
 					"If you hit a PERFECT with this character, there is a 60% chance to deal 7% of this character's attack in extra damage",
-					"If you hit a PERFECT with this character, there is a 80% chance to deal 8% of this character's attack in extra damage"
+					"If you hit a PERFECT with this character, there is an 80% chance to deal 8% of this character's attack in extra damage"
 				]
 			},
 			{
@@ -163426,7 +163426,7 @@ window.details = {
 					"If you hit a PERFECT with this character, there is a 40% chance to deal 5% of this character's attack in extra damage",
 					"If you hit a PERFECT with this character, there is a 50% chance to deal 6% of this character's attack in extra damage",
 					"If you hit a PERFECT with this character, there is a 60% chance to deal 7% of this character's attack in extra damage",
-					"If you hit a PERFECT with this character, there is a 80% chance to deal 8% of this character's attack in extra damage"
+					"If you hit a PERFECT with this character, there is an 80% chance to deal 8% of this character's attack in extra damage"
 				]
 			},
 			{
@@ -163537,7 +163537,7 @@ window.details = {
 					"If you hit a PERFECT with this character, there is a 50% chance to deal 5% of this character's attack in extra damage",
 					"If you hit a PERFECT with this character, there is a 60% chance to deal 6% of this character's attack in extra damage",
 					"If you hit a PERFECT with this character, there is a 70% chance to deal 7% of this character's attack in extra damage",
-					"If you hit a PERFECT with this character, there is a 80% chance to deal 8% of this character's attack in extra damage"
+					"If you hit a PERFECT with this character, there is an 80% chance to deal 8% of this character's attack in extra damage"
 				]
 			},
 			{
@@ -163635,7 +163635,7 @@ window.details = {
 					"If you hit a PERFECT with this character, there is a 50% chance to deal 5% of this character's attack in extra damage",
 					"If you hit a PERFECT with this character, there is a 60% chance to deal 6% of this character's attack in extra damage",
 					"If you hit a PERFECT with this character, there is a 70% chance to deal 7% of this character's attack in extra damage",
-					"If you hit a PERFECT with this character, there is a 80% chance to deal 8% of this character's attack in extra damage"
+					"If you hit a PERFECT with this character, there is an 80% chance to deal 8% of this character's attack in extra damage"
 				]
 			},
 			{
@@ -164017,7 +164017,7 @@ window.details = {
 					"If you hit a PERFECT with this character, there is a 50% chance to deal 5% of this character's attack in extra damage",
 					"If you hit a PERFECT with this character, there is a 60% chance to deal 6% of this character's attack in extra damage",
 					"If you hit a PERFECT with this character, there is a 70% chance to deal 7% of this character's attack in extra damage",
-					"If you hit a PERFECT with this character, there is a 80% chance to deal 8% of this character's attack in extra damage"
+					"If you hit a PERFECT with this character, there is an 80% chance to deal 8% of this character's attack in extra damage"
 				]
 			},
 			{
@@ -164800,7 +164800,7 @@ window.details = {
 					"If you hit a PERFECT with this character, there is a 50% chance to deal 5% of this character's attack in extra damage",
 					"If you hit a PERFECT with this character, there is a 60% chance to deal 6% of this character's attack in extra damage",
 					"If you hit a PERFECT with this character, there is a 70% chance to deal 7% of this character's attack in extra damage",
-					"If you hit a PERFECT with this character, there is a 80% chance to deal 8% of this character's attack in extra damage"
+					"If you hit a PERFECT with this character, there is an 80% chance to deal 8% of this character's attack in extra damage"
 				]
 			},
 			{
@@ -164917,7 +164917,7 @@ window.details = {
 					"If you hit a PERFECT with this character, there is a 50% chance to deal 5% of this character's attack in extra damage",
 					"If you hit a PERFECT with this character, there is a 60% chance to deal 6% of this character's attack in extra damage",
 					"If you hit a PERFECT with this character, there is a 70% chance to deal 7% of this character's attack in extra damage",
-					"If you hit a PERFECT with this character, there is a 80% chance to deal 8% of this character's attack in extra damage"
+					"If you hit a PERFECT with this character, there is an 80% chance to deal 8% of this character's attack in extra damage"
 				]
 			},
 			{
@@ -165010,7 +165010,7 @@ window.details = {
 					"If you hit a PERFECT with this character, there is a 40% chance to deal 4% of this character's attack in extra damage",
 					"If you hit a PERFECT with this character, there is a 50% chance to deal 5% of this character's attack in extra damage",
 					"If you hit a PERFECT with this character, there is a 60% chance to deal 6% of this character's attack in extra damage",
-					"If you hit a PERFECT with this character, there is a 80% chance to deal 8% of this character's attack in extra damage"
+					"If you hit a PERFECT with this character, there is an 80% chance to deal 8% of this character's attack in extra damage"
 				]
 			}
 		]
@@ -165070,7 +165070,7 @@ window.details = {
 					"If you hit a PERFECT with this character, there is a 40% chance to deal 4% of this character's attack in extra damage",
 					"If you hit a PERFECT with this character, there is a 50% chance to deal 5% of this character's attack in extra damage",
 					"If you hit a PERFECT with this character, there is a 60% chance to deal 6% of this character's attack in extra damage",
-					"If you hit a PERFECT with this character, there is a 80% chance to deal 8% of this character's attack in extra damage"
+					"If you hit a PERFECT with this character, there is an 80% chance to deal 8% of this character's attack in extra damage"
 				]
 			}
 		]
@@ -165253,7 +165253,7 @@ window.details = {
     4335: {//Sanji
 		captain: {
 			base: "Reduces Special Cooldown of all characters by 1 turn at the start of the fight, boosts ATK of all characters by 4.5x, by 5x instead if they have a [TND] orb, makes [TND] orbs beneficial for all characters, and boosts chances of getting [TND] orbs.<br><b>Action:</b> Sanji Vanishes and prevents all debuffs to himself (including, but not limited to, Bind, Despair, Special Bind, Slot Bind, Special Rewind, and Paralysis), makes own normal attacks ignore defense, damage reducing Barriers and Buffs, and adds 500x character's ATK as Additional Typeless Damage to own's attacks.",
-			level1: "Reduces Special Cooldown of all characters by 2 turns at the start of the fight, boosts ATK of all characters by 4.75x, by 5x instead if they have a [TND] orb, makes [TND] orbs beneficial for all characters, and greatly boosts chances of getting [TND] orbs. Up to 1 time per adventure, if \"Monkey  D. Luffy\", \"Roronoa Zoro\", \"Usopp\", \"Nami\", \"Tony Tony Chopper\", \"Nico Robin\", \"Franky\", \"Brook\", \"Jinbe\", or \"Vinsmoke Reiju\" is a crewmate and they use their special, removes Special Bind duration completely on this characters and advances Special Cooldown of this character to MAX.<br><b>Action:</b> Sanji Vanishes and prevents all debuffs to himself (including, but not limited to, Bind, Despair, Special Bind, Slot Bind, Special Rewind, and Paralysis), makes own normal attacks ignore defense, damage reducing Barriers and Buffs, and adds 500x character's ATK as Additional Typeless Damage to own's attacks."
+			level1: "Reduces Special Cooldown of all characters by 2 turns at the start of the fight, boosts ATK of all characters by 4.75x, by 5x instead if they have a [TND] orb, makes [TND] orbs beneficial for all characters, and greatly boosts chances of getting [TND] orbs. Up to 1 time per adventure, if \"Monkey D. Luffy\", \"Roronoa Zoro\", \"Usopp\", \"Nami\", \"Tony Tony Chopper\", \"Nico Robin\", \"Franky\", \"Brook\", \"Jinbe\", or \"Vinsmoke Reiju\" is a crewmate and they use their special, removes Special Bind duration completely on this characters and advances Special Cooldown of this character to MAX.<br><b>Action:</b> Sanji Vanishes and prevents all debuffs to himself (including, but not limited to, Bind, Despair, Special Bind, Slot Bind, Special Rewind, and Paralysis), makes own normal attacks ignore defense, damage reducing Barriers and Buffs, and adds 500x character's ATK as Additional Typeless Damage to own's attacks."
 		},
         captainNotes: "Sanji Captain Action lasts for 3 turns and can be reactivated after 6 turns.",
 		special: "Deals 200x character's ATK in Typeless Fixed True damage to one enemy, reduces Burn duration by 3 turns, changes all orbs, including [BLOCK] orbs, into [TND] orbs, and boosts ATK of all characters by 2.75x for 1 turn. If \"Shooting Star Soba Kick\" is used again in the same turn the special is activated in, increases boost effects of ATK Up buffs to 3.5x.",
@@ -165315,7 +165315,7 @@ window.details = {
 			"Boosts base RCV by 20",
 			"Boosts base HP by 100",
 			"Boosts base ATK by 100",
-			"Acquire new Captain Ability: Boosts crew's ATK by 4.75x, boosts their ATK by approximately 5x when they have [TND] slots, makes [TND] slots have matching slot effects, greatly boosts chance of landing on [TND] slots, reduces Special charge time by 2 turns at start of quest, and if \"Monkey  D. Luffy\", \"Roronoa Zoro\", \"Usopp\", \"Nami\", \"Tony Tony Chopper\", \"Nico Robin\", \"Franky\", \"Brook\", \"Jinbe\", or \"Vinsmoke Reiju\" is a crewmate and uses a Special, completely removes character's Special Bind and sets character's Special charge to MAX (up to 1 time per quest) [Captain Action: Vanish] For 3 turns, protects character from certain status effects, character's normal attacks will ignore all enemies' defensive effects and DEF, and adds 500x character's ATK in non-type damage on top of tap-timing bonuses for character (For more details on Captain Action, check the MENU during a quest)"
+			"Acquire new Captain Ability: Boosts crew's ATK by 4.75x, boosts their ATK by approximately 5x when they have [TND] slots, makes [TND] slots have matching slot effects, greatly boosts chance of landing on [TND] slots, reduces Special charge time by 2 turns at start of quest, and if \"Monkey D. Luffy\", \"Roronoa Zoro\", \"Usopp\", \"Nami\", \"Tony Tony Chopper\", \"Nico Robin\", \"Franky\", \"Brook\", \"Jinbe\", or \"Vinsmoke Reiju\" is a crewmate and uses a Special, completely removes character's Special Bind and sets character's Special charge to MAX (up to 1 time per quest) [Captain Action: Vanish] For 3 turns, protects character from certain status effects, character's normal attacks will ignore all enemies' defensive effects and DEF, and adds 500x character's ATK in non-type damage on top of tap-timing bonuses for character (For more details on Captain Action, check the MENU during a quest)"
 		],
         lLimit: [
             null,
@@ -165324,8 +165324,8 @@ window.details = {
             },
             {
                 captain: {
-                    base: "Reduces Special Cooldown of all characters by 2 turns at the start of the fight, boosts ATK of all characters by 4.75x, by 5x instead if they have a [TND] orb, makes [TND] orbs beneficial for all characters, and greatly boosts chances of getting [TND] orbs. Up to 1 time per adventure, if \"Monkey  D. Luffy\", \"Roronoa Zoro\", \"Usopp\", \"Nami\", \"Tony Tony Chopper\", \"Nico Robin\", \"Franky\", \"Brook\", \"Jinbe\", or \"Vinsmoke Reiju\" is a crewmate and they use their special, removes Special Bind duration completely on this characters and advances Special Cooldown of this character to MAX.<br><b>Action:</b> Sanji Vanishes and prevents all debuffs to himself (including, but not limited to, Bind, Despair, Special Bind, Slot Bind, Special Rewind, and Paralysis), makes own normal attacks ignore defense, damage reducing Barriers and Buffs, and adds 500x character's ATK as Additional Typeless Damage to own's attacks.",
-                    level1: "Reduces Special Cooldown of all characters by 2 turns at the start of the fight, boosts ATK of all characters by 4.75x, by 5.25x instead if they have a [TND] orb, makes [TND] orbs beneficial for all characters, and greatly boosts chances of getting [TND] orbs. Up to 3 times per adventure, if \"Monkey  D. Luffy\", \"Roronoa Zoro\", \"Usopp\", \"Nami\", \"Tony Tony Chopper\", \"Nico Robin\", \"Franky\", \"Brook\", \"Jinbe\", or \"Vinsmoke Reiju\" is a crewmate and they use their special, removes Special Bind duration completely on this characters and advances Special Cooldown of this character to MAX.<br><b>Action:</b> Sanji Vanishes and prevents all debuffs to himself (including, but not limited to, Bind, Despair, Special Bind, Slot Bind, Special Rewind, and Paralysis), makes own normal attacks ignore defense, damage reducing Barriers and Buffs, and adds 500x character's ATK as Additional Typeless Damage to own's attacks."
+                    base: "Reduces Special Cooldown of all characters by 2 turns at the start of the fight, boosts ATK of all characters by 4.75x, by 5x instead if they have a [TND] orb, makes [TND] orbs beneficial for all characters, and greatly boosts chances of getting [TND] orbs. Up to 1 time per adventure, if \"Monkey D. Luffy\", \"Roronoa Zoro\", \"Usopp\", \"Nami\", \"Tony Tony Chopper\", \"Nico Robin\", \"Franky\", \"Brook\", \"Jinbe\", or \"Vinsmoke Reiju\" is a crewmate and they use their special, removes Special Bind duration completely on this characters and advances Special Cooldown of this character to MAX.<br><b>Action:</b> Sanji Vanishes and prevents all debuffs to himself (including, but not limited to, Bind, Despair, Special Bind, Slot Bind, Special Rewind, and Paralysis), makes own normal attacks ignore defense, damage reducing Barriers and Buffs, and adds 500x character's ATK as Additional Typeless Damage to own's attacks.",
+                    level1: "Reduces Special Cooldown of all characters by 2 turns at the start of the fight, boosts ATK of all characters by 4.75x, by 5.25x instead if they have a [TND] orb, makes [TND] orbs beneficial for all characters, and greatly boosts chances of getting [TND] orbs. Up to 3 times per adventure, if \"Monkey D. Luffy\", \"Roronoa Zoro\", \"Usopp\", \"Nami\", \"Tony Tony Chopper\", \"Nico Robin\", \"Franky\", \"Brook\", \"Jinbe\", or \"Vinsmoke Reiju\" is a crewmate and they use their special, removes Special Bind duration completely on this characters and advances Special Cooldown of this character to MAX.<br><b>Action:</b> Sanji Vanishes and prevents all debuffs to himself (including, but not limited to, Bind, Despair, Special Bind, Slot Bind, Special Rewind, and Paralysis), makes own normal attacks ignore defense, damage reducing Barriers and Buffs, and adds 500x character's ATK as Additional Typeless Damage to own's attacks."
                 }
             },
             {
@@ -165462,7 +165462,7 @@ window.details = {
 					"If you hit a PERFECT with this character, there is a 50% chance to deal 5% of this character's attack in extra damage",
 					"If you hit a PERFECT with this character, there is a 60% chance to deal 6% of this character's attack in extra damage",
 					"If you hit a PERFECT with this character, there is a 70% chance to deal 7% of this character's attack in extra damage",
-					"If you hit a PERFECT with this character, there is a 80% chance to deal 8% of this character's attack in extra damage"
+					"If you hit a PERFECT with this character, there is an 80% chance to deal 8% of this character's attack in extra damage"
 				]
 			},
 			{
@@ -165579,7 +165579,7 @@ window.details = {
 					"If you hit a PERFECT with this character, there is a 50% chance to deal 5% of this character's attack in extra damage",
 					"If you hit a PERFECT with this character, there is a 60% chance to deal 6% of this character's attack in extra damage",
 					"If you hit a PERFECT with this character, there is a 70% chance to deal 7% of this character's attack in extra damage",
-					"If you hit a PERFECT with this character, there is a 80% chance to deal 8% of this character's attack in extra damage"
+					"If you hit a PERFECT with this character, there is an 80% chance to deal 8% of this character's attack in extra damage"
 				]
 			},
 			{
@@ -165702,7 +165702,7 @@ window.details = {
 					"If you hit a PERFECT with this character, there is a 50% chance to deal 5% of this character's attack in extra damage",
 					"If you hit a PERFECT with this character, there is a 60% chance to deal 6% of this character's attack in extra damage",
 					"If you hit a PERFECT with this character, there is a 70% chance to deal 7% of this character's attack in extra damage",
-					"If you hit a PERFECT with this character, there is a 80% chance to deal 8% of this character's attack in extra damage"
+					"If you hit a PERFECT with this character, there is an 80% chance to deal 8% of this character's attack in extra damage"
 				]
 			},
 			{
@@ -165928,7 +165928,7 @@ window.details = {
 					"If you hit a PERFECT with this character, there is a 40% chance to deal 5% of this character's attack in extra damage",
 					"If you hit a PERFECT with this character, there is a 50% chance to deal 6% of this character's attack in extra damage",
 					"If you hit a PERFECT with this character, there is a 60% chance to deal 7% of this character's attack in extra damage",
-					"If you hit a PERFECT with this character, there is a 80% chance to deal 8% of this character's attack in extra damage"
+					"If you hit a PERFECT with this character, there is an 80% chance to deal 8% of this character's attack in extra damage"
 				]
 			},
 			{
@@ -166024,7 +166024,7 @@ window.details = {
 					"If you hit a PERFECT with this character, there is a 40% chance to deal 5% of this character's attack in extra damage",
 					"If you hit a PERFECT with this character, there is a 50% chance to deal 6% of this character's attack in extra damage",
 					"If you hit a PERFECT with this character, there is a 60% chance to deal 7% of this character's attack in extra damage",
-					"If you hit a PERFECT with this character, there is a 80% chance to deal 8% of this character's attack in extra damage"
+					"If you hit a PERFECT with this character, there is an 80% chance to deal 8% of this character's attack in extra damage"
 				]
 			},
 			{
@@ -166135,7 +166135,7 @@ window.details = {
 					"If you hit a PERFECT with this character, there is a 50% chance to deal 5% of this character's attack in extra damage",
 					"If you hit a PERFECT with this character, there is a 60% chance to deal 6% of this character's attack in extra damage",
 					"If you hit a PERFECT with this character, there is a 70% chance to deal 7% of this character's attack in extra damage",
-					"If you hit a PERFECT with this character, there is a 80% chance to deal 8% of this character's attack in extra damage"
+					"If you hit a PERFECT with this character, there is an 80% chance to deal 8% of this character's attack in extra damage"
 				]
 			},
 			{
@@ -166350,7 +166350,7 @@ window.details = {
 					"If you hit a PERFECT with this character, there is a 50% chance to deal 5% of this character's attack in extra damage",
 					"If you hit a PERFECT with this character, there is a 60% chance to deal 6% of this character's attack in extra damage",
 					"If you hit a PERFECT with this character, there is a 70% chance to deal 7% of this character's attack in extra damage",
-					"If you hit a PERFECT with this character, there is a 80% chance to deal 8% of this character's attack in extra damage"
+					"If you hit a PERFECT with this character, there is an 80% chance to deal 8% of this character's attack in extra damage"
 				]
 			},
 			{
@@ -166430,7 +166430,7 @@ window.details = {
 					"If you hit a PERFECT with this character, there is a 40% chance to deal 5% of this character's attack in extra damage",
 					"If you hit a PERFECT with this character, there is a 50% chance to deal 6% of this character's attack in extra damage",
 					"If you hit a PERFECT with this character, there is a 60% chance to deal 7% of this character's attack in extra damage",
-					"If you hit a PERFECT with this character, there is a 80% chance to deal 8% of this character's attack in extra damage"
+					"If you hit a PERFECT with this character, there is an 80% chance to deal 8% of this character's attack in extra damage"
 				]
 			}
 		]
@@ -167019,9 +167019,9 @@ window.details = {
 		specialName: "Advocating the Possibilities of Science",
 		sailor: {
 			base: "Makes [DEX], [INT] and [TND] orbs beneficial for Cerebral, Free Spirit and Powerhouse characters; if Territory: Cerebral class is on the field, boosts base ATK of Cerebral characters by 200.",
-			level1: "If this character has a [INT] orb and you attack with this character, increases boost effects of Chain Addition buffs by +0.3x."
+			level1: "If this character has an [INT] orb and you attack with this character, increases boost effects of Chain Addition buffs by +0.3x."
 		},
-		superSpecial: "Deals 10% of enemies' current HP in damage to all enemies at the end of the turn for 1 turn, changes all orbs, including [BLOCK] orbs, into [TND] orbs, changes the orb of this character into a [INT] orb, applies Territory: Cerebral class to the field, boosts ATK by 1x-1.5x and reduces damage received by 0%-25% based on number of characters matching the territory, for 2 turns, and transforms Cerebral character into Super Cerebral characters.",
+		superSpecial: "Deals 10% of enemies' current HP in damage to all enemies at the end of the turn for 1 turn, changes all orbs, including [BLOCK] orbs, into [TND] orbs, changes the orb of this character into an [INT] orb, applies Territory: Cerebral class to the field, boosts ATK by 1x-1.5x and reduces damage received by 0%-25% based on number of characters matching the territory, for 2 turns, and transforms Cerebral character into Super Cerebral characters.",
 		superSpecialCriteria: "This character must be captain. Your crew must consist of any 2 of the following, excluding Supports and counting only 1 per unit: Dr. Vegapunk \"Shaka the Good\", Dr. Vegapunk \"Lilith the Evil\", Dr. Vegapunk \"Edison the Thinker\", Dr. Vegapunk \"Pythagoras the Wise\", Dr. Vegapunk \"Atlas the Violent\", Dr. Vegapunk \"York the Greedy\", S-Snake, S-Hawk, S-Shark, S-Bear, Sentomaru, Bartholomew Kuma, Jewelry Bonney",
 		support: [
 			{
@@ -167174,7 +167174,7 @@ window.details = {
 					"If you hit a PERFECT with this character, there is a 40% chance to deal 4% of this character's attack in extra damage",
 					"If you hit a PERFECT with this character, there is a 50% chance to deal 5% of this character's attack in extra damage",
 					"If you hit a PERFECT with this character, there is a 60% chance to deal 6% of this character's attack in extra damage",
-					"If you hit a PERFECT with this character, there is a 80% chance to deal 8% of this character's attack in extra damage"
+					"If you hit a PERFECT with this character, there is an 80% chance to deal 8% of this character's attack in extra damage"
 				]
 			},
 			{
@@ -167758,7 +167758,7 @@ window.details = {
 					"If you hit a PERFECT with this character, there is a 40% chance to deal 4% of this character's attack in extra damage",
 					"If you hit a PERFECT with this character, there is a 50% chance to deal 5% of this character's attack in extra damage",
 					"If you hit a PERFECT with this character, there is a 70% chance to deal 7% of this character's attack in extra damage",
-					"If you hit a PERFECT with this character, there is a 80% chance to deal 8% of this character's attack in extra damage",
+					"If you hit a PERFECT with this character, there is an 80% chance to deal 8% of this character's attack in extra damage",
 					"If you hit a PERFECT with this character, there is a 100% chance to deal 10% of this character's attack in extra damage"
 				]
 			}
@@ -167874,7 +167874,7 @@ window.details = {
 					"If you hit a PERFECT with this character, there is a 40% chance to deal 4% of this character's attack in extra damage",
 					"If you hit a PERFECT with this character, there is a 50% chance to deal 5% of this character's attack in extra damage",
 					"If you hit a PERFECT with this character, there is a 70% chance to deal 7% of this character's attack in extra damage",
-					"If you hit a PERFECT with this character, there is a 80% chance to deal 8% of this character's attack in extra damage",
+					"If you hit a PERFECT with this character, there is an 80% chance to deal 8% of this character's attack in extra damage",
 					"If you hit a PERFECT with this character, there is a 100% chance to deal 10% of this character's attack in extra damage"
 				]
 			}
@@ -167995,7 +167995,7 @@ window.details = {
 					"If you hit a PERFECT with this character, there is a 40% chance to deal 4% of this character's attack in extra damage",
 					"If you hit a PERFECT with this character, there is a 50% chance to deal 5% of this character's attack in extra damage",
 					"If you hit a PERFECT with this character, there is a 70% chance to deal 7% of this character's attack in extra damage",
-					"If you hit a PERFECT with this character, there is a 80% chance to deal 8% of this character's attack in extra damage",
+					"If you hit a PERFECT with this character, there is an 80% chance to deal 8% of this character's attack in extra damage",
 					"If you hit a PERFECT with this character, there is a 100% chance to deal 10% of this character's attack in extra damage"
 				]
 			},
@@ -168362,7 +168362,7 @@ window.details = {
 					"If you hit a PERFECT with this character, there is a 50% chance to deal 5% of this character's attack in extra damage",
 					"If you hit a PERFECT with this character, there is a 60% chance to deal 6% of this character's attack in extra damage",
 					"If you hit a PERFECT with this character, there is a 70% chance to deal 7% of this character's attack in extra damage",
-					"If you hit a PERFECT with this character, there is a 80% chance to deal 8% of this character's attack in extra damage"
+					"If you hit a PERFECT with this character, there is an 80% chance to deal 8% of this character's attack in extra damage"
 				]
 			},
 			{
@@ -168465,7 +168465,7 @@ window.details = {
 	},
 	4373: {//Mihawk
 		captain: "Boosts ATK of [DEX], Slasher and Shooter characters by 4.5x, by 5x instead if HP is below 50% at the start of the turn, boosts HP of [DEX], Slasher and Shooter characters by 1.3x, makes [TND] orbs beneficial for [DEX], Slasher and Shooter characters, and reduces Paralysis and ATK Down duration by 1 turn.",
-		special: "Reduces enemies' Orb-Based Damage Reduction duration by 2 turn, and boosts Orb Effects of Slasher and Shooter characters by 2.75x for 1 turn. If your crew has Orb Amplification when the special is activated, boosts Final Tap ATK of Slasher and Shooter characters by 20%; additionally, if your crew has 1+ [Navy] characters or 2+ [Seven Warlords of the Sea] characters, boosts Final Tap ATK of Slasher and Shooter characters by 40% instead. If your crew has 1+ [Navy] characters or 2+ [Seven Warlords of the Sea] characters, reduces enemies' Barrier duration by 1 turn.",
+		special: "Reduces enemies' Orb-Based Damage Reduction duration by 2 turns, and boosts Orb Effects of Slasher and Shooter characters by 2.75x for 1 turn. If your crew has Orb Amplification when the special is activated, boosts Final Tap ATK of Slasher and Shooter characters by 20%; additionally, if your crew has 1+ [Navy] characters or 2+ [Seven Warlords of the Sea] characters, boosts Final Tap ATK of Slasher and Shooter characters by 40% instead. If your crew has 1+ [Navy] characters or 2+ [Seven Warlords of the Sea] characters, reduces enemies' Barrier duration by 1 turn.",
 		specialName: "World's Greatest Slash Against the Emperor",
 		sailor: {
 			base: "Changes orbs of top row characters into [TND] orbs at the start of the fight; makes [TND] orbs beneficial for all characters.",
@@ -168528,7 +168528,7 @@ window.details = {
 					"If you hit a PERFECT with this character, there is a 40% chance to deal 4% of this character's attack in extra damage",
 					"If you hit a PERFECT with this character, there is a 50% chance to deal 5% of this character's attack in extra damage",
 					"If you hit a PERFECT with this character, there is a 60% chance to deal 6% of this character's attack in extra damage",
-					"If you hit a PERFECT with this character, there is a 80% chance to deal 8% of this character's attack in extra damage"
+					"If you hit a PERFECT with this character, there is an 80% chance to deal 8% of this character's attack in extra damage"
 				]
 			},
 			{
@@ -168561,7 +168561,7 @@ window.details = {
 	},
 	4374: {//5+ Mihawk
 		captain: "Boosts ATK of [DEX], Slasher and Shooter characters by 4.5x, by 5.25x instead if HP is below 50% at the start of the turn, boosts HP of [DEX], Slasher and Shooter characters by 1.3x, makes [TND] orbs beneficial for [DEX], Slasher and Shooter characters, and reduces Paralysis and ATK Down duration by 2 turns.",
-		special: "Reduces enemies' Orb-Based Damage Reduction duration by 3 turn, and boosts Orb Effects of Slasher and Shooter characters by 2.75x for 1 turn. If your crew has Orb Amplification when the special is activated, boosts Final Tap ATK of Slasher and Shooter characters by 25%; additionally, if your crew has 1+ [Navy] characters or 2+ [Seven Warlords of the Sea] characters, boosts Final Tap ATK of Slasher and Shooter characters by 50% instead. If your crew has 1+ [Navy] characters or 2+ [Seven Warlords of the Sea] characters, reduces enemies' Barrier duration by 2 turns.",
+		special: "Reduces enemies' Orb-Based Damage Reduction duration by 3 turns, and boosts Orb Effects of Slasher and Shooter characters by 2.75x for 1 turn. If your crew has Orb Amplification when the special is activated, boosts Final Tap ATK of Slasher and Shooter characters by 25%; additionally, if your crew has 1+ [Navy] characters or 2+ [Seven Warlords of the Sea] characters, boosts Final Tap ATK of Slasher and Shooter characters by 50% instead. If your crew has 1+ [Navy] characters or 2+ [Seven Warlords of the Sea] characters, reduces enemies' Barrier duration by 2 turns.",
 		specialName: "World's Greatest Slash Against the Emperor",
 		sailor: {
 			base: "Changes orbs of top row characters into [TND] orbs at the start of the fight; makes [TND] orbs beneficial for all characters.",
@@ -168626,7 +168626,7 @@ window.details = {
 					"If you hit a PERFECT with this character, there is a 40% chance to deal 4% of this character's attack in extra damage",
 					"If you hit a PERFECT with this character, there is a 50% chance to deal 5% of this character's attack in extra damage",
 					"If you hit a PERFECT with this character, there is a 60% chance to deal 6% of this character's attack in extra damage",
-					"If you hit a PERFECT with this character, there is a 80% chance to deal 8% of this character's attack in extra damage"
+					"If you hit a PERFECT with this character, there is an 80% chance to deal 8% of this character's attack in extra damage"
 				]
 			},
 			{
@@ -169120,7 +169120,7 @@ window.details = {
 					"If you hit a PERFECT with this character, there is a 50% chance to deal 5% of this character's attack in extra damage",
 					"If you hit a PERFECT with this character, there is a 60% chance to deal 6% of this character's attack in extra damage",
 					"If you hit a PERFECT with this character, there is a 70% chance to deal 7% of this character's attack in extra damage",
-					"If you hit a PERFECT with this character, there is a 80% chance to deal 8% of this character's attack in extra damage"
+					"If you hit a PERFECT with this character, there is an 80% chance to deal 8% of this character's attack in extra damage"
 				]
 			},
 			{
@@ -169589,7 +169589,7 @@ window.details = {
 					"If you hit a PERFECT with this character, there is a 40% chance to deal 4% of this character's attack in extra damage",
 					"If you hit a PERFECT with this character, there is a 50% chance to deal 5% of this character's attack in extra damage",
 					"If you hit a PERFECT with this character, there is a 70% chance to deal 7% of this character's attack in extra damage",
-					"If you hit a PERFECT with this character, there is a 80% chance to deal 8% of this character's attack in extra damage",
+					"If you hit a PERFECT with this character, there is an 80% chance to deal 8% of this character's attack in extra damage",
 					"If you hit a PERFECT with this character, there is a 100% chance to deal 10% of this character's attack in extra damage"
 				]
 			},
@@ -171354,7 +171354,7 @@ window.details = {
                 description: [
                     "If you hit a PERFECT with this character, there is a 60% chance to deal 6% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 70% chance to deal 7% of this character's attack in extra damage",
-                    "If you hit a PERFECT with this character, there is a 80% chance to deal 8% of this character's attack in extra damage",
+                    "If you hit a PERFECT with this character, there is an 80% chance to deal 8% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 90% chance to deal 9% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 100% chance to deal 10% of this character's attack in extra damage"
                 ]
@@ -171451,7 +171451,7 @@ window.details = {
                     "If you hit a PERFECT with this character, there is a 40% chance to deal 4% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 50% chance to deal 5% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 70% chance to deal 7% of this character's attack in extra damage",
-                    "If you hit a PERFECT with this character, there is a 80% chance to deal 8% of this character's attack in extra damage",
+                    "If you hit a PERFECT with this character, there is an 80% chance to deal 8% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 100% chance to deal 10% of this character's attack in extra damage"
                 ]
             },
@@ -171489,10 +171489,10 @@ window.details = {
         specialName: "Rabbit-Hunting Sword",
         sailor: {
             base: "Reduces Paralysis and Special Bind duration by 10 turns on this character; makes [RCV] and [TND] orbs beneficial for this character.",
-            level1: "If this character has a [INT] orb and you attack with this character, reduces enemies' [INT] Resistance by -5% for 1 turn."
+            level1: "If this character has an [INT] orb and you attack with this character, reduces enemies' [INT] Resistance by -5% for 1 turn."
         },
         superSpecialCriteria: "Can be launched as crewmate. If your crew has an ATK Up or Orb Amplification buff with an effect of 6x or more",
-        superSpecial: "Changes the orb, including [BLOCK] orb, of this character into a [INT] orb, boosts Base ATK of [Five Elders] and [Celestial Dragon] characters by 1,500 for 1 turn, boosts Critical Hit Rate of [DEX] and [INT] characters by 20% for 1 turn, and transforms [INT] characters into Super [INT] characters.",
+        superSpecial: "Changes the orb, including [BLOCK] orb, of this character into an [INT] orb, boosts Base ATK of [Five Elders] and [Celestial Dragon] characters by 1,500 for 1 turn, boosts Critical Hit Rate of [DEX] and [INT] characters by 20% for 1 turn, and transforms [INT] characters into Super [INT] characters.",
         support: [
             {
                 Characters: "Characters with cost 99 or more",
@@ -171574,7 +171574,7 @@ window.details = {
                     "If you hit a PERFECT with this character, there is a 50% chance to deal 5% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 60% chance to deal 7% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 70% chance to deal 8% of this character's attack in extra damage",
-                    "If you hit a PERFECT with this character, there is a 80% chance to deal 15% of this character's attack in extra damage"
+                    "If you hit a PERFECT with this character, there is an 80% chance to deal 15% of this character's attack in extra damage"
                 ]
             },
             {
@@ -171601,7 +171601,7 @@ window.details = {
     },
     4411: {//Ivankov
         captain: "Boosts ATK of Fighter and Free Spirit characters by 3.5x, boosts base ATK of [Child] characters by 1,500, and boosts RCV of Fighter and Free Spirit characters by 1.2x.",
-        special: "Reduces the defense of all enemies by 100% for 1 turn, changes the orbs, including [BLOCK] orbs, of top and bottom row characters into [TND] orbs, changes the orbs, including [BLOCK] orbs, of middle row characters into [G] orbs, reduces Burn duration by 6 turns, and adds 1.2x to chain multiplier for 1 turn. If your Captain is a [DEX] character, increases boost effects of ATK Up buffs by 1.2x (up to 6x). If your Captain is a [INT] character, increases boost effects of Orb Amplification buffs by 1.2x (up to 6x). If your crew has 2+ [Child] characters, increases boost effects of Color Affinity buffs by 1.2x (up to 6x).",
+        special: "Reduces the defense of all enemies by 100% for 1 turn, changes the orbs, including [BLOCK] orbs, of top and bottom row characters into [TND] orbs, changes the orbs, including [BLOCK] orbs, of middle row characters into [G] orbs, reduces Burn duration by 6 turns, and adds 1.2x to chain multiplier for 1 turn. If your Captain is a [DEX] character, increases boost effects of ATK Up buffs by 1.2x (up to 6x). If your Captain is an [INT] character, increases boost effects of Orb Amplification buffs by 1.2x (up to 6x). If your crew has 2+ [Child] characters, increases boost effects of Color Affinity buffs by 1.2x (up to 6x).",
         specialName: "Will to Survive",
         sailor: {
             base: "If this character has a [G] orb and you attack with this character, reduces enemies' [DEX] and [INT] Resistance by -15% for 1 turn.",
@@ -171654,14 +171654,14 @@ window.details = {
                     "If you hit a PERFECT with this character, there is a 40% chance to deal 5% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 50% chance to deal 6% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 60% chance to deal 7% of this character's attack in extra damage",
-                    "If you hit a PERFECT with this character, there is a 80% chance to deal 8% of this character's attack in extra damage"
+                    "If you hit a PERFECT with this character, there is an 80% chance to deal 8% of this character's attack in extra damage"
                 ]
             }
         ]
     },
     4412: {//Kuma & Ginny
         captain: "Boosts ATK of Free Spirit and Cerebral characters by 3.5x, boosts base HP of [Child] characters by 2,000, and boosts RCV of Free Spirit and Cerebral characters by 1.2x.",
-        special: "Delays all enemies by 1 turn, reduces Despair duration by 6 turns, and boosts Final Tap ATK of all characters by 40%. If your Captain is a [DEX] character, reduces Special Cooldown of your Captain character by 6 turns. If your Captain is a [INT] character, reduces Special Cooldown of your Friend Captain character by 6 turns. If your crew has 2+ [Child] characters, increases boost effects of Orb Amplification buffs by 1.25x (up to 6x).",
+        special: "Delays all enemies by 1 turn, reduces Despair duration by 6 turns, and boosts Final Tap ATK of all characters by 40%. If your Captain is a [DEX] character, reduces Special Cooldown of your Captain character by 6 turns. If your Captain is an [INT] character, reduces Special Cooldown of your Friend Captain character by 6 turns. If your crew has 2+ [Child] characters, increases boost effects of Orb Amplification buffs by 1.25x (up to 6x).",
         specialNotes: "Special is limited to 1 use per adventure",
         specialName: "Savoring Happiness",
         sailor: {
@@ -171715,7 +171715,7 @@ window.details = {
                     "If you hit a PERFECT with this character, there is a 40% chance to deal 5% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 50% chance to deal 6% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 60% chance to deal 7% of this character's attack in extra damage",
-                    "If you hit a PERFECT with this character, there is a 80% chance to deal 8% of this character's attack in extra damage"
+                    "If you hit a PERFECT with this character, there is an 80% chance to deal 8% of this character's attack in extra damage"
                 ]
             }
         ]
@@ -172946,7 +172946,7 @@ window.details = {
                     "If you hit a PERFECT with this character, there is a 50% chance to deal 5% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 60% chance to deal 6% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 70% chance to deal 7% of this character's attack in extra damage",
-                    "If you hit a PERFECT with this character, there is a 80% chance to deal 8% of this character's attack in extra damage"
+                    "If you hit a PERFECT with this character, there is an 80% chance to deal 8% of this character's attack in extra damage"
                 ]
             },
             {
@@ -173071,7 +173071,7 @@ window.details = {
                     "If you hit a PERFECT with this character, there is a 40% chance to deal 4% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 50% chance to deal 5% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 70% chance to deal 7% of this character's attack in extra damage",
-                    "If you hit a PERFECT with this character, there is a 80% chance to deal 8% of this character's attack in extra damage",
+                    "If you hit a PERFECT with this character, there is an 80% chance to deal 8% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 100% chance to deal 10% of this character's attack in extra damage"
                 ]
             },
@@ -173148,7 +173148,7 @@ window.details = {
                     "If you hit a PERFECT with this character, there is a 40% chance to deal 5% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 50% chance to deal 6% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 60% chance to deal 7% of this character's attack in extra damage",
-                    "If you hit a PERFECT with this character, there is a 80% chance to deal 8% of this character's attack in extra damage"
+                    "If you hit a PERFECT with this character, there is an 80% chance to deal 8% of this character's attack in extra damage"
                 ]
             },
             {
@@ -173224,7 +173224,7 @@ window.details = {
                     "If you hit a PERFECT with this character, there is a 40% chance to deal 5% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 50% chance to deal 6% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 60% chance to deal 7% of this character's attack in extra damage",
-                    "If you hit a PERFECT with this character, there is a 80% chance to deal 8% of this character's attack in extra damage"
+                    "If you hit a PERFECT with this character, there is an 80% chance to deal 8% of this character's attack in extra damage"
                 ]
             },
             {
@@ -173311,7 +173311,7 @@ window.details = {
                     "If you hit a PERFECT with this character, there is a 40% chance to deal 5% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 50% chance to deal 6% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 60% chance to deal 7% of this character's attack in extra damage",
-                    "If you hit a PERFECT with this character, there is a 80% chance to deal 8% of this character's attack in extra damage"
+                    "If you hit a PERFECT with this character, there is an 80% chance to deal 8% of this character's attack in extra damage"
                 ]
             },
             {
@@ -173392,7 +173392,7 @@ window.details = {
                     "If you hit a PERFECT with this character, there is a 40% chance to deal 5% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 50% chance to deal 6% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 60% chance to deal 7% of this character's attack in extra damage",
-                    "If you hit a PERFECT with this character, there is a 80% chance to deal 8% of this character's attack in extra damage"
+                    "If you hit a PERFECT with this character, there is an 80% chance to deal 8% of this character's attack in extra damage"
                 ]
             },
             {
@@ -173499,7 +173499,7 @@ window.details = {
                     "If you hit a PERFECT with this character, there is a 50% chance to deal 5% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 60% chance to deal 6% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 70% chance to deal 8% of this character's attack in extra damage",
-                    "If you hit a PERFECT with this character, there is a 80% chance to deal 10% of this character's attack in extra damage"
+                    "If you hit a PERFECT with this character, there is an 80% chance to deal 10% of this character's attack in extra damage"
                 ]
             },
             {
@@ -173940,7 +173940,7 @@ window.details = {
                 description: [
                     "If you hit a PERFECT with this character, there is a 60% chance to deal 6% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 70% chance to deal 7% of this character's attack in extra damage",
-                    "If you hit a PERFECT with this character, there is a 80% chance to deal 8% of this character's attack in extra damage",
+                    "If you hit a PERFECT with this character, there is an 80% chance to deal 8% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 90% chance to deal 9% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 100% chance to deal 10% of this character's attack in extra damage"
                 ]
@@ -174364,7 +174364,7 @@ window.details = {
                     "If you hit a PERFECT with this character, there is a 50% chance to deal 5% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 60% chance to deal 7% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 70% chance to deal 8% of this character's attack in extra damage",
-                    "If you hit a PERFECT with this character, there is a 80% chance to deal 15% of this character's attack in extra damage"
+                    "If you hit a PERFECT with this character, there is an 80% chance to deal 15% of this character's attack in extra damage"
                 ]
             },
             {
@@ -174823,7 +174823,7 @@ window.details = {
                     "If you hit a PERFECT with this character, there is a 50% chance to deal 5% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 60% chance to deal 6% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 70% chance to deal 7% of this character's attack in extra damage",
-                    "If you hit a PERFECT with this character, there is a 80% chance to deal 8% of this character's attack in extra damage"
+                    "If you hit a PERFECT with this character, there is an 80% chance to deal 8% of this character's attack in extra damage"
                 ]
             }
         ]
@@ -175175,7 +175175,7 @@ window.details = {
                     "If you hit a PERFECT with this character, there is a 40% chance to deal 5% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 50% chance to deal 6% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 60% chance to deal 7% of this character's attack in extra damage",
-                    "If you hit a PERFECT with this character, there is a 80% chance to deal 8% of this character's attack in extra damage"
+                    "If you hit a PERFECT with this character, there is an 80% chance to deal 8% of this character's attack in extra damage"
                 ]
             },
             {
@@ -176478,7 +176478,7 @@ window.details = {
                     "If you hit a PERFECT with this character, there is a 40% chance to deal 4% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 50% chance to deal 5% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 70% chance to deal 7% of this character's attack in extra damage",
-                    "If you hit a PERFECT with this character, there is a 80% chance to deal 8% of this character's attack in extra damage",
+                    "If you hit a PERFECT with this character, there is an 80% chance to deal 8% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 100% chance to deal 10% of this character's attack in extra damage"
                 ]
             },
@@ -176957,7 +176957,7 @@ window.details = {
                 description: [
                     "If you hit a PERFECT with this character, there is a 60% chance to deal 6% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 70% chance to deal 7% of this character's attack in extra damage",
-                    "If you hit a PERFECT with this character, there is a 80% chance to deal 8% of this character's attack in extra damage",
+                    "If you hit a PERFECT with this character, there is an 80% chance to deal 8% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 90% chance to deal 9% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 100% chance to deal 10% of this character's attack in extra damage"
                 ]
@@ -177031,7 +177031,7 @@ window.details = {
                     "If you hit a PERFECT with this character, there is a 40% chance to deal 4% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 50% chance to deal 5% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 70% chance to deal 7% of this character's attack in extra damage",
-                    "If you hit a PERFECT with this character, there is a 80% chance to deal 8% of this character's attack in extra damage",
+                    "If you hit a PERFECT with this character, there is an 80% chance to deal 8% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 100% chance to deal 10% of this character's attack in extra damage"
                 ]
             },
@@ -177143,7 +177143,7 @@ window.details = {
                     "If you hit a PERFECT with this character, there is a 40% chance to deal 4% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 50% chance to deal 5% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 70% chance to deal 7% of this character's attack in extra damage",
-                    "If you hit a PERFECT with this character, there is a 80% chance to deal 8% of this character's attack in extra damage",
+                    "If you hit a PERFECT with this character, there is an 80% chance to deal 8% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 100% chance to deal 10% of this character's attack in extra damage"
                 ]
             },
@@ -177237,7 +177237,7 @@ window.details = {
                     "If you hit a PERFECT with this character, there is a 40% chance to deal 5% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 50% chance to deal 6% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 60% chance to deal 7% of this character's attack in extra damage",
-                    "If you hit a PERFECT with this character, there is a 80% chance to deal 8% of this character's attack in extra damage"
+                    "If you hit a PERFECT with this character, there is an 80% chance to deal 8% of this character's attack in extra damage"
                 ]
             },
             {
@@ -177331,7 +177331,7 @@ window.details = {
     },
     4480: {//5* PKA Kid
         captain: "Reduces Special Cooldown of [STR], Striker and Slasher characters by 1 turn at the start of the fight, boosts ATK of [STR], Striker and Slasher characters by 3.75x, by 4x instead if they have a beneficial orb and by 5x instead if they have a [EMPTY] orb, boosts base ATK of [Kid Pirates] and [Worst Generation] characters by 1,000, makes [BOMB] and [SUPERBOMB] orbs beneficial for [STR], Striker and Slasher characters, and [BOMB] and [SUPERBOMB] orbs will deal 80% less damage to the crew.",
-        special: "Changes [STR], [DEX], [QCK], [PSY] and [INT] orbs into [EMPTY] orbs, deals 35x-350x character's ATK in [STR] damage to one enemy depending on number of [STR], [DEX], [QCK], [PSY] and [INT] slots emptied, reduces enemies' Barrier duration by 2 turns, reduces ATK Down duration by 6 turn, and boosts Critical Hit Damage of all characters by 60% for 1 turn.",
+        special: "Changes [STR], [DEX], [QCK], [PSY] and [INT] orbs into [EMPTY] orbs, deals 35x-350x character's ATK in [STR] damage to one enemy depending on number of [STR], [DEX], [QCK], [PSY] and [INT] slots emptied, reduces enemies' Barrier duration by 2 turns, reduces ATK Down duration by 6 turns, and boosts Critical Hit Damage of all characters by 60% for 1 turn.",
         specialName: "Punk Clash",
         sailor: {
             base: "Makes [BOMB] and [SUPERBOMB] orbs beneficial for all characters.",
@@ -177403,7 +177403,7 @@ window.details = {
                     "If you hit a PERFECT with this character, there is a 40% chance to deal 4% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 50% chance to deal 5% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 70% chance to deal 6% of this character's attack in extra damage",
-                    "If you hit a PERFECT with this character, there is a 80% chance to deal 7% of this character's attack in extra damage",
+                    "If you hit a PERFECT with this character, there is an 80% chance to deal 7% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 100% chance to deal 8% of this character's attack in extra damage"
                 ]
             }
@@ -177411,7 +177411,7 @@ window.details = {
     },
     4481: {//5+ PKA Kid
         captain: "Reduces Special Cooldown of [STR], Striker and Slasher characters by 1 turn at the start of the fight, boosts ATK of [STR], Striker and Slasher characters by 4x, by 4.5x instead if they have a beneficial orb and by 5.25x instead if they have a [EMPTY] orb, boosts base ATK of [Kid Pirates] and [Worst Generation] characters by 1,000, makes [BOMB] and [SUPERBOMB] orbs beneficial for [STR], Striker and Slasher characters, and [BOMB] and [SUPERBOMB] orbs will deal 80% less damage to the crew.",
-        special: "Changes [STR], [DEX], [QCK], [PSY] and [INT] orbs into [EMPTY] orbs, deals 35x-350x character's ATK in [STR] damage to one enemy depending on number of [STR], [DEX], [QCK], [PSY] and [INT] slots emptied, reduces enemies' Barrier duration by 3 turns, reduces ATK Down duration by 6 turn, and boosts Critical Hit Damage of all characters by 60% for 1 turn. If your crew has 5+ [Land of Wano Arc], [Paramythia-type] or [Kid Pirates] characters, binds self for 10 turns, and inflicts all enemies with Set Target, increasing damage taken from all characters by 1.75x and reducing Special Cooldown of all characters by 1 turn when they defeat an enemy, for 1 turn.",
+        special: "Changes [STR], [DEX], [QCK], [PSY] and [INT] orbs into [EMPTY] orbs, deals 35x-350x character's ATK in [STR] damage to one enemy depending on number of [STR], [DEX], [QCK], [PSY] and [INT] slots emptied, reduces enemies' Barrier duration by 3 turns, reduces ATK Down duration by 6 turns, and boosts Critical Hit Damage of all characters by 60% for 1 turn. If your crew has 5+ [Land of Wano Arc], [Paramythia-type] or [Kid Pirates] characters, binds self for 10 turns, and inflicts all enemies with Set Target, increasing damage taken from all characters by 1.75x and reducing Special Cooldown of all characters by 1 turn when they defeat an enemy, for 1 turn.",
         specialName: "Punk Clash",
         sailor: {
             base: "Makes [BOMB] and [SUPERBOMB] orbs beneficial for all characters.",
@@ -177483,7 +177483,7 @@ window.details = {
                     "If you hit a PERFECT with this character, there is a 40% chance to deal 4% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 50% chance to deal 5% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 70% chance to deal 6% of this character's attack in extra damage",
-                    "If you hit a PERFECT with this character, there is a 80% chance to deal 7% of this character's attack in extra damage",
+                    "If you hit a PERFECT with this character, there is an 80% chance to deal 7% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 100% chance to deal 8% of this character's attack in extra damage"
                 ]
             }
@@ -178421,7 +178421,7 @@ window.details = {
         special: "Reduces Special Cooldown of all characters by 1 turn, reduces Bind and Special Bind duration by 7 turns, applies Territory: Cerebral class to the field, boosts ATK by 1x-1.5x and reduces damage received by 0%-25% based on number of characters matching the territory, for 3 turns, decreases boost effects of Color Affinity buffs by -0.5x, and converts Color Affinity into a Stackable Color Affinity. If this character has used \"Memories of the Path Thus Far\" 0 times this adventure, boosts Color Affinity of [INT], Cerebral and Free Spirit characters by 3.5x, preventing buff clears, for 3 turns. If this character has used \"Memories of the Path Thus Far\" 1+ times this adventure and your crew has 4+ [Bonney Pirates], [Revolutionary Army], [Straw Hat Pirates], [Scientist] or [Egghead Arc] characters, recovers 50x character's RCV in HP, allowing HP Overfill up to 2x MAX HP, and inflicts all enemies with Set Target, increasing damage taken from Cerebral and Free Spirit characters by 2x and reducing Special Cooldown of Cerebral and Free Spirit characters by 2 turns when they defeat an enemy, for 1 turn.",
         specialName: "Memories of the Path Thus Far",
         sailor: {
-            base: "Reduces Special Bind and Bind duration by 10 turns on this character, and restores Special Cooldown of this character by 10 turns when it is rewinded.  Changes orbs of all characters into [RAINBOW] orbs at the start of the fight.",
+            base: "Reduces Special Bind and Bind duration by 10 turns on this character, and restores Special Cooldown of this character by 10 turns when it is rewinded. Changes orbs of all characters into [RAINBOW] orbs at the start of the fight.",
             level1: "If field has Territory: Free Spirit or Territory: Cerebral, adds 0.2x to chain multiplier; boosts base ATK of Free Spirit and Cerebral characters by 60 otherwise."
         },
         superSpecialCriteria: "Can be launched as crewmate. Your crew must consist of Jewelry Bonney and your crew must consist of any 1 of the following, excluding supports and counting only 1 per unit: Borsalino (Kizaru), Sentomaru, Stussy, Monkey D. Luffy, Dr. Vegapunk (Stella), Ginny, Emporio Ivankov, Sabo, Monkey D. Dragon",
@@ -179380,7 +179380,7 @@ window.details = {
                     "If you hit a PERFECT with this character, there is a 40% chance to deal 4% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 50% chance to deal 5% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 70% chance to deal 6% of this character's attack in extra damage",
-                    "If you hit a PERFECT with this character, there is a 80% chance to deal 8% of this character's attack in extra damage",
+                    "If you hit a PERFECT with this character, there is an 80% chance to deal 8% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 100% chance to deal 10% of this character's attack in extra damage"
                 ]
             },
@@ -179451,7 +179451,7 @@ window.details = {
                     "If you hit a PERFECT with this character, there is a 50% chance to deal 5% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 60% chance to deal 6% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 70% chance to deal 7% of this character's attack in extra damage",
-                    "If you hit a PERFECT with this character, there is a 80% chance to deal 8% of this character's attack in extra damage"
+                    "If you hit a PERFECT with this character, there is an 80% chance to deal 8% of this character's attack in extra damage"
                 ]
             },
             {
@@ -180551,7 +180551,7 @@ window.details = {
                     "If you hit a PERFECT with this character, there is a 40% chance to deal 4% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 50% chance to deal 5% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 70% chance to deal 7% of this character's attack in extra damage",
-                    "If you hit a PERFECT with this character, there is a 80% chance to deal 8% of this character's attack in extra damage"
+                    "If you hit a PERFECT with this character, there is an 80% chance to deal 8% of this character's attack in extra damage"
                 ]
             }
         ]
@@ -180698,7 +180698,7 @@ window.details = {
                     "If you hit a PERFECT with this character, there is a 40% chance to deal 4% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 50% chance to deal 5% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 70% chance to deal 6% of this character's attack in extra damage",
-                    "If you hit a PERFECT with this character, there is a 80% chance to deal 8% of this character's attack in extra damage",
+                    "If you hit a PERFECT with this character, there is an 80% chance to deal 8% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 90% chance to deal 10% of this character's attack in extra damage"
                 ]
             },
@@ -181458,7 +181458,7 @@ window.details = {
                     "If you hit a PERFECT with this character, there is a 40% chance to deal 5% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 50% chance to deal 6% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 60% chance to deal 7% of this character's attack in extra damage",
-                    "If you hit a PERFECT with this character, there is a 80% chance to deal 8% of this character's attack in extra damage"
+                    "If you hit a PERFECT with this character, there is an 80% chance to deal 8% of this character's attack in extra damage"
                 ]
             },
             {
@@ -181540,7 +181540,7 @@ window.details = {
                     "If you hit a PERFECT with this character, there is a 40% chance to deal 5% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 50% chance to deal 6% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 60% chance to deal 7% of this character's attack in extra damage",
-                    "If you hit a PERFECT with this character, there is a 80% chance to deal 8% of this character's attack in extra damage"
+                    "If you hit a PERFECT with this character, there is an 80% chance to deal 8% of this character's attack in extra damage"
                 ]
             },
             {
@@ -181763,7 +181763,7 @@ window.details = {
                     "If you hit a PERFECT with this character, there is a 40% chance to deal 4% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 50% chance to deal 5% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 70% chance to deal 7% of this character's attack in extra damage",
-                    "If you hit a PERFECT with this character, there is a 80% chance to deal 8% of this character's attack in extra damage",
+                    "If you hit a PERFECT with this character, there is an 80% chance to deal 8% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 100% chance to deal 10% of this character's attack in extra damage"
                 ]
             },
@@ -182439,7 +182439,7 @@ window.details = {
                     "If you hit a PERFECT with this character, there is a 40% chance to deal 4% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 50% chance to deal 5% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 70% chance to deal 7% of this character's attack in extra damage",
-                    "If you hit a PERFECT with this character, there is a 80% chance to deal 8% of this character's attack in extra damage",
+                    "If you hit a PERFECT with this character, there is an 80% chance to deal 8% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 100% chance to deal 10% of this character's attack in extra damage"
                 ]
             },
@@ -182660,7 +182660,7 @@ window.details = {
                     "If you hit a PERFECT with this character, there is a 40% chance to deal 5% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 50% chance to deal 6% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 60% chance to deal 7% of this character's attack in extra damage",
-                    "If you hit a PERFECT with this character, there is a 80% chance to deal 8% of this character's attack in extra damage"
+                    "If you hit a PERFECT with this character, there is an 80% chance to deal 8% of this character's attack in extra damage"
                 ]
             },
             {
@@ -182740,7 +182740,7 @@ window.details = {
                     "If you hit a PERFECT with this character, there is a 40% chance to deal 5% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 50% chance to deal 6% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 60% chance to deal 7% of this character's attack in extra damage",
-                    "If you hit a PERFECT with this character, there is a 80% chance to deal 8% of this character's attack in extra damage"
+                    "If you hit a PERFECT with this character, there is an 80% chance to deal 8% of this character's attack in extra damage"
                 ]
             },
             {
@@ -182845,7 +182845,7 @@ window.details = {
                     "If you hit a PERFECT with this character, there is a 50% chance to deal 5% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 60% chance to deal 6% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 70% chance to deal 7% of this character's attack in extra damage",
-                    "If you hit a PERFECT with this character, there is a 80% chance to deal 8% of this character's attack in extra damage"
+                    "If you hit a PERFECT with this character, there is an 80% chance to deal 8% of this character's attack in extra damage"
                 ]
             }
         ]
@@ -182933,7 +182933,7 @@ window.details = {
                     "If you hit a PERFECT with this character, there is a 50% chance to deal 5% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 60% chance to deal 6% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 70% chance to deal 7% of this character's attack in extra damage",
-                    "If you hit a PERFECT with this character, there is a 80% chance to deal 8% of this character's attack in extra damage"
+                    "If you hit a PERFECT with this character, there is an 80% chance to deal 8% of this character's attack in extra damage"
                 ]
             },
             {
@@ -183369,7 +183369,7 @@ window.details = {
                     "If you hit a PERFECT with this character, there is a 50% chance to deal 9% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 60% chance to deal 10% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 70% chance to deal 11% of this character's attack in extra damage",
-                    "If you hit a PERFECT with this character, there is a 80% chance to deal 12% of this character's attack in extra damage"
+                    "If you hit a PERFECT with this character, there is an 80% chance to deal 12% of this character's attack in extra damage"
                 ]
             }
         ],
@@ -183474,7 +183474,7 @@ window.details = {
                     "If you hit a PERFECT with this character, there is a 50% chance to deal 5% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 60% chance to deal 6% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 70% chance to deal 7% of this character's attack in extra damage",
-                    "If you hit a PERFECT with this character, there is a 80% chance to deal 8% of this character's attack in extra damage"
+                    "If you hit a PERFECT with this character, there is an 80% chance to deal 8% of this character's attack in extra damage"
                 ]
             },
             {
@@ -183511,7 +183511,7 @@ window.details = {
             character2: "Launches the following effect at start of fight: reduces Special Cooldown of [Blackbeard Pirates] and [Four Emperors] characters by 3 turns, and reduces Switch Effect and VS Gauge of all characters by 2. Boosts ATK of [QCK] and [INT] characters by 5x, boosts HP of [QCK] and [INT] characters by 1.3x, makes [QCK], [TND] and [BOMB] orbs beneficial for [QCK] and [INT] characters, and reduces Despair duration by 10 turns.",
             combined: "Launches the following effect at start of fight: reduces Special Cooldown of [Blackbeard Pirates] and [Four Emperors] characters by 3 turns, and reduces Switch Effect and VS Gauge of all characters by 2. Boosts ATK of [QCK] and [INT] characters by 5.5x, by 5.75x instead if they have a beneficial orb, boosts HP of [QCK] and [INT] characters by 1.3x, makes [QCK], [INT], [RCV], [TND] and [BOMB] orbs beneficial for [QCK] and [INT] characters, and reduces Despair duration by 10 turns. If your crew has 2+ [Blackbeard Pirates] or [Four Emperors] characters, boosts ATK of Free Spirit, Driven and Slasher characters by 1.1x."
         },
-        special: "Reduces Paralysis and Special Bind duration by 7 turns, boosts ATK of [QCK] and [INT] characters by 3.25x, can be enhanced up to 2 times, for 3 turn, and becomes Burgess & Shiryu for 3 turns. If your crew has ATK Up when the special is activated, boosts Advantageous Class Effect of Free Spirit, Driven and Slasher characters by 1.75x for 1 turn. If your crew has 2+ [Blackbeard Pirates] or [Four Emperors] characters and field has Territory: [QCK], Territory: [INT] or Territory: Free Spirit when the special is activated, increases Chain Tap Timing Bonus of [QCK] and [INT] characters to +0.3x-0.7x for 3 turns depending on Tap Timing. If enemies have Percent Damage Reduction when the special is activated and an [QCK] character is supporting this character, applies Territory: [QCK] type to the field, boosts ATK by 1x-1.5x and reduces damage received by 0%-25% based on number of characters matching the territory, for 2 turns. If enemies have Percent Damage Reduction when the special is activated and an [INT] character is supporting this character, applies Territory: Free Spirit class to the field, boosts ATK by 1x-1.5x and reduces damage received by 0%-25% based on number of characters matching the territory, for 2 turns.",
+        special: "Reduces Paralysis and Special Bind duration by 7 turns, boosts ATK of [QCK] and [INT] characters by 3.25x, can be enhanced up to 2 times, for 3 turns, and becomes Burgess & Shiryu for 3 turns. If your crew has ATK Up when the special is activated, boosts Advantageous Class Effect of Free Spirit, Driven and Slasher characters by 1.75x for 1 turn. If your crew has 2+ [Blackbeard Pirates] or [Four Emperors] characters and field has Territory: [QCK], Territory: [INT] or Territory: Free Spirit when the special is activated, increases Chain Tap Timing Bonus of [QCK] and [INT] characters to +0.3x-0.7x for 3 turns depending on Tap Timing. If enemies have Percent Damage Reduction when the special is activated and an [QCK] character is supporting this character, applies Territory: [QCK] type to the field, boosts ATK by 1x-1.5x and reduces damage received by 0%-25% based on number of characters matching the territory, for 2 turns. If enemies have Percent Damage Reduction when the special is activated and an [INT] character is supporting this character, applies Territory: Free Spirit class to the field, boosts ATK by 1x-1.5x and reduces damage received by 0%-25% based on number of characters matching the territory, for 2 turns.",
         specialNotes: "<b>GOOD:</b> +0.3, <b>GREAT:</b> +0.5, <b>PERFECT:</b> +0.7",
         specialName: "Coordinated Might and Invisibility",
         sailor: {
@@ -183596,7 +183596,7 @@ window.details = {
                     "If you hit a PERFECT with this character, there is a 50% chance to deal 5% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 60% chance to deal 6% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 70% chance to deal 7% of this character's attack in extra damage",
-                    "If you hit a PERFECT with this character, there is a 80% chance to deal 8% of this character's attack in extra damage"
+                    "If you hit a PERFECT with this character, there is an 80% chance to deal 8% of this character's attack in extra damage"
                 ]
             },
             {

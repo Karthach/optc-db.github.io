@@ -345,7 +345,7 @@
 
 		// may be "and" or ", and" or ", " even with extra whitespace
 		// if using .split(), you should use non-capturing groups (?:)
-		let separatorRegex = /(?:\s*,\s*|\s+)(?:and|or)\s+|\s*,\s*|\/|:\s*/g;
+		let separatorRegex = /(?:\s*,\s*|\s+)(?:and|or)\s+|\s*,\s*|\/|&|:\s*/g;
 
 		let costMatch = criteria.match(costRegex);
 		if (costMatch) {
@@ -374,6 +374,8 @@
 			criteria = criteria.replace(aliasesRegex, "");
 			let terms = criteria.split(separatorRegex);
 			for (let term of terms) {
+				term = term.trim();
+				if (!term) continue;
 				let typeMatch = term.match(typeRegex);
 				let classMatch = term.match(classRegex);
 				let tagMatch = term.match(tagRegex);
@@ -383,7 +385,7 @@
 					if (classMatch) classes.push(classMatch[0]);
 					if (tagMatch) tags.push(tagMatch[1]);
 				} else {
-					families.push(term.replace(specialCharactersRegex, "\\$&")); // escape special characters before pushing (except dot)
+					families.push(term.replace(/\.$/, "").replace(specialCharactersRegex, "\\$&")); // escape special characters before pushing (except dot)
 				};
 			};
 		};
@@ -503,11 +505,24 @@
 		// depending on the conditions (so that one will handle the `6 Striker characters`,
 		// the other will handle the family names.)
 		let charactersRegex =
-			/must consist of (?:any \d(?: or \d)?|all) of the following, excluding Supports(?: and counting only 1 per unit)?\: (?:(?:\d )?(.*?)characters(?: or )?)?(.*)?/i;
+			/must consist of (?:any \d(?: or \d)?|all) of the following, excluding Supports(?: and counting only 1 per unit)?\: ^(?:(?:\d )?(.*?)\s+characters(?: or )?)?(.*)?/i;
 		let match = criteria.match(charactersRegex);
 		if (!match) return null;
 		// prioritize family names. if there are no family names (match[2] is null|undefined), use the classes/types condition.
-		var criteriaTrimmed = (match[2] || match[1]).trim();
+		var criteriaTrimmed = (match[2] && match[2].trim().replace(/\.$/, "").length > 0 ? match[2] : match[1]).trim().replace(/\.$/, "");
+		
+		// Remove leading/trailing punctuation like ; or :
+		criteriaTrimmed = criteriaTrimmed.replace(/^[;:\s]+|[;:\s]+$/g, "");
+
+		// Remove leading "or " or "and "
+		criteriaTrimmed = criteriaTrimmed.replace(/^(?:or|and)\s+/i, "");
+
+		// Remove "or your crew uses/has ..." conditions
+		criteriaTrimmed = criteriaTrimmed.replace(/[;:\s]*\s*or (?:your )?crew (?:uses|has) .*/i, "");
+
+		// Remove generic conditions like "Characters with Last Tap, Super Tandem or Rush"
+		criteriaTrimmed = criteriaTrimmed.replace(/Characters with (?:Last Tap|Super Tandem|Rush|Final Tap|Tandem)(?:,?\s+(?:Super Tandem|Rush|Final Tap|Tandem|and|or))*[\s,;.]*/i, "");
+
 		return utils.generateCriteriaQuery(criteriaTrimmed, supportingFamilies);
 	};
 
@@ -532,7 +547,7 @@
 		let match = criteria.match(charactersRegex);
 		if (!match) return null;
 		// prioritize family names. if there are no family names (match[2] is null|undefined), use the classes/types condition.
-		var criteriaTrimmed = (match[2] || match[1]).trim();
+		var criteriaTrimmed = (match[2] && match[2].trim().replace(/\.$/, "").length > 0 ? match[2] : match[1]).trim().replace(/\.$/, "");
 
 		return utils.generateCriteriaQuery(criteriaTrimmed, supportingFamilies);
 	};
