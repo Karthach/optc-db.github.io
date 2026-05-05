@@ -297,6 +297,9 @@ body, html {
     display: flex;
     flex-direction: column;
     overflow-y: auto;
+    background: #1e2127;
+    padding: 10px;
+    box-shadow: 2px 0 10px rgba(0,0,0,0.3);
 }
 
 #tableContainer {
@@ -529,29 +532,33 @@ input#burgerMenuState {
 }
 
 .filter-header {
-    display: block;
-    padding: 8px 5px;
-    text-align: center;
-    background: #202020;
-    color: white;
-    font-weight: bold;
-    cursor: pointer;
-    border: 1px solid #333;
-    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 5px;
+    background: #282c34;
+    color: #abb2bf;
+    font-size: 0.9em;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border: 1px solid #3e4451;
+    border-radius: 4px;
     margin: 4px 2px;
+    cursor: pointer;
+    transition: all 0.2s;
     box-shadow: 0 2px 4px rgba(0,0,0,0.2);
 }
 
 .filter-header-log {
-    background: hsla(157, 79%, 15%, 0.4) !important;
+    border-left: 4px solid #98c379;
 }
 
 .filter-header-pve {
-    background: hsla(230, 70%, 10%, .4) !important;
+    border-left: 4px solid #61afef;
 }
 
 .filter-header-pvp {
-    background: hsla(0, 70%, 10%, .4) !important;
+    border-left: 4px solid #d19a66;
 }
 
 .filter-header > i {
@@ -564,9 +571,13 @@ input#burgerMenuState {
     padding: 4px 10px;
     text-align: center;
     cursor: pointer;
-    border: 1px solid #aaa;
+    background: #282c34;
+    color: #abb2bf;
+    border: 1px solid #3e4451;
     border-radius: 4px;
-    margin: 1px;
+    margin: 2px;
+    font-size: 0.85em;
+    min-width: 40px;
     transition: all 0.2s ease;
 }
 
@@ -666,8 +677,33 @@ input#burgerMenuState {
     }
 }
 
-.type.filter.active, .orb-controllers > .active {
-    font-weight: bold;
+.filter.type {
+    border: none;
+    color: #282c34;
+    font-weight: 800;
+}
+
+.filter.type.STR { background-color: #ff6b6b !important; }
+.filter.type.DEX { background-color: #51cf66 !important; }
+.filter.type.QCK { background-color: #339af0 !important; }
+.filter.type.PSY { background-color: #fcc419 !important; }
+.filter.type.INT { background-color: #ae3ec9 !important; }
+
+.filter.type:not(.active) {
+    opacity: 0.4;
+    color: rgba(40, 44, 52, 0.7);
+}
+
+.filter.type.active {
+    opacity: 1;
+    color: #282c34 !important;
+    box-shadow: 0 0 8px rgba(255,255,255,0.3);
+}
+
+@media (hover) {
+    .filter.type:hover {
+        opacity: 0.8;
+    }
 }
 
 #class-filters {
@@ -801,9 +837,10 @@ input#burgerMenuState {
 
 
 .class.filter.active, .custom.filter.active, .drop.filter.active, .exc.filter.active, .submatcher-option.active {
-    background: red;
-    color: white;
-    font-weight: bold;
+    background: #61afef !important;
+    color: #282c34 !important;
+    border-color: #61afef !important;
+    font-weight: 600;
 }
 
 .subclass.filter.active {
@@ -900,25 +937,18 @@ input#burgerMenuState {
     margin: 5px 5% 5px 5%;
 }
 
-#clear-button {
-    background: #202020;
-    cursor: pointer;
-    color: salmon;
+#clear-button, #toggle-button {
+    background: #2c313a;
+    color: #e06c75;
+    border: 1px solid #3e4451;
+    font-weight: 600;
+    margin: 2px;
 }
 
-#toggle-button {
-    background: #202020;
-    cursor: pointer;
-    color: salmon;
-    }
-
 @media (hover) {
-    #clear-button:hover {
-        background: rgba(255, 68, 0, 0.439);
-    }
-
-    #toggle-button:hover {
-        background: rgba(255, 68, 0, 0.439);
+    #clear-button:hover, #toggle-button:hover {
+        background: #e06c75;
+        color: white;
     }
 }
 
