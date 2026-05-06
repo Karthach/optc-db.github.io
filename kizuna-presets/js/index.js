@@ -4,136 +4,173 @@
     app.controller('PresetsCtrl', ['$scope', '$timeout', 'LanguageService', function($scope, $timeout, LanguageService) {
         $scope.getLang = function() { return LanguageService.getLang(); };
         $scope.setLang = function(lang) { LanguageService.setLang(lang); };
+        $scope.translate = function(key) { return LanguageService.translate(key); };
 
-        // Helper para traducir desde JS
-        $scope.translate = function(key) {
-            return LanguageService.translate(key);
-        };
-
-        // --- CONFIGURACIÓN INICIAL ---
-        $scope.pastBosses = [];
+        // --- CONFIGURACIÓN ---
+        $scope.pastEvents = [];
         if (window.drops && window.drops['Kizuna Clash']) {
-            $scope.pastBosses = window.drops['Kizuna Clash'].map(function(b) {
-                return { name: b.name, id: b.thumb };
-            }).reverse();
+            $scope.pastEvents = window.drops['Kizuna Clash'].slice().reverse(); // Copia y reversa para no mutar el original
         }
         
-        $scope.selectedBoss = $scope.pastBosses[0] || { name: 'Kizuna Mayo 2026', id: 3543 };
-        
-        // Gimmicks usando llaves de traducción para ser multilingüe
-        $scope.bossGimmicks = {
-            'STR': { st2: 'GIMMICK_STR_ST2', st3: 'GIMMICK_STR_ST3' },
-            'DEX': { st2: 'GIMMICK_DEX_ST2', st3: 'GIMMICK_DEX_ST3' },
-            'QCK': { st2: 'GIMMICK_QCK_ST2', st3: 'GIMMICK_QCK_ST3' },
-            'PSY': { st2: 'GIMMICK_PSY_ST2', st3: 'GIMMICK_PSY_ST3' },
-            'INT': { st2: 'GIMMICK_INT_ST2', st3: 'GIMMICK_INT_ST3' }
-        };
-
-        // --- SISTEMA DE UNIDADES QUE NO TENGO (BLACKLIST) ---
+        $scope.selectedEvent = $scope.pastEvents[0];
+        $scope.detectedVariations = [];
+        $scope.presets = [];
         $scope.missingUnits = JSON.parse(localStorage.getItem('kizuna_missing_units') || "[]");
 
-        $scope.toggleMissing = function(id) {
-            var index = $scope.missingUnits.indexOf(Number(id));
-            if (index === -1) $scope.missingUnits.push(Number(id));
-            else $scope.missingUnits.splice(index, 1);
-            localStorage.setItem('kizuna_missing_units', JSON.stringify($scope.missingUnits));
+        // --- ANALIZADOR DE VARIACIONES (CRÍTICO: Limpia y Regenera) ---
+        $scope.analyzeEventColors = function() {
+            if (!$scope.selectedEvent) return;
+            
+            console.log("Cambiando a evento:", $scope.selectedEvent.name);
+            
+            var event = $scope.selectedEvent;
+            var types = new Set();
+            var unitIds = [event.thumb];
+
+            // Recopilar IDs de todas las posibles claves de rondas en la DB
+            var rounds = ['All Difficulties', 'Round 1', 'Round 2', 'Round 3'];
+            rounds.forEach(function(r) {
+                if (event[r] && Array.isArray(event[r])) {
+                    unitIds = unitIds.concat(event[r]);
+                }
+            });
+
+            // Escanear tipos de los personajes relacionados
+            unitIds.forEach(function(id) {
+                var u = window.units[id];
+                if (u && u.type && !id.toString().includes('skull')) {
+                    types.add(u.type);
+                }
+            });
+
+            // Lógica de Negocio: Si detecta solo el color de la unidad principal, asume trío estándar
+            if (types.size <= 1) {
+                $scope.detectedVariations = ['STR', 'DEX', 'QCK'];
+            } else {
+                $scope.detectedVariations = Array.from(types);
+            }
+
+            // LIMPIEZA TOTAL Y REGENERACIÓN
+            $timeout(function() {
+                $scope.presets = []; 
+                $scope.autoGenerateAll();
+            });
         };
 
-        $scope.presets = [];
+        $scope.autoGenerateAll = function() {
+            // Generar un equipo por cada color detectado
+            $scope.detectedVariations.forEach(function(color) {
+                $scope.generateKizunaTeam(color);
+            });
+        };
 
-        // --- LÓGICA DE NOMBRES ---
         function getBaseName(id) {
             var unit = window.units[id];
-            if (!unit) return "";
+            if (!unit) return "Unknown";
             var name = unit.name.split(/ - |,/)[0].trim();
-            var commonNames = ["Luffy", "Sanji", "Zoro", "Nami", "Robin", "Chopper", "Brook", "Franky", "Usopp", "Jinbe"];
-            for (var i = 0; i < commonNames.length; i++) {
-                if (name.includes(commonNames[i])) return commonNames[i];
+            var common = ["Luffy", "Sanji", "Zoro", "Nami", "Robin", "Chopper", "Brook", "Franky", "Usopp", "Jinbe", "Law", "Kid", "Yamato", "Kaido", "Big Mom", "Shanks", "Ace", "Sabo"];
+            for (var i = 0; i < common.length; i++) {
+                if (name.includes(common[i])) return common[i];
             }
             return name;
         }
 
-        // --- GENERADOR ---
+        // --- GENERADOR TÉCNICO ---
         $scope.generateKizunaTeam = function(targetColor) {
             var unitsDB = window.units;
+            var specialsDB = window.specials;
+            var detailsDB = window.details;
             var counterColor = getCounterColor(targetColor);
+            
             var usedNames = [];
             var teamMembers = [];
 
+            // 1. Filtrar candidatos del color counter
             var candidates = Object.keys(unitsDB).filter(function(id) {
                 var u = unitsDB[id];
                 var uid = Number(id);
-                return u && u.type === counterColor && uid > 2000 && !id.includes('-') && $scope.missingUnits.indexOf(uid) === -1;
+                return u && u.type === counterColor && uid > 2000 && 
+                       !id.toString().includes('-') && 
+                       detailsDB[id] && 
+                       $scope.missingUnits.indexOf(uid) === -1;
+            }).sort((a, b) => Number(b) - Number(a));
+
+            if (candidates.length < 6) return;
+
+            // 2. Utilidad (Escaneo de código)
+            var utility = candidates.filter(function(id) {
+                var s = specialsDB[id];
+                if (!s) return false;
+                var sStr = JSON.stringify(s).toLowerCase();
+                return sStr.includes('p.') || sStr.includes('return 1') || sStr.includes('specialbind');
             });
 
-            candidates.sort((a, b) => Number(b) - Number(a));
-
-            for (var i = 0; i < candidates.length && teamMembers.length < 6; i++) {
-                var id = candidates[i];
-                var baseName = getBaseName(id);
-                if (!usedNames.includes(baseName)) {
-                    usedNames.push(baseName);
-                    teamMembers.push({ id: Number(id), name: baseName });
+            for (var i = 0; i < utility.length && teamMembers.length < 3; i++) {
+                var uid = Number(utility[i]);
+                var name = getBaseName(uid);
+                if (!usedNames.includes(name)) {
+                    usedNames.push(name);
+                    teamMembers.push({ id: uid, name: name });
                 }
             }
 
-            var finalTeam = teamMembers.map(function(member) {
-                var supportId = findValidSupport(member.id, usedNames, targetColor);
+            // 3. Daño (Rellenar hasta 6)
+            for (var j = 0; j < candidates.length && teamMembers.length < 6; j++) {
+                var duid = Number(candidates[j]);
+                var dname = getBaseName(duid);
+                if (!usedNames.includes(dname)) {
+                    usedNames.push(dname);
+                    teamMembers.push({ id: duid, name: dname });
+                }
+            }
+
+            // 4. Supports Pro (Sin repetir nombres)
+            var finalTeam = teamMembers.map(function(m) {
+                var supportId = findProfessionalSupport(m.id, usedNames, targetColor);
                 if (supportId) usedNames.push(getBaseName(supportId));
-                return { id: member.id, support: supportId || 1240 };
+                return { id: m.id, support: supportId || 1240 };
             });
 
-            var newPreset = {
-                title: 'Vs ' + $scope.selectedBoss.name + ' (' + targetColor + ')',
-                targetType: targetColor,
-                counterType: counterColor,
-                bossThumb: $scope.selectedBoss.id,
-                stage2: $scope.bossGimmicks[targetColor].st2,
-                stage3: $scope.bossGimmicks[targetColor].st3,
-                members: finalTeam
-            };
+            var gimmicks = predictGimmicks(targetColor);
 
             $timeout(function() {
-                $scope.presets.unshift(newPreset);
-                if ($scope.presets.length > 5) $scope.presets.pop();
-            });
-        };
-
-        $scope.replaceUnit = function(preset, memberIndex) {
-            var counterColor = preset.counterType;
-            var usedNamesInTeam = preset.members.map(m => getBaseName(m.id));
-            preset.members.forEach(m => usedNamesInTeam.push(getBaseName(m.support)));
-
-            var candidates = Object.keys(window.units).filter(function(id) {
-                var u = window.units[id];
-                var uid = Number(id);
-                var name = getBaseName(id);
-                return u && u.type === counterColor && uid > 2000 && !id.includes('-') && 
-                       $scope.missingUnits.indexOf(uid) === -1 && !usedNamesInTeam.includes(name);
-            });
-
-            candidates.sort((a, b) => Number(b) - Number(a));
-
-            if (candidates.length > 0) {
-                var newId = Number(candidates[0]);
-                var newSupport = findValidSupport(newId, usedNamesInTeam, preset.targetType);
-                $timeout(function() {
-                    preset.members[memberIndex] = { id: newId, support: newSupport };
+                $scope.presets.push({
+                    title: 'Tactical Team vs ' + targetColor,
+                    targetType: targetColor,
+                    counterType: counterColor,
+                    bossThumb: $scope.selectedEvent.thumb, // USAR EL THUMB DEL EVENTO SELECCIONADO
+                    stage2: gimmicks.st2,
+                    stage3: gimmicks.st3,
+                    members: finalTeam
                 });
-            }
+            });
         };
 
-        function findValidSupport(mainUnitId, usedNamesList, targetColor) {
+        function findProfessionalSupport(mainId, usedList, color) {
             var detailsDB = window.details;
-            var allSids = Object.keys(detailsDB).filter(sid => {
+            var possible = Object.keys(detailsDB).filter(function(sid) {
                 var d = detailsDB[sid];
-                var uid = Number(sid);
-                if (!d || !d.support || d.support.length === 0 || uid < 500 || $scope.missingUnits.indexOf(uid) !== -1) return false;
-                return !usedNamesList.includes(getBaseName(sid));
+                var suid = Number(sid);
+                return d && d.support && d.support.length > 0 && suid > 1000 && 
+                       !usedList.includes(getBaseName(sid)) && 
+                       $scope.missingUnits.indexOf(suid) === -1;
+            }).sort((a,b) => Number(b) - Number(a));
+
+            var match = possible.find(function(sid) {
+                return JSON.stringify(detailsDB[sid].support).toLowerCase().includes(color.toLowerCase());
             });
-            allSids.sort((a, b) => Number(b) - Number(a));
-            var match = allSids.find(sid => JSON.stringify(detailsDB[sid].support).toLowerCase().includes(targetColor.toLowerCase()));
-            return Number(match || allSids[0]);
+            return Number(match || possible[0]);
+        }
+
+        function predictGimmicks(color) {
+            var map = {
+                'STR': { st2: 'GIMMICK_STR_ST2', st3: 'GIMMICK_STR_ST3' },
+                'DEX': { st2: 'GIMMICK_DEX_ST2', st3: 'GIMMICK_DEX_ST3' },
+                'QCK': { st2: 'GIMMICK_QCK_ST2', st3: 'GIMMICK_QCK_ST3' },
+                'PSY': { st2: 'GIMMICK_PSY_ST2', st3: 'GIMMICK_PSY_ST3' },
+                'INT': { st2: 'GIMMICK_INT_ST2', st3: 'GIMMICK_INT_ST3' }
+            };
+            return map[color] || map['STR'];
         }
 
         function getCounterColor(type) {
@@ -141,9 +178,36 @@
             return map[type] || 'STR';
         }
 
+        $scope.toggleMissing = function(id) {
+            var index = $scope.missingUnits.indexOf(Number(id));
+            if (index === -1) $scope.missingUnits.push(Number(id));
+            else $scope.missingUnits.splice(index, 1);
+            localStorage.setItem('kizuna_missing_units', JSON.stringify($scope.missingUnits));
+            $scope.analyzeEventColors(); // Refrescar equipos para aplicar blacklist
+        };
+
+        $scope.replaceUnit = function(preset, idx) {
+            var counter = preset.counterType;
+            var inUse = preset.members.map(function(m) { return getBaseName(m.id); });
+            preset.members.forEach(function(m) { inUse.push(getBaseName(m.support)); });
+
+            var pool = Object.keys(window.units).filter(function(id) {
+                var u = window.units[id];
+                var uid = Number(id);
+                return u && u.type === counter && uid > 2000 && !id.toString().includes('-') && 
+                       window.details[id] && !inUse.includes(getBaseName(id)) && $scope.missingUnits.indexOf(uid) === -1;
+            }).sort((a,b) => Number(b) - Number(a));
+
+            if (pool.length > 0) {
+                var nid = Number(pool[0]);
+                var nsup = findProfessionalSupport(nid, inUse, preset.targetType);
+                $timeout(function() { preset.members[idx] = { id: nid, support: nsup }; });
+            }
+        };
+
+        // ANALIZAR INICIAL
         $timeout(function() {
-            $scope.generateKizunaTeam('STR');
-            $scope.generateKizunaTeam('DEX');
+            $scope.analyzeEventColors();
         }, 1500);
     }]);
 
@@ -156,9 +220,17 @@
                 scope.$watch('uid', function(newVal) {
                     if (!newVal) { element[0].style.backgroundImage = "url(" + noimagePath + ")"; return; }
                     try {
+                        var id = String(newVal).split('-')[0].padStart(4, '0');
                         var paths = window.Utils.getThumbnailUrl(newVal, "..");
-                        element[0].style.backgroundImage = "url(" + paths.glo + ")";
-                        element[0].style.backgroundSize = "cover";
+                        var img = new Image();
+                        img.onload = function() { 
+                            element[0].style.backgroundImage = "url(" + paths.glo + ")"; 
+                            element[0].style.backgroundSize = "cover";
+                        };
+                        img.onerror = function() {
+                            element[0].style.backgroundImage = "url(" + noimagePath + ")";
+                        };
+                        img.src = paths.glo;
                     } catch(e) { element[0].style.backgroundImage = "url(" + noimagePath + ")"; }
                 });
             }
