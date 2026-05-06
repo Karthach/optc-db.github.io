@@ -1537,23 +1537,17 @@
         }
     },
 1028: {
-        //TODO
-        hit: function(n,p) { return n > 30 ? 1.75 : 1; },
-        onActivation: function(p) {
-            p.scope.notify({
-                text: 'This ability currently stacks with regular attack boosts when it does not in-game, so please keep that in mind.',
-                name: (parseInt(window.Utils.getBaseId(p.team[p.sourceSlot].unit.id), 10) + 1).toString() + 'warning'
-            });
+        hit: function(n, p) {
+            if (n <= 30) return 1;
+            if (p.scope.hasAtkBoostActive(p.slot)) return 1;
+            return 1.75;
         }
     },
 1029: {
-        //TODO
-        hit: function(n,p) { return n > 30 ? 1.75 : 1; },
-        onActivation: function(p) {
-            p.scope.notify({
-                text: 'This ability currently stacks with regular attack boosts when it does not in-game, so please keep that in mind.',
-                name: (parseInt(window.Utils.getBaseId(p.team[p.sourceSlot].unit.id), 10) + 1).toString() + 'warning'
-            });
+        hit: function(n, p) {
+            if (n <= 30) return 1;
+            if (p.scope.hasAtkBoostActive(p.slot)) return 1;
+            return 1.75;
         }
     },
 1030: {
@@ -1971,23 +1965,17 @@
         delay: function(p) { return 1; },
     },
 1237: {
-        //TODO
-        hit: function(n,p) { return n > 30 ? 2 : 1; },
-        onActivation: function(p) {
-            p.scope.notify({
-                text: 'This ability currently stacks with regular attack boosts when it does not in-game, so please keep that in mind.',
-                name: (parseInt(window.Utils.getBaseId(p.team[p.sourceSlot].unit.id), 10) + 1).toString() + 'warning'
-            });
+        hit: function(n, p) {
+            if (n <= 30) return 1;
+            if (p.scope.hasAtkBoostActive(p.slot)) return 1;
+            return 2;
         }
     },
 1238: {
-        //TODO
-        hit: function(n,p) { return n > 30 ? 2 : 1; },
-        onActivation: function(p) {
-            p.scope.notify({
-                text: 'This ability currently stacks with regular attack boosts when it does not in-game, so please keep that in mind.',
-                name: (parseInt(window.Utils.getBaseId(p.team[p.sourceSlot].unit.id), 10) + 1).toString() + 'warning'
-            });
+        hit: function(n, p) {
+            if (n <= 30) return 1;
+            if (p.scope.hasAtkBoostActive(p.slot)) return 1;
+            return 2;
         }
     },
 1239: {
@@ -6913,23 +6901,17 @@
         type: "class",
     },
 2380: {
-        //TODO
-        hit: function(n,p) { return (n > 12 && (p.unit.class.has("Driven") || p.unit.class.has("Powerhouse"))) ? 2.25 : 1; },
-        onActivation: function(p) {
-            p.scope.notify({
-                text: 'This ability currently stacks with regular attack boosts when it does not in-game, so please keep that in mind.',
-                name: (parseInt(window.Utils.getBaseId(p.team[p.sourceSlot].unit.id), 10) + 1).toString() + 'warning'
-            });
+        hit: function(n, p) {
+            if (n <= 12 || !(p.unit.class.has("Driven") || p.unit.class.has("Powerhouse"))) return 1;
+            if (p.scope.hasAtkBoostActive(p.slot)) return 1;
+            return 2.25;
         }
     },
 2381: {
-        //TODO
-        hit: function(n,p) { return (n > 12 && (p.unit.class.has("Driven") || p.unit.class.has("Powerhouse"))) ? 2.25 : 1; },
-        onActivation: function(p) {
-            p.scope.notify({
-                text: 'This ability currently stacks with regular attack boosts when it does not in-game, so please keep that in mind.',
-                name: (parseInt(window.Utils.getBaseId(p.team[p.sourceSlot].unit.id), 10) + 1).toString() + 'warning'
-            });
+        hit: function(n, p) {
+            if (n <= 12 || !(p.unit.class.has("Driven") || p.unit.class.has("Powerhouse"))) return 1;
+            if (p.scope.hasAtkBoostActive(p.slot)) return 1;
+            return 2.25;
         }
     },
 2383: {
@@ -9739,23 +9721,17 @@
         affinity: function(p) { return p.unit.class.has("Cerebral") ? 1.75 : 1; }
     },
 2766: {
-        //TODO
-        hit: function(n,p) { return n > 12 ? 2 : 1; },
-        onActivation: function(p) {
-            p.scope.notify({
-                text: 'This ability currently stacks with regular attack boosts when it does not in-game, so please keep that in mind.',
-                name: (parseInt(window.Utils.getBaseId(p.team[p.sourceSlot].unit.id), 10) + 1).toString() + 'warning'
-            });
+        hit: function(n, p) {
+            if (n <= 12) return 1;
+            if (p.scope.hasAtkBoostActive(p.slot)) return 1;
+            return 2;
         }
     },
 2767: {
-        //TODO
-        hit: function(n,p) { return n > 12 ? 2 : 1; },
-        onActivation: function(p) {
-            p.scope.notify({
-                text: 'This ability currently stacks with regular attack boosts when it does not in-game, so please keep that in mind.',
-                name: (parseInt(window.Utils.getBaseId(p.team[p.sourceSlot].unit.id), 10) + 1).toString() + 'warning'
-            });
+        hit: function(n, p) {
+            if (n <= 12) return 1;
+            if (p.scope.hasAtkBoostActive(p.slot)) return 1;
+            return 2;
         }
     },
 2768: {
@@ -11121,23 +11097,17 @@
         affinity: function(p) { return (p.unit.type == "STR" || p.unit.type == "QCK" || p.unit.type == "INT") && p.cached.enemyImmunities.delay ? 1.75 : 1; },
     },
 2922: {
-        //TODO
-        hit: function(n,p) { return (n > 12 && (p.unit.type == "INT")) ? 2.25 : 1; },
-        onActivation: function(p) {
-            p.scope.notify({
-                text: 'This ability currently stacks with regular attack boosts when it does not in-game, so please keep that in mind.',
-                name: (parseInt(window.Utils.getBaseId(p.team[p.sourceSlot].unit.id), 10) + 1).toString() + 'warning'
-            });
+        hit: function(n, p) {
+            if (n <= 12 || p.unit.type !== "INT") return 1;
+            if (p.scope.hasAtkBoostActive(p.slot)) return 1;
+            return 2.25;
         }
     },
 2923: {
-        //TODO
-        hit: function(n,p) { return (n > 12 && (p.unit.type == "STR")) ? 2.25 : 1; },
-        onActivation: function(p) {
-            p.scope.notify({
-                text: 'This ability currently stacks with regular attack boosts when it does not in-game, so please keep that in mind.',
-                name: (parseInt(window.Utils.getBaseId(p.team[p.sourceSlot].unit.id), 10) + 1).toString() + 'warning'
-            });
+        hit: function(n, p) {
+            if (n <= 12 || p.unit.type !== "STR") return 1;
+            if (p.scope.hasAtkBoostActive(p.slot)) return 1;
+            return 2.25;
         }
     },
 2924: {
@@ -13097,13 +13067,10 @@
         },
     },
 3241: {
-        //TODO
-        hit: function(n,p) { return (n > 12 && (p.unit.type == "QCK")) ? 2.25 : 1; },
-        onActivation: function(p) {
-            p.scope.notify({
-                text: 'This ability currently stacks with regular attack boosts when it does not in-game, so please keep that in mind.',
-                name: (parseInt(window.Utils.getBaseId(p.team[p.sourceSlot].unit.id), 10) + 1).toString() + 'warning'
-            });
+        hit: function(n, p) {
+            if (n <= 12 || p.unit.type !== "QCK") return 1;
+            if (p.scope.hasAtkBoostActive(p.slot)) return 1;
+            return 2.25;
         }
     },
 3242: {
