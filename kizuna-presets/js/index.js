@@ -6,7 +6,7 @@
         $scope.setLang = function(lang) { LanguageService.setLang(lang); };
         $scope.translate = function(key) { return LanguageService.translate(key); };
 
-        // --- GIMMICK DEFINITIONS WITH TURN-AWARE REGEX ---
+        // --- GIMMICKS ---
         $scope.gimmickOptions = [
             { id: 'bind', label: 'GIMMICK_BIND', regex: /reduces? bind duration by (\d+) turns?/i },
             { id: 'despair', label: 'GIMMICK_DESPAIR', regex: /reduces? despair duration by (\d+) turns?/i },
@@ -19,53 +19,45 @@
         ];
 
         $scope.bossConfig = {
-            type: 'STR',
-            activeGimmicks: [] // Array of { id, turns }
+            st2Type: 'STR',
+            st3Type: 'STR',
+            st2Gimmicks: [],
+            st3Gimmicks: []
         };
 
-        $scope.addGimmick = function() {
-            $scope.bossConfig.activeGimmicks.push({ id: 'bind', turns: 5 });
+        $scope.addGimmick = function(stage) {
+            var target = stage === 2 ? $scope.bossConfig.st2Gimmicks : $scope.bossConfig.st3Gimmicks;
+            target.push({ id: 'bind', turns: 5 });
         };
 
-        $scope.removeGimmick = function(index) {
-            $scope.bossConfig.activeGimmicks.splice(index, 1);
+        $scope.removeGimmick = function(stage, index) {
+            var target = stage === 2 ? $scope.bossConfig.st2Gimmicks : $scope.bossConfig.st3Gimmicks;
+            target.splice(index, 1);
         };
 
         $scope.presets = [];
         $scope.missingUnits = JSON.parse(localStorage.getItem('kizuna_missing_units') || "[]");
 
-        // Helper to flatten special descriptions (some are strings, some are objects with stages)
         function getSpecialDescription(unitId) {
             var detail = window.details[unitId];
             if (!detail || !detail.special) return "";
-            if (typeof detail.special === "string") return detail.special;
-            if (typeof detail.special === "object") {
-                // Join all stages into one big string to search everything
-                return Object.values(detail.special).join(" ");
-            }
-            return "";
+            return (typeof detail.special === "string") ? detail.special : Object.values(detail.special).join(" ");
         }
 
-        // Helper to get support descriptions
         function getSupportDescription(unitId) {
             var detail = window.details[unitId];
             if (!detail || !detail.support || !Array.isArray(detail.support)) return "";
-            // We take the last level of support (max level)
             var lastSupport = detail.support[detail.support.length - 1];
             if (!lastSupport || !lastSupport.description) return "";
-            if (typeof lastSupport.description === "string") return lastSupport.description;
-            if (Array.isArray(lastSupport.description)) return lastSupport.description.join(" ");
-            return "";
+            return (typeof lastSupport.description === "string") ? lastSupport.description : (Array.isArray(lastSupport.description) ? lastSupport.description.join(" ") : "");
         }
 
         function getBaseName(id) {
             var unit = window.units[id];
             if (!unit) return "Unknown";
             var name = unit.name.split(/ - |,/)[0].trim();
-            var common = ["Luffy", "Sanji", "Zoro", "Nami", "Robin", "Chopper", "Brook", "Franky", "Usopp", "Jinbe", "Law", "Kid", "Yamato", "Kaido", "Big Mom", "Shanks", "Ace", "Sabo", "Hancock", "Uta", "Kizaru", "Akainu", "Aokiji"];
-            for (var i = 0; i < common.length; i++) {
-                if (name.includes(common[i])) return common[i];
-            }
+            var common = ["Luffy", "Sanji", "Zoro", "Nami", "Robin", "Chopper", "Brook", "Franky", "Usopp", "Jinbe", "Law", "Kid", "Yamato", "Kaido", "Big Mom", "Shanks", "Ace", "Sabo"];
+            for (var i = 0; i < common.length; i++) { if (name.includes(common[i])) return common[i]; }
             return name;
         }
 
@@ -74,50 +66,42 @@
             return map[type] || 'STR';
         }
 
-        // --- THE ENGINE V8.1: BUG-FREE TURN-AWARE ENGINE ---
+        // --- ENGINE V10: MULTI-COLOR STAGE ENGINE ---
         $scope.generatePerfectTeam = function() {
             var unitsDB = window.units;
             var detailsDB = window.details;
-            var targetColor = $scope.bossConfig.type;
-            var counterColor = getCounterColor(targetColor);
             
+            // Requerimientos combinados
             var requirements = {};
-            $scope.bossConfig.activeGimmicks.forEach(g => {
-                requirements[g.id] = (requirements[g.id] || 0) + Number(g.turns);
-            });
+            var combinedGimmicks = $scope.bossConfig.st2Gimmicks.concat($scope.bossConfig.st3Gimmicks);
+            combinedGimmicks.forEach(g => { requirements[g.id] = (requirements[g.id] || 0) + Number(g.turns); });
 
             var usedNames = [];
             var teamMembers = [];
 
-            // 1. Filtrar candidatos potentes
+            // El color principal del equipo será el counter del FINAL BOSS (Stage 3)
+            var mainCounterColor = getCounterColor($scope.bossConfig.st3Type);
+
             var candidates = Object.keys(unitsDB).filter(id => {
                 var u = unitsDB[id];
-                var uid = Number(id);
-                return u && u.type === counterColor && uid > 2000 && !id.toString().includes('-') && 
-                       (u.stars == "5" || u.stars == "6" || u.stars == "6+") &&
-                       detailsDB[id] && $scope.missingUnits.indexOf(uid) === -1;
+                return u && u.type === mainCounterColor && parseInt(id) > 2000 && !id.toString().includes('-') && 
+                       (u.stars == "5" || u.stars == "6" || u.stars == "6+") && detailsDB[id] && 
+                       $scope.missingUnits.indexOf(Number(id)) === -1;
             });
 
-            // 2. Scoring de Unidades
             var scoredUnits = candidates.map(id => {
                 var specialText = getSpecialDescription(id);
-                var turnsCleared = 0;
-                
-                $scope.bossConfig.activeGimmicks.forEach(ag => {
-                    var opt = $scope.gimmickOptions.find(o => o.id === ag.id);
+                var score = 0;
+                Object.keys(requirements).forEach(gid => {
+                    var opt = $scope.gimmickOptions.find(o => o.id === gid);
                     var match = specialText.match(opt.regex);
-                    if (match) {
-                        var val = parseInt(match[1]);
-                        turnsCleared += Math.min(val, ag.turns);
-                    }
+                    if (match) score += Math.min(parseInt(match[1]), requirements[gid]) * 10;
                 });
-
-                return { id: Number(id), turnsCleared: turnsCleared };
+                return { id: Number(id), score: score };
             });
 
-            scoredUnits.sort((a, b) => b.turnsCleared - a.turnsCleared || b.id - a.id);
+            scoredUnits.sort((a, b) => b.score - a.score || b.id - a.id);
 
-            // 3. Ensamblar equipo
             for (var i = 0; i < scoredUnits.length && teamMembers.length < 6; i++) {
                 var uid = scoredUnits[i].id;
                 var baseName = getBaseName(uid);
@@ -127,40 +111,40 @@
                 }
             }
 
-            // 4. Calcular Gaps
             var currentClears = {};
             teamMembers.forEach(m => {
                 var specialText = getSpecialDescription(m.id);
-                $scope.bossConfig.activeGimmicks.forEach(ag => {
-                    var opt = $scope.gimmickOptions.find(o => o.id === ag.id);
+                Object.keys(requirements).forEach(gid => {
+                    var opt = $scope.gimmickOptions.find(o => o.id === gid);
                     var match = specialText.match(opt.regex);
-                    if (match) currentClears[ag.id] = (currentClears[ag.id] || 0) + parseInt(match[1]);
+                    if (match) currentClears[gid] = (currentClears[gid] || 0) + parseInt(match[1]);
                 });
             });
 
-            // 5. Asignar Supports
             var finalTeam = teamMembers.map(m => {
-                var supportId = findSynergisticSupport(m.id, usedNames, currentClears, requirements, targetColor);
+                var supportId = findProfessionalSupport(m.id, usedNames, currentClears, requirements, $scope.bossConfig.st3Type);
                 if (supportId) usedNames.push(getBaseName(supportId));
                 return { id: m.id, support: supportId || 1240 };
             });
 
             $timeout(() => {
                 $scope.presets = [{
-                    title: 'Perfect Counter vs ' + targetColor,
-                    targetType: targetColor,
-                    counterType: counterColor,
+                    title: 'Strategic Hub v10 Counter',
+                    st2Type: $scope.bossConfig.st2Type,
+                    st3Type: $scope.bossConfig.st3Type,
+                    counterType: mainCounterColor,
+                    st2Summary: $scope.bossConfig.st2Gimmicks.map(g => $scope.translate('GIMMICK_'+g.id.toUpperCase()) + " ("+g.turns+")").join(", "),
+                    st3Summary: $scope.bossConfig.st3Gimmicks.map(g => $scope.translate('GIMMICK_'+g.id.toUpperCase()) + " ("+g.turns+")").join(", "),
                     members: finalTeam,
                     bossThumb: 3543
                 }];
             });
         };
 
-        function findSynergisticSupport(mainId, usedList, currentClears, requirements, color) {
+        function findProfessionalSupport(mainId, usedList, currentClears, requirements, bossColor) {
             var detailsDB = window.details;
             var unitsDB = window.units;
             var mainUnitObj = unitsDB[mainId];
-            
             var possibleSids = Object.keys(detailsDB).filter(sid => {
                 var d = detailsDB[sid];
                 var su = unitsDB[sid];
@@ -173,22 +157,19 @@
             var scoredSupports = possibleSids.map(sid => {
                 var sText = getSupportDescription(sid).toLowerCase();
                 var score = 0;
-                
-                $scope.bossConfig.activeGimmicks.forEach(ag => {
-                    var opt = $scope.gimmickOptions.find(o => o.id === ag.id);
+                Object.keys(requirements).forEach(gid => {
+                    var opt = $scope.gimmickOptions.find(o => o.id === gid);
                     var match = sText.match(opt.regex);
                     if (match) {
                         var val = parseInt(match[1]);
-                        var gap = (requirements[ag.id] || 0) - (currentClears[ag.id] || 0);
+                        var gap = (requirements[gid] || 0) - (currentClears[gid] || 0);
                         if (gap > 0) score += Math.min(val, gap) * 20;
                     }
                 });
-
-                if (sText.includes("base atk") || sText.includes(color.toLowerCase())) score += 2;
+                if (sText.includes("base atk") || sText.includes(bossColor.toLowerCase())) score += 2;
                 score += (Number(sid) / 10000);
                 return { id: Number(sid), score: score };
             });
-
             scoredSupports.sort((a,b) => b.score - a.score);
             return scoredSupports.length > 0 ? scoredSupports[0].id : null;
         }
@@ -204,23 +185,19 @@
         $scope.replaceUnit = function(idx) {
             if ($scope.presets.length === 0) return;
             var preset = $scope.presets[0];
-            var counter = preset.counterType;
             var inUse = preset.members.map(m => getBaseName(m.id));
             preset.members.forEach(m => inUse.push(getBaseName(m.support)));
-
             var pool = Object.keys(window.units).filter(id => {
                 var u = window.units[id];
-                return u && u.type === counter && (u.stars == "5" || u.stars == "6") &&
+                return u && u.type === preset.counterType && (u.stars == "5" || u.stars == "6") &&
                        window.details[id] && !inUse.includes(getBaseName(id)) && $scope.missingUnits.indexOf(Number(id)) === -1;
             }).sort((a,b) => Number(b) - Number(a));
-
             if (pool.length > 0) {
                 var nid = Number(pool[0]);
-                var nsup = findSynergisticSupport(nid, inUse, {}, {}, preset.targetType);
+                var nsup = findProfessionalSupport(nid, inUse, {}, {}, preset.st3Type);
                 $timeout(() => { preset.members[idx] = { id: nid, support: nsup || 1240 }; });
             }
         };
-
     }]);
 
     app.directive('decorateSlot', [function() {
