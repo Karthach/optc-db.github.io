@@ -1,8 +1,16 @@
 (function() {
     var app = angular.module('optc');
 
-    app.controller('PresetsCtrl', ['$scope', '$timeout', function($scope, $timeout) {
-        // 1. Obtener la lista de jefes históricos de Kizuna desde drops.js
+    app.controller('PresetsCtrl', ['$scope', '$timeout', 'LanguageService', function($scope, $timeout, LanguageService) {
+        $scope.getLang = function() { return LanguageService.getLang(); };
+        $scope.setLang = function(lang) { LanguageService.setLang(lang); };
+
+        // Helper para traducir desde JS
+        $scope.translate = function(key) {
+            return LanguageService.translate(key);
+        };
+
+        // --- CONFIGURACIÓN INICIAL ---
         $scope.pastBosses = [];
         if (window.drops && window.drops['Kizuna Clash']) {
             $scope.pastBosses = window.drops['Kizuna Clash'].map(function(b) {
@@ -11,71 +19,67 @@
         }
         
         $scope.selectedBoss = $scope.pastBosses[0] || { name: 'Kizuna Mayo 2026', id: 3543 };
-
+        
+        // Gimmicks usando llaves de traducción para ser multilingüe
         $scope.bossGimmicks = {
-            'STR': { st2: 'Parálisis & Silencio', st3: 'Escudo Rainbow (5) & Defensa' },
-            'DEX': { st2: 'Bind (5) & Despair', st3: 'Threshold & ATK Down' },
-            'QCK': { st2: 'Special Reverse & Bomb', st3: 'Resilience & Percent Reduction' },
-            'PSY': { st2: 'Blind & Delay Immunity', st3: 'Burn & Chain Lock' },
-            'INT': { st2: 'Hunger & RCV Down', st3: 'NAO & Slot Bind' }
+            'STR': { st2: 'GIMMICK_STR_ST2', st3: 'GIMMICK_STR_ST3' },
+            'DEX': { st2: 'GIMMICK_DEX_ST2', st3: 'GIMMICK_DEX_ST3' },
+            'QCK': { st2: 'GIMMICK_QCK_ST2', st3: 'GIMMICK_QCK_ST3' },
+            'PSY': { st2: 'GIMMICK_PSY_ST2', st3: 'GIMMICK_PSY_ST3' },
+            'INT': { st2: 'GIMMICK_INT_ST2', st3: 'GIMMICK_INT_ST3' }
+        };
+
+        // --- SISTEMA DE UNIDADES QUE NO TENGO (BLACKLIST) ---
+        $scope.missingUnits = JSON.parse(localStorage.getItem('kizuna_missing_units') || "[]");
+
+        $scope.toggleMissing = function(id) {
+            var index = $scope.missingUnits.indexOf(Number(id));
+            if (index === -1) $scope.missingUnits.push(Number(id));
+            else $scope.missingUnits.splice(index, 1);
+            localStorage.setItem('kizuna_missing_units', JSON.stringify($scope.missingUnits));
         };
 
         $scope.presets = [];
 
-        // --- LÓGICA DE NOMBRES PARA EVITAR DUPLICADOS ---
+        // --- LÓGICA DE NOMBRES ---
         function getBaseName(id) {
             var unit = window.units[id];
             if (!unit) return "";
-            // El nombre suele venir como "Sanji - Vinsmoke Family"
-            // Cortamos por el primer guión o espacio para obtener el nombre base
             var name = unit.name.split(/ - |,/)[0].trim();
-            // Limpieza extra para nombres compuestos comunes (ej: "Monkey D. Luffy")
-            if (name.includes("Luffy")) return "Luffy";
-            if (name.includes("Sanji")) return "Sanji";
-            if (name.includes("Zoro")) return "Zoro";
-            if (name.includes("Nami")) return "Nami";
-            if (name.includes("Robin")) return "Robin";
-            if (name.includes("Chopper")) return "Chopper";
-            if (name.includes("Brook")) return "Brook";
-            if (name.includes("Franky")) return "Franky";
-            if (name.includes("Usopp")) return "Usopp";
-            if (name.includes("Jinbe")) return "Jinbe";
+            var commonNames = ["Luffy", "Sanji", "Zoro", "Nami", "Robin", "Chopper", "Brook", "Franky", "Usopp", "Jinbe"];
+            for (var i = 0; i < commonNames.length; i++) {
+                if (name.includes(commonNames[i])) return commonNames[i];
+            }
             return name;
         }
 
+        // --- GENERADOR ---
         $scope.generateKizunaTeam = function(targetColor) {
             var unitsDB = window.units;
-            var detailsDB = window.details;
             var counterColor = getCounterColor(targetColor);
-            
             var usedNames = [];
             var teamMembers = [];
 
-            // 1. Filtrar candidatos del color correcto
             var candidates = Object.keys(unitsDB).filter(function(id) {
                 var u = unitsDB[id];
-                return u && u.type === counterColor && parseInt(id) > 2000 && !id.includes('-');
+                var uid = Number(id);
+                return u && u.type === counterColor && uid > 2000 && !id.includes('-') && $scope.missingUnits.indexOf(uid) === -1;
             });
 
-            candidates.sort(() => 0.5 - Math.random());
+            candidates.sort((a, b) => Number(b) - Number(a));
 
-            // 2. Seleccionar 6 Unidades Únicas por nombre
             for (var i = 0; i < candidates.length && teamMembers.length < 6; i++) {
                 var id = candidates[i];
                 var baseName = getBaseName(id);
-                
                 if (!usedNames.includes(baseName)) {
                     usedNames.push(baseName);
                     teamMembers.push({ id: Number(id), name: baseName });
                 }
             }
 
-            // 3. Asignar Supports Únicos (que no coincidan con PJ ni con otros supports)
             var finalTeam = teamMembers.map(function(member) {
                 var supportId = findValidSupport(member.id, usedNames, targetColor);
-                if (supportId) {
-                    usedNames.push(getBaseName(supportId));
-                }
+                if (supportId) usedNames.push(getBaseName(supportId));
                 return { id: member.id, support: supportId || 1240 };
             });
 
@@ -84,33 +88,52 @@
                 targetType: targetColor,
                 counterType: counterColor,
                 bossThumb: $scope.selectedBoss.id,
-                stage2: $scope.bossGimmicks[targetColor] ? $scope.bossGimmicks[targetColor].st2 : 'Varios',
-                stage3: $scope.bossGimmicks[targetColor] ? $scope.bossGimmicks[targetColor].st3 : 'Final',
+                stage2: $scope.bossGimmicks[targetColor].st2,
+                stage3: $scope.bossGimmicks[targetColor].st3,
                 members: finalTeam
             };
 
             $timeout(function() {
                 $scope.presets.unshift(newPreset);
-                if ($scope.presets.length > 6) $scope.presets.pop();
+                if ($scope.presets.length > 5) $scope.presets.pop();
             });
+        };
+
+        $scope.replaceUnit = function(preset, memberIndex) {
+            var counterColor = preset.counterType;
+            var usedNamesInTeam = preset.members.map(m => getBaseName(m.id));
+            preset.members.forEach(m => usedNamesInTeam.push(getBaseName(m.support)));
+
+            var candidates = Object.keys(window.units).filter(function(id) {
+                var u = window.units[id];
+                var uid = Number(id);
+                var name = getBaseName(id);
+                return u && u.type === counterColor && uid > 2000 && !id.includes('-') && 
+                       $scope.missingUnits.indexOf(uid) === -1 && !usedNamesInTeam.includes(name);
+            });
+
+            candidates.sort((a, b) => Number(b) - Number(a));
+
+            if (candidates.length > 0) {
+                var newId = Number(candidates[0]);
+                var newSupport = findValidSupport(newId, usedNamesInTeam, preset.targetType);
+                $timeout(function() {
+                    preset.members[memberIndex] = { id: newId, support: newSupport };
+                });
+            }
         };
 
         function findValidSupport(mainUnitId, usedNamesList, targetColor) {
             var detailsDB = window.details;
             var allSids = Object.keys(detailsDB).filter(sid => {
                 var d = detailsDB[sid];
-                if (!d || !d.support || d.support.length === 0 || parseInt(sid) < 500) return false;
-                var sName = getBaseName(sid);
-                return !usedNamesList.includes(sName);
+                var uid = Number(sid);
+                if (!d || !d.support || d.support.length === 0 || uid < 500 || $scope.missingUnits.indexOf(uid) !== -1) return false;
+                return !usedNamesList.includes(getBaseName(sid));
             });
-
-            // Buscar afinidad
-            var match = allSids.find(sid => {
-                var sData = JSON.stringify(detailsDB[sid].support).toLowerCase();
-                return sData.includes(targetColor.toLowerCase());
-            });
-
-            return Number(match || allSids[Math.floor(Math.random() * allSids.length)]);
+            allSids.sort((a, b) => Number(b) - Number(a));
+            var match = allSids.find(sid => JSON.stringify(detailsDB[sid].support).toLowerCase().includes(targetColor.toLowerCase()));
+            return Number(match || allSids[0]);
         }
 
         function getCounterColor(type) {
