@@ -83,14 +83,14 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
 /* * * * * Local variables * * * * */
 
 $scope.hasAtkBoostActive = function(slot) {
-    // This is a bit tricky because multipliers are calculated during the crunching loop.
-    // For hit-based multipliers, we want to know if a standard ATK boost special was already applied.
-    // We can check the enabledSpecials to see if any of them is an ATK boost and is active for this slot.
     return enabledSpecials.some(function(s) {
-        if (s.type !== 'atk') return false;
-        // Check if this special applies to the current slot
+        // A special is considered an ATK boost if it has an 'atk' property.
+        // We exclude 'hit' multipliers to avoid a special detecting itself or other hit-based specials
+        // that are supposed to be the "secondary" boost.
+        if (!s.hasOwnProperty('atk')) return false;
+        
         var params = getParameters(slot, undefined, s.sourceSlot, s.specialType);
-        return s.f(params) > 1;
+        return s.atk(params) > 1;
     });
 };
 
