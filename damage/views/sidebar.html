@@ -4,15 +4,15 @@
 
         <li ui-sref=".effects">
             <div id="profileContainer" ng-class="{ profiled: data.effect }">
-                <i class="fa fa-book"></i>
+                <i class="fas fa-book"></i>
                 <a>{{data.effect || ('NO_MAP_EFFECT' | translate)}}</a>
             </div>
         </li>
 
         <li>
             <div id="ship" status="{{data.ship[1]}}" ship-manager>
-                <i class="fa fa-level-up comodity" ui-sref="main.ship"></i>
-                <i class="fa fa-ship"></i>
+                <i class="fas fa-level-up-alt comodity" ui-sref="main.ship"></i>
+                <i class="fas fa-ship"></i>
                 <span>{{ships[data.ship[0]].name}} ({{ 'LEVEL' | translate }}. {{data.ship[1]}})</span>
                 <div id="ship-background"></div>
             </div>
@@ -20,7 +20,7 @@
         
         <li>
             <div id="buffs">
-                <i class="fa fa-fist-raised"></i> {{ 'CUSTOM_BUFFS' | translate }}<br>
+                <i class="fas fa-fist-raised"></i> {{ 'CUSTOM_BUFFS' | translate }}<br>
                  {{ 'ATK' | translate }}: <input type="number" size="4" min="1" max="10" step="0.1" id="customATK" to-int ng-model="data.customATK"></input><br>
                  {{ 'ORB' | translate }}: <input type="number" size="4" min="1" max="10" step="0.1" id="customOrb" to-int ng-model="data.customOrb"></input><br>
                  {{ 'AFFINITY' | translate }}: <input type="number" size="4" min="1" max="10" step="0.1" id="customAffinity" to-int ng-model="data.customAffinity"></input><br>
@@ -32,22 +32,22 @@
 
         <li>
             <div id="customRainbow">
-                <i class="fa fa-fist-raised"></i> {{ 'RAINBOW_DMG' | translate }}<br>
+                <i class="fas fa-fist-raised"></i> {{ 'RAINBOW_DMG' | translate }}<br>
                 <span ng-repeat="n in ::[].constructor(6) track by $index"><label>{{ 'CREW' | translate }} {{$index+1}}: <input type="checkbox" class="wheelable" name="rainbowDamage{{$index}}" ng-model="data.rainbowDamage[$index]"></label><br ng-if="$index % 2 == 1"> </span>
             </div>
         </li>
         
         <li>
             <div id="heal">
-                <i class="fa fa-heart"></i>
+                <i class="fas fa-heart"></i>
                 {{ 'HEAL_SOCKET' | translate }} <input type="number" size="2" min="0" max="5" id="healLevel" to-int ng-model="data.healLevel"></input>
             </div>
         </li>
 
         <li>
             <div id="defenseContainer" title="Middle-click or CTRL-click for details" defense-on-click>
-                <i class="fa fa-level-up comodity" ui-sref="main.defense"></i>
-                <i class="fa fa-shield"></i>
+                <i class="fas fa-level-up-alt comodity" ui-sref="main.defense"></i>
+                <i class="fas fa-shield-alt"></i>
                 {{ 'ENEMY_DEFENSE' | translate }} <input type="number" id="defense" min = 0 to-int ng-model="data.defense"></input>
             </div>
         </li>
@@ -60,7 +60,7 @@
 
         <li>
             <div id="enemyImmunities">
-                <i class="fa fa-shield"></i>{{ 'ENEMY_IMMUNITIES' | translate }}<br>
+                <i class="fas fa-shield-alt"></i>{{ 'ENEMY_IMMUNITIES' | translate }}<br>
                 <label><input type="checkbox" class="wheelable" name="enemyImmunities.all" ng-model="data.enemyImmunities.all" ng-change="toggleEnemyImmunity(true)"> {{ 'IMM_ALL' | translate }}</label><br>
                 <label><input type="checkbox" class="wheelable" name="enemyImmunities.burn" ng-model="data.enemyImmunities.burn" ng-change="toggleEnemyImmunity(false)"> {{ 'IMM_BURN' | translate }}</label><br>
                 <label><input type="checkbox" class="wheelable" name="enemyImmunities.def" ng-model="data.enemyImmunities.def" ng-change="toggleEnemyImmunity(false)"> {{ 'IMM_DEF' | translate }}</label><br>
@@ -73,14 +73,14 @@
 
         <li>
             <div id="enemyBuffs">
-                <i class="fa fa-fist-raised"></i>{{ 'OTHER_ENEMY_BUFFS' | translate }}<br>
+                <i class="fas fa-fist-raised"></i>{{ 'OTHER_ENEMY_BUFFS' | translate }}<br>
                 <label><input type="checkbox" class="wheelable" name="enemyBuffs.barrier" ng-model="data.enemyBuffs.barrier"> {{ 'BARRIER' | translate }}</label><br>
             </div>
         </li>
 
         <li>
             <div id="shieldContainer">
-                <i class="fa fa-shield"></i>
+                <i class="fas fa-shield-alt"></i>
                 {{ 'BARRIER' | translate }}: <input min="0" style="color: black; width:40px" type="number" id="comboShield" to-int ng-model="data.comboShield">
                                                                       <select style="color: black" id="comboType" ng-model="data.comboType">
                                                                         <option value="" selected>{{ 'HITS' | translate }}</option>
@@ -93,21 +93,21 @@
 
         <li ui-sref=".candy">
             <div id="candyContainer">
-                <i class="fa fa-sliders"></i>
+                <i class="fas fa-sliders-h"></i>
                 <a>{{ 'CANDIES' | translate }}</a>
             </div>
         </li>
         
         <li>
             <div id="action">
-                <i class="fa fa-check-square"></i>
+                <i class="fas fa-check-square"></i>
                 {{ 'BOOSTED_ABILITIES' | translate }} <br><input type="checkbox" name="friend" value="left" ng-model="data.actionleft">{{ 'FRIEND_CAPTAIN' | translate }}<br><input type="checkbox" name="captain" value="right" ng-model="data.actionright">{{ 'CAPTAIN' | translate }}
             </div>
         </li>
         
         <li>
             <div id="limit">
-                <i class="fa fa-angle-double-up"></i>
+                <i class="fas fa-angle-double-up"></i>
                 {{ 'LIMIT_BREAK_LEVEL' | translate }}  <button type="button" ng-click="toggleLimitBreakLevels()">{{ 'TOGGLE_MAX' | translate }}</button> <br>
                 <span ng-repeat="n in ::[].constructor(6) track by $index"><input type="number" size="4" id="limitLevel" class="wheelable" name="limit{{$index}}" min=0 max="{{data.team[$index].unit.limitStats.atk.length ? data.team[$index].unit.limitStats.atk.length : 0}}" ng-model="data.team[$index].limit"><br ng-if="$index % 2 == 1"></span>
             </div>
@@ -115,7 +115,7 @@
         
         <li>
             <div id="llimit">
-                <i class="fa fa-angle-double-up"></i>
+                <i class="fas fa-angle-double-up"></i>
                 {{ 'LEVEL_LIMIT_BREAK_LEVEL' | translate }}  <button type="button" ng-click="toggleLLimitBreakLevels()">{{ 'TOGGLE_MAX' | translate }}</button> <br>
                 <span ng-repeat="n in ::[].constructor(6) track by $index"><input type="number" size="4" id="llimitLevel" class="wheelable" name="llimit{{$index}}" min=0 max="{{data.team[$index].unit.maxLevel == 99 ? 5 : 0}}" ng-model="data.team[$index].llimit"><br ng-if="$index % 2 == 1"></span>
             </div>
@@ -123,7 +123,7 @@
 
         <li>
             <div>
-                <i class="fa fa-atom"></i> 
+                <i class="fas fa-atom"></i> 
                 {{ 'SUPER_TYPING' | translate }} 
             </div>
             <div id="supertypeContainer">
@@ -143,7 +143,7 @@
 
         <li>
             <div>
-                <i class="fa fa-toolbox"></i> 
+                <i class="fas fa-toolbox"></i> 
                 {{ 'SUPER_CLASS' | translate }} 
             </div>
             <div id="superclassContainer">
@@ -173,7 +173,7 @@
 
         <li ng-show="options.sugarToysEnabled">
             <div id="sugarToy">
-                <i class="fa fa-paw"></i>
+                <i class="fas fa-paw"></i>
                 {{ 'SUGAR_TOYS' | translate }}<br>
                 <span ng-repeat="n in ::[].constructor(6) track by $index"><label>{{ 'CREW' | translate }} {{$index+1}}: <input type="checkbox" class="wheelable" name="sugarToy{{$index}}" ng-model="data.team[$index].sugarToy"></label><br ng-if="$index % 2 == 1"> </span>
                 <button type="button" ng-click="toggleSugarToys()">{{ 'TOGGLE_ALL' | translate }}</button>
@@ -182,7 +182,7 @@
 
         <li ng-show="options.vegapunkOptionsEnabled">
             <div id="vegapunkOptions">
-                <i class="fa fa-wrench"></i>
+                <i class="fas fa-wrench"></i>
                 {{ 'VEGAPUNK_OPTIONS' | translate }}<br>
                 <span ng-repeat="n in ::[].constructor(6) track by $index"><label>{{ 'SPECIAL' | translate }} {{$index+1}}: <input type="checkbox" class="wheelable" name="vegapunkOptions{{$index}}" ng-model="data.vegapunkOptions[$index]"></label></span>
             </div>
@@ -190,7 +190,7 @@
 
         <li ng-show="options.tokiStateEnabled">
             <div id="toki">
-                <i class="fa fa-hourglass"></i>
+                <i class="fas fa-hourglass-half"></i>
                 {{ 'TOKI_EFFECTS' | translate }}<br>
                 <span ng-repeat="n in ::[].constructor(6) track by $index"><label>{{ 'CREW' | translate }} {{$index+1}}: <input type="checkbox" class="wheelable" name="tokiState{$index}}" ng-model="data.team[$index].tokiState"></label><br ng-if="$index % 2 == 1"> </span>
                 <button type="button" ng-click="resetTokiStates()">{{ 'RESET' | translate }}</button>
@@ -199,7 +199,7 @@
 
         <li ng-show="options.cloneEnabled">
             <div id="clone">
-                <i class="fa fa-people-arrows"></i>
+                <i class="fas fa-people-arrows"></i>
                 {{ 'CLONE_EFFECT' | translate }}<br>
                 <input type="checkbox" name="cloneCheck1" value="left" ng-model="data.cloneCheck1">{{ 'FRIEND_CAPTAIN' | translate }}<br>
                 {{ 'TYPE' | translate }}: <select style="color: black" name="cars" id="cloneType" ng-model="data.cloneFCType">
@@ -262,7 +262,7 @@
 
         <li ng-show="options.classOverrideEnabled">
             <div id="clone">
-                <i class="fa fa-people-arrows"></i>
+                <i class="fas fa-people-arrows"></i>
                 {{ 'UNIVERSAL_CLASS_OVERRIDE' | translate }}<br>
                 <input type="checkbox" name="classOverrideEnabled" value="left" ng-model="data.classOverrideEnabled"><br>
                 {{ 'CLASS' | translate }} 1: <select style="color: black" name="cars" id="overrideClass" ng-model="data.classOverride1">
@@ -293,13 +293,13 @@
         <li>
             <div id="sliderToggle" status="{{options.slidersEnabled ? 0 : 1}}"
                 ng-click="options.slidersEnabled = !options.slidersEnabled">
-                <i class="fa fa-circle-o-notch"></i>
+                <i class="fas fa-circle-notch"></i>
             </div>
         </li>
 
         <li ng-show="showGatherButton">
             <div id="gather" ui-sref=".gather">
-                <i class="fa fa-heartbeat"></i>
+                <i class="fas fa-heartbeat"></i>
                 {{ 'DATA_GATHERING' | translate }}
             </div>
         </li>

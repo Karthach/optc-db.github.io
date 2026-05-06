@@ -20,38 +20,38 @@
     <div id="other">
         <button type="button" class="btn btn-settings menu-link" uib-tooltip="{{ 'SETTINGS' | translate }}" tooltip-append-to-body="true"
                 ng-click="options.sidebarVisible = !options.sidebarVisible">
-            <i class="fa fa-gear"></i>
+            <i class="fas fa-cog"></i>
         </a><!--
      --><button type="button" class="btn btn-info" id="reset" ui-sref=".saveSlot" uib-tooltip="{{ 'SAVE' | translate }}" tooltip-append-to-body="true">
-            <i class="fa fa-download"></i>
+            <i class="fas fa-file-download"></i>
         </button><!--
      --><button type="button" class="btn btn-primary" id="reset" ui-sref=".loadSlot" uib-tooltip="{{ 'LOAD' | translate }}" tooltip-append-to-body="true">
-            <i class="fa fa-upload"></i>
+            <i class="fas fa-file-upload"></i>
         </button><!--
      --><button type="button" class="btn btn-danger" id="reset" ui-sref=".reset" uib-tooltip="{{ 'RESET' | translate }}" tooltip-append-to-body="true">
-            <i class="fa fa-eraser"></i>
+            <i class="fas fa-eraser"></i>
         </button><!--
      --><button type="button" class="btn btn-orchid" id="quickPick" ui-sref=".quickpick" uib-tooltip="{{ 'QUICK_PICK' | translate }}" tooltip-append-to-body="true">
-            <i class="fa fa-bolt"></i>
+            <i class="fas fa-bolt"></i>
         </button><!--
      --><button type="button" class="btn btn-success" ng-click="generateURL()"
                 title="Transfer team" ng-controller="ExportCtrl" uib-tooltip="{{ 'EXPORT_URL' | translate }}" tooltip-append-to-body="true">
-            <i class="fa fa-exchange"></i>
+            <i class="fas fa-exchange-alt"></i>
         </button><!--
      --><button type="button" class="btn btn-warning" ui-sref=".image" title="Generate image"
                 uib-tooltip="{{ 'EXPORT_IMAGE' | translate }}" tooltip-append-to-body="true">
-            <i class="fa fa-picture-o"></i>
+            <i class="fas fa-image"></i>
         </button>
         <button type="button" class="btn" ui-sref="main.instruction" title="Instructions"
                 uib-tooltip="{{ 'INSTRUCTIONS' | translate }}" tooltip-append-to-body="true">
-            <i class="fa fa-question-circle"></i>
+            <i class="fas fa-question-circle"></i>
         </button>
     </div>
 
     <url-container></url-container>
 
     <div id="transient" class="alert alert-danger" ng-if="options.transientMode" ng-click="options.transientMode = false">
-        <i class="fa fa-lock"></i>
+        <i class="fas fa-lock"></i>
         {{ 'TRANSIENT_MODE' | translate }}
         <span popover-placement="top" popover-trigger="mouseenter"
             popover-title="{{ 'TRANSIENT_MODE_TITLE' | translate }}" uib-popover-template="'transient.html'"

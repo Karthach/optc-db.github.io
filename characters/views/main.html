@@ -5,24 +5,24 @@
 </div>
 
 <div id="queryContainer">
-    <label for="burgerMenuState" id="burgerMenu" class="fa fa-bars fa-lg"></label>
+    <label for="burgerMenuState" id="burgerMenu" class="fas fa-bars fa-lg"></label>
     
     <input type="text" id="picker" placeholder="{{ 'TYPE_TO_FILTER' | translate }}"
         ng-model="query" ng-model-options="{ updateOn: 'default blur', debounce: { 'default': 300, 'blur': 0 } }" auto-focus>
 
     <button ng-if="query" ng-click="clearQuery()" title="{{ 'CLEAR' | translate }}">
-        <i class="fa fa-times"></i>
+        <i class="fas fa-times"></i>
         <span>{{ 'CLEAR' | translate }}</span>
     </button>
 
     <button ng-click="query = getRandChar();" title="{{ 'RANDOM' | translate }}">
-        <i class="fa fa-random"></i>
+        <i class="fas fa-random"></i>
         <span>{{ 'RANDOM' | translate }}</span>
     </button>
 
     <button popover-trigger="mouseenter" popover-placement="bottom"
         uib-popover-template="'operators.html'" popover-append-to-body="'true'" title="{{ 'OPERATORS' | translate }}">
-        <i class="fa fa-info-circle"></i>
+        <i class="fas fa-info-circle"></i>
         <span>{{ 'OPERATORS' | translate }}</span>
     </button>
 

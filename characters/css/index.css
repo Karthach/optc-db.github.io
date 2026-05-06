@@ -534,41 +534,192 @@ input#burgerMenuState {
 .filter-header {
     display: flex;
     align-items: center;
-    justify-content: center;
-    padding: 10px 5px;
-    background: #282c34;
+    position: relative;
+    padding: 10px 14px 10px 50px; /* Fixed left padding to accommodate absolute icons */
+    background: #2c313a;
     color: #abb2bf;
-    font-size: 0.9em;
+    font-size: 0.82em;
     text-transform: uppercase;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.6px;
     border: 1px solid #3e4451;
-    border-radius: 4px;
-    margin: 4px 2px;
+    border-radius: 6px;
+    margin: 4px 0;
     cursor: pointer;
-    transition: all 0.2s;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    min-height: 42px;
+    line-height: 1.2;
+    box-sizing: border-box;
+    width: 100%;
 }
 
-.filter-header-log {
-    border-left: 4px solid #98c379;
+.filter-header > span {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    word-break: break-word;
+}
+
+/* Ensure transcluded span also follows the padding rule if it contains the icon */
+.filter-header > span i:first-child,
+.filter-header > i:first-child {
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.15em;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #61afef;
+    margin: 0; /* Remove margin as it's absolute now */
+}
+
+/* Secondary headers (inside containers) symmetry */
+.filter-container .filter-header {
+    background: #282c34;
+    font-size: 0.78em;
+    padding: 8px 12px 8px 44px; /* Slightly less padding for nested */
+    min-height: 36px;
+    border-color: rgba(62, 68, 81, 0.5);
+    margin: 2px 0;
+}
+
+.filter-container .filter-header > span i:first-child,
+.filter-container .filter-header > i:first-child {
+    left: 12px;
+    font-size: 1.1em;
+    width: 20px;
+    color: #abb2bf;
+}
+
+.filter-header .pull-right {
+    margin-left: auto;
+    float: none !important;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    opacity: 0.4;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    font-size: 0.9em;
+}
+
+.filter-header:hover .pull-right {
+    opacity: 0.8;
+}
+
+.filter-header .pull-right.fa-flip-vertical {
+    transform: rotate(180deg) !important;
+    opacity: 1;
+    color: #61afef;
+}
+
+.filter-header:hover {
+    background: #353b45;
+    border-color: #61afef;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
 .filter-header-pve {
     border-left: 4px solid #61afef;
+    background: rgba(97, 175, 239, 0.05);
+}
+
+.filter-header-pve > span i:first-child,
+.filter-header-pve > i:first-child {
+    color: #61afef;
 }
 
 .filter-header-pvp {
     border-left: 4px solid #d19a66;
+    background: rgba(209, 154, 102, 0.05);
 }
 
-.filter-header > i {
-    position: relative;
-    top: 2px;
+.filter-header-pvp > span i:first-child,
+.filter-header-pvp > i:first-child {
+    color: #d19a66;
+}
+
+.filter-header-log {
+    border-left: 4px solid #98c379;
+    background: rgba(152, 195, 121, 0.05);
+}
+
+.filter-header-log > span i:first-child,
+.filter-header-log > i:first-child {
+    color: #98c379;
+}
+
+.filter-header-meta {
+    border-left: 4px solid #c678dd;
+    background: rgba(198, 120, 221, 0.05);
+}
+
+.filter-header-meta > span i:first-child,
+.filter-header-meta > i:first-child {
+    color: #c678dd;
+}
+
+.sidebar-section {
+    margin-bottom: 16px;
+    padding: 2px;
+    border-radius: 8px;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.sidebar-buttons-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    padding: 6px 2px;
+}
+
+.sidebar-buttons-grid .filter {
+    flex: 1 1 calc(33.33% - 6px);
+    margin: 0;
+    min-width: 0;
+    padding: 8px 4px;
+    font-size: 0.72em;
+    white-space: normal;
+    word-break: break-word;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 38px;
+    background: #21252b;
+    border: 1px solid #3e4451;
+    border-radius: 4px;
+    color: #abb2bf;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.sidebar-buttons-grid .filter:hover {
+    background: #2c313a;
+    border-color: #61afef;
+    color: white;
+}
+
+.sidebar-buttons-grid .filter.active {
+    background: #61afef !important;
+    color: #282c34 !important;
+    border-color: #61afef !important;
+    font-weight: 700;
+    box-shadow: 0 0 12px rgba(97, 175, 239, 0.4);
+}
+
+.sidebar-buttons-grid .filter.width-12 {
+    flex: 1 1 100%;
 }
 
 .filter {
     display: inline-block;
-    padding: 4px 10px;
+    padding: 6px 10px;
     text-align: center;
     cursor: pointer;
     background: #282c34;
@@ -576,9 +727,109 @@ input#burgerMenuState {
     border: 1px solid #3e4451;
     border-radius: 4px;
     margin: 2px;
-    font-size: 0.85em;
-    min-width: 40px;
-    transition: all 0.2s ease;
+    font-size: 0.8em;
+    min-width: 38px;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.filter:hover {
+    background: #2c313a;
+    border-color: #abb2bf;
+    color: white;
+}
+
+.filter.active {
+    background: #61afef;
+    color: #282c34;
+    border-color: #61afef;
+    font-weight: bold;
+    box-shadow: 0 0 12px rgba(97, 175, 239, 0.3);
+}
+
+.type-buttons .filter {
+    flex: 1;
+    font-weight: bold;
+    padding: 8px 2px;
+}
+
+.filter.type {
+    font-size: 0.75em;
+    border-radius: 4px;
+}
+
+.sidebar-actions {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.sidebar-actions .filter-header {
+    margin: 0;
+    justify-content: center;
+    padding: 8px 10px; /* Reduced padding for action buttons */
+    min-height: 38px;
+    font-size: 0.75em;
+}
+
+.sidebar-actions .filter-header i:first-child {
+    position: static; /* Remove absolute positioning for these buttons to center them with text */
+    transform: none;
+    margin-right: 8px;
+    width: auto;
+    height: auto;
+    font-size: 1.1em;
+}
+
+#clear-button, #toggle-button {
+    flex: 1;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin: 0;
+}
+
+/* Scrollbar refinement */
+#leftContainer::-webkit-scrollbar {
+    width: 6px;
+}
+
+#leftContainer::-webkit-scrollbar-thumb {
+    background: #3e4451;
+    border-radius: 10px;
+}
+
+#leftContainer::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.filter-container .collapse {
+    padding: 4px 2px;
+}
+
+/* Light mode overrides */
+.light-mode .filter-header {
+    background: #f0f0f0;
+    color: #333;
+    border-color: #ddd;
+}
+
+.light-mode .filter-header:hover {
+    background: #e0e0e0;
+    border-color: #4a90e2;
+}
+
+.light-mode .filter {
+    background: #ffffff !important;
+    color: #333333 !important;
+    border-color: #cccccc;
+}
+
+.light-mode .filter.active {
+    background: #4a90e2 !important;
+    color: #ffffff !important;
+    border-color: #4a90e2 !important;
 }
 
 .filter.custom {

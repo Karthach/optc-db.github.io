@@ -13,7 +13,8 @@
 		$timeout,
 		$compile,
 		$storage,
-		$state
+		$state,
+		LanguageService
 	) {
 		function hasEvolution(unitId) {
 			return window.evolutions && window.evolutions[unitId];
@@ -47,6 +48,16 @@
 					deferRender: true,
 					data: scope.table.data,
 					columns: scope.table.columns,
+					oLanguage: {
+						sLengthMenu: LanguageService.getLang() == "es" ? "Mostrar _MENU_ entradas" : "Show _MENU_ entries",
+						sSearch: LanguageService.getLang() == "es" ? "Buscar:" : "Search:",
+						oPaginate: {
+							sFirst: LanguageService.getLang() == "es" ? "Primero" : "First",
+							sLast: LanguageService.getLang() == "es" ? "Último" : "Last",
+							sNext: LanguageService.getLang() == "es" ? "Siguiente" : "Next",
+							sPrevious: LanguageService.getLang() == "es" ? "Anterior" : "Previous"
+						}
+					},
 					rowCallback: function (row, data, index) {
 						if (!row || row.hasAttribute("loaded")) return;
 						var $row = $(row);
@@ -135,27 +146,23 @@
 						element.fnDraw();
 					});
 				};
-				// report link
-				var link = $(
-					'<span class="help-link"><i class="fab fa-discord"></i> Want to report or request something? <a>Join our Discord server</a>.</span>'
-				);
-				link.find("a").attr("href", "https://discord.gg/xhKT87vKX7");
-				link.insertAfter($(".dataTables_length"));
 				// pick column link
+				var pickLabel = LanguageService.getLang() == "es" ? "Columnas adicionales" : "Additional columns";
 				var pick = $(
-					'<a id="pick-link" popover-placement="bottom" popover-trigger="click" popover-title="Additional Columns" ' +
-						"uib-popover-template=\"'views/pick.html'\" popover-append-to-body=\"'true'\">Additional columns</a>"
+					'<a id="pick-link" popover-placement="bottom" popover-trigger="click" popover-title="' + pickLabel + '" ' +
+						"uib-popover-template=\"'views/pick.html'\" popover-append-to-body=\"'true'\">" + pickLabel + "</a>"
 				);
 				$compile(pick)(scope);
 				pick.insertAfter($(".dataTables_length"));
 				// fuzzy toggle
+				var fuzzyLabel = LanguageService.getLang() == "es" ? "Activar búsqueda aproximada" : "Enable fuzzy search";
+				var fuzzyTitle = LanguageService.getLang() == "es" ? 
+					"Cuando se activa, las búsquedas también mostrarán unidades cuyo nombre no coincide exactamente con las palabras clave.\nÚtil si no conoces la ortografía correcta de una unidad." :
+					"When enabled, searches will also display units whose name is not an exact match to the search keywords.\nUseful if you don't know the correct spelling of a certain unit.";
 				var fuzzyToggle = $(
-					'<label class="fuzzy-toggle"><input type="checkbox">Enable fuzzy search</input></label>'
+					'<label class="fuzzy-toggle"><input type="checkbox">' + fuzzyLabel + '</input></label>'
 				);
-				fuzzyToggle.attr(
-					"title",
-					"When enabled, searches will also display units whose name is not an exact match to the search keywords.\nUseful if you don't know the correct spelling of a certain unit."
-				);
+				fuzzyToggle.attr("title", fuzzyTitle);
 				fuzzyToggle.find("input").prop("checked", scope.table.fuzzy);
 				fuzzyToggle.find("input").change(function () {
 					var checked = $(this).is(":checked");
@@ -219,7 +226,7 @@
 			transclude: true,
 			template: `<span>
         <ng-transclude></ng-transclude>
-        <i class="{{ faClasses ? faClasses : 'fa fa-chevron-down pull-right' }}"></i>
+        <i class="{{ faClasses ? faClasses : 'fas fa-chevron-down pull-right' }}"></i>
     </span>`,
 			scope: {}, // empty isolate scope for `scope.faClasses`
 			link: function (scope, element, attrs) {

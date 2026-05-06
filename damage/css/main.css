@@ -499,12 +499,72 @@ body, html {
 }
 
 #menu li > div {
-    display: block;
-    padding: 12px 10px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 12px 10px 12px 46px; /* Space for absolute icons */
     color: #abb2bf;
     text-align: left;
     font-size: 10pt;
     transition: all 0.2s;
+    min-height: 44px;
+    box-sizing: border-box;
+}
+
+#menu li > div i:not(.comodity) {
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #61afef;
+    font-size: 1.1em;
+}
+
+#menu li > div i.comodity {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0.5;
+    font-size: 0.85em;
+    color: #abb2bf;
+}
+
+/* Specific adjustment for elements with complex content */
+#menu li > div#buffs, 
+#menu li > div#customRainbow, 
+#menu li > div#enemyImmunities, 
+#menu li > div#enemyBuffs,
+#menu li > div#limit,
+#menu li > div#llimit,
+#menu li > div#superclassContainer,
+#menu li > div#supertypeContainer,
+#menu li > div#clone,
+#menu li > div#sugarToy,
+#menu li > div#vegapunkOptions,
+#menu li > div#toki {
+    display: block;
+}
+
+#menu li > div#buffs i, 
+#menu li > div#customRainbow i, 
+#menu li > div#enemyImmunities i, 
+#menu li > div#enemyBuffs i,
+#menu li > div#limit i,
+#menu li > div#llimit i,
+#menu li > div#superclassContainer i,
+#menu li > div#supertypeContainer i,
+#menu li > div#clone i,
+#menu li > div#sugarToy i,
+#menu li > div#vegapunkOptions i,
+#menu li > div#toki i {
+    top: 22px; /* Fixed top for blocks with multi-line text */
+    transform: none;
 }
 
 /* Common Toggle Button Style for Sidebar Labels */
