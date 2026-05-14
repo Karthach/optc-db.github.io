@@ -2487,3 +2487,28 @@ a { color: #8acccf; }
 .light-mode #operators-modal-close:hover {
     color: #333;
 }
+
+/* Evolution Hover Zoom (Details & List View) */
+.evolution-card .details-card-content,
+.evolution-card table,
+.evolution-card tbody,
+.evolution-card tr,
+.evolution-card td,
+.evo-col {
+    overflow: visible !important;
+}
+
+.evolution-card .slot,
+.evo-thumb {
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s;
+    position: relative;
+    cursor: pointer;
+}
+
+.evolution-card .slot:hover,
+.evo-thumb:hover {
+    transform: scale(2.5) !important;
+    z-index: 999 !important;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+    border-radius: 4px;
+}
