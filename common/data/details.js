@@ -184011,7 +184011,7 @@ window.details = {
                 description: [
                     "If you hit a PERFECT with this character, there is a 50% chance to deal 4% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 70% chance to deal 5% of this character's attack in extra damage",
-                    "If you hit a PERFECT with this character, there is a 80% chance to deal 6% of this character's attack in extra damage",
+                    "If you hit a PERFECT with this character, there is an 80% chance to deal 6% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 90% chance to deal 8% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 100% chance to deal 10% of this character's attack in extra damage"
                 ]
@@ -184119,7 +184119,7 @@ window.details = {
                 description: [
                     "If you hit a PERFECT with this character, there is a 50% chance to deal 4% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 70% chance to deal 5% of this character's attack in extra damage",
-                    "If you hit a PERFECT with this character, there is a 80% chance to deal 6% of this character's attack in extra damage",
+                    "If you hit a PERFECT with this character, there is an 80% chance to deal 6% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 90% chance to deal 8% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 100% chance to deal 10% of this character's attack in extra damage"
                 ]
@@ -184227,7 +184227,7 @@ window.details = {
                 description: [
                     "If you hit a PERFECT with this character, there is a 50% chance to deal 4% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 70% chance to deal 5% of this character's attack in extra damage",
-                    "If you hit a PERFECT with this character, there is a 80% chance to deal 6% of this character's attack in extra damage",
+                    "If you hit a PERFECT with this character, there is an 80% chance to deal 6% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 90% chance to deal 8% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 100% chance to deal 10% of this character's attack in extra damage"
                 ]
@@ -184341,7 +184341,7 @@ window.details = {
                 description: [
                     "If you hit a PERFECT with this character, there is a 50% chance to deal 4% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 70% chance to deal 5% of this character's attack in extra damage",
-                    "If you hit a PERFECT with this character, there is a 80% chance to deal 6% of this character's attack in extra damage",
+                    "If you hit a PERFECT with this character, there is an 80% chance to deal 6% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 90% chance to deal 8% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 100% chance to deal 10% of this character's attack in extra damage"
                 ]
@@ -184456,7 +184456,7 @@ window.details = {
                     "If you hit a PERFECT with this character, there is a 40% chance to deal 4% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 50% chance to deal 5% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 70% chance to deal 7% of this character's attack in extra damage",
-                    "If you hit a PERFECT with this character, there is a 80% chance to deal 8% of this character's attack in extra damage",
+                    "If you hit a PERFECT with this character, there is an 80% chance to deal 8% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 100% chance to deal 10% of this character's attack in extra damage"
                 ]
             },
@@ -184570,7 +184570,7 @@ window.details = {
                     "If you hit a PERFECT with this character, there is a 40% chance to deal 4% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 50% chance to deal 5% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 70% chance to deal 7% of this character's attack in extra damage",
-                    "If you hit a PERFECT with this character, there is a 80% chance to deal 8% of this character's attack in extra damage",
+                    "If you hit a PERFECT with this character, there is an 80% chance to deal 8% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 100% chance to deal 10% of this character's attack in extra damage"
                 ]
             },
@@ -184684,7 +184684,7 @@ window.details = {
                     "If you hit a PERFECT with this character, there is a 40% chance to deal 4% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 50% chance to deal 5% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 70% chance to deal 7% of this character's attack in extra damage",
-                    "If you hit a PERFECT with this character, there is a 80% chance to deal 8% of this character's attack in extra damage",
+                    "If you hit a PERFECT with this character, there is an 80% chance to deal 8% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 100% chance to deal 10% of this character's attack in extra damage"
                 ]
             },
@@ -184798,7 +184798,7 @@ window.details = {
                     "If you hit a PERFECT with this character, there is a 40% chance to deal 4% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 50% chance to deal 5% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 70% chance to deal 7% of this character's attack in extra damage",
-                    "If you hit a PERFECT with this character, there is a 80% chance to deal 8% of this character's attack in extra damage",
+                    "If you hit a PERFECT with this character, there is an 80% chance to deal 8% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 100% chance to deal 10% of this character's attack in extra damage"
                 ]
             },
@@ -185197,7 +185197,7 @@ window.details = {
     4571: {//Imu
         captain: "Launches the following effect at start of fight: reduces Special Cooldown of Cost 70 or more characters by 34% of Max Cooldown (rounded down), reduces VS Gauge and Switch Effect of all characters by 3, and allows all characters to perform Super Tandem with [STR] orbs for 10 turns. Boosts ATK of Cost 70 or more characters by 6x, boosts ATK of all other characters by 4x, boosts HP of all characters by 1.5x, and reduces Bind, Despair, Paralysis and Special Bind duration completely on this character. If this character is your Captain and performs EXCELLENT with their Action Special, for 3 turns boosts ATK of Cost 70 or more characters by 6.5x instead. If field has Territory: Crew, makes all specials that apply Class or Type restricted buffs apply to all characters instead. <br><b>Special Captain Ability:</b> If this character begins a quest as Captain, allows crew to immediately clear certain quests 6 times per day.",
         captainNotes: "Special Captain Ability effect is limited to Main Story and Event quests with difficulty 6 stars or less.",
-        special: "If this character is your Captain or Friend Captain, reduces enemies' positive buffs duration by 1 turn. Applies Territory: Crew to the field for 3 turns, and launches the following effects depending on the Special Launch Status of this character when the special is activated: <ul><li><b>(0)</b> Reduces Special Cooldown of all characters by 2 turns, reduces Special Bind duration by 10 turns, and sets Chain Boundaries to 3.5x-5.0x and 50.0x for 3 turns depending on the outcome of Action Special.</li><li><b>(1)</b> Reduces Paralysis and Burn duration by 10 turns, decreases boost effects of ATK Up buffs by -1.0x and converts ATK Up into a Stackable ATK Up,  boosts ATK of Cost 70 or more characters by 3.5x-5x for 3 turns depending on the outcome of Action Special, and sets Special Launch Status to (0).</li></ul>",
+        special: "If this character is your Captain or Friend Captain, reduces enemies' positive buffs duration by 1 turn. Applies Territory: Crew to the field for 3 turns, and launches the following effects depending on the Special Launch Status of this character when the special is activated: <ul><li><b>(0)</b> Reduces Special Cooldown of all characters by 2 turns, reduces Special Bind duration by 10 turns, and sets Chain Boundaries to 3.5x-5.0x and 50.0x for 3 turns depending on the outcome of Action Special.</li><li><b>(1)</b> Reduces Paralysis and Burn duration by 10 turns, decreases boost effects of ATK Up buffs by -1.0x and converts ATK Up into a Stackable ATK Up, boosts ATK of Cost 70 or more characters by 3.5x-5x for 3 turns depending on the outcome of Action Special, and sets Special Launch Status to (0).</li></ul>",
         specialNotes: "<br><b>Chain Boundary:</b> MISS: 3.5x, GOOD: 4.0x, GREAT: 4.5x, PERFECT: 4.75x, EXCELLENT 5.0x<br><b>ATK:</b> MISS: 3.5x, GOOD: 4.0x, GREAT: 4.5x, PERFECT: 4.75x, EXCELLENT 5.0x",
         specialName: "Punishing the Intruder",
         sailor: {
@@ -185266,7 +185266,7 @@ window.details = {
                 description: [
                     "If you hit a PERFECT with this character, there is a 50% chance to deal 4% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 70% chance to deal 5% of this character's attack in extra damage",
-                    "If you hit a PERFECT with this character, there is a 80% chance to deal 6% of this character's attack in extra damage",
+                    "If you hit a PERFECT with this character, there is an 80% chance to deal 6% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 90% chance to deal 8% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 100% chance to deal 10% of this character's attack in extra damage"
                 ]

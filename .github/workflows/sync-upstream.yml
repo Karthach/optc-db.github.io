@@ -29,9 +29,9 @@ jobs:
 
       - name: Merge Upstream
         run: |
-          # Intenta fusionar los cambios. Si hay conflictos, la acción fallará 
-          # y te enviará un correo para que lo resuelvas manualmente.
-          git merge upstream/master --no-edit
+          # Intenta fusionar los cambios con la estrategia -X ours para evitar fallos por conflictos
+          # en archivos de diseño o correcciones de datos manuales.
+          git merge upstream/master -X ours --no-edit
 
       - name: Fix Typos and Data
         run: |
