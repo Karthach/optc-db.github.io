@@ -440,7 +440,7 @@
 				name: "Activates: Special",
 				targets: ["support"],
 				regex:
-					/When you reach the ([\w]+) stage, activates supported character's Special/i,
+					/When you reach the ([\w]+) stage[^.]*?, activates supported character's Special/i,
 				submatchers: [
 					{
 						type: "option",
@@ -3554,31 +3554,22 @@
 				name: "Territory",
 				targets: ["captain", "special", "superSpecial", "swap", "support"],
 				regex:
-					/Applies Territory: (?=((?:[^ct."]+|c(?!lass)|t(?!ype))*))\1(?:class|type) to the field, boosts ATK by ([?.\d]+)x(?:-([?.\d]+)x)?(?:, (\D+?),)? and reduces damage received by ([?.\d]+)%(?:-([?.\d]+)%)? (?:based|depending) on number of characters matching the territory, for ([?\d]+\+?)(?:-([?\d]+))? turns?(?:, for ([?\d]+\+?)(?:-([?\d]+))? turns?)?/i,
+					/Applies Territory: (?=((?:[^f."]+|f(?!ield))*))\1field for ([?\d]+\+?)(?:-([?\d]+))? turns?(?:, for ([?\d]+\+?)(?:-([?\d]+))? turns?)?/i,
 				submatchers: [
 					{
 						type: "number",
-						description: "Multiplier:",
-						groups: [2, 3],
-					},
-					{
-						type: "number",
-						description: "Percentage:",
-						groups: [5, 6],
-					},
-					{
-						type: "number",
 						description: "Turns:",
-						groups: [7, 8, 9, 10],
+						groups: [2, 3, 4, 5],
 					},
+					...createUniversalSubmatcher([1], "Crew"),
 					{
 						type: "separator",
-						description: "Affected Types:",
+						description: "Affected types:",
 					},
 					...createTypesSubmatchers([1]),
 					{
 						type: "separator",
-						description: "Affected Classes:",
+						description: "Affected classes:",
 					},
 					...createClassesSubmatchers([1]),
 				],
@@ -3738,7 +3729,7 @@
 			},
 			{
 				name: "Enemy Damage Reduction to ATK",
-				targets: ["special"],
+				targets: ["special", "superSpecial"],
 				regex:
 					/boosts Enemy Damage Reduction to ATK of (?=((?:[^c."]+|c(?!har))*))\1characters? by ([?.\d]+)x-([?.\d]+)x, proportional to the strength of enemies' Percent Damage Reduction buff, for ([?\d]+\+?)(?:-([?\d]+))? turns?/i,
 				submatchers: [
@@ -3933,6 +3924,13 @@
 						type: "option",
 						description: "EOT Healing",
 						regex: /End of Turn Healing/i,
+						groups: [1],
+						cssClasses: ["min-width-6"],
+					},
+					{
+						type: "option",
+						description: "STND Expansion",
+						regex: /STND Expansion/i,
 						groups: [1],
 						cssClasses: ["min-width-6"],
 					},
@@ -5836,19 +5834,19 @@
 				name: "STND Expansion",
 				targets: ["captain", "special", "superSpecial", "support"],
 				regex:
-					/allows crew to perform Super Tandem with ([^".]+?)orbs(?:, ([^,]+),)? for ([?\d]+\+?)(?:-([?\d]+))? turns?/i,
+					/allows (?=((?:[^c."]+|c(?!har))*))\1characters? to perform Super Tandem with ([^".]+?)orbs(?:, ([^,]+),)? for ([?\d]+\+?)(?:-([?\d]+))? turns?/i,
 				submatchers: [
 					{
 						type: "number",
 						description: "Turns:",
-						groups: [3, 4],
+						groups: [4, 5],
 					},
 					{
 						type: "option",
 						description: "Buff Clear Immune",
 						regex: /preventing buff clears/,
 						radioGroup: "targets",
-						groups: [2],
+						groups: [3],
 						cssClasses: ["min-width-6"],
 					},
 					{
@@ -5869,8 +5867,23 @@
 							"RAINBOW",
 							"WANO",
 						],
-						[1]
+						[2]
 					),
+					{
+						type: "separator",
+						description: "Affected characters:",
+					},
+					...createUniversalSubmatcher([1]),
+					{
+						type: "separator",
+						description: "Affected types:",
+					},
+					...createTypesSubmatchers([1]),
+					{
+						type: "separator",
+						description: "Affected classes:",
+					},
+					...createClassesSubmatchers([1]),
 				],
 			},
 			{
@@ -6042,6 +6055,11 @@
 							"TND",
 							"BOMB",
 							"EMPTY",
+							"Super STR",
+							"Super DEX",
+							"Super QCK",
+							"Super PSY",
+							"Super INT",
 							"SUPERBOMB",
 							"RAINBOW",
 							"SEMLA",
@@ -11660,6 +11678,101 @@
 
 		"Hinderances": [
 			{
+				name: "Ability Bind",
+				targets: ["rumbleSpecial"],
+				regex:
+					/([.\d]+)% chance to inflict[^.]+Ability Bind[^.]+to (\d)?(?=((?:[^e]+|e(?!nem))*))\3enem(?:y|ies)(?: with [^.]+ (ATK|DEF|HP|RCV|SPD|Special CT))?(?: in a ([\w]+, [\w]+) range)?(?: for (\d+) seconds)?/i,
+				submatchers: [
+					{
+						type: "number",
+						description: "Chance:",
+						groups: [1],
+					},
+					{
+						type: "number",
+						description: "Duration:",
+						groups: [6],
+					},
+					{
+						type: "separator",
+						description: "Targeting:",
+					},
+					{
+						type: "number",
+						description: "Count:",
+						groups: [2],
+					},
+					{
+						type: "option",
+						description: "Universal",
+						regex: /all/i,
+						groups: [3],
+						cssClasses: ["min-width-6"],
+					},
+					{
+						type: "separator",
+						description: "Types:",
+					},
+					...createTypesSubmatchers([3]),
+					{
+						type: "separator",
+						description: "Classes:",
+					},
+					...createClassesSubmatchers([3]),
+					{
+						type: "separator",
+						description: "Range:",
+					},
+					...createRangeSubmatcher([5]),
+				],
+			},
+
+			{
+				name: "Ability Bind",
+				targets: ["gpSpecial"],
+				regex:
+					/([.\d]+)% chance to inflict[^.]+Ability Bind[^.]+to (\d)?(?=((?:[^e]+|e(?!nem))*))\3enem(?:y|ies)(?: with [^.]+ (ATK|DEF|HP|RCV|SPD|Special CT))?(?: for (\d+) seconds)?/i,
+				submatchers: [
+					{
+						type: "number",
+						description: "Chance:",
+						groups: [1],
+					},
+					{
+						type: "number",
+						description: "Duration:",
+						groups: [5],
+					},
+					{
+						type: "separator",
+						description: "Targeting:",
+					},
+					{
+						type: "number",
+						description: "Count:",
+						groups: [2],
+					},
+					{
+						type: "option",
+						description: "Universal",
+						regex: /all/i,
+						groups: [3],
+						cssClasses: ["min-width-6"],
+					},
+					{
+						type: "separator",
+						description: "Types:",
+					},
+					...createTypesSubmatchers([3]),
+					{
+						type: "separator",
+						description: "Classes:",
+					},
+					...createClassesSubmatchers([3]),
+				],
+			},
+
+			{
 				name: "Action Bind",
 				targets: ["rumbleSpecial"],
 				regex:
@@ -13853,6 +13966,72 @@
 					...createUniversalSubmatcher([3]),
 				],
 			},
+
+			{
+				name: "Stats Up",
+				targets: ["rumbleSpecial", "gpSpecial"],
+				regex:
+					/([\d]+)% chance to cleanse ([^.]+) up buffs to ([^.]+)/i,
+				submatchers: [
+					{
+						type: "number",
+						description: "Chance:",
+						groups: [1],
+					},
+					{
+						type: "separator",
+						description: "Stats:",
+					},
+					{
+						type: "option",
+						description: "All",
+						regex: /All/i,
+						groups: [2],
+						cssClasses: ["min-width-4"],
+					},
+					{
+						type: "option",
+						description: "ATK",
+						regex: /(ATK|all)/i,
+						groups: [2],
+						cssClasses: ["min-width-4"],
+					},
+					{
+						type: "option",
+						description: "DEF",
+						regex: /(DEF|all)/i,
+						groups: [2],
+						cssClasses: ["min-width-4"],
+					},
+					{
+						type: "option",
+						description: "RCV",
+						regex: /(RCV|all)/i,
+						groups: [2],
+						cssClasses: ["min-width-4"],
+					},
+					{
+						type: "option",
+						description: "SPD",
+						regex: /(SPD|all)/i,
+						groups: [2],
+						cssClasses: ["min-width-4"],
+					},
+					{
+						type: "option",
+						description: "Special CT",
+						regex: /(Special CT|all)/i,
+						groups: [2],
+						cssClasses: ["min-width-4"],
+					},
+					{
+						type: "separator",
+						description: "Targeting:",
+					},
+					...createUniversalSubmatcher([3]),
+				],
+			},
+
 		],
 
 		"Resistances": [
@@ -14365,6 +14544,20 @@
 					{
 						type: "separator",
 						description: "Damage Types:",
+					},
+					{
+						type: "option",
+						description: "Fixed",
+						regex: /Fixed Damage/i,
+						groups: [2],
+						cssClasses: ["min-width-6"],
+					},
+					{
+						type: "option",
+						description: "Percentage",
+						regex: /Percentage Damage/i,
+						groups: [2],
+						cssClasses: ["min-width-6"],
 					},
 					{
 						type: "option",
