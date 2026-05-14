@@ -5,53 +5,53 @@
     <div class="custom-modal">
         <div id="picker" class="modal-dialog">
             <div class="modal-content animated fadeInDown">
-                <div class="modal-header">Instructions</div>
+                <div class="modal-header">{{ 'INSTRUCTIONS' | translate }}</div>
                 <div class="modal-body slim">
                     <div id="instructions">
-					Hold down the desired action while clicking in order to change how the action works.
+					{{ 'INST_HOLD_DOWN' | translate }}
                     <p><p>
-					<b>Damage Window: (Right side)</b>
+					<b>{{ 'INST_DAMAGE_WINDOW' | translate }}</b>
                     <br>
                     <ul>
-  						<li><tt>Middle Mouse Click</tt>: Changes Miss > Below Good > Good > Great > Perfect</li>
-                        <li><tt>CTRL</tt>: Changes Miss > Below Good > Good > Great > Perfect</li>
-                        <li><tt>SHIFT</tt>: Changes Opponent's Type (For individual targets)</li>
-                        <li><tt>Drag &amp; Drop</tt>: Changes Attack Order</li>
-						<li><tt>Double Click on Background:</tt>: Enable/Disable Dark Mode</li>
+  						<li><tt>{{ 'INST_MID_CLICK' | translate }}</tt>: {{ 'INST_CHANGE_MISS' | translate }}</li>
+                        <li><tt>CTRL</tt>: {{ 'INST_CHANGE_MISS' | translate }}</li>
+                        <li><tt>SHIFT</tt>: {{ 'INST_CHANGE_TYPE' | translate }}</li>
+                        <li><tt>{{ 'INST_DRAG_DROP' | translate }}</tt>: {{ 'INST_CHANGE_ORDER' | translate }}</li>
+						<li><tt>{{ 'INST_DBL_CLICK_BG' | translate }}</tt>: {{ 'INST_ENABLE_DARK' | translate }}</li>
                     </ul>
                     <br>
-                    <b>Units Window: (Center area)</b>
+                    <b>{{ 'INST_UNITS_WINDOW' | translate }}</b>
                     <ul>
-						<li><tt>Middle Mouse Click</tt>: Changes Miss > Below Good > Good > Great > Perfect</li>
-                        <li><tt>CTRL</tt>: Changes Orbs Matching > Opposite > None (You may also click on orb)</li> 
-                        <li><tt>SHIFT</tt>: Despairs Captain</li>
-                        <li><tt>ALT</tt>: Locks Units</li>
-                        <li><tt>SHIFT + ALT</tt>: Disables Unit</li>
-                        <li><tt>Drag &amp; Drop</tt>: Change Unit Position</li>
-						<li><tt>Click on Level</tt>: Opens level slider</li>
-						<li><tt>Middle Mouse Click on Level</tt>: Sets unit to MAX level</li>
+						<li><tt>{{ 'INST_MID_CLICK' | translate }}</tt>: {{ 'INST_CHANGE_MISS' | translate }}</li>
+                        <li><tt>CTRL</tt>: {{ 'INST_CHANGE_ORBS' | translate }}</li> 
+                        <li><tt>SHIFT</tt>: {{ 'INST_DESPAIR_CAP' | translate }}</li>
+                        <li><tt>ALT</tt>: {{ 'INST_LOCK_UNITS' | translate }}</li>
+                        <li><tt>SHIFT + ALT</tt>: {{ 'INST_DISABLE_UNIT' | translate }}</li>
+                        <li><tt>{{ 'INST_DRAG_DROP' | translate }}</tt>: {{ 'INST_CHANGE_POS' | translate }}</li>
+						<li><tt>{{ 'INST_CLICK_LEVEL' | translate }}</tt>: {{ 'INST_OPEN_LEVEL_SLIDER' | translate }}</li>
+						<li><tt>{{ 'INST_MID_CLICK_LEVEL' | translate }}</tt>: {{ 'INST_SET_MAX' | translate }}</li>
 
                     </ul>
                     <br>
-                    <b>Ship Slider: (Under Settings)</b>
+                    <b>{{ 'INST_SHIP_SLIDER' | translate }}</b>
                     <ul>
-                       <li><tt>CTRL</tt>: Opens Ship Selection Window</li> 
+                       <li><tt>CTRL</tt>: {{ 'INST_OPEN_SHIP_WIN' | translate }}</li> 
                     </ul>
                     <br>
-                    <b>Enemy Defense: (Under Settings)</b>
+                    <b>{{ 'INST_ENEMY_DEF' | translate }}</b>
                     <ul>
-                       <li><tt>CTRL</tt>: Opens Defense Selection Window</li> 
+                       <li><tt>CTRL</tt>: {{ 'INST_OPEN_DEF_WIN' | translate }}</li> 
                     </ul>
                     <br>
-                    <b>Stat Window: (Under Units Window)</b>
+                    <b>{{ 'INST_STAT_WINDOW' | translate }}</b>
                     <ul>
-                        <li><tt>Drag Slider</tt>: Adjusts Health Percentage</li>
-                        <li><tt>Left Click on Health</tt>: Opens prompt where you can set HP or HP in %</li>
+                        <li><tt>{{ 'INST_DRAG_SLIDER' | translate }}</tt>: {{ 'INST_ADJ_HP' | translate }}</li>
+                        <li><tt>{{ 'INST_LEFT_CLICK_HP' | translate }}</tt>: {{ 'INST_OPEN_HP_PROMPT' | translate }}</li>
                     </ul>
                 </div>
                 </div>
                 <div class="modal-footer">
-                    <button class="btn btn-primary" ui-sref="^">Go Back</button> 
+                    <button class="btn btn-primary" ui-sref="^">{{ 'GO_BACK' | translate }}</button> 
                 </div>
             </div>
         </div>

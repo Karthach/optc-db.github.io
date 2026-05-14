@@ -5,10 +5,10 @@
     <div class="custom-modal">
         <div id="picker" class="modal-dialog">
             <div class="modal-content animated fadeInDown">
-                <div class="modal-header">Known Defense Values</div>
+                <div class="modal-header">{{ 'KNOWN_DEFENSE_VALUES' | translate }}</div>
                 <div class="modal-body">
 
-                    <input type="text" id="picker" placeholder="type to filter" ng-model="query" auto-focus class="modal-filter padded-picker">
+                    <input type="text" id="picker" placeholder="{{ 'TYPE_TO_FILTER' | translate }}" ng-model="query" auto-focus class="modal-filter padded-picker">
 
                     <div class="modal-div">
 
@@ -16,10 +16,10 @@
                             <thead>
                                 <tr>
                                     <th></th>
-                                    <th>Enemy</th>
-                                    <th>Location</th>
-                                    <th>Difficulty</th>
-                                    <th>Defense</th>
+                                    <th>{{ 'ENEMY' | translate }}</th>
+                                    <th>{{ 'LOCATION' | translate }}</th>
+                                    <th>{{ 'DIFFICULTY' | translate }}</th>
+                                    <th>{{ 'DEFENSE' | translate }}</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -37,7 +37,7 @@
 
                 </div>
                 <div class="modal-footer">
-                    <button class="btn btn-default" ui-sref="^">Cancel</button> 
+                    <button class="btn btn-default" ui-sref="^">{{ 'CANCEL' | translate }}</button> 
                 </div>
             </div>
         </div>

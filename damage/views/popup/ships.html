@@ -5,10 +5,10 @@
     <div class="custom-modal">
         <div id="picker" class="modal-dialog">
             <div class="modal-content animated fadeInDown">
-                <div class="modal-header">Ships</div>
+                <div class="modal-header">{{ 'SHIPS' | translate }}</div>
                 <div class="modal-body">
 
-                    <input type="text" id="picker" placeholder="type to filter" ng-model="query" auto-focus class="modal-filter">
+                    <input type="text" id="picker" placeholder="{{ 'TYPE_TO_FILTER' | translate }}" ng-model="query" auto-focus class="modal-filter">
 
                     <div class="modal-div">
 
@@ -16,8 +16,8 @@
                             <thead>
                                 <tr>
                                     <th></th>
-                                    <th width="30%">Ship</th>
-                                    <th width="60%">Effect at MAX level</th>
+                                    <th width="30%">{{ 'SHIP' | translate }}</th>
+                                    <th width="60%">{{ 'EFFECT_AT_MAX' | translate }}</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -34,7 +34,7 @@
 
                 </div>
                 <div class="modal-footer">
-                    <button class="btn btn-default" ui-sref="^">Cancel</button> 
+                    <button class="btn btn-default" ui-sref="^">{{ 'CANCEL' | translate }}</button> 
                 </div>
             </div>
         </div>

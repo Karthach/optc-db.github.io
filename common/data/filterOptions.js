@@ -1,27 +1,27 @@
 window.farmableOptions = [
-    { key: "Story", label: "Story-only", hideLabel: "Hide Story-only" },
-    { key: "Fortnight", label: "Fortnight-only", hideLabel: "Hide Fortnight-only" },
-    { key: "Pirateking", label: "Pirate King-only", hideLabel: "Hide Pirate King-only" },
-    { key: "Coop", label: "Co-Op-only", hideLabel: "Hide Co-Op-only" },
-    { key: "Raid", label: "Raid-only", hideLabel: "Hide Raid-only" },
-    { key: "Coliseum", label: "Coliseum-only", hideLabel: "Hide Clssm-only" },
-    { key: "Arena", label: "Arena-only", hideLabel: "Hide Arena-only" },
-    { key: "Ambush", label: "Ambush-only", hideLabel: "Hide Ambush-only" },
-    { key: "Treasuremap", label: "Treasure Map-only", hideLabel: "Hide TreasMap-only" },
-    { key: "Kizuna", label: "Kizuna Clash-only", hideLabel: "Hide KizuClash-only" },
-    { key: "Piraterumble", label: "Pirate Rumble-only", hideLabel: "Hide PiRumble-only" }
+    { key: "Story", label: "STORY_ONLY" },
+    { key: "Fortnight", label: "FORTNIGHT_ONLY" },
+    { key: "Pirateking", label: "PKA_ONLY" },
+    { key: "Coop", label: "COOP_ONLY" },
+    { key: "Raid", label: "RAID_ONLY" },
+    { key: "Coliseum", label: "COLISEUM_ONLY" },
+    { key: "Arena", label: "ARENA_ONLY" },
+    { key: "Ambush", label: "AMBUSH_ONLY" },
+    { key: "Treasuremap", label: "TM_ONLY" },
+    { key: "Kizuna", label: "KIZUNA_ONLY" },
+    { key: "Piraterumble", label: "RUMBLE_ONLY" }
 ];
 
 window.nonFarmableOptions = [
-    { key: "lrr", label: "Limited RR-only", hideLabel: "Hide lim. RR-only" },
-    { key: "tmlrr", label: "TM Limited RR-only", hideLabel: "Hide TM lim. RR-only" },
-    { key: "kclrr", label: "KC Limited RR-only", hideLabel: "Hide KC lim. RR-only" },
-    { key: "pflrr", label: "PF Limited RR-only", hideLabel: "Hide PF lim. RR-only" },
-    { key: "slrr", label: "Support Limited RR-only", hideLabel: "Hide Support lim. RR-only" },
-    { key: "superlrr", label: "Super Limited RR-only", hideLabel: "Hide Super lim. RR-only" },
-    { key: "annilrr", label: "Anniversary Limited RR-only", hideLabel: "Hide Anniversary lim. RR-only" },
-    { key: "promo", label: "Promo-only", hideLabel: "Hide promo-only" },
-    { key: "special", label: "Login Bonus-only", hideLabel: "Hide Login-only" },
-    { key: "shop", label: "Ray Shop Unit", hideLabel: "Hide Ray Shop Unit" },
-    { key: "tmshop", label: "Trade Port Unit", hideLabel: "Hide Trade Port Unit" }
+    { key: "lrr", label: "LRR_ONLY" },
+    { key: "tmlrr", label: "TM_LRR_ONLY" },
+    { key: "kclrr", label: "KC_LRR_ONLY" },
+    { key: "pflrr", label: "PF_LRR_ONLY" },
+    { key: "slrr", label: "SLRR_ONLY" },
+    { key: "superlrr", label: "SUPER_LRR_ONLY" },
+    { key: "annilrr", label: "ANNI_LRR_ONLY" },
+    { key: "promo", label: "PROMO_ONLY" },
+    { key: "special", label: "LOGIN_ONLY" },
+    { key: "shop", label: "RAY_SHOP_UNIT" },
+    { key: "tmshop", label: "TRADE_PORT_UNIT" }
 ];

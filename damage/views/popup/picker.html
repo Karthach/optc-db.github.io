@@ -5,15 +5,15 @@
     <div class="custom-modal">
         <div id="picker" class="modal-dialog">
             <div class="modal-content animated fadeInDown">
-                <div class="modal-header">Pick a Unit
+                <div class="modal-header">{{ 'PICK_UNIT' | translate }}
                     <p class="pull-right">
                         <span class="help" popover-trigger="mouseenter" popover-placement="bottom"
-                            uib-popover-template="'operators.html'">Operators</span>
+                            uib-popover-template="'operators.html'">{{ 'OPERATORS' | translate }}</span>
                     </p>
                 </div>
                 <div class="modal-body">
 
-                    <input type="text" id="picker" placeholder="type to filter"
+                    <input type="text" id="picker" placeholder="{{ 'TYPE_TO_FILTER' | translate }}"
                         ng-model="query" ng-model-options="{ debounce: 500 }" auto-focus class="modal-filter">
 
                     <div id="pickerUnits" class="modal-div">
@@ -23,7 +23,7 @@
                     </div>
 
                     <div id="recent">
-                        <span>Recently picked</span>
+                        <span>{{ 'RECENTLY_PICKED' | translate }}</span>
                         <div id="recentUnits">
                         <div class="slot small" ng-repeat="unit in recents" ng-click="pickUnit(unit)"
                             decorate-slot uid="unit" flag="true">
@@ -33,42 +33,42 @@
 
                 </div>
                 <div class="modal-footer">
-                    <button class="btn btn-default" ui-sref="^">Cancel</button> 
+                    <button class="btn btn-default" ui-sref="^">{{ 'CANCEL' | translate }}</button> 
                 </div>
             </div>
         </div>
 
         <script id="operators.html" type="text/ng-template">
             <div>
-                Supported string operators:
+                {{ 'OPERATORS_TITLE' | translate }}
                 <br>
                 <ul>
-                    <li><tt>type:X</tt>: shows only units of type X (STR, DEX, QCK, ...)</li>
-                    <li><tt>class:X</tt>: shows only units of class X (fighter, slasher, ...)</li>
-                    <ul><li>For Free Spirit units enter free_spirit or just free</li></ul>
-                    <li><tt>family:X</tt>: shows only units of family X (Monkey_D._Luffy, Nami, ...)</li>
-                    <ul><li>Use underscores "_" instead of spaces </li></ul>
-                    <ul><li>Use notFamily:X to exclude family X </li></ul>
-                    <li><tt>supports:X</tt>: shows only units that can be attached as a support for unit ID X</li>
-                    <li><tt>units:X</tt>: shows units based on ID, separated by |</li>
+                    <li><tt>type:X</tt>: {{ 'OPERATOR_TYPE' | translate }}</li>
+                    <li><tt>class:X</tt>: {{ 'OPERATOR_CLASS' | translate }}</li>
+                    <ul><li>{{ 'OPERATOR_FREE' | translate }}</li></ul>
+                    <li><tt>family:X</tt>: {{ 'OPERATOR_FAMILY' | translate }}</li>
+                    <ul><li>{{ 'OPERATOR_UNDERSCORE' | translate }} </li></ul>
+                    <ul><li>{{ 'OPERATOR_NOT_FAMILY' | translate }} </li></ul>
+                    <li><tt>supports:X</tt>: {{ 'OPERATOR_SUPPORTS' | translate }}</li>
+                    <li><tt>units:X</tt>: {{ 'OPERATOR_UNITS' | translate }}</li>
                 </ul>
                 <br>
-                Supported mathematical operators:
+                {{ 'OPERATORS_MATH_TITLE' | translate }}
                 <ul>
-                    <li><tt>hp&gt;X</tt>: shows only units with max HP &gt; X</li>
-                    <li><tt>atk&gt;X</tt>: shows only units with max ATK &gt; X</li>
-                    <li><tt>cost&gt;X</tt>: shows only units with a cost higher than X</li>
-                    <li><tt>stars&gt;X</tt>: shows only units with more than X stars</li>
-                    <li><tt>id&gt;X</tt>: shows only units with ID greater than X</li>
-                    <li><tt>slots&gt;X</tt>: shows only units with more than X slots</li>
-                    <li><tt>combo&gt;X</tt>: shows only units with CMB &gt; X</li>
-                    <li><tt>exp&gt;X</tt>: shows only units that require more than X EXP to max</li>
-                    <li><tt>minCD&gt;X</tt>: shows only units with a minimum CD higher than X</li>
-                    <li><tt>maxCD&gt;X</tt>: shows only units with a maximum CD higher than X</li>
+                    <li><tt>hp&gt;X</tt>: {{ 'OPERATOR_HP' | translate }}</li>
+                    <li><tt>atk&gt;X</tt>: {{ 'OPERATOR_ATK' | translate }}</li>
+                    <li><tt>cost&gt;X</tt>: {{ 'OPERATOR_COST' | translate }}</li>
+                    <li><tt>stars&gt;X</tt>: {{ 'OPERATOR_STARS' | translate }}</li>
+                    <li><tt>id&gt;X</tt>: {{ 'OPERATOR_ID' | translate }}</li>
+                    <li><tt>slots&gt;X</tt>: {{ 'OPERATOR_SLOTS' | translate }}</li>
+                    <li><tt>combo&gt;X</tt>: {{ 'OPERATOR_COMBO' | translate }}</li>
+                    <li><tt>exp&gt;X</tt>: {{ 'OPERATOR_EXP' | translate }}</li>
+                    <li><tt>minCD&gt;X</tt>: {{ 'OPERATOR_MIN_CD' | translate }}</li>
+                    <li><tt>maxCD&gt;X</tt>: {{ 'OPERATOR_MAX_CD' | translate }}</li>
                 </ul>
-                Mathematical operators also work with "<tt>&lt;</tt>", "<tt>&gt;=</tt>", "<tt>&lt;=</tt>" and "<tt>=</tt>".
+                {{ 'OPERATORS_MATH_NOTE' | translate }} "<tt>&lt;</tt>", "<tt>&gt;=</tt>", "<tt>&lt;=</tt>" and "<tt>=</tt>".
                 <br><br>
-                Example query:
+                {{ 'EXAMPLE_QUERY' | translate }}
                 <br>
                 <tt>type:str class:fighter atk>1300 cost>20 family:vinsmoke_sanji supports:2936</tt>
             </div>

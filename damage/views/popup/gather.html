@@ -5,20 +5,20 @@
     <div class="custom-modal">
         <div id="picker" class="modal-dialog">
             <div class="modal-content animated fadeInDown">
-                <div class="modal-header">Data Gathering</div>
+                <div class="modal-header">{{ 'DATA_GATHERING' | translate }}</div>
 
                 <div class="modal-body">
 
-                    <b>tl;dr I need data on certain characters</b>
+                    <b>{{ 'GATHER_TLDR' | translate }}</b>
                     <br><br>
 
-                    If you happen to have any of the characters shown below, and:
+                    {{ 'GATHER_TEXT' | translate }}
                     <ol>
-                        <li>They're <b>NOT</b> at level 1</li>
-                        <li>They're <b>NOT</b> at max level</li>
+                        <li>{{ 'GATHER_LI1' | translate }}</li>
+                        <li>{{ 'GATHER_LI2' | translate }}</li>
                     </ol>
 
-                    please head over <a href="http://goo.gl/forms/oGMIPv3QTc">here</a> and complete the form (it takes like 20 seconds), any help is appreciated.
+                    <span ng-bind-html="'GATHER_LINK_TEXT' | translate"></span>
                     <br><br>
 
                     <div id="pickerUnits" class="modal-div">
@@ -30,7 +30,7 @@
                 </div>
 
                 <div class="modal-footer">
-                    <button class="btn btn-default" ui-sref="^">Close</button> 
+                    <button class="btn btn-default" ui-sref="^">{{ 'CLOSE' | translate }}</button> 
                 </div>
 
             </div>

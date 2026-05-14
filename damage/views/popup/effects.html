@@ -5,7 +5,7 @@
     <div class="custom-modal">
         <div id="picker" class="modal-dialog">
             <div class="modal-content animated fadeInDown">
-                <div class="modal-header">Map Effects</div>
+                <div class="modal-header">{{ 'MAP_EFFECTS' | translate }}</div>
                 <div class="modal-body">
                     
                     <!-- input type="text" id="picker" placeholder="type to filter (wip)" ng-model="query" auto-focus class="modal-filter" -->
@@ -16,15 +16,15 @@
                             <thead>
                                 <tr>
                                     <th>&nbsp;</th>
-                                    <th>Name</th>
-                                    <th>Effect</th>
+                                    <th>{{ 'NAME' | translate }}</th>
+                                    <th>{{ 'EFFECT' | translate }}</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr ng-click="pickEffect(null)">
                                     <td class="slot small" decorate-slot="notitle" uid="1"></td>
-                                    <td>No map effect</td>
-                                    <td>N/A</td>
+                                    <td>{{ 'NO_MAP_EFFECT' | translate }}</td>
+                                    <td>{{ 'NA_LABEL' | translate }}</td>
                                 </tr>
                                 <tr ng-repeat="(effect,data) in list track by $index" ng-click="pickEffect(effect)">
                                     <td class="slot small" decorate-slot="notitle" uid="data.thumb"></td>
@@ -38,7 +38,7 @@
 
                 </div>
                 <div class="modal-footer">
-                    <button class="btn btn-default" ui-sref="^">Cancel</button> 
+                    <button class="btn btn-default" ui-sref="^">{{ 'CANCEL' | translate }}</button> 
                 </div>
             </div>
         </div>

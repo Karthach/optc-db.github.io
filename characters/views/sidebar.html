@@ -22,17 +22,17 @@
         
         <!-- Unit Specifics -->
         <div style="display: flex; gap: 2px; padding: 2px;">
-            <span class="filter exc" style="flex: 1;" ng-model="filters.dualUnits" ng-class="{ active: filters.dualUnits }" ng-click="filters.dualUnits = !filters.dualUnits">Dual</span>
-            <span class="filter exc" style="flex: 1;" ng-model="filters.vsUnits" ng-class="{ active: filters.vsUnits }" ng-click="filters.vsUnits = !filters.vsUnits">VS</span>
-            <span class="filter exc" style="flex: 2;" ng-class="{ active: filters.superTypeUnits }" ng-click="filters.superTypeUnits = !filters.superTypeUnits">Super Class/Type</span>
+            <span class="filter exc" style="flex: 1;" ng-model="filters.dualUnits" ng-class="{ active: filters.dualUnits }" ng-click="filters.dualUnits = !filters.dualUnits">{{ 'DUAL' | translate }}</span>
+            <span class="filter exc" style="flex: 1;" ng-model="filters.vsUnits" ng-class="{ active: filters.vsUnits }" ng-click="filters.vsUnits = !filters.vsUnits">{{ 'VS' | translate }}</span>
+            <span class="filter exc" style="flex: 2;" ng-class="{ active: filters.superTypeUnits }" ng-click="filters.superTypeUnits = !filters.superTypeUnits">{{ 'SUPER_CLASS_TYPE' | translate }}</span>
         </div>
         
         <!-- Class Exclusions -->
         <div class="sidebar-buttons-grid">
             <span class="filter width-12 exc" ng-class="{ active: filters.classInclusive === true }"
-                ng-model="filters.classInclusive" ng-click="filters.classInclusive = !filters.classInclusive">Exclude characters with other classes</span>
+                ng-model="filters.classInclusive" ng-click="filters.classInclusive = !filters.classInclusive">{{ 'EXCLUDE_OTHER_CLASSES' | translate }}</span>
             <span class="filter width-12 exc" ng-class="{ active: filters.noSingleClass === true }"
-                ng-model="filters.noSingleClass" ng-click="filters.noSingleClass = !filters.noSingleClass">Exclude single class characters</span>
+                ng-model="filters.noSingleClass" ng-click="filters.noSingleClass = !filters.noSingleClass">{{ 'EXCLUDE_SINGLE_CLASS' | translate }}</span>
         </div>
 
         <!-- Rarity -->
@@ -151,7 +151,7 @@
         <div class="filter-container">
             <animate-collapse class="filter-header">{{ 'TAGS' | translate }}</animate-collapse>
             <div class="collapse">
-                <label class="filter width-12 tags"><input type="checkbox" style="margin-right: 5px;" ng-model="filters.tagsStrict">Match all selected tags</label>
+                <label class="filter width-12 tags"><input type="checkbox" style="margin-right: 5px;" ng-model="filters.tagsStrict">{{ 'MATCH_ALL_TAGS' | translate }}</label>
                 <div style="max-height: 180px; overflow-y: auto;" class="sidebar-buttons-grid">
                     <span ng-repeat="tags in availableTags" class="filter tags exc" ng-click="onTagsClick($event,tags)" ng-class="{ active: filters.tags.indexOf(tags) > -1 }">{{::tags.name}}</span>
                 </div>
@@ -171,7 +171,7 @@
                     
                     <!-- Nested Shops -->
                     <div style="width: 100%;">
-                        <animate-collapse class="filter-header" style="margin: 2px 0;">Current Shops</animate-collapse>
+                        <animate-collapse class="filter-header" style="margin: 2px 0;">{{ 'CURRENT_SHOPS' | translate }}</animate-collapse>
                         <div class="collapse">
                             <div class="sidebar-buttons-grid">
                                 <span ng-repeat="(key, value) in shops" class="filter drop" ng-model="filters.shop" ng-class="{ active: filters.shop == value }" ng-click="onFilterClick($event, value)">{{::key}}</span>
@@ -181,22 +181,22 @@
 
                     <!-- Nested Farmable -->
                     <div style="width: 100%;">
-                        <animate-collapse class="filter-header" style="margin: 2px 0;">Farmable</animate-collapse>
+                        <animate-collapse class="filter-header" style="margin: 2px 0;">{{ 'FARMABLE' | translate }}</animate-collapse>
                         <div class="collapse" style="padding: 2px;">
                             <div ng-repeat="opt in farmableOptions" style="display: flex; gap: 2px; margin-bottom: 2px;">
-                                <span class="filter drop" style="flex: 1;" ng-class="{ active: filters.farmable[opt.key] }" ng-click="onDropFilterClick($event, 'farmable', opt.key, true)">{{::opt.label}}</span>
-                                <span class="filter exc" style="flex: 1;" ng-class="{ active: filters.farmable[opt.key] === false }" ng-click="onDropFilterClick($event, 'farmable', opt.key, false)">{{::opt.hideLabel}}</span>
+                                <span class="filter drop" style="flex: 1;" ng-class="{ active: filters.farmable[opt.key] }" ng-click="onDropFilterClick($event, 'farmable', opt.key, true)">{{ opt.label | translate }}</span>
+                                <span class="filter exc" style="flex: 1;" ng-class="{ active: filters.farmable[opt.key] === false }" ng-click="onDropFilterClick($event, 'farmable', opt.key, false)">{{ 'HIDE_PREFIX' | translate }} {{ opt.label | translate }}</span>
                             </div>
                         </div>
                     </div>
 
                     <!-- Nested Non-farmable -->
                     <div style="width: 100%;">
-                        <animate-collapse class="filter-header" style="margin: 2px 0;">Non-farmable</animate-collapse>
+                        <animate-collapse class="filter-header" style="margin: 2px 0;">{{ 'NON_FARMABLE' | translate }}</animate-collapse>
                         <div class="collapse" style="padding: 2px;">
                             <div ng-repeat="opt in nonFarmableOptions" style="display: flex; gap: 2px; margin-bottom: 2px;">
-                                <span class="filter drop" style="flex: 1;" ng-class="{ active: filters.nonFarmable[opt.key] }" ng-click="onDropFilterClick($event, 'nonFarmable', opt.key, true)">{{::opt.label}}</span>
-                                <span class="filter exc" style="flex: 1;" ng-class="{ active: filters.nonFarmable[opt.key] === false }" ng-click="onDropFilterClick($event, 'nonFarmable', opt.key, false)">{{::opt.hideLabel}}</span>
+                                <span class="filter drop" style="flex: 1;" ng-class="{ active: filters.nonFarmable[opt.key] }" ng-click="onDropFilterClick($event, 'nonFarmable', opt.key, true)">{{ opt.label | translate }}</span>
+                                <span class="filter exc" style="flex: 1;" ng-class="{ active: filters.nonFarmable[opt.key] === false }" ng-click="onDropFilterClick($event, 'nonFarmable', opt.key, false)">{{ 'HIDE_PREFIX' | translate }} {{ opt.label | translate }}</span>
                             </div>
                         </div>
                     </div>
@@ -236,11 +236,11 @@
             <animate-collapse class="filter-header">{{ 'SPECIFIC_CAPTAIN' | translate }}</animate-collapse>
             <div class="collapse">
                 <div class="sidebar-buttons-grid">
-                    <span class="filter width-12 exc" ng-model="filters.katakuri" ng-class="{ active: filters.katakuri }" ng-click="filters.katakuri = !filters.katakuri">Katakuri (Double Boost)</span>
-                    <span class="filter width-12 exc" ng-model="filters.katakuriplus" ng-class="{ active: filters.katakuriplus }" ng-click="filters.katakuriplus = !filters.katakuriplus">Katakuri+ (Double Boost)</span>
-                    <span class="filter width-12 exc" ng-model="filters.katakuriv2" ng-class="{ active: filters.katakuriv2 }" ng-click="filters.katakuriv2 = !filters.katakuriv2">Katakuri V2 (Double Boost)</span>
-                    <span class="filter width-12 exc" ng-model="filters.TMlaw" ng-class="{ active: filters.TMlaw }" ng-click="filters.TMlaw = !filters.TMlaw">TM Law (Double Boost)</span>
-                    <span class="filter width-12 exc" ng-model="filters.carrotwanda" ng-class="{ active: filters.carrotwanda }" ng-click="filters.carrotwanda = !filters.carrotwanda">Carrot & Wanda (Double Boost)</span>
+                    <span class="filter width-12 exc" ng-model="filters.katakuri" ng-class="{ active: filters.katakuri }" ng-click="filters.katakuri = !filters.katakuri">{{ 'KATAKURI_DB' | translate }}</span>
+                    <span class="filter width-12 exc" ng-model="filters.katakuriplus" ng-class="{ active: filters.katakuriplus }" ng-click="filters.katakuriplus = !filters.katakuriplus">{{ 'KATAKURI_PLUS_DB' | translate }}</span>
+                    <span class="filter width-12 exc" ng-model="filters.katakuriv2" ng-class="{ active: filters.katakuriv2 }" ng-click="filters.katakuriv2 = !filters.katakuriv2">{{ 'KATAKURI_V2_DB' | translate }}</span>
+                    <span class="filter width-12 exc" ng-model="filters.TMlaw" ng-class="{ active: filters.TMlaw }" ng-click="filters.TMlaw = !filters.TMlaw">{{ 'TM_LAW_DB' | translate }}</span>
+                    <span class="filter width-12 exc" ng-model="filters.carrotwanda" ng-class="{ active: filters.carrotwanda }" ng-click="filters.carrotwanda = !filters.carrotwanda">{{ 'CARROT_WANDA_DB' | translate }}</span>
                 </div>
             </div>
         </div>

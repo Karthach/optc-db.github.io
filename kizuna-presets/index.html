@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Kizuna Clash Strategic Hub v10.0</title>
+    <title>{{ 'KIZUNA_PRESETS' | translate }}</title>
 
     <!-- Style -->
     <link rel="stylesheet" type="text/css" href="../common/libs/css/bootstrap.min.css" />
@@ -126,7 +126,7 @@
             <div class="stage-columns">
                 <!-- STAGE 2 CONFIG -->
                 <div class="stage-box">
-                    <span class="stage-title"><i class="fas fa-ghost"></i> Stage 2 (Mini-Boss)</span>
+                    <span class="stage-title"><i class="fas fa-ghost"></i> {{ 'STAGE' | translate }} 2 ({{ 'MINI_BOSS' | translate }})</span>
                     <div class="stage-type-bar">
                         <button class="type-mini-btn STR" ng-class="{active: bossConfig.st2Type == 'STR'}" ng-click="bossConfig.st2Type = 'STR'">STR</button>
                         <button class="type-mini-btn DEX" ng-class="{active: bossConfig.st2Type == 'DEX'}" ng-click="bossConfig.st2Type = 'DEX'">DEX</button>
@@ -147,7 +147,7 @@
 
                 <!-- STAGE 3 CONFIG -->
                 <div class="stage-box">
-                    <span class="stage-title"><i class="fas fa-skull"></i> Stage 3 (Final Boss)</span>
+                    <span class="stage-title"><i class="fas fa-skull"></i> {{ 'STAGE' | translate }} 3 ({{ 'FINAL_BOSS' | translate }})</span>
                     <div class="stage-type-bar">
                         <button class="type-mini-btn STR" ng-class="{active: bossConfig.st3Type == 'STR'}" ng-click="bossConfig.st3Type = 'STR'">STR</button>
                         <button class="type-mini-btn DEX" ng-class="{active: bossConfig.st3Type == 'DEX'}" ng-click="bossConfig.st3Type = 'DEX'">DEX</button>
@@ -180,7 +180,7 @@
                         <span class="type-tag" ng-class="preset.st3Type">ST3: {{preset.st3Type}}</span>
                     </div>
                     <h2 class="team-title" style="margin-left: 10px;">{{preset.title}}</h2>
-                    <span class="type-tag" style="margin-left: auto; border: 1px solid #fff;" ng-class="preset.counterType">TEAM: {{preset.counterType}}</span>
+                    <span class="type-tag" style="margin-left: auto; border: 1px solid #fff;" ng-class="preset.counterType">{{ 'TEAM_COLON' | translate }} {{preset.counterType}}</span>
                 </div>
 
                 <div class="battle-formation">
@@ -196,19 +196,19 @@
                                  ng-class="{'is-missing': missingUnits.indexOf(member.support) !== -1}">
                                  <div class="missing-mark" style="width:38px; height:38px; top:auto; bottom:25px;" ng-if="missingUnits.indexOf(member.support) !== -1"></div>
                             </div>
-                            <span class="pair-label">{{$index < 2 ? 'CAPTAIN' : 'CREW'}}</span>
+                            <span class="pair-label">{{$index < 2 ? ('CAPTAIN' | translate) : ('CREW' | translate)}}</span>
                         </div>
                     </div>
                 </div>
 
                 <footer class="gimmick-footer">
                     <div class="gimmick-row">
-                        <span class="gimmick-label">ST2 REQ:</span>
-                        <span class="gimmick-text">{{preset.st2Summary || 'None'}}</span>
+                        <span class="gimmick-label">ST2 {{ 'REQ_COLON' | translate }}</span>
+                        <span class="gimmick-text">{{preset.st2Summary || ('NONE' | translate)}}</span>
                     </div>
                     <div class="gimmick-row">
-                        <span class="gimmick-label">ST3 REQ:</span>
-                        <span class="gimmick-text">{{preset.st3Summary || 'None'}}</span>
+                        <span class="gimmick-label">ST3 {{ 'REQ_COLON' | translate }}</span>
+                        <span class="gimmick-text">{{preset.st3Summary || ('NONE' | translate)}}</span>
                     </div>
                 </footer>
             </article>

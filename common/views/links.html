@@ -9,56 +9,56 @@
         <div class="rotater" id="link-home">
             <a class="btn btn-icon" href="/">
                 <i class="fa fa-home"></i>
-                <span class="tip">Inicio</span>
+                <span class="tip">{{ 'HOME' | translate }}</span>
             </a>
         </div>
 
         <div class="rotater" id="link-voyage">
             <a class="btn btn-icon" target="_blank" href="https://lukforce.bitbucket.io/">
                 <i class="fa fa-map-marker"></i>
-                <span class="tip">Calendario y TM</span>
+                <span class="tip">{{ 'CALENDAR' | translate }}</span>
             </a>
         </div>
 
         <div class="rotater" id="link-supports">
             <a class="btn btn-icon" target="_blank" href="https://thepiebandit.github.io/optc-supports/">
                 <i class="fa fa-handshake"></i>
-                <span class="tip">Base de Datos Supports</span>
+                <span class="tip">{{ 'SUPPORTS_DB' | translate }}</span>
             </a>
         </div>
 
         <div class="rotater" id="link-rumble">
             <a class="btn btn-icon" target="_blank" href="https://thepiebandit.github.io/optc-pirate-rumble-db/">
                 <i class="fa fa-flag"></i>
-                <span class="tip">Base de Datos Rumble</span>
+                <span class="tip">{{ 'RUMBLE_DB' | translate }}</span>
             </a>
         </div>
 
         <div class="rotater" id="link-ship">
             <a class="btn btn-icon" target="_blank" href="https://optc-ships.vercel.app">
                 <i class="fa fa-ship"></i>
-                <span class="tip">Base de Datos Barcos</span>
+                <span class="tip">{{ 'SHIPS_DB' | translate }}</span>
             </a>
         </div>
 
         <div class="rotater" id="link-drops" ng-if="exclude != 'drops'">
             <a class="btn btn-icon" target="_blank" href="../drops">
                 <i class="fa fa-arrow-down"></i>
-                <span class="tip">Tabla de Drops</span>
+                <span class="tip">{{ 'DROP' | translate }}</span>
             </a>
         </div>
 
         <div class="rotater" id="link-characters" ng-if="exclude != 'characters'">
             <a class="btn btn-icon" target="_blank" href="../characters">
                 <i class="fa fa-book"></i>
-                <span class="tip">Tabla de Personajes</span>
+                <span class="tip">{{ 'CHAR' | translate }}</span>
             </a>
         </div>
 
         <div class="rotater" id="link-damage" ng-if="exclude != 'calculator'">
             <a class="btn btn-icon" target="_blank" href="../damage">
                 <i class="fa fa-calculator"></i>
-                <span class="tip">Calculadora de Daño</span>
+                <span class="tip">{{ 'CALC' | translate }}</span>
             </a>
         </div>
 
@@ -72,28 +72,28 @@
         <div class="rotater" id="link-github">
             <a class="btn btn-icon" target="_blank" href="https://github.com/Karthach/optc-db.github.io" style="background: #333 url('https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png') no-repeat center; background-size: 100%;">
                 <i class="fa fa-github"></i>
-                <span class="tip">Repositorio GitHub</span>
+                <span class="tip">{{ 'GITHUB_REPO' | translate }}</span>
             </a>
         </div>
 
         <div class="rotater" id="link-discord">
             <a class="btn btn-icon" target="_blank" href="https://discord.gg/MRhRrbF" style="background: #5865F2 url('https://www.freepnglogos.com/uploads/discord-logo-png/discord-logo-logodownload-download-logotipos-1.png') no-repeat center; background-size: 100%;">
                 <i class="fa fa-discord"></i>
-                <span class="tip">Discord Reporte Bugs</span>
+                <span class="tip">{{ 'DISCORD_REPORT' | translate }}</span>
             </a>
         </div>
 
         <div class="rotater" id="link-lang-es">
             <a class="btn btn-icon" ng-click="setLang('es')" title="Español" ng-style="{'background-color': currentLang === 'es' ? '#FFD700' : '#AA381E', 'border': currentLang === 'es' ? '2px solid white' : 'none'}">
                 <span style="font-weight: bold; color: white; display: block; margin-top: 5px;" ng-style="{'color': currentLang === 'es' ? '#000' : 'white'}">ES</span>
-                <span class="tip">Español</span>
+                <span class="tip">{{ 'SPANISH' | translate }}</span>
             </a>
         </div>
 
         <div class="rotater" id="link-lang-en">
             <a class="btn btn-icon" ng-click="setLang('en')" title="English" ng-style="{'background-color': currentLang === 'en' ? '#FFD700' : '#00247D', 'border': currentLang === 'en' ? '2px solid white' : 'none'}">
                 <span style="font-weight: bold; color: white; display: block; margin-top: 5px;" ng-style="{'color': currentLang === 'en' ? '#000' : 'white'}">EN</span>
-                <span class="tip">English</span>
+                <span class="tip">{{ 'ENGLISH' | translate }}</span>
             </a>
         </div>
 

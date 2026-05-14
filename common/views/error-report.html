@@ -33,7 +33,7 @@
     </style>
 
     <a id="errorReport" ng-class="{ enabled: caughtException }"
-        uib-tooltip="Error Report" tooltip-placement="left" ng-click="clearError()"
+        uib-tooltip="{{ 'ERROR_REPORT' | translate }}" tooltip-placement="left" ng-click="clearError()"
         target="_blank" ng-href="{{baseURL}}{{caughtException}}">
         <i class="fa fa-exclamation-triangle"></i>
     </a>

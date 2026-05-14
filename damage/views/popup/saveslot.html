@@ -5,30 +5,30 @@
     <div class="custom-modal">
         <div id="saveslot" class="modal-dialog">
             <div class="modal-content animated fadeInDown">
-                <div class="modal-header">Save slot</div>
+                <div class="modal-header">{{ 'SAVE_SLOT' | translate }}</div>
                 <div class="modal-body">
 
                     <form ng-submit="saveTeam()" name="saveForm" id="saveForm">
-                        <input type="text" id="slotName" placeholder="Slot name" ng-model="lastSlot" auto-focus required class="modal-filter">
+                        <input type="text" id="slotName" placeholder="{{ 'SLOT_NAME' | translate }}" ng-model="lastSlot" auto-focus required class="modal-filter">
                         <div id="labelContainer">
                             <label>
                                 <input type="checkbox" ng-model="saveShip">
-                                Save ship &amp; ship's level
+                                {{ 'SAVE_SHIP_LVL' | translate }}
                             </label>
                             <label>
                                 <input type="checkbox" ng-model="saveDefense">
-                                Save enemy's defense
+                                {{ 'SAVE_DEFENSE' | translate }}
                             </label>
                         </div>
                         <div class="modal-div padded slim" ng-show="overwriting">
-                            <div class="alert alert-danger">Saving will overwrite an existing slot.</div>
+                            <div class="alert alert-danger">{{ 'OVERWRITE_WARN' | translate }}</div>
                         </div>
                     </form>
 
                 </div>
                 <div class="modal-footer">
-                    <button class="btn btn-default" ui-sref="^">Cancel</button> 
-                    <button class="btn btn-primary" form="saveForm" ng-disabled="saveForm.$invalid">Save</button> 
+                    <button class="btn btn-default" ui-sref="^">{{ 'CANCEL' | translate }}</button> 
+                    <button class="btn btn-primary" form="saveForm" ng-disabled="saveForm.$invalid">{{ 'SAVE' | translate }}</button> 
                 </div>
             </div>
         </div>

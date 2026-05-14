@@ -24,7 +24,7 @@ services.$storage = function() {
 
 services.LanguageService = ['$storage', function($storage) {
     var currentLang = $storage.get('lang', 'es');
-    return {
+    var service = {
         getLang: function() { return currentLang; },
         setLang: function(lang) {
             if (currentLang === lang) return;
@@ -36,6 +36,8 @@ services.LanguageService = ['$storage', function($storage) {
             return (window.translations[currentLang] && window.translations[currentLang][key]) || key;
         }
     };
+    window.LanguageService = service;
+    return service;
 }];
 
 app.filter('translate', ['LanguageService', function(LanguageService) {

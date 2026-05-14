@@ -70,8 +70,8 @@
                     <i class="fa fa-chevron-right"></i>
                     <i class="fa fa-chevron-down"></i>
                     <span>{{island.name}}</span>
-                    <i class="fa fa-globe-americas" ng-show="island.global" title="Available On Global"></i>
-                    <i class="fa fa-star" ng-show="island.challenge" title="Challenge Available"></i>
+                    <i class="fa fa-globe-americas" ng-show="island.global" title="{{ 'AVAILABLE_GLOBAL' | translate }}"></i>
+                    <i class="fa fa-star" ng-show="island.challenge" title="{{ 'CHALLENGE_AVAILABLE' | translate }}"></i>
                     <bonus-list ng-if="type == 'Story Island'" y="$index"></bonus-list>
                     <day-label ng-if="type == 'Rookie Mission'"></day-label>
                 </h3>
@@ -82,39 +82,39 @@
             <table class="table table-dark">
                 <tbody>
                     <tr ng-if="island.completion" hide-when-empty>
-                        <td>Completion</td>
+                        <td>{{ 'COMPLETION' | translate }}</td>
                         <td colspan="2">{{island.completion}} </td>
                     </tr>
                     <tr ng-if="island.gamewith" hide-when-empty>
-                        <td>Gamewith (Japanese)</td>
+                        <td>{{ 'GAMEWITH_JAP' | translate }}</td>
                         <td colspan="2">
-                            <a ng-if="!island.gamewith[0]" href = "https://トレクル.gamewith.jp/article/show/{{island.gamewith}}" target="_blank">Gamewith Page</a>
-                            <a ng-if="island.gamewith[0]" href = "https://トレクル.gamewith.jp/article/show/{{island.gamewith[0]}}" target="_blank">Gamewith Page: Part 1</a><br ng-if="island.gamewith[0]">
-                            <a ng-if="island.gamewith[1]" href = "https://トレクル.gamewith.jp/article/show/{{island.gamewith[1]}}" target="_blank">Gamewith Page: Part 2</a><br ng-if="island.gamewith[1]">
-                            <a ng-if="island.gamewith[2]" href = "https://トレクル.gamewith.jp/article/show/{{island.gamewith[2]}}" target="_blank">Gamewith Page: Part 3</a><br ng-if="island.gamewith[2]">
-                            <a ng-if="island.gamewith[3]" href = "https://トレクル.gamewith.jp/article/show/{{island.gamewith[3]}}" target="_blank">Gamewith Page: Part 4</a><br ng-if="island.gamewith[3]">
-                            <a ng-if="island.gamewith[4]" href = "https://トレクル.gamewith.jp/article/show/{{island.gamewith[4]}}" target="_blank">Gamewith Page: Part 5</a><br ng-if="island.gamewith[5]">
-                            <a ng-if="island.gamewith[5]" href = "https://トレクル.gamewith.jp/article/show/{{island.gamewith[5]}}" target="_blank">Gamewith Page: Part 6</a><br ng-if="island.gamewith[6]">
+                            <a ng-if="!island.gamewith[0]" href = "https://トレクル.gamewith.jp/article/show/{{island.gamewith}}" target="_blank">{{ 'GAMEWITH_PAGE' | translate }}</a>
+                            <a ng-if="island.gamewith[0]" href = "https://トレクル.gamewith.jp/article/show/{{island.gamewith[0]}}" target="_blank">{{ 'GAMEWITH_PAGE' | translate }}: {{ 'GAMEWITH_PART' | translate }} 1</a><br ng-if="island.gamewith[0]">
+                            <a ng-if="island.gamewith[1]" href = "https://トレクル.gamewith.jp/article/show/{{island.gamewith[1]}}" target="_blank">{{ 'GAMEWITH_PAGE' | translate }}: {{ 'GAMEWITH_PART' | translate }} 2</a><br ng-if="island.gamewith[1]">
+                            <a ng-if="island.gamewith[2]" href = "https://トレクル.gamewith.jp/article/show/{{island.gamewith[2]}}" target="_blank">{{ 'GAMEWITH_PAGE' | translate }}: {{ 'GAMEWITH_PART' | translate }} 3</a><br ng-if="island.gamewith[2]">
+                            <a ng-if="island.gamewith[3]" href = "https://トレクル.gamewith.jp/article/show/{{island.gamewith[3]}}" target="_blank">{{ 'GAMEWITH_PAGE' | translate }}: {{ 'GAMEWITH_PART' | translate }} 4</a><br ng-if="island.gamewith[3]">
+                            <a ng-if="island.gamewith[4]" href = "https://トレクル.gamewith.jp/article/show/{{island.gamewith[4]}}" target="_blank">{{ 'GAMEWITH_PAGE' | translate }}: {{ 'GAMEWITH_PART' | translate }} 5</a><br ng-if="island.gamewith[5]">
+                            <a ng-if="island.gamewith[5]" href = "https://トレクル.gamewith.jp/article/show/{{island.gamewith[5]}}" target="_blank">{{ 'GAMEWITH_PAGE' | translate }}: {{ 'GAMEWITH_PART' | translate }} 6</a><br ng-if="island.gamewith[6]">
                         </td>
                     </tr>
                     <tr ng-if="island.slefty" hide-when-empty>
-                        <td>Slefty's Team Database</td>
+                        <td>{{ 'SLEFTY_DB' | translate }}</td>
                         <td colspan="2">
-                            <a href = "http://slefty.herokuapp.com/{{island.slefty}}" target="_blank">Slefty's Team Database Page</a>
+                            <a href = "http://slefty.herokuapp.com/{{island.slefty}}" target="_blank">{{ 'SLEFTY_PAGE' | translate }}</a>
                         </td>
                     </tr>
                     <tr ng-if="island.nakama" hide-when-empty>
-                        <td>Nakama Network</td>
+                        <td>{{ 'NAKAMA_NETWORK' | translate }}</td>
                         <td colspan="2">
-                            <a href = "https://www.nakama.network/stages/{{island.nakama}}/details" target="_blank">Nakama Network Team Database</a>
+                            <a href = "https://www.nakama.network/stages/{{island.nakama}}/details" target="_blank">{{ 'NAKAMA_TEAM_DB' | translate }}</a>
                         </td>
                     </tr>
                     <tr ng-if="island.condition" hide-when-empty>
-                        <td>Condition</td>
+                        <td>{{ 'CONDITION' | translate }}</td>
                         <td style="white-space: pre-line" colspan="2">{{island.condition}} </td>
                     </tr>
                     <tr ng-if="island.boosters" hide-when-empty>
-                        <td>Boosters</td>
+                        <td>{{ 'BOOSTERS' | translate }}</td>
                         <td style="white-space: pre-line" colspan="2">
                             <span ng-repeat="tier in island.boosters">
                             <a ng-repeat="uid in tier.units | smartSort:'false'" ng-if="uid > 0 && !hiddenUnits[uid]"
@@ -126,21 +126,21 @@
                         </td>
                     </tr>
                     <tr ng-if="island.gimmicks" hide-when-empty>
-                        <td>Gimmicks</td>
+                        <td>{{ 'GIMMICKS' | translate }}</td>
                         <td ng-repeat="(difficulty,data) in island.gimmicks">{{difficulty}}<br>
                             <span style="white-space: pre-line" ng-repeat="fight in data"><b>{{fight.title}}</b>
-                            <span ng-if="fight.recUnits.length > 0"><br><b>Recommended Units:</b><br>
+                            <span ng-if="fight.recUnits.length > 0"><br><b>{{ 'REC_UNITS' | translate }}</b><br>
                             <a ng-repeat="uid in fight.recUnits | smartSort:'false'" ng-if="uid > 0 && !hiddenUnits[uid]"
                             decorate-slot uid="uid" class="slot small" 
                             href="../characters/#/view/{{uid}}" target="_blank"
                             uib-tooltip="{{getTooltipText(uid)}}"
                             tooltip-placement="bottom" tooltip-trigger="mouseenter"
                             tooltip-enable="{{isTooltipEnabled(uid)}}" tooltip-append-to-body="true"></a><br></span>
-                            <b>Gimmicks:</b><br>{{fight.gimmicks}}<br><br></span>
+                            <b>{{ 'GIMMICKS' | translate }}:</b><br>{{fight.gimmicks}}<br><br></span>
                         </td>
                     </tr>
                     <tr ng-if="island.challenge">
-                        <td>Challenge</td>
+                        <td>{{ 'CHALLENGE' | translate }}</td>
                         <td colspan="2">{{island.challenge}} </td>
                     </tr>
                     <tr ng-repeat="challenge in island.challengeData">
@@ -153,7 +153,7 @@
                     <tr ng-repeat="(stage,data) in island"
                         ng-if="!['thumb', 'day', 'name', 'shortName', 'global', 'condition', 'challenge', 'completion', 'challengeData', 'showManual', 'gamewith', 'slefty', 'nakama', 'dropID', 'boosters', 'gimmicks'].includes(stage)">
                         <td>
-                            {{type == 'Story Island'&& stage!='Completion Units' ? 'Stage ' + stage : (stage.length < 2 ? 'Any' : stage)}}
+                            {{type == 'Story Island'&& stage!='Completion Units' ? ('STAGE' | translate) + ' ' + stage : (stage.length < 2 ? ('ANY' | translate) : stage)}}
                         </td>
                         <td hide-when-empty colspan="2">
                             <a ng-repeat="uid in data | smartSort:'false'" ng-if="uid > 0 && !hiddenUnits[uid]"
@@ -168,7 +168,7 @@
                                 uib-tooltip="{{getTooltipText(uid)}}"
                                 tooltip-placement="bottom" tooltip-trigger="mouseenter"
                                 tooltip-enable="{{isTooltipEnabled(uid)}}" tooltip-append-to-body="true"></a>
-                            <h4 ng-if="type == 'Fortnight' || type == 'Rookie Mission' || island.showManual">Manuals:</h4>
+                            <h4 ng-if="type == 'Fortnight' || type == 'Rookie Mission' || island.showManual">{{ 'MANUALS' | translate }}</h4>
                             <a ng-repeat="uid in data | smartSort:'true'" ng-if="uid < 0"
                                 decorate-slot uid="-uid" class="slot small"
                                 href="../characters/#/view/{{-uid}}" target="_blank"
@@ -184,12 +184,12 @@
         <div id="main" ng-cloak>
 
             <h1 class="page-header">
-                Drop Table
-                <label><input type="checkbox" ng-model="onlyGlobal" ng-change="changeFilters()">Show only Global</label>
-                <label><input type="checkbox" ng-model="noFodder" ng-change="changeFilters()">Hide fodder</label>
-                <label><input type="checkbox" ng-model="noEvolverBooster" ng-change="changeFilters()">Hide Boosters and Evolvers</label>
-                <label><input type="checkbox" ng-model="sortByType" ng-change="changeSorting()">Sort by type</label>
-                <input class="pull-right" type="text" placeholder="Filter by name" auto-focus
+                {{ 'DROP_TABLE' | translate }}
+                <label><input type="checkbox" ng-model="onlyGlobal" ng-change="changeFilters()">{{ 'ONLY_GLOBAL' | translate }}</label>
+                <label><input type="checkbox" ng-model="noFodder" ng-change="changeFilters()">{{ 'HIDE_FODDER' | translate }}</label>
+                <label><input type="checkbox" ng-model="noEvolverBooster" ng-change="changeFilters()">{{ 'HIDE_BOOST_EVO_DROPS' | translate }}</label>
+                <label><input type="checkbox" ng-model="sortByType" ng-change="changeSorting()">{{ 'SORT_BY_TYPE' | translate }}</label>
+                <input class="pull-right" type="text" placeholder="{{ 'FILTER_BY_NAME' | translate }}" auto-focus
                     ng-model="queryFilter" ng-model-options="{ debounce: 500 }" ng-change="changeQueryFilter()" id="search">
             </h1>
 
@@ -199,11 +199,11 @@
                 <h2>
                     <i class="fa fa-chevron-right"></i>
                     <i class="fa fa-chevron-down"></i>
-                    <span>{{type}}s</span>
+                    <span>{{ 'DROP_' + type.toUpperCase().replace(' ', '_') | translate }}s</span>
                 </h2> 
             </div>
 
-            <h1 class="page-header">Bonus Table</h1>
+            <h1 class="page-header">{{ 'BONUS_TABLE' | translate }}</h1>
             
             <div>
                 <p id="times"></p>
@@ -213,14 +213,14 @@
             <table class="table table-dark" id="bonus-table" add-bonuses>
                 <thead>
                     <tr>
-                        <th>Name</th>
-                        <th>MON</th>
-                        <th>TUE</th>
-                        <th>WED</th>
-                        <th>THU</th>
-                        <th>FRI</th>
-                        <th>SAT</th>
-                        <th>SUN</th>
+                        <th>{{ 'NAME' | translate }}</th>
+                        <th>{{ 'MON' | translate }}</th>
+                        <th>{{ 'TUE' | translate }}</th>
+                        <th>{{ 'WED' | translate }}</th>
+                        <th>{{ 'THU' | translate }}</th>
+                        <th>{{ 'FRI' | translate }}</th>
+                        <th>{{ 'SAT' | translate }}</th>
+                        <th>{{ 'SUN' | translate }}</th>
                     </tr>
                 </thead>
                 <tbody>

@@ -45,7 +45,7 @@
         </li>
 
         <li>
-            <div id="defenseContainer" title="Middle-click or CTRL-click for details" defense-on-click>
+            <div id="defenseContainer" title="{{ 'DEFENSE_TOOLTIP' | translate }}" defense-on-click>
                 <i class="fas fa-level-up-alt comodity" ui-sref="main.defense"></i>
                 <i class="fas fa-shield-alt"></i>
                 {{ 'ENEMY_DEFENSE' | translate }} <input type="number" id="defense" min = 0 to-int ng-model="data.defense"></input>

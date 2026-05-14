@@ -174,7 +174,12 @@ app.directive('addBonuses',function($timeout) {
     return {
         restrict: 'A',
         link: function(scope, element, attrs) {
-            var bonusNames = { 'stamina': '0.5x stamina', 'drop': '2x drop', 'beli': '2x beli', 'exp': '2x EXP', };
+            var bonusNames = { 
+                'stamina': window.LanguageService.translate('STAMINA_05'), 
+                'drop': window.LanguageService.translate('DROP_2X'), 
+                'beli': window.LanguageService.translate('BELI_2X'), 
+                'exp': window.LanguageService.translate('EXP_2X'), 
+            };
             $timeout(function() {
 
                 var rows = element[0].rows;
@@ -219,7 +224,8 @@ app.directive('dayLabel',function() {
         restrict: 'E',
         template: '<span class="day-label" ng-if="island.day >= 0" ng-class="{ active: isActive }">{{day}}</span>',
         link: function(scope, element, attrs) {
-            scope.day = [ 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'][scope.island.day];
+            var dayKeys = [ 'MONDAY', 'TUESDAY', 'WEDNESDAY', 'THURSDAY', 'FRIDAY', 'SATURDAY', 'SUNDAY'];
+            scope.day = window.LanguageService.translate(dayKeys[scope.island.day]);
             scope.isActive = CharUtils.getDayOfWeek(false) == scope.island.day || CharUtils.getDayOfWeek(true, true) == scope.island.day;
         }
     };
@@ -251,12 +257,15 @@ mytime=setTimeout('updateTimes()',refresh)
 
 function updateTimes(){
     //Japan can also be Etc/GMT-9
-    document.getElementById("times").innerHTML = "Global: <b>"+moment().tz('Etc/GMT+8').format('H:mm:ss')+"</b> | Japan: <b>"+moment().tz('Asia/Tokyo').format('H:mm:ss')+"</b>";
+    var globalLabel = window.LanguageService.translate('GLOBAL_COLON');
+    var japanLabel = window.LanguageService.translate('JAPAN_COLON');
+    document.getElementById("times").innerHTML = globalLabel + " <b>"+moment().tz('Etc/GMT+8').format('H:mm:ss')+"</b> | " + japanLabel + " <b>"+moment().tz('Asia/Tokyo').format('H:mm:ss')+"</b>";
 
+    var bonusTimeNote = window.LanguageService.translate('JAPAN_BONUS_TIME_NOTE');
     if(moment().tz('Asia/Tokyo').format('H')>12 && moment().tz('Asia/Tokyo').format('H')<23){
-        document.getElementById("timesNote").innerHTML = "The Bonuses in the Japanese Version only last from 12:00 till 23:00<br><b>Japan Bonuses are currently active<b>";
+        document.getElementById("timesNote").innerHTML = bonusTimeNote + "<br><b>" + window.LanguageService.translate('JAPAN_BONUS_ACTIVE') + "<b>";
     }else{
-         document.getElementById("timesNote").innerHTML = "The Bonuses in the Japanese Version only last from 12:00 till 23:00<br><b>Japan Bonuses are currently not active<b>";
+         document.getElementById("timesNote").innerHTML = bonusTimeNote + "<br><b>" + window.LanguageService.translate('JAPAN_BONUS_INACTIVE') + "<b>";
     }
     tt=refreshTimer();
 }
