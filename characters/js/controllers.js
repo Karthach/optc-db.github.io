@@ -49,6 +49,14 @@
         document.body.classList.toggle('light-mode', $scope.theme === 'light');
       };
 
+      $scope.getLang = LanguageService.getLang;
+      $scope.setLang = LanguageService.setLang;
+
+      $scope.showOperators = false;
+      $scope.toggleOperators = function (state) {
+        $scope.showOperators = state;
+      };
+
       $scope.getRandChar = function () {
         var range = parseInt($rootScope.table.data.length) + 1;
         return $rootScope.table.data[Math.floor(Math.random() * range)][0];
