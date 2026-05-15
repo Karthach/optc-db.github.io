@@ -450,16 +450,24 @@ directives.goBack = function ($state) {
 		};
 	};
 
-	directives.scrollToSection = function ($state, $stateParams) {
+	directives.scrollToSection = function ($state, $stateParams, $timeout) {
 		return {
 			restrict: "A",
 			link: function (scope, element, attrs) {
 				element.click(function (e) {
-					var target = document.getElementById(attrs.scrollToSection);
+					var targetId = attrs.scrollToSection;
+					var target = document.getElementById(targetId);
+					if (!target) return;
+
 					if (target.classList.contains('modal-body')) {
 						target.scrollTo({ top: 0, behavior: "smooth" });
 					} else {
 						target.scrollIntoView({ behavior: "smooth" });
+						// Add highlight effect
+						$(target).addClass('highlight-section');
+						$timeout(function() {
+							$(target).removeClass('highlight-section');
+						}, 1500);
 					}
 				});
 			},
