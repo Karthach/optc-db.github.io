@@ -1,34 +1,38 @@
-# optc-db.github.io
+# Base de Datos de One Piece Treasure Cruise (OPTC)
 
-La continuación de la muy querida y apreciada OPTC Database.
+Este es un **proyecto personal** creado por interés propio. Cabe destacar que **no es la continuación de ningún proyecto anterior**; es un trabajo independiente que desarrollo simplemente porque quiero y me apasiona.
 
-Esta es una base de datos para todo lo relacionado con One Piece Treasure Cruise, incluyendo Estadísticas, Drops, Sockets y una Calculadora de Daño.
+Esta herramienta sirve como base de datos integral para todo lo relacionado con One Piece Treasure Cruise, incluyendo:
+* Estadísticas detalladas de personajes.
+* Lugares de obtención (Drops).
+* Guía de Sockets y Habilidades.
+* Calculadora de Daño avanzada.
+* Planificador de Kizuna y eventos.
 
-Este proyecto está escrito en HTML y JS, usando AngularJS, Bootstrap y jQuery.
+## Tecnologías Utilizadas
+El proyecto está construido de forma ligera y eficiente utilizando:
+* HTML5 y CSS3
+* JavaScript (AngularJS)
+* Bootstrap y jQuery
 
-Está alojado en GitHub Pages, aunque también puedes descargarlo y ejecutar una copia local.
+Está optimizado para funcionar directamente en GitHub Pages, aunque puede ejecutarse localmente.
 
-# Equipo y Contribuidores
+## Equipo y Contribuidores
+Agradecimiento especial a quienes han ayudado a mantener viva la información:
+* **Karthach** - Desarrollador y administrador actual, responsable de la localización al español y la optimización del diseño.
+* **Mondfischer** - Responsable inicial de la arquitectura y datos.
+* **Zeenigami** - Colaborador histórico en datos y características.
+* **2Shankz** - Principal fuente de datos actualizada (Upstream).
+* **xfts** - Verificación de datos técnicos.
+* A toda la comunidad en Discord, Reddit y GitHub que reporta errores.
 
-* Karthach - Administrador actual, traductor y encargado de la optimización del diseño.
-* Mondfischer - Tomó el proyecto inicialmente y fue responsable de añadir características y datos.
-* Zeenigami - Ayudó con datos y características (usualmente añadía las unidades más nuevas).
-* xfts - Verificación de datos y traducciones.
-* 2Shankz - Principal contribuidor actual upstream, creador de las actualizaciones de datos constantes.
-* Todos los demás en Discord/Reddit/Github etc. que reportan errores y ayudan a la comunidad.
+## Instalación y Uso
+No requiere de instalaciones complejas. Puedes clonar el repositorio y ejecutarlo en cualquier servidor local (como XAMPP o Live Preview de VS Code).
 
-# Instalación
+> **Nota Importante:** Las imágenes de las unidades se cargan dinámicamente desde los servidores oficiales del juego, por lo que es necesaria una conexión a internet activa para visualizarlas correctamente.
 
-Simplemente descárgalo y ejecútalo en algún entorno de Live Preview o mediante XAMPP. O mejor aún, accede a través de la web oficial.
+## Contacto
+Si encuentras algún error o tienes sugerencias, puedes abrir un **Issue** en este repositorio.
 
-Ten en cuenta que las imágenes no están alojadas aquí, sino enlazadas desde el sitio oficial del juego, por lo que se requiere conexión a internet.
-
-# Contacto
-
-Puedes contactar abriendo un Issue en el repositorio de GitHub. 
-
-# Licencia
- 
- GNU General Public License
- 
- También se encuentra en el proyecto bajo el nombre de archivo LICENSE.md.
+## Licencia
+Este proyecto se distribuye bajo la **GNU General Public License**. Puedes consultar los detalles en el archivo [LICENSE.md](LICENSE.md).
