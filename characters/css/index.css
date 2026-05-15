@@ -1463,7 +1463,7 @@ tr.preview td:nth-child(2) > a:after {
     height: 100%;
     width: 100%;
     display: table;
-    z-index: 100;
+    z-index: 5000;
 }
 
 .popup:not(.visible) {
@@ -1477,7 +1477,7 @@ tr.preview td:nth-child(2) > a:after {
     width: 100%;
     height: 100%;
     background-color: rgba(0,0,0,0.65);
-    z-index: 100;
+    z-index: 5000;
 }
 
 .backdrop.closing {
@@ -1489,7 +1489,7 @@ tr.preview td:nth-child(2) > a:after {
     display: block;
     width: 100%;
     height: 100%;
-    z-index: 101;
+    z-index: 5001;
     padding: 10px;
 }
 
@@ -2512,3 +2512,300 @@ a { color: #8acccf; }
     box-shadow: 0 10px 30px rgba(0,0,0,0.8);
     border-radius: 4px;
 }
+
+/* View Mode Selector Styling */
+.view-mode-selector {
+    margin: 10px 15px 5px;
+    padding-top: 10px;
+    border-top: 1px solid #4f5b66;
+}
+
+.view-mode-label {
+    display: block;
+    font-size: 12px;
+    color: #a7adba;
+    margin-bottom: 8px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.view-mode-buttons {
+    display: flex;
+    gap: 8px;
+}
+
+.view-mode-buttons button {
+    flex: 1;
+    padding: 8px !important;
+    font-size: 13px !important;
+    background: #4f5b66 !important;
+    color: #f6f3e8 !important;
+    border-radius: 4px;
+    border: 1px solid transparent !important;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.view-mode-buttons button.active {
+    background: #ffd700 !important;
+    color: #000 !important;
+    border-color: white !important;
+}
+
+.light-mode .view-mode-selector { border-top-color: #eeeeee; }
+.light-mode .view-mode-buttons button { background: #e0e0e0 !important; color: #333 !important; }
+
+/* Grid View Mode Implementation (Precision Character Cards) */
+.view-mode-grid thead,
+.view-mode-grid .dataTables_scrollHead,
+.view-mode-grid .dataTables_length,
+.view-mode-grid .dataTables_info,
+.view-mode-grid .dataTables_filter {
+    display: none !important;
+}
+
+#tableContainer.view-mode-grid {
+    background-color: #2b303b !important;
+    padding-top: 15px !important;
+}
+
+.view-mode-grid #mainTable,
+.view-mode-grid .dataTables_wrapper,
+.view-mode-grid .dataTables_scrollBody {
+    display: block !important;
+    width: 100% !important;
+    border: none !important;
+    background: transparent !important;
+}
+
+.view-mode-grid #mainTable tbody {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fill, 190px) !important;
+    gap: 20px !important;
+    padding: 25px !important;
+    justify-content: center !important;
+    background: transparent !important;
+    border: none !important;
+}
+
+.view-mode-grid #mainTable tr {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    grid-template-rows: 40px 125px auto auto 45px !important;
+    grid-template-areas: 
+        "header header"
+        "thumb thumb"
+        "hp atk"
+        "rcv cost"
+        "footer footer" !important;
+    background: #343d46 !important;
+    border: 1px solid #4f5b66 !important;
+    border-radius: 12px !important;
+    padding: 10px !important;
+    position: relative !important;
+    overflow: visible !important;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4) !important;
+    height: auto !important;
+    width: 190px !important;
+    margin: 0 !important;
+}
+
+.view-mode-grid #mainTable tr:hover {
+    transform: translateY(-5px) !important;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.7) !important;
+    border-color: #ffd700 !important;
+    z-index: 100 !important;
+}
+
+.view-mode-grid #mainTable td {
+    display: none !important;
+    border: none !important;
+    background: none !important;
+    padding: 2px !important;
+    color: #f6f3e8 !important;
+    overflow: visible !important;
+}
+
+/* Header Area: ID (Left) and Name (Right) */
+.view-mode-grid #mainTable td.id-col {
+    grid-area: header;
+    display: flex !important;
+    justify-content: flex-start !important;
+    align-items: center !important;
+    font-size: 13px !important;
+    font-weight: bold !important;
+    color: #ffd700 !important;
+    border-bottom: 1px solid rgba(255,255,255,0.1) !important;
+    margin-bottom: 5px !important;
+    padding: 0 0 5px 0 !important;
+}
+
+.view-mode-grid #mainTable td.id-col::before {
+    content: "#";
+}
+
+.view-mode-grid #mainTable td.name-col a {
+    position: absolute !important;
+    top: 10px !important;
+    right: 10px !important;
+    display: block !important;
+    font-size: 11px !important;
+    font-weight: bold !important;
+    color: #fff !important;
+    text-align: right !important;
+    width: 130px !important;
+    height: 32px !important;
+    line-height: 1.1 !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    pointer-events: none !important;
+    z-index: 15 !important;
+    text-shadow: 1px 1px 2px #000 !important;
+}
+
+/* Image Container */
+.view-mode-grid #mainTable td.name-col {
+    grid-area: thumb;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 100% !important;
+    padding: 5px 0 !important;
+}
+
+.view-mode-grid #mainTable td.name-col .slot {
+    width: 112px !important;
+    height: 112px !important;
+    margin: 0 !important;
+    background-size: contain !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    border-radius: 10px !important;
+    border: 1px solid rgba(255,255,255,0.1) !important;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3) !important;
+    cursor: pointer !important;
+    display: block !important;
+}
+
+/* Stats Section */
+.view-mode-grid #mainTable td.hp-col,
+.view-mode-grid #mainTable td.atk-col,
+.view-mode-grid #mainTable td.rcv-col,
+.view-mode-grid #mainTable td.cost-col {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    font-size: 11.5px !important;
+    background: rgba(0,0,0,0.2) !important;
+    border-radius: 4px !important;
+    margin: 2px !important;
+    padding: 5px 2px !important;
+    color: #fff !important;
+}
+
+.view-mode-grid #mainTable td.hp-col { grid-area: hp; }
+.view-mode-grid #mainTable td.atk-col { grid-area: atk; }
+.view-mode-grid #mainTable td.rcv-col { grid-area: rcv; }
+.view-mode-grid #mainTable td.cost-col { grid-area: cost; }
+
+.view-mode-grid #mainTable td.hp-col::before { content: "VIT"; font-size: 8px; color: #a7adba; }
+.view-mode-grid #mainTable td.atk-col::before { content: "ATA"; font-size: 8px; color: #a7adba; }
+.view-mode-grid #mainTable td.rcv-col::before { content: "RCV"; font-size: 8px; color: #a7adba; }
+.view-mode-grid #mainTable td.cost-col::before { content: "COST"; font-size: 8px; color: #a7adba; }
+
+/* Footer Area: Stars (Left), Type Badge (Center-Right), Log (Right) */
+.view-mode-grid #mainTable td.stars-col {
+    grid-area: footer;
+    display: flex !important;
+    width: 65px !important;
+    height: 20px !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: left center !important;
+    align-self: center !important;
+    justify-self: start !important;
+    margin-top: 5px !important;
+    border-top: none !important;
+}
+
+.view-mode-grid #mainTable td.type-col {
+    grid-area: footer;
+    display: flex !important;
+    position: absolute !important;
+    bottom: 12px !important;
+    left: 105px !important;
+    width: auto !important;
+    height: auto !important;
+    z-index: 10 !important;
+    padding: 0 !important;
+}
+
+.view-mode-grid #mainTable td.type-col .type-badge {
+    display: block !important;
+    padding: 2px 6px !important;
+    border-radius: 3px !important;
+    font-size: 9px !important;
+    font-weight: 800 !important;
+    color: #fff !important;
+    text-transform: uppercase !important;
+    border: 1px solid rgba(255,255,255,0.3) !important;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.3) !important;
+    line-height: 1 !important;
+    text-align: center !important;
+}
+
+/* Vibrant Type Colors */
+.view-mode-grid .type-badge.STR { background-color: #bf616a !important; }
+.view-mode-grid .type-badge.DEX { background-color: #a3be8c !important; }
+.view-mode-grid .type-badge.QCK { background-color: #81a1c1 !important; }
+.view-mode-grid .type-badge.PSY { background-color: #ebcb8b !important; color: #000 !important; }
+.view-mode-grid .type-badge.INT { background-color: #b48ead !important; }
+
+.view-mode-grid #mainTable td.log-col {
+    grid-area: footer;
+    display: flex !important;
+    width: 100% !important;
+    align-items: center !important;
+    justify-content: flex-end !important;
+    margin-top: 5px !important;
+    opacity: 0.5 !important;
+}
+
+.view-mode-grid #mainTable tr:hover td.log-col {
+    opacity: 1 !important;
+}
+
+/* Separation line for footer */
+.view-mode-grid #mainTable tr::before {
+    content: "";
+    grid-area: footer;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    width: 100%;
+    margin-top: -5px;
+}
+
+/* Hide clutter */
+.view-mode-grid #mainTable td.evo-col,
+.view-mode-grid #mainTable td.class-col,
+.view-mode-grid #mainTable td.sockets-col {
+    display: none !important;
+}
+
+/* Light Mode Adaptations */
+.light-mode #tableContainer.view-mode-grid {
+    background-color: #f5f5f5 !important;
+}
+
+.light-mode.view-mode-grid #mainTable tr { background: #ffffff !important; border-color: #dddddd !important; color: #333 !important; }
+.light-mode.view-mode-grid #mainTable td.id-col { border-bottom-color: #eee !important; color: #00247d !important; }
+.light-mode.view-mode-grid #mainTable td.name-col a { color: #333 !important; text-shadow: none !important; }
+.light-mode.view-mode-grid #mainTable td.hp-col, .light-mode.view-mode-grid #mainTable td.atk-col, .light-mode.view-mode-grid #mainTable td.rcv-col, .light-mode.view-mode-grid #mainTable td.cost-col {
+    background: #f1f3f5 !important; color: #333 !important;
+}
+.light-mode.view-mode-grid #mainTable tr::before { border-top-color: #eee !important; }
+
+
+
+
+

@@ -40,11 +40,23 @@
                 <button class="lang-es" ng-class="{active: getLang() == 'es'}" ng-click="setLang('es')">ES</button>
                 <button class="lang-en" ng-class="{active: getLang() == 'en'}" ng-click="setLang('en')">EN</button>
             </div>
+
+            <div class="view-mode-selector">
+                <span class="view-mode-label">{{ 'DESIGN' | translate }}:</span>
+                <div class="view-mode-buttons">
+                    <button ng-class="{active: viewMode === 'rows'}" ng-click="setViewMode('rows')">
+                        <i class="fas fa-list"></i> {{ 'ROWS' | translate }}
+                    </button>
+                    <button ng-class="{active: viewMode === 'grid'}" ng-click="setViewMode('grid')">
+                        <i class="fas fa-th"></i> {{ 'GRID' | translate }}
+                    </button>
+                </div>
+            </div>
         </div>
     </div>
 </div>
 
-<div id="tableContainer">
+<div id="tableContainer" ng-class="'view-mode-' + viewMode">
     <character-table></character-table>
 </div>
 

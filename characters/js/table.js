@@ -30,7 +30,7 @@
         var paths = Utils.getThumbnailUrl(id, "..");
         var noimage = "../api/images/common/noimage.png";
         return (
-          '<img class="slot small" data-original="' +
+          '<img class="slot small char-link" data-id="' + id + '" data-original="' +
           paths.glo +
           '" ' +
           "onerror=\"this.onerror=null; this.src='" +
@@ -105,20 +105,28 @@
      * Table functions *
      *******************/
 
+    var renderType = function (data, type, row, meta) {
+      if (type !== 'display') return data;
+      var types = data.split(/[,/]/);
+      return types.map(function(t) {
+        return '<span class="type-badge ' + t.trim() + '">' + t.trim() + '</span>';
+      }).join('');
+    };
+
     var getTableColumns = function () {
       var result = [
-        { title: "ID" },
-        { title: LanguageService.translate("NAME"), render: addImage },
+        { title: "ID", className: "id-col" },
+        { title: LanguageService.translate("NAME"), render: addImage, className: "name-col" },
         { title: LanguageService.translate("EVOLUTIONS"), orderable: false, render: renderEvolutions, className: "evo-col" },
-        { title: LanguageService.translate("TYPE") },
-        { title: LanguageService.translate("CLASS") },
-        { title: LanguageService.translate("HP") },
-        { title: LanguageService.translate("ATK") },
-        { title: LanguageService.translate("RCV") },
-        { title: LanguageService.translate("COST") },
-        { title: LanguageService.translate("SOCKETS") },
-        { title: LanguageService.translate("STARS") },
-        { title: LanguageService.translate("CL"), orderable: false, render: renderLog },
+        { title: LanguageService.translate("TYPE"), render: renderType, className: "type-col" },
+        { title: LanguageService.translate("CLASS"), className: "class-col" },
+        { title: LanguageService.translate("HP"), className: "hp-col" },
+        { title: LanguageService.translate("ATK"), className: "atk-col" },
+        { title: LanguageService.translate("RCV"), className: "rcv-col" },
+        { title: LanguageService.translate("COST"), className: "cost-col" },
+        { title: LanguageService.translate("SOCKETS"), className: "sockets-col" },
+        { title: LanguageService.translate("STARS"), className: "stars-col" },
+        { title: LanguageService.translate("CL"), orderable: false, render: renderLog, className: "log-col" },
       ];
       additionalColumns.forEach(function (x) {
         var title = x
