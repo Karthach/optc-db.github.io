@@ -1,7 +1,7 @@
 <div class="backdrop" ui-sref="^"></div>
 
 <div class="inner-container" go-back>
-    <div class="modal-wrapper">
+    <div class="modal-wrapper" ng-class="'details-mode-' + detailsViewMode">
         <div class="custom-modal">
         <div class="modal-dialog">
           <div class="modal-content">
@@ -1781,45 +1781,44 @@
 
 </div> <!-- End Modal Body -->
 
+<div class="quick-nav">
+    <button class="btn nav-top" title="{{ 'BACK_TO_TOP' | translate }}" scroll-to-section="modal-body-top">
+        <i class="fa fa-arrow-up"></i>
+    </button>
+    <div class="nav-divider"></div>
+    <button class="btn nav-info" title="{{ 'DETAILS' | translate }}" scroll-to-section="card-details">{{ 'DET' | translate }}</button>
+    <button class="btn nav-stats" title="{{ 'STATS' | translate }}" scroll-to-section="card-stats" ng-hide="hidden.stats">{{ 'STATS_BTN' | translate }}</button>
+    <div class="nav-divider"></div>
+    <button class="btn nav-skills" title="{{ 'CAPTAIN' | translate }}" scroll-to-section="card-captain" ng-hide="hidden.abilities" ng-if="details.captain">{{ 'CAPT' | translate }}</button>
+    <button class="btn nav-skills" title="{{ 'SPECIAL' | translate }}" scroll-to-section="card-special" ng-hide="hidden.abilities" ng-if="details.special">{{ 'SPC' | translate }}</button>
+    <button class="btn nav-skills" title="{{ 'SUPER_SPECIAL' | translate }}" scroll-to-section="card-superSpecial" ng-hide="hidden.abilities" ng-if="details.superSpecial">{{ 'SSP' | translate }}</button>
+    <button class="btn nav-skills" title="{{ 'VS_SPECIAL' | translate }}" scroll-to-section="card-vsSpecial" ng-hide="hidden.abilities" ng-if="details.VSSpecial">{{ 'VS' | translate }}</button>
+    <button class="btn nav-skills" title="{{ 'SAILOR' | translate }}" scroll-to-section="card-sailor" ng-hide="hidden.abilities" ng-if="details.sailor">{{ 'SAIL' | translate }}</button>
+    <button class="btn nav-skills" title="{{ 'SWAP' | translate }}" scroll-to-section="card-swap" ng-hide="hidden.abilities" ng-if="details.swap">{{ 'SWAP_BTN' | translate }}</button>
+    <button class="btn nav-meta" title="{{ 'SUPPORT' | translate }}" scroll-to-section="card-support" ng-hide="hidden.abilities" ng-if="details.support">{{ 'SUP' | translate }}</button>
+    <div class="nav-divider"></div>
+    <button class="btn nav-meta" title="{{ 'LIMIT_BREAK' | translate }}" scroll-to-section="card-limitBreak" ng-hide="hidden.abilities" ng-if="details.limit || details.potential || unit.maxLevel == 99">{{ 'LB' | translate }}</button>
+    <button class="btn nav-meta" title="{{ 'POTENTIAL' | translate }}" scroll-to-section="card-potential" ng-hide="hidden.abilities" ng-if="details.potential">{{ 'POT' | translate }}</button>
+    <button class="btn nav-meta" title="{{ 'LAST_TAP' | translate }}" scroll-to-section="card-lastTap" ng-hide="hidden.abilities" ng-if="details.lastTap">{{ 'LTAP' | translate }}</button>
+    <button class="btn nav-meta" title="{{ 'SUPER_TANDEM' | translate }}" scroll-to-section="card-superTandem" ng-hide="hidden.abilities" ng-if="details.superTandem">{{ 'STND' | translate }}</button>
+    <button class="btn nav-meta" title="{{ 'SUPER_TANDEM_BOOST' | translate }}" scroll-to-section="card-superTandemBoost" ng-hide="hidden.abilities" ng-if="details.superTandemBoost">{{ 'STNDB' | translate }}</button>
+    <button class="btn nav-meta" title="{{ 'RUSH' | translate }}" scroll-to-section="card-rush" ng-hide="hidden.abilities" ng-if="details.rush">{{ 'RUSH' | translate }}</button>
+    <button class="btn nav-meta" title="{{ 'LLB_TITLE' | translate }}" scroll-to-section="card-levelLimitBreak" ng-hide="hidden.abilities">{{ 'LLB' | translate }}</button>
+    <div class="nav-divider"></div>
+    <button class="btn nav-pvp" title="{{ 'PIRATE_RUMBLE' | translate }}" scroll-to-section="card-rumble" ng-hide="hidden.abilities" ng-if="rumble || (!rumble && (details.festAttackPattern || details.festAttackTarget || details.festResistance || details.festAbility || details.festSpecial || details.festSuperSpecial))">{{ 'PVP' | translate }}</button>
+    <button class="btn nav-pvp" title="{{ 'GRAND_PARTY' | translate }}" scroll-to-section="card-grandParty" ng-hide="hidden.abilities" ng-if="rumble.festGPAbility || rumble.festGPSpecial || (!rumble.gpability && !rumble.gpcondition && !rumble.gpspecial && (details.festAbilityGP || details.festAbilityGPCondition))">{{ 'GP' | translate }}</button>
+    <div class="nav-divider"></div>
+    <button class="btn nav-evo" title="{{ 'EVOLUTIONS' | translate }}" scroll-to-section="card-evolution" ng-if="evolution.evolution || evolvesFrom.length > 0" ng-hide="hidden.evolution">{{ 'EVO' | translate }}</button>
+    <button class="btn nav-evo" title="{{ 'USED_BY' | translate }}" scroll-to-section="card-usedBy" ng-if="sizeOf(usedBy) > 0" ng-hide="hidden.required">{{ 'UBY' | translate }}</button>
+    <div class="nav-divider"></div>
+    <button class="btn nav-info" title="{{ 'DROPS' | translate }}" scroll-to-section="card-drops" ng-if="drops.length > 0">{{ 'DRP' | translate }}</button>
+    <button class="btn nav-info" title="{{ 'MANUALS' | translate }}" scroll-to-section="card-manuals" ng-if="manuals.length > 0">{{ 'MAN' | translate }}</button>
+    <button class="btn nav-info" title="{{ 'FAMILY' | translate }}" scroll-to-section="card-family" ng-if="displayFamily">{{ 'FAM' | translate }}</button>
+    <button class="btn nav-info" title="{{ 'TAGS' | translate }}" scroll-to-section="card-tags">{{ 'TAG' | translate }}</button>
 </div>
-        </div>
-        </div>
 
-        <div class="quick-nav">
-            <button class="btn nav-top" title="{{ 'BACK_TO_TOP' | translate }}" scroll-to-section="modal-body-top">
-                <i class="fa fa-arrow-up"></i>
-            </button>
-            <div class="nav-divider"></div>
-            <button class="btn nav-info" title="{{ 'DETAILS' | translate }}" scroll-to-section="card-details">{{ 'DET' | translate }}</button>
-            <button class="btn nav-stats" title="{{ 'STATS' | translate }}" scroll-to-section="card-stats" ng-hide="hidden.stats">{{ 'STATS_BTN' | translate }}</button>
-            <div class="nav-divider"></div>
-            <button class="btn nav-skills" title="{{ 'CAPTAIN' | translate }}" scroll-to-section="card-captain" ng-hide="hidden.abilities" ng-if="details.captain">{{ 'CAPT' | translate }}</button>
-            <button class="btn nav-skills" title="{{ 'SPECIAL' | translate }}" scroll-to-section="card-special" ng-hide="hidden.abilities" ng-if="details.special">{{ 'SPC' | translate }}</button>
-            <button class="btn nav-skills" title="{{ 'SUPER_SPECIAL' | translate }}" scroll-to-section="card-superSpecial" ng-hide="hidden.abilities" ng-if="details.superSpecial">{{ 'SSP' | translate }}</button>
-            <button class="btn nav-skills" title="{{ 'VS_SPECIAL' | translate }}" scroll-to-section="card-vsSpecial" ng-hide="hidden.abilities" ng-if="details.VSSpecial">{{ 'VS' | translate }}</button>
-            <button class="btn nav-skills" title="{{ 'SAILOR' | translate }}" scroll-to-section="card-sailor" ng-hide="hidden.abilities" ng-if="details.sailor">{{ 'SAIL' | translate }}</button>
-            <button class="btn nav-skills" title="{{ 'SWAP' | translate }}" scroll-to-section="card-swap" ng-hide="hidden.abilities" ng-if="details.swap">{{ 'SWAP_BTN' | translate }}</button>
-            <button class="btn nav-meta" title="{{ 'SUPPORT' | translate }}" scroll-to-section="card-support" ng-hide="hidden.abilities" ng-if="details.support">{{ 'SUP' | translate }}</button>
-            <div class="nav-divider"></div>
-            <button class="btn nav-meta" title="{{ 'LIMIT_BREAK' | translate }}" scroll-to-section="card-limitBreak" ng-hide="hidden.abilities" ng-if="details.limit || details.potential || unit.maxLevel == 99">{{ 'LB' | translate }}</button>
-            <button class="btn nav-meta" title="{{ 'POTENTIAL' | translate }}" scroll-to-section="card-potential" ng-hide="hidden.abilities" ng-if="details.potential">{{ 'POT' | translate }}</button>
-            <button class="btn nav-meta" title="{{ 'LAST_TAP' | translate }}" scroll-to-section="card-lastTap" ng-hide="hidden.abilities" ng-if="details.lastTap">{{ 'LTAP' | translate }}</button>
-            <button class="btn nav-meta" title="{{ 'SUPER_TANDEM' | translate }}" scroll-to-section="card-superTandem" ng-hide="hidden.abilities" ng-if="details.superTandem">{{ 'STND' | translate }}</button>
-            <button class="btn nav-meta" title="{{ 'SUPER_TANDEM_BOOST' | translate }}" scroll-to-section="card-superTandemBoost" ng-hide="hidden.abilities" ng-if="details.superTandemBoost">{{ 'STNDB' | translate }}</button>
-            <button class="btn nav-meta" title="{{ 'RUSH' | translate }}" scroll-to-section="card-rush" ng-hide="hidden.abilities" ng-if="details.rush">{{ 'RUSH' | translate }}</button>
-            <button class="btn nav-meta" title="{{ 'LLB_TITLE' | translate }}" scroll-to-section="card-levelLimitBreak" ng-hide="hidden.abilities">{{ 'LLB' | translate }}</button>
-            <div class="nav-divider"></div>
-            <button class="btn nav-pvp" title="{{ 'PIRATE_RUMBLE' | translate }}" scroll-to-section="card-rumble" ng-hide="hidden.abilities" ng-if="rumble || (!rumble && (details.festAttackPattern || details.festAttackTarget || details.festResistance || details.festAbility || details.festSpecial || details.festSuperSpecial))">{{ 'PVP' | translate }}</button>
-            <button class="btn nav-pvp" title="{{ 'GRAND_PARTY' | translate }}" scroll-to-section="card-grandParty" ng-hide="hidden.abilities" ng-if="rumble.festGPAbility || rumble.festGPSpecial || (!rumble.gpability && !rumble.gpcondition && !rumble.gpspecial && (details.festAbilityGP || details.festAbilityGPCondition))">{{ 'GP' | translate }}</button>
-            <div class="nav-divider"></div>
-            <button class="btn nav-evo" title="{{ 'EVOLUTIONS' | translate }}" scroll-to-section="card-evolution" ng-if="evolution.evolution || evolvesFrom.length > 0" ng-hide="hidden.evolution">{{ 'EVO' | translate }}</button>
-            <button class="btn nav-evo" title="{{ 'USED_BY' | translate }}" scroll-to-section="card-usedBy" ng-if="sizeOf(usedBy) > 0" ng-hide="hidden.required">{{ 'UBY' | translate }}</button>
-            <div class="nav-divider"></div>
-            <button class="btn nav-info" title="{{ 'DROPS' | translate }}" scroll-to-section="card-drops" ng-if="drops.length > 0">{{ 'DRP' | translate }}</button>
-            <button class="btn nav-info" title="{{ 'MANUALS' | translate }}" scroll-to-section="card-manuals" ng-if="manuals.length > 0">{{ 'MAN' | translate }}</button>
-            <button class="btn nav-info" title="{{ 'FAMILY' | translate }}" scroll-to-section="card-family" ng-if="displayFamily">{{ 'FAM' | translate }}</button>
-            <button class="btn nav-info" title="{{ 'TAGS' | translate }}" scroll-to-section="card-tags">{{ 'TAG' | translate }}</button>
-        </div>
+</div>
+</div>
 
-    </div>
-    </div>
+</div>
+</div>

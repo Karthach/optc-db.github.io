@@ -63,6 +63,12 @@
         $storage.set('charViewMode', mode);
       };
 
+      $rootScope.detailsViewMode = $storage.get('detailsViewMode', 'two-columns');
+      $scope.setDetailsViewMode = function(mode) {
+        $rootScope.detailsViewMode = mode;
+        $storage.set('detailsViewMode', mode);
+      };
+
       $scope.currentSort = { col: 0, dir: 'asc' };
       $scope.sortBy = function(col) {
         if ($scope.currentSort.col === col) {

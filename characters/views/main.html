@@ -52,6 +52,18 @@
                     </button>
                 </div>
             </div>
+
+            <div class="view-mode-selector">
+                <span class="view-mode-label">{{ 'DETAILS_VIEW' | translate }}:</span>
+                <div class="view-mode-buttons">
+                    <button ng-class="{active: detailsViewMode === 'two-columns'}" ng-click="setDetailsViewMode('two-columns')">
+                        <i class="fas fa-columns"></i> {{ 'TWO_COLUMNS' | translate }}
+                    </button>
+                    <button ng-class="{active: detailsViewMode === 'vertical'}" ng-click="setDetailsViewMode('vertical')">
+                        <i class="fas fa-arrows-alt-v"></i> {{ 'VERTICAL' | translate }}
+                    </button>
+                </div>
+            </div>
         </div>
     </div>
 </div>

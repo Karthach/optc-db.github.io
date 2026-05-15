@@ -1479,15 +1479,58 @@ tr.preview td:nth-child(2) > a:after {
 }
 
 @media (min-width: 992px) {
-    .modal-wrapper {
+    .modal-wrapper.details-mode-two-columns {
         width: 1200px !important;
         margin: auto !important;
         overflow: visible !important;
     }
 
-    .custom-modal {
+    .modal-wrapper.details-mode-two-columns .custom-modal {
         width: 1150px !important;
     }
+
+    .modal-wrapper.details-mode-two-columns #modal-body-top .details-upper-row {
+        display: flex !important;
+        flex-direction: row !important;
+        gap: 20px !important;
+        padding: 20px !important;
+        align-items: flex-start !important;
+        text-align: left !important;
+    }
+
+    .modal-wrapper.details-mode-two-columns #modal-body-top .details-left-pane {
+        width: 380px !important;
+        flex-shrink: 0 !important;
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 15px !important;
+    }
+
+    .modal-wrapper.details-mode-two-columns #modal-body-top .details-right-pane {
+        flex-grow: 1 !important;
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 15px !important;
+        min-width: 0 !important;
+    }
+
+    .modal-wrapper.details-mode-two-columns #modal-body-top .details-footer-sections {
+        padding: 0 20px 20px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 15px !important;
+    }
+
+    .modal-wrapper.details-mode-two-columns #modal-body-top .details-right-pane .details-card {
+        margin: 0 !important;
+        width: 100% !important;
+    }
+}
+
+/* Vertical Mode Specifics */
+.details-mode-vertical .details-footer-sections,
+.details-mode-vertical .details-upper-row {
+    padding: 15px !important;
 }
 
 .modal-wrapper {
@@ -2021,49 +2064,6 @@ a { color: #8acccf; }
     padding: 0 !important;
 }
 
-/* Two-Column Details Layout (Desktop) */
-@media (min-width: 992px) {
-    .details-upper-row {
-        display: flex !important;
-        flex-direction: row !important;
-        gap: 20px !important;
-        padding: 20px !important;
-        align-items: flex-start !important;
-        text-align: left !important;
-    }
-
-    .details-left-pane {
-        width: 380px !important;
-        flex-shrink: 0 !important;
-        display: flex !important;
-        flex-direction: column !important;
-        gap: 15px !important;
-    }
-
-    .details-right-pane {
-        flex-grow: 1 !important;
-        display: flex !important;
-        flex-direction: column !important;
-        gap: 15px !important;
-        min-width: 0 !important;
-    }
-
-    .details-footer-sections {
-        padding: 0 20px 20px !important;
-        display: flex !important;
-        flex-direction: column !important;
-        gap: 15px !important;
-    }
-
-    /* Style resets for the new layout */
-    .details-left-pane .details-card,
-    .details-right-pane .details-card {
-        margin: 0 !important;
-        width: 100% !important;
-    }
-    
-    .details-right-pane .details-card-header {
-        text-align: left !important;
     }
 }
 
@@ -2942,12 +2942,16 @@ a { color: #8acccf; }
     }
 }
 
+
 /* FINAL & PROMINENT QUICK-NAV SIDEBAR */
+.modal-wrapper {
+    overflow: visible !important;
+}
+
 .quick-nav {
-    position: fixed !important;
-    left: 50% !important;
-    margin-left: 585px !important; /* Positioned just outside the 1150px modal */
-    top: 50% !important;
+    position: absolute !important;
+    right: -70px !important;
+    top: 55% !important;
     transform: translateY(-50%) !important;
     width: 60px !important;
     background: rgba(35, 39, 46, 0.98) !important;
@@ -2959,7 +2963,7 @@ a { color: #8acccf; }
     justify-content: center !important;
     gap: 8px !important;
     box-shadow: 0 0 30px rgba(255, 215, 0, 0.3) !important;
-    z-index: 99999 !important;
+    z-index: 5005 !important;
     backdrop-filter: blur(10px) !important;
 }
 
@@ -2998,15 +3002,7 @@ a { color: #8acccf; }
     color: #000 !important;
 }
 
-/* Ensure visibility and handle small screens */
-@media (max-width: 1300px) {
-    .quick-nav {
-        margin-left: 0 !important;
-        left: auto !important;
-        right: 10px !important;
-    }
-}
-
+/* Ensure visibility on desktop, hide on mobile */
 @media (max-width: 991px) {
     .quick-nav {
         display: none !important;
