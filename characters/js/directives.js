@@ -172,10 +172,29 @@
 					scope.table.refresh();
 				});
 				fuzzyToggle.insertBefore($(".dataTables_length"));
-			},
-		};
-	};
 
+				var gridFilterBar = $(
+				        '<div id="grid-filter-bar" ng-if="viewMode === \'grid\'">' +
+				        '    <div class="sort-group">' +
+				        '        <span class="sort-label">{{ \'SORT_BY\' | translate }}:</span>' +
+				        '        <div class="sort-buttons">' +
+				        '            <button ng-class="{active: currentSort.col == 0}" ng-click="sortBy(0)">ID <i class="fas" ng-class="{\'fa-sort-up\': currentSort.dir==\'asc\', \'fa-sort-down\': currentSort.dir==\'desc\'}" ng-if="currentSort.col==0"></i></button>' +
+				        '            <button ng-class="{active: currentSort.col == 5}" ng-click="sortBy(5)">{{ \'HP\' | translate }} <i class="fas" ng-class="{\'fa-sort-up\': currentSort.dir==\'asc\', \'fa-sort-down\': currentSort.dir==\'desc\'}" ng-if="currentSort.col==5"></i></button>' +
+				        '            <button ng-class="{active: currentSort.col == 6}" ng-click="sortBy(6)">{{ \'ATK\' | translate }} <i class="fas" ng-class="{\'fa-sort-up\': currentSort.dir==\'asc\', \'fa-sort-down\': currentSort.dir==\'desc\'}" ng-if="currentSort.col==6"></i></button>' +
+				        '            <button ng-class="{active: currentSort.col == 7}" ng-click="sortBy(7)">{{ \'RCV\' | translate }} <i class="fas" ng-class="{\'fa-sort-up\': currentSort.dir==\'asc\', \'fa-sort-down\': currentSort.dir==\'desc\'}" ng-if="currentSort.col==7"></i></button>' +
+				        '            <button ng-class="{active: currentSort.col == 8}" ng-click="sortBy(8)">{{ \'COST\' | translate }} <i class="fas" ng-class="{\'fa-sort-up\': currentSort.dir==\'asc\', \'fa-sort-down\': currentSort.dir==\'desc\'}" ng-if="currentSort.col==8"></i></button>' +
+				        '            <button ng-class="{active: currentSort.col == 10}" ng-click="sortBy(10)">{{ \'STARS\' | translate }} <i class="fas" ng-class="{\'fa-sort-up\': currentSort.dir==\'asc\', \'fa-sort-down\': currentSort.dir==\'desc\'}" ng-if="currentSort.col==10"></i></button>' +
+				        '        </div>' +
+				        '        <button class="btn-clear-grid" ng-click="clearFilters()" title="{{ \'CLEAR_ALL\' | translate }}">' +
+				        '        </button>' +
+				        '    </div>' +
+				        '</div>'
+				);
+				$compile(gridFilterBar)(scope);
+				gridFilterBar.insertAfter($(".dataTables_wrapper > :first-child"));
+				},
+				};
+				};
 		directives.decorateSlot = function () {
 		return {
 			restrict: "A",

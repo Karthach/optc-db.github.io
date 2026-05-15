@@ -63,6 +63,92 @@
         $storage.set('charViewMode', mode);
       };
 
+      $scope.currentSort = { col: 0, dir: 'asc' };
+      $scope.sortBy = function(col) {
+        if ($scope.currentSort.col === col) {
+          $scope.currentSort.dir = $scope.currentSort.dir === 'asc' ? 'desc' : 'asc';
+        } else {
+          $scope.currentSort.col = col;
+          $scope.currentSort.dir = 'desc'; // Default to desc for stats
+        }
+        if (window.charTable) {
+          window.charTable.fnSort([[ $scope.currentSort.col, $scope.currentSort.dir ]]);
+        }
+      };
+
+      $scope.filters = $rootScope.filters;
+      $scope.availableClasses = window.availableClasses;
+      $scope.onTypeClick = function (e, value) {
+        if ($rootScope.filters.types.indexOf(value) == -1) {
+          $rootScope.filters.types.push(value);
+        } else
+          $rootScope.filters.types.splice(
+            $rootScope.filters.types.indexOf(value),
+            1
+          );
+      };
+
+      $scope.onClassClick = function (e, clazz) {
+        if ($rootScope.filters.classes.indexOf(clazz) == -1) {
+          $rootScope.filters.classes.push(clazz);
+        } else
+          $rootScope.filters.classes.splice(
+            $rootScope.filters.classes.indexOf(clazz),
+            1
+          );
+      };
+
+      $scope.clearFilters = function () {
+        $rootScope.filters = {
+          custom: {},
+          classes: [],
+          tags: [],
+          types: [],
+          stars: [],
+          cost: [1, 99],
+          rumbleCost: [1, 99],
+          toggle: true,
+          typeEnabled: false,
+          characterEnabled: false,
+          classEnabled: false,
+          tagEnabled: false,
+          rumbleStyleEnabled: false,
+          dropEnabled: false,
+          temporaryEnabled: false,
+          specCaptEnabled: false,
+          tmkcEnabled: false,
+          exclusionEnabled: false,
+          costEnabled: false,
+          rarityEnabled: false,
+          farmEnabled: false,
+          nonfarmEnabled: false,
+          farmable: {},
+          nonFarmable: {},
+        };
+
+        // Initialize custom matchers
+        for (const target in window.matchers) {
+          $rootScope.filters.custom[target] = {};
+          for (const group in window.matchers[target]) {
+            $rootScope.filters.custom[target][group] = {
+              expanded: false,
+              matchers: {},
+            };
+            for (const name in window.matchers[target][group]) {
+              $rootScope.filters.custom[target][group].matchers[name] = {
+                enabled: false,
+              };
+              if (window.matchers[target][group][name].submatchers) {
+                $rootScope.filters.custom[target][group].matchers[name].submatchers = [];
+                for (const j in window.matchers[target][group][name].submatchers) {
+                  $rootScope.filters.custom[target][group].matchers[name].submatchers[j] = {};
+                }
+              }
+            }
+          }
+        }
+      };
+
       $scope.getRandChar = function () {
         var range = parseInt($rootScope.table.data.length) + 1;
         return $rootScope.table.data[Math.floor(Math.random() * range)][0];
