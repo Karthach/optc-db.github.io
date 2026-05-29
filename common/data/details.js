@@ -186508,7 +186508,7 @@ window.details = {
                     "If you hit a PERFECT with this character, there is a 40% chance to deal 4% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 50% chance to deal 5% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 70% chance to deal 7% of this character's attack in extra damage",
-                    "If you hit a PERFECT with this character, there is a 80% chance to deal 8% of this character's attack in extra damage",
+                    "If you hit a PERFECT with this character, there is an 80% chance to deal 8% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 100% chance to deal 10% of this character's attack in extra damage"
                 ]
             },
@@ -186715,7 +186715,7 @@ window.details = {
                     "If you hit a PERFECT with this character, there is a 40% chance to deal 4% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 50% chance to deal 5% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 70% chance to deal 7% of this character's attack in extra damage",
-                    "If you hit a PERFECT with this character, there is a 80% chance to deal 8% of this character's attack in extra damage",
+                    "If you hit a PERFECT with this character, there is an 80% chance to deal 8% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 100% chance to deal 10% of this character's attack in extra damage"
                 ]
             },
@@ -186950,7 +186950,7 @@ window.details = {
         ]
     },
     4587: {//Chopper
-        special: "Reduces [INT] characters' Special charge time by 2 turns, reduces crew's Despair duration by 7 turns, removes all Poison effects on the crew, and boosts damage dealt to delayed enemies by 2.5x for 2 turns. If field has \"Territory: [INT]\" or \"Territory: Striker class\", delays all enemies for 1 turn ignoring immunity to Delay, immunity to all status effects, or immunity (excluding certain status effect), locks crew's slots for 1 turn, heals crew by 30,000 HP (up to 2x max HP ignoring max HP limit; if HP is above max limit, it is treated as being full HP), and adds 50x character's ATK in non-type damage on top of tap-timing bonuses for 5 turn (delays all enemies for 1 turn and heals crew by 10,000 HP otherwise)",
+        special: "Reduces [INT] characters' Special charge time by 2 turns, reduces crew's Despair duration by 7 turns, removes all Poison effects on the crew, and boosts damage dealt to delayed enemies by 2.5x for 2 turns. If field has \"Territory: [INT]\" or \"Territory: Striker class\", delays all enemies for 1 turn ignoring immunity to Delay, immunity to all status effects, or immunity (excluding certain status effect), locks crew's slots for 1 turn, heals crew by 30,000 HP (up to 2x max HP ignoring max HP limit; if HP is above max limit, it is treated as being full HP), and adds 50x character's ATK in non-type damage on top of tap-timing bonuses for 5 turns (delays all enemies for 1 turn and heals crew by 10,000 HP otherwise)",
         specialName: "Spilling Tears of Relief",
         sailor: {
             base: "Reduces character's Special Reverse by 3 turns",
@@ -187135,7 +187135,7 @@ window.details = {
                     "If you hit a PERFECT with this character, there is a 40% chance to deal 5% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 50% chance to deal 6% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 60% chance to deal 7% of this character's attack in extra damage",
-                    "If you hit a PERFECT with this character, there is a 80% chance to deal 8% of this character's attack in extra damage"
+                    "If you hit a PERFECT with this character, there is an 80% chance to deal 8% of this character's attack in extra damage"
                 ]
             },
             {
