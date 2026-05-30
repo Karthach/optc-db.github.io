@@ -185423,7 +185423,7 @@ window.details = {
             ]
         }
     },
-    4572: {//Co-Op 5* Gol D. Roger
+    4572: {//5* Co-Op Gol D. Roger
         captain: "Boosts HP of all characters by 1.25x, and makes badly matching orbs beneficial for all characters. If there is a [STR], [DEX], [QCK], [PSY] and [INT] character in your crew, boosts ATK of all characters by 5.25x, and reduces Bind duration by 6 turns.",
         special: "Removes all positive buffs on your team, reduces Despair duration by 6 turns, and boosts Base ATK of all characters by 1,000 for 3 turns. If your crew has 5+ [Four Emperors], [Land of Wano Arc] or [Roger Pirates] characters, applies Territory: Crew to the field for 1 turn.",
         specialName: "Location of the Great Treasure",
@@ -185503,7 +185503,7 @@ window.details = {
             }
         ]
     },
-    4573: {//Co-Op 5+ Gol D. Roger
+    4573: {//5+ Co-Op Gol D. Roger
         captain: "Boosts HP of all characters by 1.25x, and makes badly matching orbs beneficial for all characters. If you have 6 [PSY] characters or there is a [STR], [DEX], [QCK], [PSY] and [INT] character in your crew, boosts ATK of all characters by 5.25x, and reduces Bind duration by 6 turns.",
         special: "Reduces Special Cooldown of all characters by 1 turn, removes all positive buffs on your team, reduces Despair duration by 6 turns, and boosts Base ATK of all characters by 1,250 for 5 turns. If your crew has 4+ [Four Emperors], [Land of Wano Arc] or [Roger Pirates] characters, applies Territory: Crew to the field for 1 turn.",
         specialName: "Location of the Great Treasure",
@@ -185583,13 +185583,13 @@ window.details = {
             }
         ]
     },
-    4574: {//Blitz 5* St. Ethanbaron V. Nusjuro
+    4574: {//5* Blitz St. Ethanbaron V. Nusjuro
         captain: "Boosts HP of all characters by 1.25x, makes badly matching orbs beneficial for all characters, and reduces Despair duration by 6 turns. If your crew has 4+ characters of the same Type, boosts ATK of the Dominant Type characters by 4.5x.",
-        special: "Reduces enemies' Percent Damage Reduction duration by 1 turn, reduces Chain Coefficient Reduction duration by 6 turns, inflicts all enemies with Increase Damage Taken by 2.25x for 1 turn, and after 1 turn, inflicts all enemies with Increase Damage Taken by 2.25x for 1 turn. If your crew has 3+ [World Government] or [Five Elders] characters, up to 1 time per adventure, reduces Special Cooldown of Captain character by 5 turns.",
+        special: "Reduces enemies' Damage Nullification duration by 1 turn, reduces Chain Coefficient Reduction duration by 6 turns, inflicts all enemies with Increase Damage Taken by 2.25x for 1 turn, and after 1 turn, inflicts all enemies with Increase Damage Taken by 2.25x for 1 turn. If your crew has 3+ [World Government] or [Five Elders] characters, up to 1 time per adventure, reduces Special Cooldown of Captain character by 5 turns.",
         specialName: "Swift Gallop",
         sailor: {
             base: "Boosts base ATK, HP and RCV of all characters by 100.",
-            level1: "If your crew has 3+ [World Government] or [Five Elders] characters, once per adventure, when the enemy gains a Percent Damage Reduction buff, reduces enemies' Percent Damage Reduction duration by 1 turn."
+            level1: "If your crew has 3+ [World Government] or [Five Elders] characters, once per adventure, when the enemy gains a Damage Nullification buff, reduces enemies' Damage Nullification duration by 1 turn."
         },
         support: [
             {
@@ -185679,13 +185679,13 @@ window.details = {
             ]
         }
     },
-    4575: {//Blitz 5+ St. Ethanbaron V. Nusjuro
+    4575: {//5+ Blitz St. Ethanbaron V. Nusjuro
         captain: "Boosts HP of all characters by 1.25x, makes badly matching orbs beneficial for all characters, and reduces Despair duration by 6 turns. If your crew has 4+ characters of the same Type, boosts ATK of the Dominant Type characters by 5.25x.",
-        special: "Reduces enemies' Percent Damage Reduction duration by 2 turns, reduces Chain Coefficient Reduction duration by 6 turns, inflicts all enemies with Increase Damage Taken by 2.25x for 1 turn, and after 1 turn, inflicts all enemies with Increase Damage Taken by 2.25x for 1 turn. If your crew has 3+ [World Government] or [Five Elders] characters, adds 1.2x to chain multiplier for 3 turns, and up to 1 time per adventure, reduces Special Cooldown of Captain character by 7 turns.",
+        special: "Reduces enemies' Damage Nullification duration by 2 turns, reduces Chain Coefficient Reduction duration by 6 turns, inflicts all enemies with Increase Damage Taken by 2.25x for 1 turn, and after 1 turn, inflicts all enemies with Increase Damage Taken by 2.25x for 1 turn. If your crew has 3+ [World Government] or [Five Elders] characters, adds 1.2x to chain multiplier for 3 turns, and up to 1 time per adventure, reduces Special Cooldown of Captain character by 7 turns.",
         specialName: "Swift Gallop",
         sailor: {
             base: "Boosts base ATK, HP and RCV of all characters by 100.",
-            level1: "If your crew has 3+ [World Government] or [Five Elders] characters, once per adventure, when the enemy gains a Percent Damage Reduction buff, reduces enemies' Percent Damage Reduction duration by 1 turn."
+            level1: "If your crew has 3+ [World Government] or [Five Elders] characters, once per adventure, when the enemy gains a Damage Nullification buff, reduces enemies' Damage Nullification duration by 1 turn."
         },
         support: [
             {
@@ -186270,8 +186270,15 @@ window.details = {
             null,
             null,
             null,
-            null,
             {
+                captain: {
+                    base: "Reduces crew's Special charge time by 2 turns and VS Effect gauge and Switch Effect by 2 at start of quest, boosts [INT] and Striker characters' ATK by 5.25x, HP by 1.2x, boosts other characters' ATK by 4x, and makes crew's [INT][RCV][TND] slots have matching slot effects [Applies following effect based on number of applicable Character Tags on crew] Reduces [Elbaph Arc] [Straw Hat Pirates] [Giant] characters' Special charge time by 2 turns at start of quest. If 4 or more [Elbaph Arc] [Straw Hat Pirates] [Giant] characters are on the crew, boosts [Elbaph Arc] [Straw Hat Pirates] [Giant] characters' ATK by 1.3x. If 2 or more [Elbaph Arc] characters are on the crew and \"Roronoa Zoro\", \"Sanji\", \"Usopp\", \"Nami\", \"Tony Tony Chopper\", \"Nico Robin\", \"Franky\", \"Brook\", \"Jinbe\", \"Jewelry Bonney\", \"Dorry\", \"Broggy\", \"Oimo\", \"Kashii\", or \"Hajrudin\" is a crewmate and uses a Special, reduces crew's Special charge time by 2 turns (up to 4 times per quest)"
+                }
+            },
+            {
+                special: {
+                    base: "Reduces all enemies' damage nullification duration by 2 turns, reduces crew's Paralysis duration by 7 turns, boosts [INT] and Striker characters' chain multiplier growth rate of normal attacks up to +0.7 (GOOD +0.1; GREAT +0.3; PERFECT +0.7) for 3 turns, and boosts [INT] and Striker characters' ATK when landing a successful strike by 2.25x after landing 3 PERFECT strikes in a row in this turn. If 5 or more [Elbaph Arc] [Straw Hat Pirates] [Giant] characters are on the crew, reduces damage taken by 90% for 1 turn, boosts the type effects of normal attacks for [INT] and Striker characters by 3x for 5 turns, and applies -25% Striker Resistance to all enemies for 1 turn"
+                },
                 rSuperSpecial: true
             }
         ],
@@ -186697,6 +186704,15 @@ window.details = {
             "Boosts base HP by 200",
             "Boosts base ATK by 100",
             "Reduce base Special Cooldown by 1 turn"
+        ],
+        lLimit: [
+            null,
+            null,
+            null,
+            null,
+            {
+                rSuperSpecial: true
+            }
         ],
         potential: [
             {
