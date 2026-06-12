@@ -187334,7 +187334,7 @@ window.details = {
                     "If you hit a PERFECT with this character, there is a 40% chance to deal 5% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 50% chance to deal 6% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 60% chance to deal 7% of this character's attack in extra damage",
-                    "If you hit a PERFECT with this character, there is a 80% chance to deal 8% of this character's attack in extra damage"
+                    "If you hit a PERFECT with this character, there is an 80% chance to deal 8% of this character's attack in extra damage"
                 ]
             },
             {
