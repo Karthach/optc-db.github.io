@@ -187873,7 +187873,7 @@ window.details = {
         special: "Reduces the defense of all enemies by 95% for 1 turn, reduces Chain Coefficient Reduction and Paralysis duration by 6 turns, and boosts Tap Timing ATK of [QCK] characters by 1.5x, following a chain of 4 PERFECT attacks, for 1 turn. If HP is below 30% or your crew has 5+ turns of End of Turn Healing when the special is activated, applies Territory: [QCK] to the field for 1 turn.",
         specialName: "Unageing Fist of Passion",
         sailor: {
-            base: "Boosts base ATK and HP of Free Spirit and Fighter characters by 150.",
+            base: "Boosts base HP of Free Spirit and Fighter characters by 150.",
             level1: "Makes [QCK] orbs beneficial for all characters."
         },
         support: [
@@ -187884,7 +187884,7 @@ window.details = {
                     "Adds 8% of this character's base HP to the supported character's base HP.",
                     "Adds 10% of this character's base HP to the supported character's base HP.",
                     "Adds 12% of this character's base HP to the supported character's base HP.",
-                    "Adds 15% of this character's base HP to the supported character's base HP.<b>[AUTO+]</b> When you reach the 4th stage, activates supported character's Switch Effect. When you reach the final stage, activates supported character's Special."
+                    "Adds 15% of this character's base HP to the supported character's base HP. <b>[AUTO+]</b> When you reach the 4th stage, activates supported character's Switch Effect. When you reach the final stage, activates supported character's Special."
                 ]
             }
         ],
@@ -187949,21 +187949,21 @@ window.details = {
         ]
     },
     4602: {//5+ PKA Garp
-        special: "Reduces all enemies' DEF by 95% for 1 turn (ignoring immunity to DEF Down, immunity to all status effects, or immunity excluding certain status effect), reduces crew's decrease chain multiplier growth rate and Paralysis duration by 6 turns, and boosts [QCK] characters' ATK when landing a successful strike by 1.75x for 1 turn after landing 4 PERFECT strikes in a row in this turn. If crew's End of Turn Healing status has 5 or more turns or crew's HP is 30% or below when Special is launched, applies \"Territory: [QCK]\" to the field (boosts crew's ATK up to 1.5x and reduces damage taken up to 25% based on number of characters matching the territory) for 1 turn",
+        special: "Ignores Debuff Protection and reduces the defense of all enemies by 95% for 1 turn, reduces Chain Coefficient Reduction and Paralysis duration by 6 turns, and boosts Tap Timing ATK of [QCK] characters by 1.75x, following a chain of 4 PERFECT attacks, for 1 turn. If HP is below 30% or your crew has 5+ turns of End of Turn Healing when the special is activated, applies Territory: [QCK] to the field for 1 turn.",
         specialName: "Unageing Fist of Passion",
         sailor: {
-            base: "Boosts Free Spirit and Fighter characters' base HP by 150",
-            level1: "Makes crew's [QCK] slots have matching slot effects"
+            base: "Boosts base HP of Free Spirit and Fighter characters by 150.",
+            level1: "Makes [QCK] orbs beneficial for all characters."
         },
         support: [
             {
                 Characters: "[QCK] Free Spirit characters",
                 description: [
-                    "Adds 6% of character's base HP to supported character's base HP",
-                    "Adds 8% of character's base HP to supported character's base HP",
-                    "Adds 10% of character's base HP to supported character's base HP",
-                    "Adds 12% of character's base HP to supported character's base HP",
-                    "Adds 15% of character's base HP to supported character's base HP [AUTO+] At battle 4, activates supported character's Switch Effect. At final battle, activates supported character's Special"
+                    "Adds 6% of this character's base HP to the supported character's base HP.",
+                    "Adds 8% of this character's base HP to the supported character's base HP.",
+                    "Adds 10% of this character's base HP to the supported character's base HP.",
+                    "Adds 12% of this character's base HP to the supported character's base HP.",
+                    "Adds 15% of this character's base HP to the supported character's base HP. <b>[AUTO+]</b> When you reach the 4th stage, activates supported character's Switch Effect. When you reach the final stage, activates supported character's Special."
                 ]
             }
         ],
@@ -188124,24 +188124,24 @@ window.details = {
         ]
     },
     4608: {//Lafitte
-        captain: "Reduces crew's Special charge time by 1 turn at start of quest, boosts [QCK], Striker, and Free Spirit characters' HP by 1.3x, ATK by 5.75x when slots match (5x otherwise), makes their [QCK][DEX][TND] slots have matching slot effects, and if crew uses a Special to boost type effects, extends the duration of that effect by 2 turns and further increases the boost by 1.1x (up to a maximum 8x, cannot be further increased) [Applies following effect based on number of applicable Character Tags on crew] If 3 or more [Blackbeard Pirates] [Four Emperors] characters are on the crew, boosts [Blackbeard Pirates] characters' ATK by 1.1x, and reduces crew's Special Bind duration by 10 turns",
-        special: "Reduces crew's lock chain multiplier duration by 7 turns, sets the chain multiplier's minimum value at 2.75 and maximum value at 40.0 for 3 turns, and swaps character out for the Captain for 1 turn (if not already Captain). If character is a Captain/Friend Captain/Helper Captain and field has \"Territory: [QCK]\" and \"Territory: Free Spirit class\" when Special is launched, can choose to swap selected character to Captain for 1 turn (may not be able to swap under certain special circumstances). If a [QCK] is set as Support for character, reduces crew's Slot Bind duration by 7 turns. If an [INT] is set as Support for character, boosts the chain multiplier by +1.4 for 1 turn. If \"Marshall D. Teach (Blackbeard)\" launches a Special in this turn, reduces crew's type effect boost effect by 1.0 but changes the type effect boost to a stackable boost<hidden> (the reduction of the effect cannot go below 1.0; after being changed the effect will not be treated as a type effect boost and can no longer change the effect and turn duration; certain special status will not carry over; stackable with other type effect boost effect)</hidden>",
+        captain: "Reduces Special Cooldown of all characters by 1 turn at the start of the fight, boosts ATK of [QCK], Striker and Free Spirit characters by 5x, by 5.75x instead if they have a beneficial orb, boosts HP of [QCK], Striker and Free Spirit characters by 1.3x, makes [DEX], [QCK] and [TND] orbs beneficial for [QCK], Striker and Free Spirit characters, increases duration of any Color Affinity buffs applied by specials by 2 turns, and increases boost effects of Color Affinity buffs applied by specials by 1.1x (up to 8x). If your crew has 3+ [Blackbeard Pirates] or [Four Emperors] characters, boosts ATK of [Blackbeard Pirates] characters by 1.1x, and reduces Special Bind duration by 10 turns.",
+        special: "Reduces Chain Multiplier Limit duration by 7 turns, and sets Chain Boundaries to 2.75x and 40.0x for 3 turns. If this character is your Captain or Friend Captain and field has Territory: [QCK] and Free Spirit when the special is activated, optionally swaps 1 selected character with your captain for 1 turn; swaps this unit with your captain for 1 turn otherwise. If an [QCK] character is supporting this character, reduces Slot Bind duration by 7 turns. If an [INT] character is supporting this character, adds 1.4x to chain multiplier for 1 turn. If your crew has Marshall D. Teach (Blackbeard) who has used a special this turn, decreases boost effects of Color Affinity buffs by -1.0x, and converts Color Affinity into a Stackable Color Affinity.",
         specialName: "Unprecedented Scene Unfolding in the Mind",
         sailor: {
-            base: "Makes Striker and Free Spirit characters' [QCK][DEX] slots have matching slot effects",
-            level1: "Boosts Striker and Free Spirit characters' base stats by 100"
+            base: "Makes [DEX] and [QCK] orbs beneficial for Striker and Free Spirit characters.",
+            level1: "Boosts base ATK, HP and RCV of Striker and Free Spirit characters by 100."
         },
-        superSpecialCriteria: "When any 2 [Blackbeard Pirates] [Four Emperors] characters are on the crew not including self (except as Support Characters or Double Characters in inactive state; Double Characters counts as 1; can be launched when character is a crewmate)",
-        superSpecial: "Can choose to completely remove crew's Swap Captains effect, allows crew's type effect boost to be further increased up to 2 times, and changes Striker characters to Super Striker",
+        superSpecialCriteria: "Can be launched as crewmate. Your crew must consist of any 3 of the following, excluding supports and counting only 1 per unit: [Blackbeard Pirates], [Four Emperors] characters",
+        superSpecial: "Optionally removes Captain Swap duration completely, enables Color Affinity buffs to be enhanced up to 2 times, and transforms Striker characters into Super Striker characters.",
         support: [
             {
-                Characters: "Characters with the following Character Tag: [Blackbeard Pirates]",
+                Characters: "[Blackbeard Pirates] characters",
                 description: [
-                    "Boosts the chain multiplier by +0.3 for 1 turn at start of final battle",
-                    "Boosts the chain multiplier by +0.4 for 1 turn at start of final battle",
-                    "Boosts the chain multiplier by +0.5 for 1 turn at start of final battle",
-                    "Boosts the chain multiplier by +0.6 for 1 turn at start of final battle",
-                    "Boosts the chain multiplier by +0.7 for 2 turns at start of final battle"
+                    "Once per adventure, when you reach the final stage, adds 0.3x to chain multiplier for 1 turn.",
+                    "Once per adventure, when you reach the final stage, adds 0.4x to chain multiplier for 1 turn.",
+                    "Once per adventure, when you reach the final stage, adds 0.5x to chain multiplier for 1 turn.",
+                    "Once per adventure, when you reach the final stage, adds 0.6x to chain multiplier for 1 turn.",
+                    "Once per adventure, when you reach the final stage, adds 0.7x to chain multiplier for 2 turns."
                 ]
             }
         ],
@@ -188221,38 +188221,38 @@ window.details = {
         ],
         superTandemBoost: {
             characterCondition: [
-                "When a [Blackbeard Pirates] [Four Emperors] [Giant] character performs Super Tandem",
-                "When a [Blackbeard Pirates] [Four Emperors] [Giant] character performs Super Tandem",
-                "When a [Blackbeard Pirates] [Four Emperors] [Giant] character performs Super Tandem",
-                "When a [Blackbeard Pirates] [Four Emperors] [Giant] character performs Super Tandem",
-                "When a [Blackbeard Pirates] [Four Emperors] [Giant] character performs Super Tandem"
+                "When a [Blackbeard Pirates], [Four Emperors] or [Giant] character performs Super Tandem",
+                "When a [Blackbeard Pirates], [Four Emperors] or [Giant] character performs Super Tandem",
+                "When a [Blackbeard Pirates], [Four Emperors] or [Giant] character performs Super Tandem",
+                "When a [Blackbeard Pirates], [Four Emperors] or [Giant] character performs Super Tandem",
+                "When a [Blackbeard Pirates], [Four Emperors] or [Giant] character performs Super Tandem"
             ],
             description: [
-                "Raises Boost Level of [Blackbeard Pirates] [Four Emperors] [Giant] characters by 1 for 1 turn",
-                "Raises Boost Level of [Blackbeard Pirates] [Four Emperors] [Giant] characters by 2 for 1 turn",
-                "Raises Boost Level of [Blackbeard Pirates] [Four Emperors] [Giant] characters by 3 for 1 turn",
-                "Raises Boost Level of [Blackbeard Pirates] [Four Emperors] [Giant] characters by 4 for 1 turn",
-                "Raises Boost Level of [Blackbeard Pirates] [Four Emperors] [Giant] characters by 5 for 1 turn"
+                "Raises Boost Level of [Blackbeard Pirates], [Four Emperors] and [Giant] characters by 1 for 1 turn.",
+                "Raises Boost Level of [Blackbeard Pirates], [Four Emperors] and [Giant] characters by 2 for 1 turn.",
+                "Raises Boost Level of [Blackbeard Pirates], [Four Emperors] and [Giant] characters by 3 for 1 turn.",
+                "Raises Boost Level of [Blackbeard Pirates], [Four Emperors] and [Giant] characters by 4 for 1 turn.",
+                "Raises Boost Level of [Blackbeard Pirates], [Four Emperors] and [Giant] characters by 5 for 1 turn."
             ]
         }
     },
     4609: {//Doc Q
-        captain: "Boosts Striker and Free Spirit characters' ATK by 4.5x, HP by 1.3, makes crew's [QCK] slots have matching slot effects, reduces crew's Paralysis duration by 4 turns, and boosts Striker and Free Spirit characters' ATK by a further 1.3x if character became Captain during the quest",
-        special: "Reduces crew's Bind/Paralysis duration by 6 turns, removes all Poison, boosts the type effects of normal attacks for Free Spirit characters by 2.25x for 1 turn, if crew lands 2 PERFECT strikes in this turn, boosts Free Spirit characters' ATK by 2.75x the next turn, and if 4 or more [Blackbeard Pirates] characters are on the crew, applies \"Territory: [QCK]\" to the field (boosts crew's ATK up to 1.5x and reduces damage taken up to 25% based on number of characters matching the territory) for 1 turn",
+        captain: "Boosts ATK of Striker and Free Spirit characters by 4.5x, by 5.85x instead if this character becomes your captain in the middle of an island, boosts HP of Striker and Free Spirit characters by 1.3x, makes [QCK] orbs beneficial for all characters, and reduces Paralysis duration by 4 turns.",
+        special: "Reduces Bind and Paralysis duration by 6 turns, removes Poison duration completely, boosts the Color Affinity of Free Spirit characters by 2.25x for 1 turn, and if during this turn you score 2 PERFECT hits, boosts ATK of Free Spirit characters by 2.75x for 1 turn in the following turn. If your crew has 4+ [Blackbeard Pirates] characters, applies Territory: [QCK] to the field for 1 turn.",
         specialName: "Chasing Bombardment",
         sailor: {
-            base: "Boosts crew's base HP and RCV by 150",
-            level1: "Tapping on this character with a [QCK] slot will further boost the effect of crew's lock chain multiplier effect by +0.2"
+            base: "Boosts base HP and RCV of all characters by 150.",
+            level1: "When tapping on this character with a [QCK] orb, increases boost effects of Chain Lock buffs by +0.2x."
         },
         support: [
             {
-                Characters: "[QCK] characters with the following Character Tag: [Blackbeard Pirates]",
+                Characters: "[QCK] [Blackbeard Pirates] characters",
                 description: [
-                    "Once per quest, if inflicted with Paralysis status from the enemy, reduces crew's Paralysis duration by 1 turn at start of crew's next turn",
-                    "Once per quest, if inflicted with Paralysis status from the enemy, reduces crew's Paralysis duration by 1 turn at start of crew's next turn",
-                    "Once per quest, if inflicted with Paralysis status from the enemy, reduces crew's Paralysis duration by 1 turn at start of crew's next turn",
-                    "Once per quest, if inflicted with Paralysis status from the enemy, reduces crew's Paralysis duration by 1 turn at start of crew's next turn",
-                    "Once per quest, if inflicted with Paralysis status from the enemy, reduces crew's Paralysis duration by 2 turns at start of crew's next turn"
+                    "Once per adventure, when an enemy inflicts you with Paralysis, reduces Paralysis duration by 1 turn.",
+                    "Once per adventure, when an enemy inflicts you with Paralysis, reduces Paralysis duration by 1 turn.",
+                    "Once per adventure, when an enemy inflicts you with Paralysis, reduces Paralysis duration by 1 turn.",
+                    "Once per adventure, when an enemy inflicts you with Paralysis, reduces Paralysis duration by 1 turn.",
+                    "Once per adventure, when an enemy inflicts you with Paralysis, reduces Paralysis duration by 2 turns."
                 ]
             }
         ],
@@ -188297,22 +188297,22 @@ window.details = {
         ]
     },
     4610: {//Kuzan
-        captain: "Boosts Striker and Free Spirit characters' ATK by 4.5x, HP by 1.3, makes crew's [QCK] slots have matching slot effects, reduces crew's Burn (applied by enemy) duration by 4 turns, and boosts Striker and Free Spirit characters' ATK by a further 1.3x if character became Captain during the quest",
-        special: "Reduces crew's Burn duration by 6 turns, reduces all enemies' Threshold Damage Reduction duration by 6 turns, changes crew's slots (including [BLOCK] slots) to character's own type, applies -20% [QCK] Resistance to all enemies for 1 turn, then after 1 turn, applies -30% Striker and Free Spirit Resistance to all enemies for 1 turn, and if 4 or more [Blackbeard Pirates] characters are on the crew applies \"Territory: Free Spirit class\" to the field (boosts crew's ATK up to 1.5x and reduces damage taken up to 25% based on number of characters matching the territory) for 1 turn",
+        captain: "Boosts ATK of Striker and Free Spirit characters by 4.5x, by 5.85x instead if this character becomes your captain in the middle of an island, boosts HP of Striker and Free Spirit characters by 1.3x, makes [QCK] orbs beneficial for all characters, and reduces Burn duration by 4 turns.",
+        special: "Reduces Burn duration by 6 turns, reduces enemies' Threshold Damage Reduction duration by 6 turns, changes all orbs, including [BLOCK] orbs, into matching orbs, reduces enemies' [QCK] resistance by -20% for 1 turn, and after 1 turn, reduces enemies' Striker and Free Spirit resistance by -30% for 1 turn. If your crew has 4+ [Blackbeard Pirates] characters, applies Territory: Free Spirit to the field for 1 turn.",
         specialName: "Impeding Ice",
         sailor: {
-            base: "Boosts crew's base ATK and RCV by 150",
-            level1: "Tapping on this character with a [QCK] slot will further boost the effect of crew's chain multiplier additive boost effect (except multiplicative boost) by +0.2"
+            base: "Boosts base ATK and RCV of all characters by 150.",
+            level1: "When tapping on this character with a [QCK] orb, increases boost effects of Chain Addition buffs by +0.2x."
         },
         support: [
             {
-                Characters: "[QCK] characters with the following Character Tag: [Blackbeard Pirates]",
+                Characters: "[QCK] [Blackbeard Pirates] characters",
                 description: [
-                    "Once per quest, if inflicted with Burn status from the enemy, reduces crew's Burn duration by 1 turn at start of crew's next turn",
-                    "Once per quest, if inflicted with Burn status from the enemy, reduces crew's Burn duration by 1 turn at start of crew's next turn",
-                    "Once per quest, if inflicted with Burn status from the enemy, reduces crew's Burn duration by 1 turn at start of crew's next turn",
-                    "Once per quest, if inflicted with Burn status from the enemy, reduces crew's Burn duration by 1 turn at start of crew's next turn",
-                    "Once per quest, if inflicted with Burn status from the enemy, reduces crew's Burn duration by 2 turns at start of crew's next turn"
+                    "Once per adventure, when an enemy inflicts you with Burn, reduces Burn duration by 1 turn.",
+                    "Once per adventure, when an enemy inflicts you with Burn, reduces Burn duration by 1 turn.",
+                    "Once per adventure, when an enemy inflicts you with Burn, reduces Burn duration by 1 turn.",
+                    "Once per adventure, when an enemy inflicts you with Burn, reduces Burn duration by 1 turn.",
+                    "Once per adventure, when an enemy inflicts you with Burn, reduces Burn duration by 2 turns."
                 ]
             }
         ],
