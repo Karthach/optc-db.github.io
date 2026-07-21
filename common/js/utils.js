@@ -397,6 +397,7 @@
 				"^(" + families.join("|").replace(whitespaceRegex, "_") + ")$";
 			matchers.push("family:" + params.matchers.family);
 		};
+		//console.log(matchers);
 		if (types.length > 0) {
 			params.matchers.type = types.join("|").replace(whitespaceRegex, "_");
 			matchers.push("type:" + params.matchers.type);
