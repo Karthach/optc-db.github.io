@@ -486088,7 +486088,7 @@
             },
             {
               "attributes": ["RCV Bind"],
-              "effect": "evade",
+              "effect": "penalty",
               "chance": 100,
               "duration": 20,
               "targeting": {"targets": ["self"]}
