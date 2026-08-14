@@ -28,7 +28,7 @@ window.availableTags = [
     "category": 2
   },
   {
-    "name": "Ancient Zoan-type",
+    "name": "Ancient Zoan-type / Devil Fruit User",
     "category": 3
   },
   {
@@ -45,10 +45,6 @@ window.availableTags = [
   },
   {
     "name": "Baratie",
-    "category": 1
-  },
-  {
-    "name": "Baroque Works",
     "category": 1
   },
   {
@@ -184,6 +180,30 @@ window.availableTags = [
     "category": 1
   },
   {
+    "name": "Former / Baroque Works",
+    "category": 1
+  },
+  {
+    "name": "Former / Navy",
+    "category": 1
+  },
+  {
+    "name": "Former / Roger Pirates",
+    "category": 1
+  },
+  {
+    "name": "Former / Royalty",
+    "category": 2
+  },
+  {
+    "name": "Former / Seven Warlords of the Sea",
+    "category": 2
+  },
+  {
+    "name": "Former / Whitebeard Pirates",
+    "category": 1
+  },
+  {
     "name": "Four Emperors",
     "category": 2
   },
@@ -288,7 +308,7 @@ window.availableTags = [
     "category": 2
   },
   {
-    "name": "Logia-type",
+    "name": "Logia-type / Devil Fruit User",
     "category": 3
   },
   {
@@ -312,12 +332,8 @@ window.availableTags = [
     "category": 1
   },
   {
-    "name": "Mythical Zoan-type",
+    "name": "Mythical Zoan-type / Devil Fruit User",
     "category": 3
-  },
-  {
-    "name": "Navy",
-    "category": 1
   },
   {
     "name": "Navy Admiral",
@@ -352,7 +368,7 @@ window.availableTags = [
     "category": 1
   },
   {
-    "name": "Paramythia-type",
+    "name": "Paramythia-type / Devil Fruit User",
     "category": 3
   },
   {
@@ -376,16 +392,8 @@ window.availableTags = [
     "category": 1
   },
   {
-    "name": "Roger Pirates",
-    "category": 1
-  },
-  {
     "name": "Rolling Pirates",
     "category": 1
-  },
-  {
-    "name": "Royalty",
-    "category": 2
   },
   {
     "name": "Rumbar Pirates",
@@ -409,10 +417,6 @@ window.availableTags = [
   },
   {
     "name": "Seraphim",
-    "category": 2
-  },
-  {
-    "name": "Seven Warlords of the Sea",
     "category": 2
   },
   {
@@ -476,10 +480,6 @@ window.availableTags = [
     "category": 4
   },
   {
-    "name": "Whitebeard Pirates",
-    "category": 1
-  },
-  {
     "name": "Whole Cake Island Arc",
     "category": 4
   },
@@ -504,7 +504,7 @@ window.availableTags = [
     "category": 2
   },
   {
-    "name": "Zoan-type",
+    "name": "Zoan-type / Devil Fruit User",
     "category": 3
   },
   {
