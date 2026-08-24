@@ -190730,7 +190730,7 @@ window.details = {
                     "If you hit a PERFECT with this character, there is a 40% chance to deal 4% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 50% chance to deal 5% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 70% chance to deal 7% of this character's attack in extra damage",
-                    "If you hit a PERFECT with this character, there is a 80% chance to deal 8% of this character's attack in extra damage",
+                    "If you hit a PERFECT with this character, there is an 80% chance to deal 8% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 100% chance to deal 10% of this character's attack in extra damage"
                 ]
             },
@@ -190871,7 +190871,7 @@ window.details = {
     },
     4631: {//Luffy & Zoro
         captain: {
-            character1: "Boosts [INT], [DEX], Striker, and Slasher characters' ATK by 6x. If a [INT] or [DEX] character with Critical ATK Potential Ability performs a Critical attack, applies -3% [INT] and [DEX] Resistance to all enemies for 1 turn [Applies following effect based on number of applicable Character Tags on crew] If 4 or more [Elbaph Arc] [Straw Hat Pirates] [Mythical Zoan-type] [Giant] characters are on the crew, launches the following effect at start of quest: \"Reduces crew's VS Effect gauge and Switch Effect by 2, and boosts Striker and Slasher characters' ATK based on the damage reduction effect applied on the crew (e.g. if crew has 90% damage reduction, boosts ATK by 1.9x) for 5 turns\", boosts [INT], [DEX], Striker, and Slasher characters' HP by 1.3x, and makes crew's [INT][TND] slots have matching slot effects",
+            character1: "Boosts [INT], [DEX], Striker, and Slasher characters' ATK by 6x. If an [INT] or [DEX] character with Critical ATK Potential Ability performs a Critical attack, applies -3% [INT] and [DEX] Resistance to all enemies for 1 turn [Applies following effect based on number of applicable Character Tags on crew] If 4 or more [Elbaph Arc] [Straw Hat Pirates] [Mythical Zoan-type] [Giant] characters are on the crew, launches the following effect at start of quest: \"Reduces crew's VS Effect gauge and Switch Effect by 2, and boosts Striker and Slasher characters' ATK based on the damage reduction effect applied on the crew (e.g. if crew has 90% damage reduction, boosts ATK by 1.9x) for 5 turns\", boosts [INT], [DEX], Striker, and Slasher characters' HP by 1.3x, and makes crew's [INT][TND] slots have matching slot effects",
             character2: "Boosts [INT], [DEX], Striker, and Slasher characters' ATK by 6x. If a Striker or Slasher character with Critical ATK Potential Ability performs a Critical attack, applies -3% Striker and Slasher Resistance to all enemies for 1 turn [Applies following effect based on number of applicable Character Tags on crew] If 4 or more [Elbaph Arc] [Straw Hat Pirates] [Mythical Zoan-type] [Giant] characters are on the crew, launches the following effect at start of quest: \"Reduces crew's VS Effect gauge and Switch Effect by 2, and boosts crew's damage dealt when landing a Critical hit by 60% for 5 turns (effect applies only to characters with Critical ATK Potential Ability)\", boosts [INT], [DEX], Striker, and Slasher characters' HP by 1.3x, and makes crew's [DEX][TND] slots have matching slot effects",
             combined: "Boosts [INT], [DEX], Striker, and Slasher characters' ATK by 7x. If a character with Critical ATK Potential Ability performs a Critical attack, applies -5% [INT], [DEX], Striker, and Slasher Resistance to all enemies for 1 turn [Applies following effect based on number of applicable Character Tags on crew] If 4 or more [Elbaph Arc] [Straw Hat Pirates] [Mythical Zoan-type] [Giant] characters are on the crew, launches the following effect at start of quest: \"Reduces crew's VS Effect gauge and Switch Effect by 2\", boosts [INT], [DEX], Striker, and Slasher characters' HP by 1.3x, boosts [Elbaph Arc] [Straw Hat Pirates] [Mythical Zoan-type] [Giant] characters' base ATK by +1000, and makes crew's [INT][DEX][TND] slots have matching slot effects"
         },
@@ -190939,7 +190939,7 @@ window.details = {
                     "If you hit a PERFECT with this character, there is a 40% chance to deal 4% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 50% chance to deal 5% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 70% chance to deal 7% of this character's attack in extra damage",
-                    "If you hit a PERFECT with this character, there is a 80% chance to deal 8% of this character's attack in extra damage",
+                    "If you hit a PERFECT with this character, there is an 80% chance to deal 8% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 100% chance to deal 10% of this character's attack in extra damage"
                 ]
             },
@@ -191151,7 +191151,7 @@ window.details = {
                     "If you hit a PERFECT with this character, there is a 40% chance to deal 4% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 50% chance to deal 5% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 70% chance to deal 7% of this character's attack in extra damage",
-                    "If you hit a PERFECT with this character, there is a 80% chance to deal 8% of this character's attack in extra damage",
+                    "If you hit a PERFECT with this character, there is an 80% chance to deal 8% of this character's attack in extra damage",
                     "If you hit a PERFECT with this character, there is a 100% chance to deal 10% of this character's attack in extra damage"
                 ]
             },
