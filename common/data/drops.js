@@ -10009,6 +10009,13 @@ window.drops = {
         },
 
         {
+            name: 'VS Holy Knights Blitz Battle!',
+            thumb: 4611,
+            global: true,
+            nakama: null,
+        },
+
+        {
             name: '3 Stamina Ranking! Vs Blackbeard',
             thumb: 447,
             global: true,
