@@ -3589,7 +3589,7 @@ window.drops = {
         },
 
         {
-            name: 'Doll & Bluegrass',
+            name: 'Reiju',
             dropID: 'pka33',
             thumb: 4510,
             global: true,
@@ -3656,6 +3656,17 @@ window.drops = {
             nakama: null,
             gamewith: null,
             'Defeat Level Rewards': [ 4618 ],
+        },
+
+
+        {
+            name: 'Loki',
+            dropID: 'pka38',
+            thumb: 4629,
+            global: true,
+            nakama: null,
+            gamewith: null,
+            'Defeat Level Rewards': [ 4638 ],
         },
 
     ],
