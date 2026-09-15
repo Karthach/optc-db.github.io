@@ -1,7 +1,5 @@
 # Base de Datos de One Piece Treasure Cruise (OPTC)
 
-Este es un **proyecto personal** creado por interés propio. Cabe destacar que **no es la continuación de ningún proyecto anterior**; es un trabajo independiente que desarrollo simplemente porque quiero y me apasiona.
-
 Esta herramienta sirve como base de datos integral para todo lo relacionado con One Piece Treasure Cruise, incluyendo:
 * Estadísticas detalladas de personajes.
 * Lugares de obtención (Drops).
@@ -19,11 +17,11 @@ Está optimizado para funcionar directamente en GitHub Pages, aunque puede ejecu
 
 ## Equipo y Contribuidores
 Agradecimiento especial a quienes han ayudado a mantener viva la información:
-* **Karthach** - Desarrollador y administrador actual, responsable de la localización al español y la optimización del diseño.
 * **Mondfischer** - Responsable inicial de la arquitectura y datos.
 * **Zeenigami** - Colaborador histórico en datos y características.
 * **2Shankz** - Principal fuente de datos actualizada (Upstream).
 * **xfts** - Verificación de datos técnicos.
+* **Karthach** - Desarrollador y administrador actual, responsable de la localización al español y la optimización del diseño.
 * A toda la comunidad en Discord, Reddit y GitHub que reporta errores.
 
 ## Instalación y Uso
