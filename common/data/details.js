@@ -192890,7 +192890,7 @@ window.details = {
             {
                 captain: {
                     base: "Boosts ATK of [PSY] characters by 4x, boosts HP of [PSY] characters by 1.2x, and restores Special Cooldown of all characters by 3 turns when they are rewinded.",
-                    level1: "Boosts ATK of [PSY] characters by 4.5-5.25x depending on the amount healed in the last turn, boosts HP and RCV of [PSY] characters by 1.2x, recovers 2x character's RCV in HP at the end of each turn, and restores Special Cooldown of all characters by 5 turns when they are rewinded."
+                    level1: "Boosts ATK of [PSY] characters by 4.5x-5.25x depending on the amount healed in the last turn, boosts HP and RCV of [PSY] characters by 1.2x, recovers 2x character's RCV in HP at the end of each turn, and restores Special Cooldown of all characters by 5 turns when they are rewinded."
                 }
             },
             null,
