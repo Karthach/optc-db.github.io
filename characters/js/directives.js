@@ -39,8 +39,7 @@
 		return {
 			restrict: "E",
 			replace: true,
-			template:
-				'<table id="mainTable" class="table table-striped-column panel panel-default"></table>',
+			template: '<div id="tabulator-table"></div>',
 			link: function (scope, element, attrs) {
 				window.charTable = element.dataTable({
 					stateSave: true, // includes page length
@@ -88,22 +87,28 @@
 								"</span>";
 							$(typeBox).html(typeHtml);
 						}
-						if ((classes.match(new RegExp(",", "g")) || []).length > 1) {
-							while ((classes.match(new RegExp(",", "g")) || []).length >= 1)
-								classes = classes.replace(",", "/");
-							var classess = classes.split("/");
-							//console.log(classess);
-							var classesHtml =
-								'<span class="cell-' +
-								classess[classess.length - 2] +
-								'">' +
-								classess[classess.length - 2] +
-								'</span>, <span class="cell-' +
-								classess[classess.length - 1] +
-								'">' +
-								classess[classess.length - 1] +
-								"</span>";
-							$(classBox).html(classesHtml);
+						
+						tabCol.headerTooltip = true;
+
+						if (index === 0) {
+							tabCol.width = 50;
+							tabCol.minWidth = 50;
+						} else if (index === 1) {
+							tabCol.widthGrow = 1;
+							tabCol.minWidth = 220;
+							tabCol.formatter = "textarea";
+						} else if (index === 2 || index === 3 || index === 8 || index === 10) {
+							tabCol.width = 80;
+							tabCol.minWidth = 70;
+						} else if (index >= 4 && index <= 7) {
+							tabCol.width = 60;
+							tabCol.minWidth = 55;
+						} else if (index === 9) {
+							tabCol.width = 100;
+							tabCol.minWidth = 90;
+						} else {
+							tabCol.width = 90;
+							tabCol.minWidth = 70;
 						}
 						$(typeBox).addClass("cell-" + type);
 						var n = row.cells.length - 2 - scope.table.additional;
@@ -238,51 +243,47 @@
 		};
 	};
 
-	// Uses Bootstrap's Collapse Component
-	directives.animateCollapse = function ($timeout, $document) {
-		return {
-			restrict: "E",
-			transclude: true,
-			template: `<span>
+// Uses Bootstrap's Collapse Component
+directives.animateCollapse = function ($timeout, $document) {
+	return {
+		restrict: "E",
+		transclude: true,
+		template: `<span class="animate-collapse-header">
         <ng-transclude></ng-transclude>
         <i class="{{ faClasses ? faClasses : 'fas fa-chevron-down pull-right' }}"></i>
     </span>`,
-			scope: {}, // empty isolate scope for `scope.faClasses`
-			link: function (scope, element, attrs) {
-				if (attrs.faClasses) {
-					// option to override font awesome classes
-					scope.faClasses = attrs.faClasses;
-				}
-				element.click(() => {
-					var collapsibleElement = element.next();
-					if (collapsibleElement.hasClass("collapse")) {
-						element.next().collapse("toggle");
+		scope: {},
+		link: function (scope, element, attrs) {
+			scope.faClasses = attrs.faClasses || "material-icons material-icons-chevron-right";
+
+			// Delegate to document-level events so chevron syncs with any trigger (click, Toggle All, jQuery)
+			if (!$document.isAnimateCollapseHandlerAdded) {
+				$document.on("hide.bs.collapse", (e) => {
+					var collapserElement = e.target.previousElementSibling;
+					if (collapserElement && collapserElement.tagName === "ANIMATE-COLLAPSE") {
+						var icon = collapserElement.querySelector("i");
+						if (icon) icon.classList.remove("material-icons-chevron-rotated");
 					}
 				});
+				$document.on("show.bs.collapse", (e) => {
+					var collapserElement = e.target.previousElementSibling;
+					if (collapserElement && collapserElement.tagName === "ANIMATE-COLLAPSE") {
+						var icon = collapserElement.querySelector("i");
+						if (icon) icon.classList.add("material-icons-chevron-rotated");
+					}
+				});
+				$document.isAnimateCollapseHandlerAdded = true;
+			}
 
-				if (!$document.isAnimateCollapseHandlerAdded) {
-					// delegate event to top level node, so we only add two event listeners
-					$document.on("hide.bs.collapse", (e) => {
-						var collapserElement = e.target.previousElementSibling;
-						if (collapserElement.tagName == "ANIMATE-COLLAPSE") {
-							collapserElement.children[0].lastElementChild.classList.remove(
-								"fa-flip-vertical"
-							);
-						}
-					});
-					$document.on("show.bs.collapse", (e) => {
-						var collapserElement = e.target.previousElementSibling;
-						if (collapserElement.tagName == "ANIMATE-COLLAPSE") {
-							collapserElement.children[0].lastElementChild.classList.add(
-								"fa-flip-vertical"
-							);
-						}
-					});
-					$document.isAnimateCollapseHandlerAdded = true;
+			element.on("click", () => {
+				var collapsibleElement = element.next();
+				if (collapsibleElement && collapsibleElement.hasClass("collapse")) {
+					collapsibleElement.collapse("toggle");
 				}
-			},
-		};
+			});
+		},
 	};
+};
 
 	directives.addCustomFilters = function ($timeout, $compile) {
 		return {
@@ -317,8 +318,6 @@
 				// called when a matcher is toggled, should debounce during the collapse animation
 				// of submatchers div
 				scope.toggleMatcher = function ($event, matcher) {
-					// debounce click during collapse animation, so the filter won't show
-					// the submatchers when it is turned off with a double click
 					var targetElement = $event.target.nextElementSibling;
 					if (targetElement) {
 						if (targetElement.classList.contains("collapsing")) {
@@ -332,6 +331,7 @@
 							matcher.name
 						];
 					matcherObj.enabled = !matcherObj.enabled;
+					matcherObj.submatchersOpen = !matcherObj.submatchersOpen;
 				};
 				scope.getCssClasses = function (submatcher) {
 					var classes = ["min-width-12"]; //default, may be overridden
@@ -342,7 +342,7 @@
 		};
 	};
 
-directives.goBack = function ($state) {
+directives.goBack = function ($state, $rootScope) {
 		return {
 			restrict: "A",
 			link: function (scope, element, attrs) {
@@ -353,6 +353,8 @@ directives.goBack = function ($state) {
 					$(".quick-nav").addClass("closing");
 					$(".backdrop").addClass("closing");
 					setTimeout(function () {
+						var query = $rootScope.table && $rootScope.table.parameters && $rootScope.table.parameters.query || '';
+						$state.go(".", { query: query }, { notify: false });
 						$state.go("^");
 					}, 300);
 				});
@@ -360,7 +362,7 @@ directives.goBack = function ($state) {
 		};
 	};
 
-	directives.evolution = function ($state, $stateParams) {
+	directives.evolution = function ($state, $stateParams, $rootScope) {
 		return {
 			restrict: "E",
 			replace: true,
@@ -371,13 +373,15 @@ directives.goBack = function ($state) {
 					if (!Number.isInteger(id)) return;
 					if (id == parseInt($stateParams.id, 10)) return;
 					var previous = $stateParams.previous.concat([$stateParams.id]);
+					var query = $rootScope.table && $rootScope.table.parameters && $rootScope.table.parameters.query || '';
+					$state.go(".", { query: query }, { notify: false });
 					$state.go("main.search.view", { id: id, previous: previous });
 				};
 			},
 		};
 	};
 
-	directives.unit = function ($state, $stateParams) {
+	directives.unit = function ($state, $stateParams, $rootScope) {
 		return {
 			restrict: "E",
 			scope: { uid: "=" },
@@ -387,6 +391,8 @@ directives.goBack = function ($state) {
 				scope.goToState = function (id) {
 					if (id == parseInt($stateParams.id, 10)) return;
 					var previous = $stateParams.previous.concat([$stateParams.id]);
+					var query = $rootScope.table && $rootScope.table.parameters && $rootScope.table.parameters.query || '';
+					$state.go(".", { query: query }, { notify: false });
 					$state.go("main.search.view", { id: id, previous: previous });
 				};
 			},
@@ -708,13 +714,13 @@ directives.goBack = function ($state) {
 			restrict: "E",
 			transclude: true,
 			replace: true,
-			template: '<div class="details-card" id="card-{{sectionId}}">' +
-				'<div class="details-card-header" ng-click="toggle()">' +
-				'<i class="fas fa-chevron-right details-card-chevron" ng-class="{\'details-card-collapsed\': !isOpen}"></i>' +
-				'<span class="details-card-title">{{title}}</span>' +
-				'</div>' +
-				'<div class="details-card-content" ng-transclude ng-show="isOpen"></div>' +
-				'</div>',
+template: '<div class="details-card" id="card-{{sectionId}}">' +
+            '<div class="details-card-header" ng-click="toggle()">' +
+            '<i class="material-icons material-icons-chevron-right details-card-chevron" ng-class="{\'details-card-collapsed\': !isOpen}">chevron_right</i>' +
+            '<span class="details-card-title">{{title}}</span>' +
+            '</div>' +
+            '<div class="details-card-content" ng-transclude ng-show="isOpen"></div>' +
+            '</div>',
 			scope: {
 				title: "@",
 				sectionId: "@",

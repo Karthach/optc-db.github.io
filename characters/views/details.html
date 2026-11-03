@@ -13,8 +13,8 @@
               >
                 <i class="fas fa-arrow-left"></i>
               </div>
-              {{::unit.name}}
             </div>
+            <div class="modal-header" ng-if="!unit" style="height: 50px;"></div>
 
 <div class="modal-body" id="modal-body-top">
             <div class="details-upper-row">
@@ -354,11 +354,11 @@
                                             <div ng-show="details.special.llbbase"
                                                 ng-bind-html="details.special.llbbase | decorate"></div>
                                             <span class="badge badge-slevel" ng-show="details.special.llblevel1">LLB
-                                                Level 1</span>
+                                                Lv. 1</span>
                                             <div ng-show="details.special.llblevel1"
                                                 ng-bind-html="details.special.llblevel1 | decorate"></div>
                                             <span class="badge badge-slevel" ng-show="details.special.llblevel2">LLB
-                                                Level 2 Special</span>
+                                                Lv. 2 Special</span>
                                             <div ng-show="details.special.llblevel2"
                                                 ng-bind-html="details.special.llblevel2 | decorate"></div>
                                             <span class="badge badge-character"

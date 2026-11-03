@@ -1,7 +1,9 @@
 <div>
     <!-- Uncategorized -->
     <div class="filter width-12 custom" ng-repeat="(name, filter) in ::filterData[target]['Uncategorized'] track by $index" ng-if="::filter.target == target" ng-class="{ active: filters.custom[target]['Uncategorized'].matchers[name].enabled }">
-        <div ng-click="toggleMatcher($event, filter)">{{::filter.name}}</div>
+        <div ng-click="toggleMatcher($event, filter)" class="filter-name">
+            {{::filter.name}}
+        </div>
         <div class="collapse" ng-if="::filter.submatchers">
             <animate-collapse class="filter width-12 custom submatchers-toggler" fa-classes="fas fa-chevron-down" ng-if="::filters.custom[target]['Uncategorized'].matchers[name].submatchers.length > 5">
             </animate-collapse>
@@ -37,7 +39,9 @@
         <animate-collapse class="filter-group-header filter-header">{{ group === 'Uncategorized' ? ('UNCATEGORIZED' | translate) : group }}</animate-collapse>
         <div class="collapse">
             <div class="filter width-12 custom" ng-repeat="(name, filter) in ::matchers track by $index" ng-if="::filter.target == target" ng-class="{ active: filters.custom[target][group].matchers[name].enabled }">
-                <div ng-click="toggleMatcher($event, filter)">{{::filter.name}}</div>
+                <div ng-click="toggleMatcher($event, filter)" class="filter-name">
+                    {{::filter.name}}
+                </div>
                 <div class="collapse" ng-if="::filter.submatchers">
                     <animate-collapse class="filter width-12 custom submatchers-toggler" fa-classes="fas fa-chevron-down" ng-if="::filters.custom[target][group].matchers[name].submatchers.length > 5">
                     </animate-collapse>
